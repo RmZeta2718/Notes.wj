@@ -4,24 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1d0ab0ebf5275a0f",
+        "id": "d48aaefe090a6a99",
         "type": "tabs",
         "children": [
           {
-            "id": "5e0c886c93641d92",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "79e2226887f9b639",
+            "id": "4c072792d6bc9993",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/学习路径.md",
+                "file": "ML/事件抽取.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -29,11 +21,16 @@
             }
           },
           {
-            "id": "107303ecb8c40356",
+            "id": "c86f89c0fee452e9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "tools/git.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ],
@@ -56,7 +53,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/学习路径.md"
+                "file": "tools/git.md"
               }
             }
           },
@@ -122,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/学习路径.md",
+                "file": "tools/git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byModifiedTime",
@@ -139,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML/学习路径.md",
+                "file": "tools/git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -163,17 +160,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "79e2226887f9b639",
+  "active": "c86f89c0fee452e9",
   "lastOpenFiles": [
+    "tools/terminal_notes.md",
+    "tools/git.md",
+    "ML/papers/@2018huangZeroShotTransferLearning.md",
+    "ML/papers/@2021zhangZeroshotLabelAwareEvent.md",
+    "ML/事件抽取.md",
+    "tools/obsidian.md",
+    "tools/ssh.md",
+    "ML/学习路径.md",
     "事件抽取.md",
-    "papers/@2018huangZeroShotTransferLearning.md",
-    "papers/@2021zhangZeroshotLabelAwareEvent.md",
-    "TODO.md",
-    "pq.md",
-    "zero-shot.md",
-    "NLP.md",
-    "数学.md",
-    "how to read paper.md",
-    "papers/@2018cisseMixupEmpiricalRisk.md"
+    "papers/@2018huangZeroShotTransferLearning.md"
   ]
 }

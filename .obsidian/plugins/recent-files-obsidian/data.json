@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "git",
+      "path": "tools/git.md"
+    },
+    {
+      "basename": "terminal_notes",
+      "path": "tools/terminal_notes.md"
+    },
+    {
+      "basename": "@2018huangZeroShotTransferLearning",
+      "path": "ML/papers/@2018huangZeroShotTransferLearning.md"
+    },
+    {
+      "basename": "@2021zhangZeroshotLabelAwareEvent",
+      "path": "ML/papers/@2021zhangZeroshotLabelAwareEvent.md"
+    },
+    {
+      "basename": "事件抽取",
+      "path": "ML/事件抽取.md"
+    },
+    {
+      "basename": "obsidian",
+      "path": "tools/obsidian.md"
+    },
+    {
+      "basename": "ssh",
+      "path": "tools/ssh.md"
+    },
+    {
       "basename": "学习路径",
       "path": "ML/学习路径.md"
     },

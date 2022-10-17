@@ -47,3 +47,15 @@ git clean -f
 - `https://github.com` https协议
 
 http://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols
+
+### CRLF
+
+https://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf
+
+如果windows平台（上的IDE等环境）支持LF，可以
+
+```
+git config --local core.autocrlf input
+```
+
+于是，windows上add的文件中的所有CRLF会转换成LF，保持与linux兼容

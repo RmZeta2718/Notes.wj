@@ -40,3 +40,13 @@ https://unix.stackexchange.com/questions/362559/list-of-terminal-generated-signa
 `prof` (CPU) `nvprof` (GPU)
 
 `python::viztracer`
+
+### CRLF-LF
+
+将当前文件夹下的所有文件从CRLF转为LF
+
+```bash
+find . -type f -exec dos2unix {} \;
+```
+
+https://stackoverflow.com/questions/7068179/convert-line-endings-for-whole-directory-tree-git
