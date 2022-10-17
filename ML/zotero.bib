@@ -1,0 +1,153 @@
+
+@article{2018cisseMixupEmpiricalRisk,
+  title = {Mixup: {{Beyond Empirical Risk Minimization}}},
+  shorttitle = {Mixup},
+  author = {Cisse, Moustapha and Dauphin, Yann N. and {Lopez-Paz}, David},
+  year = {2018},
+  month = apr,
+  journal = {arXiv:1710.09412 [cs, stat]},
+  eprint = {1710.09412},
+  eprinttype = {arxiv},
+  primaryclass = {cs, stat},
+  url = {http://arxiv.org/abs/1710.09412},
+  urldate = {2022-01-02},
+  abstract = {Large deep neural networks are powerful, but exhibit undesirable behaviors such as memorization and sensitivity to adversarial examples. In this work, we propose mixup, a simple learning principle to alleviate these issues. In essence, mixup trains a neural network on convex combinations of pairs of examples and their labels. By doing so, mixup regularizes the neural network to favor simple linear behavior in-between training examples. Our experiments on the ImageNet-2012, CIFAR-10, CIFAR-100, Google commands and UCI datasets show that mixup improves the generalization of state-of-the-art neural network architectures. We also find that mixup reduces the memorization of corrupt labels, increases the robustness to adversarial examples, and stabilizes the training of generative adversarial networks.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\4JAT6SE7\\Zhang 等。 - 2018 - mixup Beyond Empirical Risk Minimization.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\BCD7JIYQ\\1710.html}
+}
+
+@inproceedings{2018huangZeroShotTransferLearning,
+  title = {Zero-{{Shot Transfer Learning}} for {{Event Extraction}}},
+  booktitle = {Proceedings of the 56th {{Annual Meeting}} of the {{Association}} for {{Computational Linguistics}} ({{Volume}} 1: {{Long Papers}})},
+  author = {Huang, Lifu and Ji, Heng and Cho, Kyunghyun and Dagan, Ido and Riedel, Sebastian and Voss, Clare},
+  year = {2018},
+  month = jul,
+  pages = {2160--2170},
+  publisher = {{Association for Computational Linguistics}},
+  address = {{Melbourne, Australia}},
+  doi = {10.18653/v1/P18-1201},
+  abstract = {Most previous supervised event extraction methods have relied on features derived from manual annotations, and thus cannot be applied to new event types without extra annotation effort. We take a fresh look at event extraction and model it as a generic grounding problem: mapping each event mention to a specific type in a target event ontology. We design a transferable architecture of structural and compositional neural networks to jointly represent and map event mentions and types into a shared semantic space. Based on this new framework, we can select, for each event mention, the event type which is semantically closest in this space as its type. By leveraging manual annotations available for a small set of existing event types, our framework can be applied to new unseen event types without additional manual annotations. When tested on 23 unseen event types, our zero-shot framework, without manual annotations, achieved performance comparable to a supervised model trained from 3,000 sentences annotated with 500 event mentions.},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\M92H7XZE\\Huang 等。 - 2018 - Zero-Shot Transfer Learning for Event Extraction.pdf}
+}
+
+@article{2019devlinBERTPretrainingDeep,
+  title = {{{BERT}}: {{Pre-training}} of {{Deep Bidirectional Transformers}} for {{Language Understanding}}},
+  shorttitle = {{{BERT}}},
+  author = {Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  year = {2019},
+  month = may,
+  journal = {arXiv:1810.04805 [cs]},
+  eprint = {1810.04805},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  url = {http://arxiv.org/abs/1810.04805},
+  urldate = {2022-01-06},
+  abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5\% (7.7\% point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\YAD92F43\\Devlin 等。 - 2019 - BERT Pre-training of Deep Bidirectional Transform.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\R38JLBM2\\1810.html}
+}
+
+@article{2019vermaManifoldMixupBetter,
+  title = {Manifold {{Mixup}}: {{Better Representations}} by {{Interpolating Hidden States}}},
+  shorttitle = {Manifold {{Mixup}}},
+  author = {Verma, Vikas and Lamb, Alex and Beckham, Christopher and Najafi, Amir and Mitliagkas, Ioannis and Courville, Aaron and {Lopez-Paz}, David and Bengio, Yoshua},
+  year = {2019},
+  month = may,
+  journal = {arXiv:1806.05236 [cs, stat]},
+  eprint = {1806.05236},
+  eprinttype = {arxiv},
+  primaryclass = {cs, stat},
+  url = {http://arxiv.org/abs/1806.05236},
+  urldate = {2022-01-06},
+  abstract = {Deep neural networks excel at learning the training data, but often provide incorrect and confident predictions when evaluated on slightly different test examples. This includes distribution shifts, outliers, and adversarial examples. To address these issues, we propose Manifold Mixup, a simple regularizer that encourages neural networks to predict less confidently on interpolations of hidden representations. Manifold Mixup leverages semantic interpolations as additional training signal, obtaining neural networks with smoother decision boundaries at multiple levels of representation. As a result, neural networks trained with Manifold Mixup learn class-representations with fewer directions of variance. We prove theory on why this flattening happens under ideal conditions, validate it on practical situations, and connect it to previous works on information theory and generalization. In spite of incurring no significant computation and being implemented in a few lines of code, Manifold Mixup improves strong baselines in supervised learning, robustness to single-step adversarial attacks, and test log-likelihood.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing,Statistics - Machine Learning},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\SWGV2NL7\\Verma 等。 - 2019 - Manifold Mixup Better Representations by Interpol.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\8T5A6X6C\\1806.html}
+}
+
+@inproceedings{2020huangSemisupervisedNewEvent,
+  title = {Semi-Supervised {{New Event Type Induction}} and {{Event Detection}}},
+  booktitle = {Proceedings of the 2020 {{Conference}} on {{Empirical Methods}} in {{Natural Language Processing}} ({{EMNLP}})},
+  author = {Huang, Lifu and Ji, Heng},
+  year = {2020},
+  month = nov,
+  pages = {718--724},
+  publisher = {{Association for Computational Linguistics}},
+  address = {{Online}},
+  doi = {10.18653/v1/2020.emnlp-main.53},
+  abstract = {Most previous event extraction studies assume a set of target event types and corresponding event annotations are given, which could be very expensive. In this paper, we work on a new task of semi-supervised event type induction, aiming to automatically discover a set of unseen types from a given corpus by leveraging annotations available for a few seen types. We design a Semi-Supervised Vector Quantized Variational Autoencoder framework to automatically learn a discrete latent type representation for each seen and unseen type and optimize them using seen type event annotations. A variational autoencoder is further introduced to enforce the reconstruction of each event mention conditioned on its latent type distribution. Experiments show that our approach can not only achieve state-of-the-art performance on supervised event detection but also discover high-quality new event types.},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\UYUQQDBY\\Huang 和 Ji - 2020 - Semi-supervised New Event Type Induction and Event.pdf}
+}
+
+@article{2020zhangSeqMixAugmentingActive,
+  title = {{{SeqMix}}: {{Augmenting Active Sequence Labeling}} via {{Sequence Mixup}}},
+  shorttitle = {{{SeqMix}}},
+  author = {Zhang, Rongzhi and Yu, Yue and Zhang, Chao},
+  year = {2020},
+  month = oct,
+  journal = {arXiv:2010.02322 [cs]},
+  eprint = {2010.02322},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  url = {http://arxiv.org/abs/2010.02322},
+  urldate = {2022-01-06},
+  abstract = {Active learning is an important technique for low-resource sequence labeling tasks. However, current active sequence labeling methods use the queried samples alone in each iteration, which is an inefficient way of leveraging human annotations. We propose a simple but effective data augmentation method to improve the label efficiency of active sequence labeling. Our method, SeqMix, simply augments the queried samples by generating extra labeled sequences in each iteration. The key difficulty is to generate plausible sequences along with token-level labels. In SeqMix, we address this challenge by performing mixup for both sequences and token-level labels of the queried samples. Furthermore, we design a discriminator during sequence mixup, which judges whether the generated sequences are plausible or not. Our experiments on Named Entity Recognition and Event Detection tasks show that SeqMix can improve the standard active sequence labeling method by \$2.27\textbackslash\%\$--\$3.75\textbackslash\%\$ in terms of \$F\_1\$ scores. The code and data for SeqMix can be found at https://github.com/rz-zhang/SeqMix},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\ZCS2XLU9\\Zhang 等。 - 2020 - SeqMix Augmenting Active Sequence Labeling via Se.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\78VCPIEB\\2010.html}
+}
+
+@misc{2021wangCLEVEContrastivePretraining,
+  title = {{{CLEVE}}: {{Contrastive Pre-training}} for {{Event Extraction}}},
+  shorttitle = {{{CLEVE}}},
+  author = {Wang, Ziqi and Wang, Xiaozhi and Han, Xu and Lin, Yankai and Hou, Lei and Liu, Zhiyuan and Li, Peng and Li, Juanzi and Zhou, Jie},
+  year = {2021},
+  month = may,
+  number = {arXiv:2105.14485},
+  eprint = {2105.14485},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2105.14485},
+  urldate = {2022-10-13},
+  abstract = {Event extraction (EE) has considerably benefited from pre-trained language models (PLMs) by fine-tuning. However, existing pre-training methods have not involved modeling event characteristics, resulting in the developed EE models cannot take full advantage of large-scale unsupervised data. To this end, we propose CLEVE, a contrastive pre-training framework for EE to better learn event knowledge from large unsupervised data and their semantic structures (e.g. AMR) obtained with automatic parsers. CLEVE contains a text encoder to learn event semantics and a graph encoder to learn event structures respectively. Specifically, the text encoder learns event semantic representations by self-supervised contrastive learning to represent the words of the same events closer than those unrelated words; the graph encoder learns event structure representations by graph contrastive pre-training on parsed event-related semantic structures. The two complementary representations then work together to improve both the conventional supervised EE and the unsupervised "liberal" EE, which requires jointly extracting events and discovering event schemata without any annotated data. Experiments on ACE 2005 and MAVEN datasets show that CLEVE achieves significant improvements, especially in the challenging unsupervised setting. The source code and pre-trained checkpoints can be obtained from https://github.com/THU-KEG/CLEVE.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\DI9HLV2H\\Wang 等。 - 2021 - CLEVE Contrastive Pre-training for Event Extracti.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\CNBRZFUQ\\2105.html}
+}
+
+@inproceedings{2021zhangZeroshotLabelAwareEvent,
+  title = {Zero-Shot {{Label-Aware Event Trigger}} and {{Argument Classification}}},
+  booktitle = {Findings of the {{Association}} for {{Computational Linguistics}}: {{ACL-IJCNLP}} 2021},
+  author = {Zhang, Hongming and Wang, Haoyu and Roth, Dan},
+  year = {2021},
+  month = aug,
+  pages = {1331--1340},
+  publisher = {{Association for Computational Linguistics}},
+  address = {{Online}},
+  doi = {10.18653/v1/2021.findings-acl.114},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\AY4TUYVB\\Zhang 等。 - 2021 - Zero-shot Label-Aware Event Trigger and Argument C.pdf}
+}
+
+@misc{2022gaoSimCSESimpleContrastive,
+  title = {{{SimCSE}}: {{Simple Contrastive Learning}} of {{Sentence Embeddings}}},
+  shorttitle = {{{SimCSE}}},
+  author = {Gao, Tianyu and Yao, Xingcheng and Chen, Danqi},
+  year = {2022},
+  month = may,
+  number = {arXiv:2104.08821},
+  eprint = {2104.08821},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2104.08821},
+  urldate = {2022-10-13},
+  abstract = {This paper presents SimCSE, a simple contrastive learning framework that greatly advances state-of-the-art sentence embeddings. We first describe an unsupervised approach, which takes an input sentence and predicts itself in a contrastive objective, with only standard dropout used as noise. This simple method works surprisingly well, performing on par with previous supervised counterparts. We find that dropout acts as minimal data augmentation, and removing it leads to a representation collapse. Then, we propose a supervised approach, which incorporates annotated pairs from natural language inference datasets into our contrastive learning framework by using "entailment" pairs as positives and "contradiction" pairs as hard negatives. We evaluate SimCSE on standard semantic textual similarity (STS) tasks, and our unsupervised and supervised models using BERT base achieve an average of 76.3\% and 81.6\% Spearman's correlation respectively, a 4.2\% and 2.2\% improvement compared to the previous best results. We also show -- both theoretically and empirically -- that the contrastive learning objective regularizes pre-trained embeddings' anisotropic space to be more uniform, and it better aligns positive pairs when supervised signals are available.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\ED8864WD\\Gao 等。 - 2022 - SimCSE Simple Contrastive Learning of Sentence Em.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\2SL82W83\\2104.html}
+}
+
+
