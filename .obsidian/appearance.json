@@ -1,0 +1,17 @@
+{
+  "baseFontSize": 21,
+  "theme": "moonstone",
+  "translucency": false,
+  "cssTheme": "",
+  "enabledCssSnippets": [
+    "math",
+    "headings"
+  ],
+  "monospaceFontFamily": "Consolas",
+  "baseFontSizeAction": false,
+  "textFontFamily": "",
+  "interfaceFontFamily": "",
+  "accentColor": "",
+  "showViewHeader": false,
+  "nativeMenus": false
+}

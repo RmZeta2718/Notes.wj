@@ -1,0 +1,9 @@
+{
+  "citationExportFormat": "biblatex",
+  "literatureNoteTitleTemplate": "@{{citekey}}",
+  "literatureNoteFolder": "papers",
+  "literatureNoteContentTemplate": "---\naliases: [\"{{title}}\", \"{{title}}, {{year}}\"]\n---\n# {{title}}\n\n- **Journal**: {{containerTitle}}\n- **Author**: {{authorString}}\n- **Year**: {{year}}\n- **URL**: {{URL}}\n- [**Zotero**]({{zoteroSelectURI}})\n- [**ReadPaper**](link to https://readpaper.com)\n\n## 论文试图解决的问题（是否是新的问题）\n\n\n\n## 论文的总体贡献\n\n\n\n## 论文提供的关键元素、关键设计\n\n### 总体流程\n\n\n\n## 实验（设置、数据集）\n\n### 实现细节\n\n\n\n### 数据集\n\n\n\n### 评估\n\n\n\n### 消融实验\n\n\n\n## 有什么疑问，如何继续深入，如何吸取到你的工作中\n\n\n\n## 相关研究（如何归类，值得关注的研究员）\n\n\n",
+  "markdownCitationTemplate": "[@{{citekey}}]",
+  "alternativeMarkdownCitationTemplate": "@{{citekey}}",
+  "citationExportPath": "zotero.bib"
+}

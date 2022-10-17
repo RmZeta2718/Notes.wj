@@ -1,0 +1,160 @@
+{
+  "workspaces": {
+    "1": {
+      "main": {
+        "id": "4152aa01ebc02b45",
+        "type": "split",
+        "children": [
+          {
+            "id": "086f4061c3c05223",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0544760436f5bfc2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "事件抽取.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "c0a1c98a045254e9",
+                "type": "leaf",
+                "state": {
+                  "type": "release-notes",
+                  "state": {
+                    "currentVersion": "1.0.0"
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "72f2ff8d21c1254a",
+        "type": "split",
+        "children": [
+          {
+            "id": "2f2ce5a97bd3f00f",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1128f06810ffe510",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {}
+                }
+              },
+              {
+                "id": "b4717b8d38a872f6",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "806f14af6cb6a47f",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "3e45b3eaaf768ccc",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
+                "id": "ada3f376502c39fb",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 314.5
+      },
+      "right": {
+        "id": "491dcd2fa5962d1e",
+        "type": "split",
+        "children": [
+          {
+            "id": "232ba2c54c2b614d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "103c946a4c415bfd",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "byModifiedTime",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": false
+                  }
+                }
+              },
+              {
+                "id": "87be0a078bb81f74",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": false
+                  }
+                }
+              },
+              {
+                "id": "94e0878de6fa460e",
+                "type": "leaf",
+                "state": {
+                  "type": "advanced-tables-toolbar",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "ribbon": {
+        "mostRecentAction": ""
+      },
+      "active": "c0a1c98a045254e9"
+    }
+  },
+  "active": "1"
+}
