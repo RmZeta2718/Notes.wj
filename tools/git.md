@@ -22,7 +22,7 @@ https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule
 
 修改URL
 
-```
+```bash
 git config submodule.my-submodule.url otheruser@server:/pathtorepos
 ```
 
@@ -54,8 +54,16 @@ https://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf
 
 如果windows平台（上的IDE等环境）支持LF，可以
 
-```
+```bash
 git config --local core.autocrlf input
 ```
 
 于是，windows上add的文件中的所有CRLF会转换成LF，保持与linux兼容
+
+### 中文文件名
+
+```bash
+git config --global core.quotepath off
+```
+
+https://stackoverflow.com/questions/22827239/how-to-make-git-properly-display-utf-8-encoded-pathnames-in-the-console-window
