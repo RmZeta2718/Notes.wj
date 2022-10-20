@@ -2,6 +2,11 @@
 
 ## 相关任务
 
+- visual object classification
+    - A deep visual-semantic embedding model, 2013
+    - Zero-Shot Learning by Convex Combination of Semantic Embeddings, 2013
+    - Zero-Shot Learning Through Cross-Modal Transfer, 2013
+
 - text classification
     - Importance of semantic representation: dataless classification, 2008
     - On dataless hierarchical text classification, 2014

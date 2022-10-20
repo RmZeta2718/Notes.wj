@@ -296,5 +296,7 @@
     }
   ],
   "workspace:copy-url": [],
-  "markdown:toggle-preview": []
+  "markdown:toggle-preview": [],
+  "obsidian-completr:completr-blacklist-current-word": [],
+  "obsidian-completr:completr-bypass-tab-key": []
 }

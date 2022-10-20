@@ -12,17 +12,23 @@ aliases: ["Zero-Shot Transfer Learning for Event Extraction", "Zero-Shot Transfe
 
 ## 论文试图解决的问题（是否是新的问题）
 
-
+transfer resources from existing types to new types without any additional annotation effort
 
 ## 论文的总体贡献
 
-
+融合了各种方法，主要是AMR和CNN，我没了解过AMR，所以没看懂
 
 ## 论文提供的关键元素、关键设计
 
 ### 总体流程
 
-
+- 学习阶段：
+    - 将AMR关系表示为矩阵形式
+    - 过CNN
+- 预测阶段（unseen事件）：
+    - 用type和argument role组成的tuple表达语义（eg. 〈Transport Person, Destination〉）
+    - 过CNN
+    - 找到学习阶段中距离最近的结构
 
 ## 实验（设置、数据集）
 
@@ -50,3 +56,8 @@ aliases: ["Zero-Shot Transfer Learning for Event Extraction", "Zero-Shot Transfe
 
 - The Syntax of Event Structure, 1991
     - the semantics of an event structure can be generalized and mapped to event mention structures in a systematic and predictable way
+- Abstract Meaning Representation (AMR)
+    - Abstract Meaning Representation for Sembanking, 2013
+    - A Transition-based Algorithm for AMR Parsing, 2015
+- Entity Relation Event (ERE)
+    - From Light to Rich ERE: Annotation of Entities, Relations, and Events, 2015
