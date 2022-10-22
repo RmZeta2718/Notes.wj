@@ -10,7 +10,7 @@
   "latexMinWordTriggerLength": 2,
   "latexIgnoreCase": false,
   "fileScannerProviderEnabled": false,
-  "fileScannerScanCurrent": true,
+  "fileScannerScanCurrent": false,
   "wordListProviderEnabled": false,
   "frontMatterProviderEnabled": true,
   "frontMatterTagAppendSuffix": true,

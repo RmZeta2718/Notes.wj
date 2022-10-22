@@ -298,5 +298,14 @@
   "workspace:copy-url": [],
   "markdown:toggle-preview": [],
   "obsidian-completr:completr-blacklist-current-word": [],
-  "obsidian-completr:completr-bypass-tab-key": []
+  "obsidian-completr:completr-bypass-tab-key": [],
+  "obsidian-pangu:pangu-format": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "F"
+    }
+  ]
 }

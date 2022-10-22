@@ -14,6 +14,10 @@
 
 最佳实践：TODO
 
+sshfs -o uid=$UID gpu2:~/data/data_from_63 data_from_63 -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3
+
+https://github.com/libfuse/sshfs
+
 ### 查看命令的网络访问
 
 ```
