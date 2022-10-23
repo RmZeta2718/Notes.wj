@@ -123,6 +123,8 @@ https://zhuanlan.zhihu.com/p/430538023
 
 为什么不内置？
 
+这个插件的 im-select 经常失效，所以我还是使用 **Vim IM Select** 插件。
+
 不论是这个插件还是 **Vim IM Select** 插件，在切换 tab 的时候都会出问题，所以必须在 normal 模式下切换 tab
 
 windows 上 vim mode 导致 Ctrl+C 无法复制，解决方案：https://forum.obsidian.md/t/how-to-copy-with-vim-mode/3881/27（但是在 insert mode 中仍然不能 Ctrl+C，因为 vim 中这是 Esc，后来发现：加入 `iunmap <C-c>` 即可）

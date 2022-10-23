@@ -75,7 +75,7 @@ tokenizer 有可能将一个anchor拆分成多个token，最终结果取平均�
 
 两种评估方式：
 1. 只评估least 23 frequent event types and associated role types
-    - 为了和以前的工作（[[@2018huangZeroShotTransferLearning|Zero-shot transfer learning for event extraction, 2018]]）对比，这个工作用most 10 frequent type来训练，然后用其他的测试
+    - 为了和以前的工作（[[@2018ZeroShotTransferLearningHuang|Zero-shot transfer learning for event extraction, 2018]]）对比，这个工作用most 10 frequent type来训练，然后用其他的测试
 2. 在所有33个事件类型上测试，用以验证整体性能
 
 Hit@1, Hit@3, Hit@5
@@ -110,7 +110,7 @@ Bert到底embedding了什么东西，本文似乎表明，argument type word的�
 
 Specifically, we formulate the final inference step as an integer linear programming (ILP) （A Linear Programming Formulation for Global Inference in Natural Language Tasks, 2004）
 
-- WSD-embedding & Transfer Learning （[[@2018huangZeroShotTransferLearning|Zero-shot transfer learning for event extraction, 2018]]）
+- WSD-embedding & Transfer Learning （[[@2018ZeroShotTransferLearningHuang|Zero-shot transfer learning for event extraction, 2018]]）
 - 
 
 identification pipeline 中用到的工具:

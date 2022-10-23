@@ -82,7 +82,7 @@ query 和 key 的维度是 $d_k$ ，value 的维度是 $d_v$ （虽然实际上 
 - 拼接： $\mathrm{head}_{}=\mathrm{Concat(head_1,\cdots,head_h)}$（$shape=h\cdot d_v\times n$）
 - 最后再投影： $\mathrm{MultiHead}(Q_{d_{model}\times n},K_{d_{model}\times m},V_{d_{model}\times m})=W^O_{d_{model}\times h\cdot d_v}\mathrm{head}_{h\cdot d_v\times n}$（$shape=d_{model}\times n$）
 
-> 这里的每个 head 可以并行（用矩阵表达）
+> 这里每个 head 的投影部分可以并行（用矩阵表达）
 
 $h=8,d_k=d_v=d_{model}/h=64$
 
@@ -110,6 +110,10 @@ $h=8,d_k=d_v=d_{model}/h=64$
 - Positional Encoding：正余弦。因为引入了正余弦的 Encoding，为了让 Word Embedding 和 Positional Encoding 可以直接加（不要有系统性差距），给 Word Embedding 乘以 $\sqrt{d_{model}}$。后续工作如 Bert 让 Positional 也是可学习的。
 
 ### code
+
+https://paperswithcode.com/paper/attention-is-all-you-need
+
+https://github.com/graykode/nlp-tutorial/blob/master/5-1.Transformer/Transformer.py
 
 https://zhuanlan.zhihu.com/p/403433120
 
