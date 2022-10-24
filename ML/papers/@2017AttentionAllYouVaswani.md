@@ -94,9 +94,9 @@ $h=8,d_k=d_v=d_{model}/h=64$
 
 #### 连接方式
 
-- Encoder: self-attention，$Q,K,V$ 来自相同的向量（$n=m=T$）。每一层中，每个位置的向量都能看到前一层的每个向量。
-- Decoder: self-attention + mask，只能看到前面位置的词
-- Encoder-Decoder: $K,V$ 来自 Encoder， $Q$ 来自 Decoder，于是 Decoder 能看见 Encoder 中的每一个位置
+- Encoder: self-attention，$Q,K,V$ 来自相同的向量（$n=m=T$，$T$ 是输入句子的长度）。每一层中，每个位置的向量都能看到前一层的每个向量。
+- Decoder: self-attention + mask，只能看到前面位置的词（TODO：mn？）
+- Encoder-Decoder: $K,V$ 来自 Encoder， $Q$ 来自 Decoder，于是 Decoder 能看见 Encoder 中的每一个位置（TODO：mn？）
 
 ### Feed Forward
 
@@ -118,6 +118,10 @@ https://github.com/graykode/nlp-tutorial/blob/master/5-1.Transformer/Transformer
 https://zhuanlan.zhihu.com/p/403433120
 
 https://github.com/AntNLP/fm-gym/tree/main/transformer
+
+https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/Translation/Transformer
+
+https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/LanguageModeling/BERT
 
 ## 实验（设置、数据集）
 
