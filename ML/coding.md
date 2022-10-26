@@ -1,4 +1,4 @@
-# Python
+# Python 环境
 
 ## 换源
 
@@ -69,6 +69,18 @@ pipreqs
 ```bash
 pip install -r requirements.txt
 ```
+
+# Python 并发
+
+多进程（进程池）： https://superfastpython.com/processpoolexecutor-in-python/
+
+GIL： https://en.wikipedia.org/wiki/Global_interpreter_lock
+
+GIL 导致 python 解释器是单线程的，任何多线程的 python 程序，本质上是由单线程的 python 解释器在跑，所以任何依赖于 python 字节码的计算都是单线程的。python 多线程的正确应用场景：线程是 IO bound 的，而不是 CPU bound 的（或者说不以 python 字节码为主）
+
+不过，只要用多进程就能规避 GIL 的影响，因为多进程跑了多个 python 解释器。
+
+多线程（线程池）： https://superfastpython.com/threadpoolexecutor-in-python/
 
 # numpy
 
