@@ -8,7 +8,7 @@ aliases: ["Attention is All you Need", "Attention is All you Need, 2017", "Trans
 - **Year**: 2017
 - **URL**: https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
 - [**Zotero**](zotero://select/items/@2017vaswaniAttentionAllYou)
-- [**ReadPaper**](link to https://readpaper.com)
+- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4665249039130836993)
 
 ## 论文试图解决的问题（是否是新的问题）
 
