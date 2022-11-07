@@ -103,11 +103,48 @@ https://forum.obsidian.md/t/need-help-with-ccs-themes/20784/2
 
 管理论文引用，论文笔记
 
-TODO：my template
+my template：
+
+```
+---
+aliases: ["{{title}}", "{{title}}, {{year}}"]
+---
+# {{title}}
+
+- **Journal**: {{containerTitle}}
+- **Author**: {{authorString}}
+- **Year**: {{year}}
+- **URL**: {{URL}}
+- [**Zotero**]({{zoteroSelectURI}})
+- [**ReadPaper**](link to https://readpaper.com)
+
+## 论文试图解决的问题
+
+%% 是否是新的问题。现状、难点。motivation %%
+
+## 论文的总体贡献
+
+## 论文提供的关键元素、关键设计
+
+### 总体流程
+
+## 实验
+
+%% 实现细节、设置。数据集。评估。消融实验 %%
+
+## 后续工作
+
+%% 有什么疑问。如何继续深入。如何吸取到你的工作中 %%
+
+## 相关研究
+
+%% 如何归类。值得关注的研究员 %%
+
+```
 
 文件名：`@{{citekey}}` （不用 title，因为有的时候 title 包含非法字符，不能用于文件名，如冒号）
 
-在 front-matter 中添加 alias=title，方便其他地方提到 title 时可以提示链接/方便主动创建链接
+在 front-matter 中添加 alias=title，方便其他地方提到 title 时可以提示链接/方便主动创建链接，如果论文有别名，如 BERT，可以手动添加额外 alias
 
 ### obsidian-proxy-github
 
