@@ -116,7 +116,7 @@ aliases: ["{{title}}", "{{title}}, {{year}}"]
 - **Year**: {{year}}
 - **URL**: {{URL}}
 - [**Zotero**]({{zoteroSelectURI}})
-- [**ReadPaper**](link to https://readpaper.com)
+- [**TODO ReadPaper**](link to https://readpaper.com)
 
 ## 论文试图解决的问题
 
