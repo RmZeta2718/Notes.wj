@@ -68,6 +68,12 @@ aliases: ["Language Models are Few-Shot Learners", "Language Models are Few-Shot
 - 如果有很多训练数据怎么办？并不能全部放进 prompt 里
 - 训练样本每次都需要作为prompt输入，没有办法保存
 
+- 如果是背下来的，怎么让大模型回忆起这些数据？in-context是唯一的做法吗？
+- in-context learning到底学了还是没学？
+- 
+
+给不同的few-shot example，虽然性能比zero-shot大幅提升，但是鲁棒性和稳定性很差。
+
 ## 相关研究
 
 %% 如何归类。值得关注的研究员 %%
