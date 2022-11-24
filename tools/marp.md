@@ -4,6 +4,22 @@ https://marp.app/
 
 基于 Markdown 生成 slides
 
+### My [Front-matter](https://marpit.marp.app/directives?id=front-matter)
+
+```yaml
+---
+marp: true
+style: |
+    blockquote {
+        border-top: 0.1em dashed #555;
+        border-left: none;
+        font-size: 60%;
+        margin-top: auto;  /* put to bottom */
+    }
+paginate: true
+---
+```
+
 ### 图片
 
 https://marpit.marp.app/image-syntax
@@ -12,15 +28,19 @@ https://marpit.marp.app/image-syntax
 ![bg right](./link.png)
 ```
 
+https://stackoverflow.com/questions/47216198/get-marp-to-center-some-content-horizontally-and-vertically
+
 ### 脚注
 
-暂无解决方案
+不会有官方支持： https://github.com/marp-team/marp/discussions/150 ，但是这个讨论中提供了 workaround：用引用块（`>`）+自定义样式
 
-不会有官方支持： https://github.com/marp-team/marp/discussions/150
+在 marp 的 md 文档开头（Front-matter）加入 `blockquote` 的 CSS style，全局 blockquote 都会变成这种样式。
 
-hack的方式还没试过： https://github.com/yhatt/marp/issues/2
+> 小 trick：如果一页里只有一张 bg 图 `![bg](...) ` （即无正文），这时引用块会居中，而不是置于底部。可以用 `<br>` 作为占位符，填充正文，从而让引用块置底。
 
-https://stackoverflow.com/questions/47216198/get-marp-to-center-some-content-horizontally-and-vertically
+### Tips
+
+https://www.hashbangcode.com/article/seven-tips-getting-most-out-marp
 
 ### vscode 插件
 
