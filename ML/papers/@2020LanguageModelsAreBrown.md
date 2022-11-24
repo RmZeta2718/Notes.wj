@@ -30,7 +30,7 @@ aliases: ["Language Models are Few-Shot Learners", "Language Models are Few-Shot
 能够生成逼真的文本
 
 提出概念：
-- meta learning：训练出一个真的具有很强泛化性能的模型，而不依赖后续微调（和原来的这个词的含义不太一样）
+- meta learning（和原来的这个词的含义不太一样）：在阅读了足够多的无监督文本之后，语言模型可以具有一定的模式识别的能力，即训练出一个真的具有很强泛化性能的模型，而不依赖后续微调
 - in-context learning：不依赖于更新模型，在 prompt 的上下文里进行学习。
 
 ## 论文提供的关键元素、关键设计
@@ -67,6 +67,7 @@ aliases: ["Language Models are Few-Shot Learners", "Language Models are Few-Shot
 李沐：few-shot 的缺点：
 - 如果有很多训练数据怎么办？并不能全部放进 prompt 里
 - 训练样本每次都需要作为prompt输入，没有办法保存
+- LM-BFF：输入长度是有限的，训练数据很多怎么办？
 
 - 如果是背下来的，怎么让大模型回忆起这些数据？in-context是唯一的做法吗？
 - in-context learning到底学了还是没学？
