@@ -62,29 +62,35 @@ query 和 key 的维度是 $d_k$ ，value 的维度是 $d_v$ （虽然实际上 
 
 有 $n$ 个 query，$m$ 个 key-value 对
 
-- 对于每一个 $q$ 和 $k$ 做点乘： $q^Tk$（$shape=1\times1$）
-    - 向量化：$n$ 个 query 和 $m$ 个 key 放在一起就是 $Q^T_{d_k\times n}K_{d_k\times m}$（$shape=n\times m$）
-- 除以 $\sqrt{d_k}$ 归一化： $\dfrac{q^Tk}{\sqrt{d_k}}$（$shape=1\times1$）
-    - 点积的结果会比较大，导致 softmax 的结果接近 1，于是梯度很小。所以要归一化
-- 对每一个 query softmax：$\mathrm{softmax}(\dfrac{Q^TK}{\sqrt{d_k}})$（$shape=n\times m$）
-    - 将上式记为 $W$ ，$W$ 的每一行是一个 query 的所有权重，且有 $\sum_{j=1}^mW_{ij}=1$，即每行求和为 1
-- 按第 $i$ 个 query 的权重 $W_i$ 对 $m$ 个 value （$V=\begin{bmatrix} | & | & | & |\\ v_1 & v_2 & \cdots & v_m\\ | & | & | & |\\\end{bmatrix}$）求加权和：$\sum_{j=1}^mW_{ij}v_j=VW_i^T$ （$W_i$ 是 $W$ 的第 $i$ 行）
-    - 向量化：$n$ 个 query 放在一起， $V_{d_v\times m}W_{n\times m}^T$
-    - 即 $\mathrm{Attention}(Q_{d_k\times n},K_{d_k \times m},V_{d_v \times m})=V\mathrm{softmax}(\dfrac{Q^TK}{\sqrt{d_k}})^T$（$shape=d_v\times n$）
+> 线性代数中，向量可以分为行模式和列模式【这里需要一个更专业的术语以及补充解释】，对于行模式，线性变换是矩阵右乘向量；对于列模式，线性变换是矩阵左乘向量。一般在线性代数中偏好列模式，但是作者在本文采用行模式叙述（原因未知，可能是个人偏好）。下面的所有向量都是行向量。
 
-> 这里的记号和论文中差一个转置（所有矩阵行列互换），因为我认为特征作为列向量、多个特征横向排列，这种矩阵排布更容易理解（列向量的拼接）
+- 对于每一个 $q$ 和 $k$ 做点乘： $qk^T\in\mathbb R^{1\times1}$
+    - 向量化：$n$ 个 query 和 $m$ 个 key 放在一起就是 $Q_{n\times d_k}K_{m\times d_k}^T\in \mathbb R^{n\times m}$
+- 除以 $\sqrt{d_k}$ 归一化： $\dfrac{qk^T}{\sqrt{d_k}}\in\mathbb R^{1\times 1}$
+    - 点积的结果会比较大，导致 softmax 的结果接近 1，于是梯度很小。所以要归一化
+- 对每一个 query softmax（按query，按行）：$\mathrm{softmax}(\dfrac{QK^T}{\sqrt{d_k}})\in\mathbb R^{n\times m}$
+    - 将上式记为 $W$ ，$W$ 的每一行是一个 query 的归一化权重（$\sum_{j=1}^mW_{ij}=1$，即每行求和为 1）
+- 按第 $i$ 个 query 的权重 $W_i$ 对 $m$ 个 value （$V=\begin{bmatrix} -  & v_1 & -\\ - & v_2 & -\\ - & \cdots & -\\ - & v_m & -\\\end{bmatrix}$）求加权和：$\sum_{j=1}^mW_{ij}v_j=W_iV\in\mathbb R^{1\times d_v}$ （$W_i$ 是 $W$ 的第 $i$ 行）
+    - 向量化：$n$ 个 query 放在一起， $W_{n\times m}V_{m\times d_v}\in \mathbb R^{n\times d_v}$
+    - 即 $\mathrm{Attention}(Q_{n\times d_k},K_{m\times d_k},V_{m\times d_v})=\mathrm{softmax}(\dfrac{QK^T}{\sqrt{d_k}})V\in \mathbb R^{n\times d_v}$
+
+$q,k,v$ 之间的约束关系如下：
+$$
+\underbrace{\overset{\begin{matrix} n\\ \ \end{matrix}}{q} \quad k}_{d_k} \quad \underset{\begin{matrix} \ \\ d_v \end{matrix}}{}\!\!\!\!\!\!\!\!\!\!\!\!\!\overbrace{k\quad v}^{m}
+$$
+
 
 #### Multi-head
 
 只用 [[#Scaled Dot-Product Attention]] 是没有参数可以学的。因此引入投影矩阵，将 $Q,K,V$ 分别投影到 $h$ 个子空间，Attention 之后合并再投影。
 
-- 对第 $i$ 个 head：$\mathrm{head_i=Attention}(W^Q_{d_k\times d_{model}}Q_{d_{model}\times n},W^K_{d_k\times d_{model}}K_{d_{model}\times m},W^V_{d_v\times d_{model}}V_{d_{model}\times m})$（$shape=d_v\times n$）
-- 拼接： $\mathrm{head}_{}=\mathrm{Concat(head_1,\cdots,head_h)}$（$shape=h\cdot d_v\times n$）
-- 最后再投影： $\mathrm{MultiHead}(Q_{d_{model}\times n},K_{d_{model}\times m},V_{d_{model}\times m})=W^O_{d_{model}\times h\cdot d_v}\mathrm{head}_{h\cdot d_v\times n}$（$shape=d_{model}\times n$）
+- 对第 $i$ 个 head：$\mathrm{head_i=Attention}(Q_{n\times d_{model}}W^Q_{d_{model}\times d_k},K_{m\times d_{model}}W^K_{d_{model}\times d_k},V_{m\times d_{model}}W^V_{d_{model}\times d_v})\in \mathbb R^{n\times d_v}$
+- 拼接： $\mathrm{head}=\mathrm{Concat(head_1,\cdots,head_h)}\in\mathbb R^{n\times d_v\cdot h}$
+- 最后再投影： $\mathrm{MultiHead}(Q_{n\times d_{model}},K_{m\times d_{model}},V_{m\times d_{model}})=\mathrm{head}_{n\times d_v\cdot h}W^O_{d_v\cdot h\times d_{model}}\in\mathbb R^{n\times d_{model}}$
 
-> 这里每个 head 的投影部分可以并行（用矩阵表达）
+> 这里每个 head 的投影部分可以并行（用矩阵表达）(TODO)
 
-$h=8,d_k=d_v=d_{model}/h=64$
+$h=8,d_k=d_v=\dfrac{d_{model}}{h}=64$
 
 #### Mask
 
