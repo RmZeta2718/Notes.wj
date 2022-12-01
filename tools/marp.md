@@ -17,6 +17,7 @@ style: |
         margin-top: auto;  /* put to bottom */
     }
 paginate: true
+headingDivider: 1  # heading level 1 is ---
 ---
 ```
 
