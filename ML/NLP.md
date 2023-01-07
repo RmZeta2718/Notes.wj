@@ -1,7 +1,5 @@
 # 自然语言处理
 
-
-
 ## 序列模型
 
 > eg. speech recognition, music generation, sentiment classification, DNA sequence analysis, machine translation, video activity recognition, name entity recognition(NER)
@@ -29,7 +27,19 @@ x^{\langle t\rangle}
 \end{align}
 $$
 
-> 通常， $g_a$ 取 tanh或ReLU； $g_y$ 由 $y$ 的性质决定，如二分类可用 Sigmoid
+> 通常， $g_a$ 取 tanh 或 ReLU； $g_y$ 由 $y$ 的性质决定，如二分类可用 Sigmoid
+
+### pros and cons of RNN
+
+pros:
+- 可以处理任意长度的序列
+- 模型大小不随序列长度变化
+- 第 $t$ 个词的计算（理论上）可以用到前面的词的信息
+- 处理每个词用的是相同的参数，即对输入序列的处理是对称的
+
+cons:
+- 计算效率低，因为是 sequential 处理
+- 实践中无法有效利用前面的词的信息，因为存在梯度消失/爆炸的问题
 
 ### GRU, Gated Recurrent Unit
 
@@ -37,25 +47,25 @@ $$
 
  $c$ : 记忆单元 memory cell
 
- $c^{\langle 0\rangle}=\vec 0$ 
+ $c^{\langle 0\rangle}=\vec 0$
 
- $c^{\langle t-1\rangle}=a^{\langle t-1\rangle}$ 
+ $c^{\langle t-1\rangle}=a^{\langle t-1\rangle}$
 
  $\Gamma_r=\sigma(w_r\begin{bmatrix}c^{\langle t-1\rangle} \\x^{\langle t\rangle}\end{bmatrix}+b_r)$ 相关关系
 
- $c^{\langle t\rangle}$ 的候选值 $\tilde c^{\langle t\rangle}=\tanh(\Gamma_r*w_c\begin{bmatrix}c^{\langle t-1\rangle} \\x^{\langle t\rangle}\end{bmatrix}+b_c)$ 
+ $c^{\langle t\rangle}$ 的候选值 $\tilde c^{\langle t\rangle}=\tanh(\Gamma_r*w_c\begin{bmatrix}c^{\langle t-1\rangle} \\x^{\langle t\rangle}\end{bmatrix}+b_c)$
 
  $\Gamma_u=\sigma(w_u\begin{bmatrix}c^{\langle t-1\rangle} \\x^{\langle t\rangle}\end{bmatrix}+b_u)$ 更新开关（update gate）
 
- $c^{\langle t\rangle}=\Gamma_u*\tilde c^{\langle t\rangle}+(1-\Gamma_u)*c^{\langle t-1\rangle}$ 
+ $c^{\langle t\rangle}=\Gamma_u*\tilde c^{\langle t\rangle}+(1-\Gamma_u)*c^{\langle t-1\rangle}$
 
- $a^{\langle t\rangle}=c^{\langle t\rangle}$ 
+ $a^{\langle t\rangle}=c^{\langle t\rangle}$
 
-> $a^{\langle t\rangle}，c^{\langle t\rangle},\Gamma_u$ shape相同， $*$ 表示按位相乘
+> $a^{\langle t\rangle}，c^{\langle t\rangle},\Gamma_u$ shape 相同， $*$ 表示按位相乘
 
 ### LSTM, Long Short Term Memory units
 
- $\tilde c^{\langle t\rangle}=\tanh(w_c\begin{bmatrix}c^{\langle t-1\rangle} \\x^{\langle \rangle}\end{bmatrix}+b_c)$ 
+ $\tilde c^{\langle t\rangle}=\tanh(w_c\begin{bmatrix}c^{\langle t-1\rangle} \\x^{\langle \rangle}\end{bmatrix}+b_c)$
 
  $\Gamma_u=\sigma(w_u\begin{bmatrix}c^{\langle t-1\rangle} \\x^{\langle t\rangle}\end{bmatrix}+b_u)$ 更新开关（update gate）
 
@@ -63,21 +73,15 @@ $$
 
  $\Gamma_o=\sigma(w_o\begin{bmatrix}c^{\langle t-1\rangle} \\x^{\langle t\rangle}\end{bmatrix}+b_o)$ 输出开关（output gate）
 
- $c^{\langle t\rangle}=\Gamma_u*\tilde c^{\langle t\rangle}+\Gamma_f*c^{\langle t-1\rangle}$ 
+ $c^{\langle t\rangle}=\Gamma_u*\tilde c^{\langle t\rangle}+\Gamma_f*c^{\langle t-1\rangle}$
 
- $a^{\langle t\rangle}=\Gamma_o*c^{\langle t\rangle}$ 
+ $a^{\langle t\rangle}=\Gamma_o*c^{\langle t\rangle}$
 
 ### BRNN Bidirectional
 
-
-
 ### Deep RNN
 
-沿 $y$ 方向堆叠RNN
-
-### pros and cons of RNN
-
-TODO
+沿 $y$ 方向堆叠 RNN
 
 ## 词表示 Word Representation
 
@@ -85,9 +89,9 @@ TODO
 
 对于词表 $V$ ，用 $\mathbb{R}^{|V|}$ 的基向量表示所有单词
 
-### 基于SVD的方法
+### 基于 SVD 的方法
 
-找出某个矩阵 $X$ ，然后进行SVD分解， $X=U\Sigma V^T$ ，取 $U$ 的每一行作为 word embedding，从而达到降维的效果。
+找出某个矩阵 $X$ ，然后进行 SVD 分解， $X=U\Sigma V^T$ ，取 $U$ 的每一行作为 word embedding，从而达到降维的效果。
 
 #### Word-Document Matrix
 
@@ -99,13 +103,13 @@ TODO
 
  $X\in \mathbb{R}^{|V|\times|V|}$ 表示每个单词的周围一个范围内有多少其他单词
 
-对 $X$ SVD分解后，取前若干维作为word embedding
+对 $X$ SVD 分解后，取前若干维作为 word embedding
 
 问题：
 
 - 加入新单词导致 $X$ 维度变化
--  $X$ 稀疏且庞大
-- SVD分解是二次方复杂度
+- $X$ 稀疏且庞大
+- SVD 分解是二次方复杂度
 
 一些改进措施：
 
@@ -121,11 +125,11 @@ TODO
 
 一些注解
 
-- Word2vec是一种Bag of words model——与位置无关
-- 词嵌入用于类比：man-woman : king-？ $\underset{w}{\arg\max\,}\mathrm{sim}(e_w,e_{\mathrm{king}}-e_{\mathrm{man}}+e_{\mathrm{woman}})$ 
+- Word2vec 是一种 Bag of words model——与位置无关
+- 词嵌入用于类比：man-woman : king-？ $\underset{w}{\arg\max\,}\mathrm{sim}(e_w,e_{\mathrm{king}}-e_{\mathrm{man}}+e_{\mathrm{woman}})$
 - 对于多义词也可以很好地表示
 - 同义词和反义词都在类似的语境中出现，因此基于上下文预测的方式无法很好地区分反义词
-- 可视化方法：t-SNE算法投影到二维
+- 可视化方法：t-SNE 算法投影到二维
 
 #### word2vec: Continuous Bag of Words Model (CBOW)
 
@@ -133,24 +137,24 @@ TODO
 
 Notations：
 
--  $w^{\langle i\rangle},w_i$ ：分别表示输入序列中的第 $i$ 个单词，和词表中的第 $i$ 个单词。（假设序列中第 $i$ 个单词在词表中的下标是 $j$ ，则 $w^{\langle i\rangle}=w_j$ ）
--  $n$ ：词向量维度，超参数
--  $\mathcal{V} \in \mathbb{R}^{n \times|V|}$ ：表示输入的词向量矩阵，即作为上下文时的词向量
--  $\mathcal{U} \in \mathbb{R}^{|V|\times n}$ ：表示输出的词向量矩阵，即作为中心词时的词向量
--  $u^{\langle i\rangle},u_i$ ：同 $w^{\langle i\rangle},w_i$ 
+- $w^{\langle i\rangle},w_i$ ：分别表示输入序列中的第 $i$ 个单词，和词表中的第 $i$ 个单词。（假设序列中第 $i$ 个单词在词表中的下标是 $j$ ，则 $w^{\langle i\rangle}=w_j$ ）
+- $n$ ：词向量维度，超参数
+- $\mathcal{V} \in \mathbb{R}^{n \times|V|}$ ：表示输入的词向量矩阵，即作为上下文时的词向量
+- $\mathcal{U} \in \mathbb{R}^{|V|\times n}$ ：表示输出的词向量矩阵，即作为中心词时的词向量
+- $u^{\langle i\rangle},u_i$ ：同 $w^{\langle i\rangle},w_i$
 
--  $c$ ：中心词在序列中的位置
--  $m$ ：上下文窗口半径，即选取 $[c-m,c+m]$ 范围内的单词，即
+- $c$ ：中心词在序列中的位置
+- $m$ ：上下文窗口半径，即选取 $[c-m,c+m]$ 范围内的单词，即
 
-输入上下文的词表示： $(v^{\langle c-m\rangle},\cdots,v^{\langle c-1\rangle},v^{\langle c+1\rangle},\cdots,v^{\langle c+m\rangle})$ 
+输入上下文的词表示： $(v^{\langle c-m\rangle},\cdots,v^{\langle c-1\rangle},v^{\langle c+1\rangle},\cdots,v^{\langle c+m\rangle})$
 
-这些词向量的平均值记为 $\hat v=\dfrac{v^{\langle c-m\rangle}+\cdots+v^{\langle c-1\rangle}+v^{\langle c+1\rangle}+\cdots+v^{\langle c+m\rangle}}{2m}$ 
+这些词向量的平均值记为 $\hat v=\dfrac{v^{\langle c-m\rangle}+\cdots+v^{\langle c-1\rangle}+v^{\langle c+1\rangle}+\cdots+v^{\langle c+m\rangle}}{2m}$
 
-对于单词 $i,j$ ，相似度通过点积计算，即 $u_i^Tv_j$ ，将所有输出单词的词向量放在一起，得到评分向量： $z=\mathcal U\hat v\in\mathbb R^{|V|}$ 
+对于单词 $i,j$ ，相似度通过点积计算，即 $u_i^Tv_j$ ，将所有输出单词的词向量放在一起，得到评分向量： $z=\mathcal U\hat v\in\mathbb R^{|V|}$
 
-通过softmax将评分转化为概率，即输出 $\hat y=\text{softmax}(z)\in\mathbb R^{|V|}$ ，表示每个单词是中心词的概率，而ground truth是真实中心词的one hot表示
+通过 softmax 将评分转化为概率，即输出 $\hat y=\text{softmax}(z)\in\mathbb R^{|V|}$ ，表示每个单词是中心词的概率，而 ground truth 是真实中心词的 one hot 表示
 
-损失函数取交叉熵 $J(\hat y,y)=H(\hat y,y)=-\sum_{j=1}^{|V|}y_j\log(\hat y_j)$ ，由于 $y$ 是中心词的one hot表示，假设中心词在词表的下标是 $i$ （只有 $y_i=1$ ），于是
+损失函数取交叉熵 $J(\hat y,y)=H(\hat y,y)=-\sum_{j=1}^{|V|}y_j\log(\hat y_j)$ ，由于 $y$ 是中心词的 one hot 表示，假设中心词在词表的下标是 $i$ （只有 $y_i=1$ ），于是
 $$
 \begin{align}
 J(\hat y,y)&=-\log(\hat y_i)\qquad=-\log P(u^{\langle c\rangle}|v^{\langle c-m\rangle},\cdots,v^{\langle c-1\rangle},v^{\langle c+1\rangle},\cdots,v^{\langle c+m\rangle})\\
@@ -160,20 +164,19 @@ J(\hat y,y)&=-\log(\hat y_i)\qquad=-\log P(u^{\langle c\rangle}|v^{\langle c-m\r
 \end{align}
 $$
 
-
 #### word2vec: Skip-Gram Model
 
-类似CBOW，只是反过来
+类似 CBOW，只是反过来
 
 任务：根据中心词预测上下文，学习输入输出的词表示（学习两个词表示）
 
 Notations:
 
-- 同CBOW，不同点如下：
+- 同 CBOW，不同点如下：
 - $\mathcal{V} \in \mathbb{R}^{n \times|V|}$ 表示中心词（同样是输入的词向量矩阵）
 - $\mathcal{U} \in \mathbb{R}^{|V|\times n}$ 表示上下文
 
-评分向量 $z=\mathcal Uv^{\langle c\rangle}\in\mathbb R^{|V|}$ ，转化为概率： $\hat y=\text{softmax}(z)\in\mathbb R^{|V|}$ ，即对于单词 $w_i$ ，其在 $w^{\langle c\rangle}$ 周围 $m$ 范围内出现的概率 $P(u_i|v^{\langle c\rangle})=\hat y_i$ 
+评分向量 $z=\mathcal Uv^{\langle c\rangle}\in\mathbb R^{|V|}$ ，转化为概率： $\hat y=\text{softmax}(z)\in\mathbb R^{|V|}$ ，即对于单词 $w_i$ ，其在 $w^{\langle c\rangle}$ 周围 $m$ 范围内出现的概率 $P(u_i|v^{\langle c\rangle})=\hat y_i$
 
 对于某一个中心词 $w^{\langle c\rangle}$ ，似然函数表达为：
 $$
@@ -199,7 +202,7 @@ $$
 注：
 
 - 为了简化求导，每个单词有两个词向量 $v_w,u_w$ ，（通常）最终结果取两者平均值。
--  $J_c=-\sum_{\substack{-m \leq j \leq m \\ j \neq 0}} \log P(u^{\langle c+j\rangle}|v^{\langle c\rangle})=\sum_{\substack{-m \leq j \leq m \\ j \neq 0}} H(\hat y,y^{\langle c+j\rangle})$ ，概率向量 $\hat y$ 和one-hot向量 $y^{\langle c+j\rangle}$ 的交叉熵就是负对数似然。所以损失函数也可以看做交叉熵。
+- $J_c=-\sum_{\substack{-m \leq j \leq m \\ j \neq 0}} \log P(u^{\langle c+j\rangle}|v^{\langle c\rangle})=\sum_{\substack{-m \leq j \leq m \\ j \neq 0}} H(\hat y,y^{\langle c+j\rangle})$ ，概率向量 $\hat y$ 和 one-hot 向量 $y^{\langle c+j\rangle}$ 的交叉熵就是负对数似然。所以损失函数也可以看做交叉熵。
 - 反向传播的结果：
 
 $$
@@ -213,65 +216,88 @@ $$
 
 Distributed Representations of Words and Phrases and their Compositionality
 
-$\sum_{w\in V}$ 代价较大，尝试近似：从词表中随机取 $K$ 个单词，采样的分布是 $P_n(w)$ ，一般认为较好的分布是Unigram的 $3/4$ 次方（放大罕见词的概率）。
-
+$\sum_{w\in V}$ 代价较大，尝试近似：从词表中随机取 $K$ 个单词，采样的分布是 $P_n(w)$ ，一般认为较好的分布是 Unigram 的 $3/4$ 次方（放大罕见词的概率）。
 
 ## Seq2Seq
 
-Beam search
+### 应用
+
+- Translation: source language -> target language
+- Summarization: long text -> short text
+- Dialogue: previous utterances -> next utterance
+- Parsing: input text -> output parse as sequence
+- Code generation: natural language -> programming language
+
+### Beam search
+
+维护 $k$ 个最好的结果（beam width）
 
 ### BLEU
 
 存在多个可选的输出时（如机器翻译）使用的评价指标，越大越好
 
-n-gram上的Bleu score:
+n-gram precision:
 $$
 p_n=\dfrac{\sum\limits_{\text{n-grams}\in\hat y}\mathrm{Count_clip}(\text{n-gram})}{\sum\limits_{\text{n-grams}\in\hat y}\mathrm{Count}(\text{n-gram})}
 $$
-
 
 Combined Bleu score:
 $$
 \mathrm{BP}\cdot\exp(\dfrac14\sum_{n=1}^4p_n)
 $$
-BP指brevity penalty，用于惩罚短句子
+BP 指 brevity penalty，用于惩罚短句子
 $$
 \mathrm{BP}=\begin{cases}
 1 & \text{if } \hat T>T^* \\
 \exp(1-\dfrac{\hat T}{T^*}) &\text { otherwise }
 \end{cases}
 $$
- $\hat T,T^*$ 分别指模型预测的句子长度和ground truth的句子长度
+ $\hat T,T^*$ 分别指模型预测的句子长度和 ground truth 的句子长度
+
+BLEU score 不是完美的：如果某个翻译离 ground truth 太远（n-gram 重叠率低），就会分数较低
 
 ## 语言模型 Language Model
 
 ### 定义
 
-输入：序列，输出：该序列存在的概率，即 $P(w_1,\cdots,w_n)$ 
+输入：序列，输出：该序列存在的概率，即 $P(w_1,\cdots,w_T)$
 
-基于条件概率直接展开： $P(w_1,\cdots,w_n)=P(w_1)P(w_2|w_1)\cdots P(w_n|w_1w_2\cdots w_{n-1})$ 
+基于条件概率直接展开： $P(w_1,\cdots,w_T)=P(w_1)P(w_2|w_1)\cdots P(w_T|w_1w_2\cdots w_{T-1})$
 
-应用 $N-1$ 阶马尔科夫假设得到 N-gram 模型
+#### n-gram 语言模型
 
-Unigram model：假设每个单词独立，即 $P(w_{1}, w_{2}, \cdots, w_{n})=\prod_{i=1}^{n} P(w_{i})$ 
+应用 $N-1$ 阶马尔科夫假设得到 N-gram 模型：
 
-Bigram model：仅考虑连续两个单词的相关性，即 $P(w_{1}, w_{2}, \cdots, w_{n})=P(w_1)\cdot\prod_{i=2}^{n} P(w_{i}|w_{i-1})$ 
+$$P\left(w_{1}, \ldots, w_{T}\right)=\prod_{i=1}^T P\left(w_{i} \mid w_{1}, \ldots, w_{i-1}\right) \approx \prod_{i=1}^T P\left(w_{i} \mid w_{i-(n-1)}, \ldots, w_{i-1}\right)$$
 
-Trigram model： $P(w_{1}, w_{2}, \cdots, w_{n})=P(w_1)P(w_2|w_1)\cdot\prod_{i=3}^{n} P(w_{i}|w_{i-1},w_{i-2})$ 
+- Unigram model：假设每个单词独立，即 $P(w_{1}, w_{2}, \cdots, w_{T})=\prod_{i=1}^{T} P(w_{i})$
+- Bigram model：仅考虑连续两个单词的相关性，即 $P(w_{1}, w_{2}, \cdots, w_{T})=P(w_1)\cdot\prod_{i=2}^{T} P(w_{i}|w_{i-1})$ ，其中 $p\left(w_{i} | w_{i-1}\right)=\frac{\operatorname{count}\left(w_{i-1}, w_{i}\right)}{\operatorname{count}\left(w_{i-1}\right)}$
+- Trigram model： $P(w_{1}, w_{2}, \cdots, w_{T})=P(w_1)P(w_2|w_1)\cdot\prod_{i=3}^{T} P(w_{i}|w_{i-1},w_{i-2})$
 
 ### 评估
 
 #### Perplexity
 
-> 困惑度
+> 困惑度（越小越好）
 
-越小越好
+Inverse probability of corpus (according to LM), normalized by number of words
 
 $$
-\text{Perplexity}=\sqrt[n]{\dfrac1{P(w_1,\cdots,w_n)}}=\exp({\dfrac1n\log P(w_1,\cdots,w_n)})
+\text{Perplexity}=\sqrt[T]{\dfrac1{P(w_1,\cdots,w_T)}}=\exp(-{\dfrac1T\log P(w_1,\cdots,w_T)})
 $$
 
-TODO: 如何理解困惑度
+如何理解困惑度：如果 $\text{Perplexity}=53$，那么相当于你对下一个词的不确定度是一个 53 面的骰子
+
+困惑度最小值估计在 20 左右（by [CS224N](https://www.bilibili.com/video/BV18Y411p79k/?p=6&share_source=copy_web&vd_source=ff9df13d97e77634f0683a5b6f354918&t=1662) )
+
+困惑度等价于指数交叉熵损失（CEL）：
+
+$$
+\begin{align}
+&J(\theta)=-{\dfrac1T\log P(w_1,\cdots,w_T)}\\
+&\text{Perplexity}=\exp(J(\theta))
+\end{align}
+$$
 
 ### 神经语言模型 NLM
 
@@ -279,9 +305,9 @@ Word2vect，GloVe，Elmo，Bert
 
 ## 注意力机制
 
- 机器翻译为例： $t,t'$ 分别是输出和输入句子的下标， $s^{\langle t\rangle},a^{\langle t\rangle}$ 分别是输出和输入RNN的激活值。
+ 机器翻译为例： $t,t'$ 分别是输出和输入句子的下标， $s^{\langle t\rangle},a^{\langle t\rangle}$ 分别是输出和输入 RNN 的激活值。
 
- $\alpha^{\langle t,t'\rangle}$ 表示生成 $y^{\langle t\rangle}$ 时，对 $a^{\langle t'\rangle}$ 的注意力，用softmax计算
+ $\alpha^{\langle t,t'\rangle}$ 表示生成 $y^{\langle t\rangle}$ 时，对 $a^{\langle t'\rangle}$ 的注意力，用 softmax 计算
 $$
 \alpha^{\langle t,t'\rangle}=\dfrac{\exp(e^{\langle t,t'\rangle})}{\sum_{t'=1}^{T_x}\exp(e^{\langle t,t'\rangle})}
 $$
@@ -298,20 +324,34 @@ $$
 ### 自注意力机制 Self-Attention
 
 Intuition:
-
 - Attention: idea
+    - Attention is a way to obtain a fixed-size representation of an arbitrary set of representations (the values), dependent on some other representation (the query).
 - CNN: parallel
 
 Self-Attention=Attention+CNN
 
-第 $i$ 个token $x^{\langle i\rangle}$ 的Attention表达为：
+第 $i$ 个 token $x^{\langle i\rangle}$ 的 Attention 表达为：
 $$
 A^{\langle i\rangle}=A(q^{\langle i\rangle}, K, V)=\sum_{i} \frac{\exp \left(q^{\langle i\rangle} \cdot k^{\langle i\rangle}\right)}{\sum_{j} \exp \left(q^{\langle i\rangle} \cdot k^{\langle j\rangle}\right)} v^{\langle i\rangle}
 $$
-其中， $q^{\langle i\rangle}=W^Q\cdot x^{\langle i\rangle},k^{\langle i\rangle}=W^K\cdot x^{\langle i\rangle},v^{\langle i\rangle}=W^V\cdot x^{\langle i\rangle}$ 
+其中， $q^{\langle i\rangle}=W^Q\cdot x^{\langle i\rangle},k^{\langle i\rangle}=W^K\cdot x^{\langle i\rangle},v^{\langle i\rangle}=W^V\cdot x^{\langle i\rangle}$
 
-向量化，对所有token同时计算，也叫做Scaled dot-product attention：
+向量化，对所有 token 同时计算，也叫做 Scaled dot-product attention：
 $$
 \mathrm{Attention}(Q, K, V)=\mathrm{softmax}\left(\frac{Q K^{T}}{\sqrt{d_{k}}}\right) V
 $$
-Attention重复做若干次，则为Multihead Attention 多头注意力
+Attention 重复做若干次，则为 Multihead Attention 多头注意力
+
+## Machine Translation (MT)
+
+- Out-of-vocabulary words
+- Domain mismatch between train and test data
+- Maintaining context over longer text
+- Low-resource language pairs
+- Failures to accurately capture sentence meaning
+- Pronoun (or zero pronoun) resolution errors
+- Morphological agreement errors
+
+## Data
+
+【【斯坦福 CS224N】(2021|中英) 深度自然语言处理 Natural Language Processing with Deep Learning】 【精准空降到 1:05:37】 https://www.bilibili.com/video/BV18Y411p79k/?p=8&share_source=copy_web&vd_source=ff9df13d97e77634f0683a5b6f354918&t=3937

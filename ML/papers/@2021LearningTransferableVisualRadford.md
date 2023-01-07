@@ -15,7 +15,7 @@ aliases: ["Learning Transferable Visual Models From Natural Language Supervision
 
 %% 是否是新的问题。现状、难点。motivation %%
 
-利用自然语言的监督信号学习一个视觉模型
+利用自然语言的监督信号学习一个视觉感知模型（对比学习）
 > learning perception from supervision contained in natural language
 - NLP从n-gram等复杂模型演变成Transformer等自监督的学习范式，从而能更好的利用丰富的语料资源，为多模态铺平了道路
 
@@ -28,6 +28,8 @@ aliases: ["Learning Transferable Visual Models From Natural Language Supervision
 ## 实验
 
 %% 实现细节、设置。数据集。评估。消融实验 %%
+
+如果完全OOD（out of distribution），那即使是简单的任务也做不好，例如手写数字识别
 
 ## 后续工作
 

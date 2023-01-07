@@ -9,6 +9,7 @@ aliases: ["End-to-End Object Detection with Transformers", "End-to-End Object De
 - **URL**: http://arxiv.org/abs/2005.12872
 - [**Zotero**](zotero://select/items/@2020EndtoEndObjectDetectionCarion)
 - [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4556929152427499521&noteId=1553282941923476224)
+- [bilibili](https://www.bilibili.com/video/BV1GB4y1X72R/)
 
 ## 论文试图解决的问题
 
