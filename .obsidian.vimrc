@@ -12,6 +12,7 @@ nmap k gk
 " unmap to make ctrl+c work as system copy (Windows)
 unmap <C-c>
 iunmap <C-c>
+iunmap <C-v>
 
 " Surround text with [[ ]] to make a wikilink
 " NOTE: must use 'map' and not 'nmap'

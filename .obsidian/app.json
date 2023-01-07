@@ -10,7 +10,7 @@
   "newFileLocation": "current",
   "useMarkdownLinks": false,
   "showUnsupportedFiles": false,
-  "attachmentFolderPath": "./.assets",
+  "attachmentFolderPath": "./assets",
   "showFrontmatter": true,
   "spellcheck": true,
   "pdfExportSettings": {
