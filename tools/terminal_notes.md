@@ -54,3 +54,11 @@ find . -type f -exec dos2unix {} \;
 ```
 
 https://stackoverflow.com/questions/7068179/convert-line-endings-for-whole-directory-tree-git
+
+### nohup
+
+可能不太好？输出没了：
+https://stackoverflow.com/questions/625409/how-do-i-put-an-already-running-process-under-nohup
+
+这个也不太行
+https://github.com/nelhage/reptyr
