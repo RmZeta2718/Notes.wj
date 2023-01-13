@@ -2,7 +2,7 @@
 
 ### checkbox
 
-`ctrl+L` 创建/切换
+`ctrl+shift+C` 创建/切换
 
 - [ ] 1
 
@@ -155,6 +155,10 @@ https://zhuanlan.zhihu.com/p/430538023
 ~~只用到了 `ctrl+1` 这些 headings 快捷键，其他快捷键都关掉了~~
 
 很好，v1.0 已内置
+
+### Underline
+
+残破不堪的 obsidian，为什么这都要插件？为什么不内置？
 
 ### Vimrc Support
 
