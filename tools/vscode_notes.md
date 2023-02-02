@@ -21,7 +21,9 @@ https://www.zhihu.com/question/303850876
 
 modify `C_Cpp.clang_format_fallbackStyle` to `{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}` (and the original value was `Visual Studio` )
 
-### Remote Development
+### Remote
+
+偶然间读了下[官方文档](https://code.visualstudio.com/docs/remote/ssh)，收获不小。
 
 local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地、代码类插件在远程
 

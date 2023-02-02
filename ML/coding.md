@@ -1,87 +1,3 @@
-# Python 环境
-
-## 换源
-
-### conda
-
-清华源：https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
-
-```bash
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
-```
-
-或者直接写在 `~/.condarc` 中，见上文链接
-
-## conda sync
-
-### 直接同步
-
-一般来说虚拟环境在 <u>~/.conda</u> 下
-
-scp 同步
-
-下面的命令可以查看 conda 环境的安装位置
-
-```
-conda info
-conda info -e
-conda env list
-```
-
-### 元数据同步（not tested）
-
-#### conda env
-
-machine1:
-
-```
-conda env export > myenv.yml
-```
-
-machine2:
-
-```
-conda env create -f myenv.yml
-# or
-conda env update -f myenv.yml --prune
-```
-
-https://superuser.com/questions/1578221/synchronize-multiple-anaconda-installations
-
-#### pip env: requirements.txt
-
-导出当前环境依赖：
-
-```bash
-pip list --format=freeze > requirements.txt
-```
-
-或者 https://github.com/bndr/pipreqs ：
-
-```bash
-pipreqs
-```
-
-> `pip freeze` 会导致部分 conda 安装的包无法正常显示 https://stackoverflow.com/a/57845418/17347885
-
-根据 `requirements.txt` 安装依赖：
-
-```bash
-pip install -r requirements.txt
-```
-
-# Python 并发
-
-多进程（进程池）： https://superfastpython.com/processpoolexecutor-in-python/
-
-GIL： https://en.wikipedia.org/wiki/Global_interpreter_lock
-
-GIL 导致 python 解释器是单线程的，任何多线程的 python 程序，本质上是由单线程的 python 解释器在跑，所以任何依赖于 python 字节码的计算都是单线程的。python 多线程的正确应用场景：线程是 IO bound 的，而不是 CPU bound 的（或者说不以 python 字节码为主）
-
-不过，只要用多进程就能规避 GIL 的影响，因为多进程跑了多个 python 解释器。
-
-多线程（线程池）： https://superfastpython.com/threadpoolexecutor-in-python/
-
 # numpy
 
 ## 最佳实践
@@ -161,6 +77,62 @@ https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html
 benchmark by 李沐
 
 https://github.com/mli/transformers-benchmarks
+
+### typing nn.Module
+
+**问题描述（错误方案）**：`nn.Module` 给 `forward` 加 typing，然后通过函数调用的方式（`foo()`）调用该 Module，返回类型的 typing 为 `Any` （pytorch 的内置 Module 就是这样做的，但是等于没做）
+
+```python
+class Foo(nn.Module):
+    def forward(self, param1: torch.Tensor) -> torch.Tensor:
+        print('Foo.forward')
+        return param1
+
+foo = Foo()
+x = foo()  # x: Any
+# x = foo.forward()  # don't do this, although typing works
+```
+
+**解决方案**：复制 `forward` 的 typing，定义 `__call__` ，调用 super 的 call，把所有参数传进去。
+
+https://discuss.pytorch.org/t/adding-typing-to-call-of-nn-module/118295
+
+```python
+class Foo(nn.Module):
+    def __call__(self, param1: torch.Tensor) -> torch.Tensor:
+        return super().__call__(param1)
+
+    def forward(self, param1: torch.Tensor) -> torch.Tensor:
+        print('Foo.forward')
+        return param1
+
+foo = Foo()
+x = foo()  # x: torch.Tensor
+```
+
+**该方法的局限性**：内置 Module 不适用（需要pytorch自己定义 `__call__` ）
+
+> 但是内置 Module 的返回类型比较简单（例如就是 `torch.Tensor`），所以勉强可以接受。只有自己写的 Module 可能需要 typing 复杂类型（例如多个返回值）
+
+**原因**：函数调用本质上调了基类 `nn.Module` 的 `__call__` ，根据源码（<u>torch/nn/modules/module.py</u>），它的返回类型是 `Any`，虽然内部调用了 `forward` ，但是 typing 并不能从代码中推断出 `__call__` 的真实返回类型。所以前面的解决方案就是直接重写子类的 `__call__` 方法，这样就能 typing 了。
+
+```python
+    __call__ : Callable[..., Any] = _call_impl
+```
+
+不过这个方法也不是完美的，`__call__` 的返回类型有报错：type incompatible， [这个 thread](https://github.com/pytorch/pytorch/issues/35566) 有一些分析（主要结论是违反了Liskov substitutability）。不过这里的类型报错不影响使用。
+
+此外，不建议直接调 `forward` ，因为 `__call__` 里还有 hook 等其他处理。
+
+相关内容：
+- [相关issue](https://github.com/pytorch/pytorch/issues?q=is%3Aissue+label%3A%22module%3A+typing%22+call+in%3Atitle)
+- 1.4之后pyi文件没了是因为[inline了](https://github.com/pytorch/pytorch/issues/36915#issuecomment-692999314)
+- [一个proxy trick(works for pycharm and mypy but not vscode)以及关于内置module的讨论](https://github.com/pytorch/pytorch/issues/74746)
+- 我的[提问](https://discuss.pytorch.org/t/how-to-get-correct-typing-from-nn-module-call/171577)
+
+#### 灵异事件
+
+pytorch1.4 有 pyi 文件，内置了 `__call__` trick，但是 pytorch1.12 没有了。不知道是安装方式问题还是其他原因。
 
 # Monitor
 
@@ -261,3 +233,7 @@ $$
 https://blogs.nvidia.com/blog/2020/05/14/tensorfloat-32-precision-format/
 
 TF32 类型：1 位符号位、8 位指数位、10 位尾数位
+
+# 代码框架
+
+[深度学习里面，请问有写train函数的模板吗？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/523869554)

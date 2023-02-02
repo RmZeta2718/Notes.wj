@@ -228,15 +228,46 @@ $\sum_{w\in V}$ 代价较大，尝试近似：从词表中随机取 $K$ 个单�
 - Parsing: input text -> output parse as sequence
 - Code generation: natural language -> programming language
 
-### Beam search
+### Decoding
 
-维护 $k$ 个最好的结果（beam width）
+> 参考 [CS224n](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/slides/cs224n-2021-lecture12-generation.pdf)
 
-### BLEU
+- Exhaustive search: NP-complete
+- Greedy Search: $\hat y_{t}=\underset{w\in V}{\arg\max\ } P(y_t=w | \{y\}_{<t})$ ，容易生成重复的文本
+- Ancestral sampling: 根据当前 LM 的分布采样 $\hat y_{t} \sim P(y_{t}=w | \{y\}_{<t})$ 。
+    - 虽然理论上是渐进精确的（asymptotically exact），但实践中通常性能较差，方差较大
+        - 分布是长尾的
+        - 许多低概率的词是与当前上下文完全无关的。所以没有必要给这些词采样概率
+    - 改进策略：
+        - 选top-k by rank（但是k不好选，不同语境有不同的最优k）
+        - top-p (nucleus) 累计密度到p
+- Beam search: 每个 step $t$ 都维护 $k$ 个最好的结果（beam width）$\mathcal{H}_{t}=\left\{\left(x_{1}^{1}, \ldots, x_{t}^{1}\right), \ldots,\left(x_{1}^{K}, \ldots, x_{t}^{K}\right)\right\}$
+
+### Evaluation
+
+Evaluation vs loss (by [CS224n](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/readings/cs224n-2019-notes06-NMT_seq2seq_attention.pdf) )：本质上loss也是对模型预测结果的一种评估，因此这两个概念容易混淆。Evaluation: a final, summative assessment of your model against some measurement criterion
+
+分类（[CS224n](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/slides/cs224n-2021-lecture12-generation.pdf)）：
+- Content Overlap Metrics: Compute a score that indicates the similarity between generated and gold-standard (human-written) text
+    - N-gram overlap metrics (e.g., BLEU, ROUGE, METEOR, CIDEr, etc.)
+        - 面对open-ended的输出时评估效果较差，如machine translation、summarization、dialogue、story generation
+    - Semantic overlap metrics (e.g., PYRAMID, SPICE, SPIDEr, etc.)
+- Model-based Metrics: Use **learned representations** of words and sentences to compute semantic similarity between generated and reference texts
+- Human Evaluations: Ask humans to evaluate the quality of generated text
+    - slow and expensive, also problems:
+        - inconsistent
+        - illogical
+        - lose concentration
+        - misinterpret your question
+        - can’t always explain why they feel the way they do
+
+#### BLEU
+
+> Bilingual Evaluation Understudy
 
 存在多个可选的输出时（如机器翻译）使用的评价指标，越大越好
 
-n-gram precision:
+n-gram precision（翻译的句子中的 n-gram 有多少也出现在答案句子中，即 precision）:
 $$
 p_n=\dfrac{\sum\limits_{\text{n-grams}\in\hat y}\mathrm{Count_clip}(\text{n-gram})}{\sum\limits_{\text{n-grams}\in\hat y}\mathrm{Count}(\text{n-gram})}
 $$
@@ -247,14 +278,31 @@ $$
 $$
 BP 指 brevity penalty，用于惩罚短句子
 $$
-\mathrm{BP}=\begin{cases}
+\mathrm{BP}=\exp(\min(0,1-\dfrac{T^*}{\hat T}))=\begin{cases}
 1 & \text{if } \hat T>T^* \\
-\exp(1-\dfrac{\hat T}{T^*}) &\text { otherwise }
+\exp(1-\dfrac{T^*}{\hat T}) &\text { otherwise }
 \end{cases}
 $$
- $\hat T,T^*$ 分别指模型预测的句子长度和 ground truth 的句子长度
+ $T^*,\hat T$ 分别指 ground truth 的句子长度和模型翻译的句子长度
 
 BLEU score 不是完美的：如果某个翻译离 ground truth 太远（n-gram 重叠率低），就会分数较低
+
+### Word segmentation
+
+> 参考 [CS224n](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/readings/cs224n-2019-notes06-NMT_seq2seq_attention.pdf)
+
+现实中的词汇数量庞大，导致模型计算最终的词表概率分布的计算开销巨大（$O(|V|)$），总体上应对方案有两个思路：
+- 更快地计算Softmax。但是优化Softmax的方法只能让训练过程加速，因为知道目标词（正样本）是哪个。在测试时，为了预测，仍然需要计算每一个词的概率。
+    - Noise Contrastive Estimation：从负样本中随机采样 $K$ 个单词。于是Softmax的计算代价缩小了 $\dfrac{|V|}{K}$ 
+    - Hierarchical Softmax：把Softmax放到二分树上。
+- 缩小词表大小/更高效地表示单词
+    - Jean et al.: 把训练集分成一些子集，每个子集用自己的小词表，实践中能缩小约10倍。这个方法可以视作一种非均匀采样的NCE，其采样不是均匀分布，而是从这个分布中采样 $Q(y_{t})=\begin{cases}\frac{1}{|V'|}, \text { if } y_{t} \in|V'| \\0, \text { otherwise }\end{cases}$
+    - Byte Pair Encoding: Neural Machine Translation of Rare Words with Subword Units, 2016
+
+#### Byte Pair Encoding
+
+从仅包含字母的词表开始，不断扩充词表，加入频率最高的n-gram pair。不断重复，直到词表大小达到阈值
+
 
 ## 语言模型 Language Model
 
