@@ -53,24 +53,6 @@
       "key": "K"
     }
   ],
-  "outline:open": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "1"
-    }
-  ],
-  "file-explorer:reveal-active-file": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "2"
-    }
-  ],
   "editor:toggle-strikethrough": [
     {
       "modifiers": [
@@ -327,5 +309,23 @@
   ],
   "obsidian-underline:toggle-link-block": [],
   "obsidian-underline:toggle-link-heading": [],
-  "obsidian-underline:toggle-center-tag": []
+  "obsidian-underline:toggle-center-tag": [],
+  "file-explorer:reveal-active-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "1"
+    }
+  ],
+  "outline:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "2"
+    }
+  ]
 }
