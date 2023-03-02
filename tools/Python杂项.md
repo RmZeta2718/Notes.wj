@@ -105,3 +105,17 @@ GIL 导致 python 解释器是单线程的，任何多线程的 python 程序，
 不过，只要用多进程就能规避 GIL 的影响，因为多进程跑了多个 python 解释器。
 
 多线程（线程池）： https://superfastpython.com/threadpoolexecutor-in-python/
+
+## 代码规范
+
+[Google style](https://google.github.io/styleguide/)
+
+一些重点：
+- [Comprehensions & Generator Expressions](https://google.github.io/styleguide/pyguide.html#27-comprehensions--generator-expressions)
+- [Indentation](https://google.github.io/styleguide/pyguide.html#indentation)
+- [type-annotations](https://google.github.io/styleguide/pyguide.html#type-annotations)
+- [Naming](https://google.github.io/styleguide/pyguide.html#316-naming)
+
+## 运算符 -> 函数
+
+[operator — Standard operators as functions — Python 3.11.2 documentation](https://docs.python.org/3/library/operator.html#mapping-operators-to-functions)

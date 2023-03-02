@@ -1,12 +1,28 @@
 # VSCode Notes
 
+### Useful shortcuts
+
+| Command                     | shortcut              |
+| --------------------------- | --------------------- |
+| Trigger Suggest             | Ctrl+Space            |
+| Trigger Parameter Hints     | Ctrl+Shift+Space      |
+| Go Forward/Backward         | [Ctrl+]Alt+Left/Right |
+| Rename Symbol               | F2                      |
+| Go to Next/Previous Problem | F8/Shift+F8           |
+
+> \[\]内的是我修改的快捷键
+
 ### 自动保存
 
 文件--自动保存
 
 ### im-select
 
+[VSCodeVim/Vim: Vim for Visual Studio Code (github.com)](https://github.com/VSCodeVim/Vim/#input-method)
+
 https://www.zhihu.com/question/303850876
+
+目前似乎不支持remote上的切换，只有本地有效。
 
 ### python
 
@@ -17,16 +33,72 @@ https://www.zhihu.com/question/303850876
 
 ### Customize C formatting style
 
-[reference](https://zamhuang.medium.com/vscode-how-to-customize-c-s-coding-style-in-vscode-ad16d87e93bf)
+ [reference](https://zamhuang.medium.com/vscode-how-to-customize-c-s-coding-style-in-vscode-ad16d87e93bf)
 
 modify `C_Cpp.clang_format_fallbackStyle` to `{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}` (and the original value was `Visual Studio` )
 
 ### Remote
 
-偶然间读了下[官方文档](https://code.visualstudio.com/docs/remote/ssh)，收获不小。
+偶然间读了下 [官方文档](https://code.visualstudio.com/docs/remote/ssh) ，收获不小。
+
+#### 插件
 
 local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地、代码类插件在远程
 
-https://code.visualstudio.com/api/advanced-topics/remote-extensions#architecture-and-extension-types
-
 ![](https://code.visualstudio.com/assets/api/advanced-topics/remote-extensions/architecture.png)
+
+ [创建新 remote 时自动安装插件](https://code.visualstudio.com/docs/remote/ssh#_always-installed-extensions)
+
+我的配置：
+
+```json
+{
+    "remote.SSH.defaultExtensions": [
+        "chrisdias.vscode-opennewinstance",
+        "DavidAnson.vscode-markdownlint",
+        "eamodio.gitlens",
+        "formulahendry.code-runner",
+        "mhutchie.git-graph",
+        "ms-python.isort",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "shakram02.bash-beautify",
+        "shd101wyy.markdown-preview-enhanced",
+        "streetsidesoftware.code-spell-checker",
+        "Thinker.sort-json",
+        "yzhang.markdown-all-in-one"
+    ],
+}
+```
+
+ [根据文档](https://code.visualstudio.com/docs/remote/ssh#_ssh-hostspecific-settings) remote 的设置默认采用 local 设置（而不是default settings）
+
+### Extension bisect
+
+无意间发现的一个有趣的功能：通过二分查找寻找出问题的 extension。可能永远用不到。
+
+## settings
+
+用 Sort JSON 插件来排序。vscode 没有自带 settings.json 的排序
+
+### Theme
+
+使用默认的 Dark+主题。做了一点小修改：
+- Python 的 type alias 变量默认是变量颜色，改成了 type 的颜色。
+    - 参考： [Binaryify/OneDark-Pro: Atom's iconic One Dark theme for Visual Studio Code (github.com)](https://github.com/Binaryify/OneDark-Pro#python--pylance-users) （琢磨换主题的时候在README里看到了怎么自己改，于是还是用默认主题了）
+- 函数参数从正体改成斜体（仿照 OneDark）（已删除）
+    - 但是这会导致函数调用时的kwarg也变成斜体（而且不是全部，只有pyi的函数不受影响） [Python Semantic Highlighting of Parameters in Function Calls · Issue #1845 · microsoft/pylance-release (github.com)](https://github.com/microsoft/pylance-release/issues/1845)
+
+```json
+{
+    "editor.semanticTokenColorCustomizations": {
+        "[Default Dark+]": {
+            "rules": {
+                "*.typeHint:python": "#4EC9B0",
+                // "parameter:python": {"fontStyle": "italic"},
+            }
+        }
+    },
+}
+```

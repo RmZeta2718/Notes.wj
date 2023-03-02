@@ -21,10 +21,10 @@ fixed size
 
 <div class="row">
   <div class="column">
-    <img src="a.jpg" style="width:100%">
+    <img src="" style="width:100%">
   </div>
   <div class="column">
-    <img src="b.jpg" style="width:100%">
+    <img src="" style="width:100%">
   </div>
 </div>
 ```

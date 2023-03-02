@@ -14,6 +14,10 @@
 
 最佳实践：TODO
 
+[vscode的sshfs教程](https://code.visualstudio.com/docs/remote/troubleshooting#_using-sshfs-to-access-files-on-your-remote-host) ：best used for single file edits and uploading/downloading content. If you need to use an application that bulk reads/write to many files at once (like a local source control tool), [rsync](https://code.visualstudio.com/docs/remote/troubleshooting#_using-rsync-to-maintain-a-local-copy-of-your-source-code) is a better choice.
+
+[vscode的rsync教程](https://code.visualstudio.com/docs/remote/troubleshooting#_using-rsync-to-maintain-a-local-copy-of-your-source-code) ：if you really need to use multi-file or performance intensive local tools.
+
 sshfs -o uid=$UID gpu2:~/data/data_from_63 data_from_63 -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3
 
 https://github.com/libfuse/sshfs
@@ -62,3 +66,9 @@ https://stackoverflow.com/questions/625409/how-do-i-put-an-already-running-proce
 
 这个也不太行
 https://github.com/nelhage/reptyr
+
+### zsh
+
+vim mode：
+- omz的[vi插件](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode)不够好。目前（23/03/01）不支持 `ci"` 这样的操作，且模式prompt有点问题（不知道是不是bug）
+- 正在用： https://github.com/jeffreytse/zsh-vi-mode
