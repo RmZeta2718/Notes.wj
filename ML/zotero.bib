@@ -17,14 +17,12 @@
   year = {2014},
   month = jun,
   number = {arXiv:1406.2661},
-  eprint = {1406.2661},
-  eprinttype = {arxiv},
-  primaryclass = {cs, stat},
+  eprint = {arXiv:1406.2661},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/1406.2661},
   urldate = {2022-10-24},
   abstract = {We propose a new framework for estimating generative models via an adversarial process, in which we simultaneously train two models: a generative model G that captures the data distribution, and a discriminative model D that estimates the probability that a sample came from the training data rather than G. The training procedure for G is to maximize the probability of D making a mistake. This framework corresponds to a minimax two-player game. In the space of arbitrary functions G and D, a unique solution exists, with G recovering the training data distribution and D equal to 1/2 everywhere. In the case where G and D are defined by multilayer perceptrons, the entire system can be trained with backpropagation. There is no need for any Markov chains or unrolled approximate inference networks during either training or generation of samples. Experiments demonstrate the potential of the framework through qualitative and quantitative evaluation of the generated samples.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\VSCRBY8A\\Goodfellow 等。 - 2014 - Generative Adversarial Networks.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\UV6WZASM\\1406.html}
 }
@@ -43,6 +41,22 @@
   isbn = {978-1-4673-8851-1},
   langid = {english},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\6YV2TW68\\He 等。 - 2016 - Deep Residual Learning for Image Recognition.pdf}
+}
+
+@misc{2016TrainingDeepNetsChen,
+  title = {Training {{Deep Nets}} with {{Sublinear Memory Cost}}},
+  author = {Chen, Tianqi and Xu, Bing and Zhang, Chiyuan and Guestrin, Carlos},
+  year = {2016},
+  month = apr,
+  number = {arXiv:1604.06174},
+  eprint = {arXiv:1604.06174},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/1604.06174},
+  urldate = {2023-03-02},
+  abstract = {We propose a systematic approach to reduce the memory consumption of deep neural network training. Specifically, we design an algorithm that costs O(sqrt(n)) memory to train a n layer network, with only the computational cost of an extra forward pass per mini-batch. As many of the state-of-the-art models hit the upper bound of the GPU memory, our algorithm allows deeper and more complex models to be explored, and helps advance the innovations in deep learning research. We focus on reducing the memory cost to store the intermediate feature maps and gradients during training. Computation graph analysis is used for automatic in-place operation and memory sharing optimizations. We show that it is possible to trade computation for memory - giving a more memory efficient training algorithm with a little extra computation cost. In the extreme case, our analysis also shows that the memory consumption can be reduced to O(log n) with as little as O(n log n) extra cost for forward computation. Our experiments show that we can reduce the memory cost of a 1,000-layer deep residual network from 48G to 7G with only 30 percent additional running time cost on ImageNet problems. Similarly, significant memory cost reduction is observed in training complex recurrent neural networks on very long sequences.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Machine Learning},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\YEGKJYFM\\Chen 等 - 2016 - Training Deep Nets with Sublinear Memory Cost.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\2ISV2I4X\\1604.html}
 }
 
 @inproceedings{2017AttentionAllYouVaswani,
@@ -90,14 +104,12 @@
   year = {2018},
   month = feb,
   number = {arXiv:1710.03740},
-  eprint = {1710.03740},
-  eprinttype = {arxiv},
-  primaryclass = {cs, stat},
+  eprint = {arXiv:1710.03740},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/1710.03740},
   urldate = {2022-10-23},
   abstract = {Deep neural networks have enabled progress in a wide variety of applications. Growing the size of the neural network typically results in improved accuracy. As model sizes grow, the memory and compute requirements for training these models also increases. We introduce a technique to train deep neural networks using half precision floating point numbers. In our technique, weights, activations and gradients are stored in IEEE half-precision format. Half-precision floating numbers have limited numerical range compared to single-precision numbers. We propose two techniques to handle this loss of information. Firstly, we recommend maintaining a single-precision copy of the weights that accumulates the gradients after each optimizer step. This single-precision copy is rounded to half-precision format during training. Secondly, we propose scaling the loss appropriately to handle the loss of information with half-precision gradients. We demonstrate that this approach works for a wide variety of models including convolution neural networks, recurrent neural networks and generative adversarial networks. This technique works for large scale models with more than 100 million parameters trained on large datasets. Using this approach, we can reduce the memory consumption of deep learning models by nearly 2x. In future processors, we can also expect a significant computation speedup using half-precision hardware units.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\GQGJ6V7J\\Micikevicius 等。 - 2018 - Mixed Precision Training.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\X8BGR2QU\\1710.html}
 }
@@ -110,12 +122,11 @@
   month = apr,
   journal = {arXiv:1710.09412 [cs, stat]},
   eprint = {1710.09412},
-  eprinttype = {arxiv},
   primaryclass = {cs, stat},
   url = {http://arxiv.org/abs/1710.09412},
   urldate = {2022-01-02},
   abstract = {Large deep neural networks are powerful, but exhibit undesirable behaviors such as memorization and sensitivity to adversarial examples. In this work, we propose mixup, a simple learning principle to alleviate these issues. In essence, mixup trains a neural network on convex combinations of pairs of examples and their labels. By doing so, mixup regularizes the neural network to favor simple linear behavior in-between training examples. Our experiments on the ImageNet-2012, CIFAR-10, CIFAR-100, Google commands and UCI datasets show that mixup improves the generalization of state-of-the-art neural network architectures. We also find that mixup reduces the memorization of corrupt labels, increases the robustness to adversarial examples, and stabilizes the training of generative adversarial networks.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\4JAT6SE7\\Zhang 等。 - 2018 - mixup Beyond Empirical Risk Minimization.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\BCD7JIYQ\\1710.html}
 }
@@ -142,12 +153,11 @@
   month = may,
   journal = {arXiv:1810.04805 [cs]},
   eprint = {1810.04805},
-  eprinttype = {arxiv},
   primaryclass = {cs},
   url = {http://arxiv.org/abs/1810.04805},
   urldate = {2022-01-06},
   abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5\% (7.7\% point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\YAD92F43\\Devlin 等。 - 2019 - BERT Pre-training of Deep Bidirectional Transform.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\R38JLBM2\\1810.html}
 }
@@ -159,14 +169,12 @@
   year = {2019},
   month = may,
   number = {arXiv:1810.04805},
-  eprint = {1810.04805},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:1810.04805},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/1810.04805},
   urldate = {2022-10-24},
   abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5\% (7.7\% point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\G6PEDC25\\Devlin 等。 - 2019 - BERT Pre-training of Deep Bidirectional Transform.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\JIQ5JKSA\\1810.html}
 }
@@ -178,14 +186,12 @@
   year = {2019},
   month = may,
   number = {arXiv:1810.04805},
-  eprint = {1810.04805},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:1810.04805},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/1810.04805},
   urldate = {2022-11-23},
   abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5\% (7.7\% point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\WTHCXZZB\\Devlin 等 - 2019 - BERT Pre-training of Deep Bidirectional Transform.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\EVLGN4DN\\1810.html}
 }
@@ -209,12 +215,11 @@
   month = may,
   journal = {arXiv:1806.05236 [cs, stat]},
   eprint = {1806.05236},
-  eprinttype = {arxiv},
   primaryclass = {cs, stat},
   url = {http://arxiv.org/abs/1806.05236},
   urldate = {2022-01-06},
   abstract = {Deep neural networks excel at learning the training data, but often provide incorrect and confident predictions when evaluated on slightly different test examples. This includes distribution shifts, outliers, and adversarial examples. To address these issues, we propose Manifold Mixup, a simple regularizer that encourages neural networks to predict less confidently on interpolations of hidden representations. Manifold Mixup leverages semantic interpolations as additional training signal, obtaining neural networks with smoother decision boundaries at multiple levels of representation. As a result, neural networks trained with Manifold Mixup learn class-representations with fewer directions of variance. We prove theory on why this flattening happens under ideal conditions, validate it on practical situations, and connect it to previous works on information theory and generalization. In spite of incurring no significant computation and being implemented in a few lines of code, Manifold Mixup improves strong baselines in supervised learning, robustness to single-step adversarial attacks, and test log-likelihood.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing,Statistics - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\SWGV2NL7\\Verma 等。 - 2019 - Manifold Mixup Better Representations by Interpol.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\8T5A6X6C\\1806.html}
 }
@@ -241,14 +246,12 @@
   year = {2019},
   month = nov,
   number = {arXiv:1911.07013},
-  eprint = {1911.07013},
-  eprinttype = {arxiv},
-  primaryclass = {cs, stat},
+  eprint = {arXiv:1911.07013},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/1911.07013},
   urldate = {2022-10-21},
   abstract = {Layer normalization (LayerNorm) is a technique to normalize the distributions of intermediate layers. It enables smoother gradients, faster training, and better generalization accuracy. However, it is still unclear where the effectiveness stems from. In this paper, our main contribution is to take a step further in understanding LayerNorm. Many of previous studies believe that the success of LayerNorm comes from forward normalization. Unlike them, we find that the derivatives of the mean and variance are more important than forward normalization by re-centering and re-scaling backward gradients. Furthermore, we find that the parameters of LayerNorm, including the bias and gain, increase the risk of over-fitting and do not work in most cases. Experiments show that a simple version of LayerNorm (LayerNorm-simple) without the bias and gain outperforms LayerNorm on four datasets. It obtains the state-of-the-art performance on En-Vi machine translation. To address the over-fitting problem, we propose a new normalization method, Adaptive Normalization (AdaNorm), by replacing the bias and gain with a new transformation function. Experiments show that AdaNorm demonstrates better results than LayerNorm on seven out of eight datasets.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\LYHYCH8N\\Xu 等。 - 2019 - Understanding and Improving Layer Normalization.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\DNI5Z6AD\\1911.html}
 }
@@ -273,14 +276,12 @@
   year = {2020},
   month = may,
   number = {arXiv:2005.12872},
-  eprint = {2005.12872},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2005.12872},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2005.12872},
   urldate = {2022-12-07},
   abstract = {We present a new method that views object detection as a direct set prediction problem. Our approach streamlines the detection pipeline, effectively removing the need for many hand-designed components like a non-maximum suppression procedure or anchor generation that explicitly encode our prior knowledge about the task. The main ingredients of the new framework, called DEtection TRansformer or DETR, are a set-based global loss that forces unique predictions via bipartite matching, and a transformer encoder-decoder architecture. Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel. The new model is conceptually simple and does not require a specialized library, unlike many other modern detectors. DETR demonstrates accuracy and run-time performance on par with the well-established and highly-optimized Faster RCNN baseline on the challenging COCO object detection dataset. Moreover, DETR can be easily generalized to produce panoptic segmentation in a unified manner. We show that it significantly outperforms competitive baselines. Training code and pretrained models are available at https://github.com/facebookresearch/detr.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computer Vision and Pattern Recognition}
 }
 
@@ -290,14 +291,12 @@
   year = {2020},
   month = may,
   number = {arXiv:2005.12872},
-  eprint = {2005.12872},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2005.12872},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2005.12872},
   urldate = {2022-12-07},
   abstract = {We present a new method that views object detection as a direct set prediction problem. Our approach streamlines the detection pipeline, effectively removing the need for many hand-designed components like a non-maximum suppression procedure or anchor generation that explicitly encode our prior knowledge about the task. The main ingredients of the new framework, called DEtection TRansformer or DETR, are a set-based global loss that forces unique predictions via bipartite matching, and a transformer encoder-decoder architecture. Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel. The new model is conceptually simple and does not require a specialized library, unlike many other modern detectors. DETR demonstrates accuracy and run-time performance on par with the well-established and highly-optimized Faster RCNN baseline on the challenging COCO object detection dataset. Moreover, DETR can be easily generalized to produce panoptic segmentation in a unified manner. We show that it significantly outperforms competitive baselines. Training code and pretrained models are available at https://github.com/facebookresearch/detr.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computer Vision and Pattern Recognition}
 }
 
@@ -307,14 +306,12 @@
   year = {2020},
   month = jul,
   number = {arXiv:1910.10683},
-  eprint = {1910.10683},
-  eprinttype = {arxiv},
-  primaryclass = {cs, stat},
+  eprint = {arXiv:1910.10683},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/1910.10683},
   urldate = {2022-11-24},
   abstract = {Transfer learning, where a model is first pre-trained on a data-rich task before being fine-tuned on a downstream task, has emerged as a powerful technique in natural language processing (NLP). The effectiveness of transfer learning has given rise to a diversity of approaches, methodology, and practice. In this paper, we explore the landscape of transfer learning techniques for NLP by introducing a unified framework that converts all text-based language problems into a text-to-text format. Our systematic study compares pre-training objectives, architectures, unlabeled data sets, transfer approaches, and other factors on dozens of language understanding tasks. By combining the insights from our exploration with scale and our new ``Colossal Clean Crawled Corpus'', we achieve state-of-the-art results on many benchmarks covering summarization, question answering, text classification, and more. To facilitate future work on transfer learning for NLP, we release our data set, pre-trained models, and code.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\KVWQ4D78\\Raffel 等 - 2020 - Exploring the Limits of Transfer Learning with a U.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\6V28EUKP\\1910.html}
 }
@@ -339,14 +336,12 @@
   year = {2020},
   month = mar,
   number = {arXiv:1911.05722},
-  eprint = {1911.05722},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:1911.05722},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/1911.05722},
   urldate = {2022-12-05},
   abstract = {We present Momentum Contrast (MoCo) for unsupervised visual representation learning. From a perspective on contrastive learning as dictionary look-up, we build a dynamic dictionary with a queue and a moving-averaged encoder. This enables building a large and consistent dictionary on-the-fly that facilitates contrastive unsupervised learning. MoCo provides competitive results under the common linear protocol on ImageNet classification. More importantly, the representations learned by MoCo transfer well to downstream tasks. MoCo can outperform its supervised pre-training counterpart in 7 detection/segmentation tasks on PASCAL VOC, COCO, and other datasets, sometimes surpassing it by large margins. This suggests that the gap between unsupervised and supervised representation learning has been largely closed in many vision tasks.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computer Vision and Pattern Recognition},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\GQEX33E2\\He 等 - 2020 - Momentum Contrast for Unsupervised Visual Represen.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\MBNSM398\\1911.html}
 }
@@ -373,12 +368,11 @@
   month = oct,
   journal = {arXiv:2010.02322 [cs]},
   eprint = {2010.02322},
-  eprinttype = {arxiv},
   primaryclass = {cs},
   url = {http://arxiv.org/abs/2010.02322},
   urldate = {2022-01-06},
   abstract = {Active learning is an important technique for low-resource sequence labeling tasks. However, current active sequence labeling methods use the queried samples alone in each iteration, which is an inefficient way of leveraging human annotations. We propose a simple but effective data augmentation method to improve the label efficiency of active sequence labeling. Our method, SeqMix, simply augments the queried samples by generating extra labeled sequences in each iteration. The key difficulty is to generate plausible sequences along with token-level labels. In SeqMix, we address this challenge by performing mixup for both sequences and token-level labels of the queried samples. Furthermore, we design a discriminator during sequence mixup, which judges whether the generated sequences are plausible or not. Our experiments on Named Entity Recognition and Event Detection tasks show that SeqMix can improve the standard active sequence labeling method by \$2.27\textbackslash\%\$--\$3.75\textbackslash\%\$ in terms of \$F\_1\$ scores. The code and data for SeqMix can be found at https://github.com/rz-zhang/SeqMix},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\ZCS2XLU9\\Zhang 等。 - 2020 - SeqMix Augmenting Active Sequence Labeling via Se.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\78VCPIEB\\2010.html}
 }
@@ -389,14 +383,12 @@
   year = {2020},
   month = jun,
   number = {arXiv:2002.05709},
-  eprint = {2002.05709},
-  eprinttype = {arxiv},
-  primaryclass = {cs, stat},
+  eprint = {arXiv:2002.05709},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2002.05709},
   urldate = {2022-12-05},
   abstract = {This paper presents SimCLR: a simple framework for contrastive learning of visual representations. We simplify recently proposed contrastive self-supervised learning algorithms without requiring specialized architectures or a memory bank. In order to understand what enables the contrastive prediction tasks to learn useful representations, we systematically study the major components of our framework. We show that (1) composition of data augmentations plays a critical role in defining effective predictive tasks, (2) introducing a learnable nonlinear transformation between the representation and the contrastive loss substantially improves the quality of the learned representations, and (3) contrastive learning benefits from larger batch sizes and more training steps compared to supervised learning. By combining these findings, we are able to considerably outperform previous methods for self-supervised and semi-supervised learning on ImageNet. A linear classifier trained on self-supervised representations learned by SimCLR achieves 76.5\% top-1 accuracy, which is a 7\% relative improvement over previous state-of-the-art, matching the performance of a supervised ResNet-50. When fine-tuned on only 1\% of the labels, we achieve 85.8\% top-5 accuracy, outperforming AlexNet with 100X fewer labels.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\WE5V8Y8W\\Chen 等 - 2020 - A Simple Framework for Contrastive Learning of Vis.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\T9C2NE63\\2002.html}
 }
@@ -416,6 +408,22 @@
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\33PCZMJN\\Wolf 等。 - 2020 - Transformers State-of-the-Art Natural Language Pr.pdf}
 }
 
+@misc{2020ZeROMemoryOptimizationsRajbhandari,
+  title = {{{ZeRO}}: {{Memory Optimizations Toward Training Trillion Parameter Models}}},
+  shorttitle = {{{ZeRO}}},
+  author = {Rajbhandari, Samyam and Rasley, Jeff and Ruwase, Olatunji and He, Yuxiong},
+  year = {2020},
+  month = may,
+  number = {arXiv:1910.02054},
+  eprint = {arXiv:1910.02054},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1910.02054},
+  abstract = {Large deep learning models offer significant accuracy gains, but training billions to trillions of parameters is challenging. Existing solutions such as data and model parallelisms exhibit fundamental limitations to fit these models into limited device memory, while obtaining computation, communication and development efficiency. We develop a novel solution, Zero Redundancy Optimizer (ZeRO), to optimize memory, vastly improving training speed while increasing the model size that can be efficiently trained. ZeRO eliminates memory redundancies in data- and model-parallel training while retaining low communication volume and high computational granularity, allowing us to scale the model size proportional to the number of devices with sustained high efficiency. Our analysis on memory requirements and communication volume demonstrates: ZeRO has the potential to scale beyond 1 Trillion parameters using today's hardware. We implement and evaluate ZeRO: it trains large models of over 100B parameter with super-linear speedup on 400 GPUs, achieving throughput of 15 Petaflops. This represents an 8x increase in model size and 10x increase in achievable performance over state-of-the-art. In terms of usability, ZeRO can train large models of up to 13B parameters (e.g., larger than Megatron GPT 8.3B and T5 11B) without requiring model parallelism which is harder for scientists to apply. Last but not the least, researchers have used the system breakthroughs of ZeRO to create the world's largest language model (Turing-NLG, 17B parameters) with record breaking accuracy.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Distributed; Parallel; and Cluster Computing,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\XMKCTL3U\\Rajbhandari 等 - 2020 - ZeRO Memory Optimizations Toward Training Trillio.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\FVBSS4MV\\1910.html}
+}
+
 @misc{2021CLEVEContrastivePretrainingWang,
   title = {{{CLEVE}}: {{Contrastive Pre-training}} for {{Event Extraction}}},
   shorttitle = {{{CLEVE}}},
@@ -423,14 +431,12 @@
   year = {2021},
   month = may,
   number = {arXiv:2105.14485},
-  eprint = {2105.14485},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2105.14485},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2105.14485},
   urldate = {2022-10-13},
   abstract = {Event extraction (EE) has considerably benefited from pre-trained language models (PLMs) by fine-tuning. However, existing pre-training methods have not involved modeling event characteristics, resulting in the developed EE models cannot take full advantage of large-scale unsupervised data. To this end, we propose CLEVE, a contrastive pre-training framework for EE to better learn event knowledge from large unsupervised data and their semantic structures (e.g. AMR) obtained with automatic parsers. CLEVE contains a text encoder to learn event semantics and a graph encoder to learn event structures respectively. Specifically, the text encoder learns event semantic representations by self-supervised contrastive learning to represent the words of the same events closer than those unrelated words; the graph encoder learns event structure representations by graph contrastive pre-training on parsed event-related semantic structures. The two complementary representations then work together to improve both the conventional supervised EE and the unsupervised "liberal" EE, which requires jointly extracting events and discovering event schemata without any annotated data. Experiments on ACE 2005 and MAVEN datasets show that CLEVE achieves significant improvements, especially in the challenging unsupervised setting. The source code and pre-trained checkpoints can be obtained from https://github.com/THU-KEG/CLEVE.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\DI9HLV2H\\Wang 等。 - 2021 - CLEVE Contrastive Pre-training for Event Extracti.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\CNBRZFUQ\\2105.html}
 }
@@ -459,14 +465,12 @@
   year = {2021},
   month = dec,
   number = {arXiv:2104.05240},
-  eprint = {2104.05240},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2104.05240},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2104.05240},
   urldate = {2022-11-22},
   abstract = {Petroni et al. (2019) demonstrated that it is possible to retrieve world facts from a pre-trained language model by expressing them as cloze-style prompts and interpret the model's prediction accuracy as a lower bound on the amount of factual information it encodes. Subsequent work has attempted to tighten the estimate by searching for better prompts, using a disjoint set of facts as training data. In this work, we make two complementary contributions to better understand these factual probing techniques. First, we propose OptiPrompt, a novel and efficient method which directly optimizes in continuous embedding space. We find this simple method is able to predict an additional 6.4\% of facts in the LAMA benchmark. Second, we raise a more important question: Can we really interpret these probing results as a lower bound? Is it possible that these prompt-search methods learn from the training data too? We find, somewhat surprisingly, that the training data used by these methods contains certain regularities of the underlying fact distribution, and all the existing prompt methods, including ours, are able to exploit them for better fact prediction. We conduct a set of control experiments to disentangle "learning" from "learning to recall", providing a more detailed picture of what different prompts can reveal about pre-trained language models.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\USR54ZXH\\Zhong 等 - 2021 - Factual Probing Is [MASK] Learning vs. Learning t.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\ZB9PQW5D\\2104.html}
 }
@@ -477,14 +481,12 @@
   year = {2021},
   month = feb,
   number = {arXiv:2103.00020},
-  eprint = {2103.00020},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2103.00020},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2103.00020},
   urldate = {2022-12-06},
   abstract = {State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. Learning directly from raw text about images is a promising alternative which leverages a much broader source of supervision. We demonstrate that the simple pre-training task of predicting which caption goes with which image is an efficient and scalable way to learn SOTA image representations from scratch on a dataset of 400 million (image, text) pairs collected from the internet. After pre-training, natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks. We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and many types of fine-grained object classification. The model transfers non-trivially to most tasks and is often competitive with a fully supervised baseline without the need for any dataset specific training. For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on. We release our code and pre-trained model weights at https://github.com/OpenAI/CLIP.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\TZSNYSUD\\Radford 等 - 2021 - Learning Transferable Visual Models From Natural L.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\SU455QR2\\2103.html}
 }
@@ -496,14 +498,12 @@
   year = {2021},
   month = oct,
   number = {arXiv:2106.09685},
-  eprint = {2106.09685},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2106.09685},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2106.09685},
   urldate = {2022-11-27},
   abstract = {An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\IQHLFRWH\\Hu 等 - 2021 - LoRA Low-Rank Adaptation of Large Language Models.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\U55M29Q5\\2106.html}
 }
@@ -544,14 +544,12 @@
   year = {2021},
   month = jul,
   number = {arXiv:2107.13586},
-  eprint = {2107.13586},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2107.13586},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2107.13586},
   urldate = {2022-11-23},
   abstract = {This paper surveys and organizes research works in a new paradigm in natural language processing, which we dub "prompt-based learning". Unlike traditional supervised learning, which trains a model to take in an input x and predict an output y as P(y|x), prompt-based learning is based on language models that model the probability of text directly. To use these models to perform prediction tasks, the original input x is modified using a template into a textual string prompt x' that has some unfilled slots, and then the language model is used to probabilistically fill the unfilled information to obtain a final string x, from which the final output y can be derived. This framework is powerful and attractive for a number of reasons: it allows the language model to be pre-trained on massive amounts of raw text, and by defining a new prompting function the model is able to perform few-shot or even zero-shot learning, adapting to new scenarios with few or no labeled data. In this paper we introduce the basics of this promising paradigm, describe a unified set of mathematical notations that can cover a wide variety of existing work, and organize existing work along several dimensions, e.g.the choice of pre-trained models, prompts, and tuning strategies. To make the field more accessible to interested beginners, we not only make a systematic review of existing works and a highly structured typology of prompt-based concepts, but also release other resources, e.g., a website http://pretrain.nlpedia.ai/ including constantly-updated survey, and paperlist.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\IIHCGSX9\\Liu 等 - 2021 - Pre-train, Prompt, and Predict A Systematic Surve.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\DHXHLGU9\\2107.html}
 }
@@ -567,6 +565,22 @@
   abstract = {A review of recent advances in prompts.},
   langid = {english},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\XNVM2P6N\\prompting.html}
+}
+
+@misc{2021SurveyTransformersLin,
+  title = {A {{Survey}} of {{Transformers}}},
+  author = {Lin, Tianyang and Wang, Yuxin and Liu, Xiangyang and Qiu, Xipeng},
+  year = {2021},
+  month = jun,
+  number = {arXiv:2106.04554},
+  eprint = {arXiv:2106.04554},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2106.04554},
+  urldate = {2023-02-27},
+  abstract = {Transformers have achieved great success in many artificial intelligence fields, such as natural language processing, computer vision, and audio processing. Therefore, it is natural to attract lots of interest from academic and industry researchers. Up to the present, a great variety of Transformer variants (a.k.a. X-formers) have been proposed, however, a systematic and comprehensive literature review on these Transformer variants is still missing. In this survey, we provide a comprehensive review of various X-formers. We first briefly introduce the vanilla Transformer and then propose a new taxonomy of X-formers. Next, we introduce the various X-formers from three perspectives: architectural modification, pre-training, and applications. Finally, we outline some potential directions for future research.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\JJGMEQ2K\\Lin 等 - 2021 - A Survey of Transformers.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\PSB4RTTN\\2106.html}
 }
 
 @inproceedings{2021ZeroshotLabelAwareEventZhang,
@@ -588,14 +602,12 @@
   year = {2022},
   month = oct,
   number = {arXiv:2210.08901},
-  eprint = {2210.08901},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2210.08901},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2210.08901},
   urldate = {2022-12-06},
   abstract = {Recent years have witnessed the fast development of large-scale pre-training frameworks that can extract multi-modal representations in a unified form and achieve promising performances when transferred to downstream tasks. Nevertheless, existing approaches mainly focus on pre-training with simple image-text pairs, while neglecting the semantic connections between concepts from different modalities. In this paper, we propose a knowledge-based pre-training framework, dubbed Knowledge-CLIP, which injects semantic information into the widely used CLIP model. Through introducing knowledge-based objectives in the pre-training process and utilizing different types of knowledge graphs as training data, our model can semantically align the representations in vision and language with higher quality, and enhance the reasoning ability across scenarios and modalities. Extensive experiments on various vision-language downstream tasks demonstrate the effectiveness of Knowledge-CLIP compared with the original CLIP and competitive baselines.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computer Vision and Pattern Recognition},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\KY3IL8G5\\Pan 等 - 2022 - Contrastive Language-Image Pre-Training with Knowl.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\5FUA6XES\\2210.html}
 }
@@ -606,16 +618,29 @@
   year = {2022},
   month = oct,
   number = {arXiv:2210.08901},
-  eprint = {2210.08901},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2210.08901},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2210.08901},
   urldate = {2022-12-06},
   abstract = {Recent years have witnessed the fast development of large-scale pre-training frameworks that can extract multi-modal representations in a unified form and achieve promising performances when transferred to downstream tasks. Nevertheless, existing approaches mainly focus on pre-training with simple image-text pairs, while neglecting the semantic connections between concepts from different modalities. In this paper, we propose a knowledge-based pre-training framework, dubbed Knowledge-CLIP, which injects semantic information into the widely used CLIP model. Through introducing knowledge-based objectives in the pre-training process and utilizing different types of knowledge graphs as training data, our model can semantically align the representations in vision and language with higher quality, and enhance the reasoning ability across scenarios and modalities. Extensive experiments on various vision-language downstream tasks demonstrate the effectiveness of Knowledge-CLIP compared with the original CLIP and competitive baselines.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computer Vision and Pattern Recognition},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\MG99HL9A\\Pan 等 - 2022 - Contrastive Language-Image Pre-Training with Knowl.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\JX96FHW3\\2210.html}
+}
+
+@misc{2022EmergentAbilitiesLargeWei,
+  title = {Emergent {{Abilities}} of {{Large Language Models}}},
+  author = {Wei, Jason and Tay, Yi and Bommasani, Rishi and Raffel, Colin and Zoph, Barret and Borgeaud, Sebastian and Yogatama, Dani and Bosma, Maarten and Zhou, Denny and Metzler, Donald and Chi, Ed H. and Hashimoto, Tatsunori and Vinyals, Oriol and Liang, Percy and Dean, Jeff and Fedus, William},
+  year = {2022},
+  month = oct,
+  number = {arXiv:2206.07682},
+  eprint = {arXiv:2206.07682},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2206.07682},
+  abstract = {Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks. This paper instead discusses an unpredictable phenomenon that we refer to as emergent abilities of large language models. We consider an ability to be emergent if it is not present in smaller models but is present in larger models. Thus, emergent abilities cannot be predicted simply by extrapolating the performance of smaller models. The existence of such emergence implies that additional scaling could further expand the range of capabilities of language models.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\YB4WJ8S9\\Wei 等 - 2022 - Emergent Abilities of Large Language Models.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\RNVTGQ9Q\\2206.html}
 }
 
 @article{2022IncontextLearningInductionCatherineOlsson,
@@ -633,14 +658,12 @@
   year = {2022},
   month = oct,
   number = {arXiv:2205.11916},
-  eprint = {2205.11916},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2205.11916},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2205.11916},
   urldate = {2022-11-23},
   abstract = {Pretrained large language models (LLMs) are widely used in many sub-fields of natural language processing (NLP) and generally known as excellent few-shot learners with task-specific exemplars. Notably, chain of thought (CoT) prompting, a recent technique for eliciting complex multi-step reasoning through step-by-step answer examples, achieved the state-of-the-art performances in arithmetics and symbolic reasoning, difficult system-2 tasks that do not follow the standard scaling laws for LLMs. While these successes are often attributed to LLMs' ability for few-shot learning, we show that LLMs are decent zero-shot reasoners by simply adding "Let's think step by step" before each answer. Experimental results demonstrate that our Zero-shot-CoT, using the same single prompt template, significantly outperforms zero-shot LLM performances on diverse benchmark reasoning tasks including arithmetics (MultiArith, GSM8K, AQUA-RAT, SVAMP), symbolic reasoning (Last Letter, Coin Flip), and other logical reasoning tasks (Date Understanding, Tracking Shuffled Objects), without any hand-crafted few-shot examples, e.g. increasing the accuracy on MultiArith from 17.7\% to 78.7\% and GSM8K from 10.4\% to 40.7\% with 175B parameter InstructGPT model, as well as similar magnitudes of improvements with another off-the-shelf large model, 540B parameter PaLM. The versatility of this single prompt across very diverse reasoning tasks hints at untapped and understudied fundamental zero-shot capabilities of LLMs, suggesting high-level, multi-task broad cognitive capabilities may be extracted by simple prompting. We hope our work not only serves as the minimal strongest zero-shot baseline for the challenging reasoning benchmarks, but also highlights the importance of carefully exploring and analyzing the enormous zero-shot knowledge hidden inside LLMs before crafting finetuning datasets or few-shot exemplars.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\NRLTLW63\\Kojima 等 - 2022 - Large Language Models are Zero-Shot Reasoners.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\AI6XEBHT\\2205.html}
 }
@@ -657,6 +680,21 @@
   url = {https://aclanthology.org/2022.coling-1.173},
   urldate = {2022-10-18},
   abstract = {Event argument extraction (EAE) aims to extract arguments with given roles from texts, which have been widely studied in natural language processing. Most previous works have achieved good performance in specific EAE datasets with dedicated neural architectures. Whereas, these architectures are usually difficult to adapt to new datasets/scenarios with various annotation schemas or formats. Furthermore, they rely on large-scale labeled data for training, which is unavailable due to the high labelling cost in most cases. In this paper, we propose a multi-format transfer learning model with variational information bottleneck, which makes use of the information especially the common knowledge in existing datasets for EAE in new datasets. Specifically, we introduce a shared-specific prompt framework to learn both format-shared and format-specific knowledge from datasets with different formats. In order to further absorb the common knowledge for EAE and eliminate the irrelevant noise, we integrate variational information bottleneck into our architecture to refine the shared representation. We conduct extensive experiments on three benchmark datasets, and obtain new state-of-the-art performance on EAE.}
+}
+
+@misc{2022OvercomingCatastrophicForgettingVu,
+  title = {Overcoming {{Catastrophic Forgetting}} in {{Zero-Shot Cross-Lingual Generation}}},
+  author = {Vu, Tu and Barua, Aditya and Lester, Brian and Cer, Daniel and Iyyer, Mohit and Constant, Noah},
+  year = {2022},
+  month = oct,
+  number = {arXiv:2205.12647},
+  eprint = {arXiv:2205.12647},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2205.12647},
+  abstract = {In this paper, we explore the challenging problem of performing a generative task in a target language when labeled data is only available in English, using summarization as a case study. We assume a strict setting with no access to parallel data or machine translation and find that common transfer learning approaches struggle in this setting, as a generative multilingual model fine-tuned purely on English catastrophically forgets how to generate non-English. Given the recent rise of parameter-efficient adaptation techniques, we conduct the first investigation into how one such method, prompt tuning (Lester et al., 2021), can overcome catastrophic forgetting to enable zero-shot cross-lingual generation. Our experiments show that parameter-efficient prompt tuning provides gains over standard fine-tuning when transferring between less-related languages, e.g., from English to Thai. However, a significant gap still remains between these methods and fully-supervised baselines. To improve cross-lingual transfer further, we explore several approaches, including: (1) mixing in unlabeled multilingual data, and (2) explicitly factoring prompts into recombinable language and task components. Our approaches can provide further quality gains, suggesting that robust zero-shot cross-lingual generation is within reach.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\77FDLE7L\\Vu 等 - 2022 - Overcoming Catastrophic Forgetting in Zero-Shot Cr.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\DC749M7Q\\2205.html}
 }
 
 @inproceedings{2022PromptBasedModelsReallyWebson,
@@ -680,16 +718,47 @@
   year = {2022},
   month = mar,
   number = {arXiv:2110.07602},
-  eprint = {2110.07602},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2110.07602},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2110.07602},
   urldate = {2022-11-22},
   abstract = {Prompt tuning, which only tunes continuous prompts with a frozen language model, substantially reduces per-task storage and memory usage at training. However, in the context of NLU, prior work reveals that prompt tuning does not perform well for normal-sized pretrained models. We also find that existing methods of prompt tuning cannot handle hard sequence labeling tasks, indicating a lack of universality. We present a novel empirical finding that properly optimized prompt tuning can be universally effective across a wide range of model scales and NLU tasks. It matches the performance of finetuning while having only 0.1\%-3\% tuned parameters. Our method P-Tuning v2 is an implementation of Deep Prompt Tuning \textbackslash cite\{li2021prefix,qin2021learning\} optimized and adapted for NLU. Given the universality and simplicity of P-Tuning v2, we believe it can serve as an alternative to finetuning and a strong baseline for future research.Our code and data are released at https://github.com/THUDM/P-tuning-v2.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\LUCPGU77\\Liu 等 - 2022 - P-Tuning v2 Prompt Tuning Can Be Comparable to Fi.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\LQSTMT34\\2110.html}
+}
+
+@misc{2022ReducingActivationRecomputationKorthikanti,
+  title = {Reducing {{Activation Recomputation}} in {{Large Transformer Models}}},
+  author = {Korthikanti, Vijay and Casper, Jared and Lym, Sangkug and McAfee, Lawrence and Andersch, Michael and Shoeybi, Mohammad and Catanzaro, Bryan},
+  year = {2022},
+  month = may,
+  number = {arXiv:2205.05198},
+  eprint = {arXiv:2205.05198},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2205.05198},
+  urldate = {2023-02-27},
+  abstract = {Training large transformer models is one of the most important computational challenges of modern AI. In this paper, we show how to significantly accelerate training of large transformer models by reducing activation recomputation. Activation recomputation is commonly used to work around memory capacity constraints. Rather than storing activations for backpropagation, they are traditionally recomputed, which saves memory but adds redundant compute. In this work, we show most of this redundant compute is unnecessary because we can reduce memory consumption sufficiently without it. We present two novel yet very simple techniques: sequence parallelism and selective activation recomputation. In conjunction with tensor parallelism, these techniques almost eliminate the need to recompute activations. We evaluate our approach on language models up to one trillion parameters in scale and show that our method reduces activation memory by 5x, while reducing execution time overhead from activation recomputation by over 90\%. For example, when training a 530B parameter GPT-3 style model on 2240 NVIDIA A100 GPUs, we achieve a Model Flops Utilization of 54.2\%, which is 29\% faster than the 42.1\% we achieve using recomputation. Our implementation will be available in both Megatron-LM and NeMo-Megatron.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\JKYZYDFZ\\Korthikanti 等 - 2022 - Reducing Activation Recomputation in Large Transfo.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\LX29AX5F\\2205.html}
+}
+
+@misc{2022RoFormerEnhancedTransformerSu,
+  title = {{{RoFormer}}: {{Enhanced Transformer}} with {{Rotary Position Embedding}}},
+  shorttitle = {{{RoFormer}}},
+  author = {Su, Jianlin and Lu, Yu and Pan, Shengfeng and Murtadha, Ahmed and Wen, Bo and Liu, Yunfeng},
+  year = {2022},
+  month = aug,
+  number = {arXiv:2104.09864},
+  eprint = {arXiv:2104.09864},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2104.09864},
+  urldate = {2023-02-27},
+  abstract = {Position encoding recently has shown effective in the transformer architecture. It enables valuable supervision for dependency modeling between elements at different positions of the sequence. In this paper, we first investigate various methods to integrate positional information into the learning process of transformer-based language models. Then, we propose a novel method named Rotary Position Embedding(RoPE) to effectively leverage the positional information. Specifically, the proposed RoPE encodes the absolute position with a rotation matrix and meanwhile incorporates the explicit relative position dependency in self-attention formulation. Notably, RoPE enables valuable properties, including the flexibility of sequence length, decaying inter-token dependency with increasing relative distances, and the capability of equipping the linear self-attention with relative position encoding. Finally, we evaluate the enhanced transformer with rotary position embedding, also called RoFormer, on various long text classification benchmark datasets. Our experiments show that it consistently overcomes its alternatives. Furthermore, we provide a theoretical analysis to explain some experimental results. RoFormer is already integrated into Huggingface: \textbackslash url\{https://huggingface.co/docs/transformers/model\_doc/roformer\}.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\EGG9NANG\\Su 等 - 2022 - RoFormer Enhanced Transformer with Rotary Positio.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\3INMR9JC\\2104.html}
 }
 
 @misc{2022SimCSESimpleContrastiveGao,
@@ -699,16 +768,29 @@
   year = {2022},
   month = may,
   number = {arXiv:2104.08821},
-  eprint = {2104.08821},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2104.08821},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2104.08821},
   urldate = {2022-10-13},
   abstract = {This paper presents SimCSE, a simple contrastive learning framework that greatly advances state-of-the-art sentence embeddings. We first describe an unsupervised approach, which takes an input sentence and predicts itself in a contrastive objective, with only standard dropout used as noise. This simple method works surprisingly well, performing on par with previous supervised counterparts. We find that dropout acts as minimal data augmentation, and removing it leads to a representation collapse. Then, we propose a supervised approach, which incorporates annotated pairs from natural language inference datasets into our contrastive learning framework by using "entailment" pairs as positives and "contradiction" pairs as hard negatives. We evaluate SimCSE on standard semantic textual similarity (STS) tasks, and our unsupervised and supervised models using BERT base achieve an average of 76.3\% and 81.6\% Spearman's correlation respectively, a 4.2\% and 2.2\% improvement compared to the previous best results. We also show -- both theoretically and empirically -- that the contrastive learning objective regularizes pre-trained embeddings' anisotropic space to be more uniform, and it better aligns positive pairs when supervised signals are available.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\ED8864WD\\Gao 等。 - 2022 - SimCSE Simple Contrastive Learning of Sentence Em.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\2SL82W83\\2104.html}
+}
+
+@misc{2022TrainingComputeOptimalLargeHoffmann,
+  title = {Training {{Compute-Optimal Large Language Models}}},
+  author = {Hoffmann, Jordan and Borgeaud, Sebastian and Mensch, Arthur and Buchatskaya, Elena and Cai, Trevor and Rutherford, Eliza and Casas, Diego de Las and Hendricks, Lisa Anne and Welbl, Johannes and Clark, Aidan and Hennigan, Tom and Noland, Eric and Millican, Katie and van den Driessche, George and Damoc, Bogdan and Guy, Aurelia and Osindero, Simon and Simonyan, Karen and Elsen, Erich and Rae, Jack W. and Vinyals, Oriol and Sifre, Laurent},
+  year = {2022},
+  month = mar,
+  number = {arXiv:2203.15556},
+  eprint = {arXiv:2203.15556},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2203.15556},
+  abstract = {We investigate the optimal model size and number of tokens for training a transformer language model under a given compute budget. We find that current large language models are significantly undertrained, a consequence of the recent focus on scaling language models whilst keeping the amount of training data constant. By training over 400 language models ranging from 70 million to over 16 billion parameters on 5 to 500 billion tokens, we find that for compute-optimal training, the model size and the number of training tokens should be scaled equally: for every doubling of model size the number of training tokens should also be doubled. We test this hypothesis by training a predicted compute-optimal model, Chinchilla, that uses the same compute budget as Gopher but with 70B parameters and 4\$\textbackslash times\$ more more data. Chinchilla uniformly and significantly outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and Megatron-Turing NLG (530B) on a large range of downstream evaluation tasks. This also means that Chinchilla uses substantially less compute for fine-tuning and inference, greatly facilitating downstream usage. As a highlight, Chinchilla reaches a state-of-the-art average accuracy of 67.5\% on the MMLU benchmark, greater than a 7\% improvement over Gopher.},
+  archiveprefix = {arxiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\VUWG6RPG\\Hoffmann 等 - 2022 - Training Compute-Optimal Large Language Models.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\P36G4RFN\\2203.html}
 }
 
 @misc{2022UnifiedViewParameterEfficientHe,
@@ -717,14 +799,22 @@
   year = {2022},
   month = feb,
   number = {arXiv:2110.04366},
-  eprint = {2110.04366},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
+  eprint = {arXiv:2110.04366},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2110.04366},
   urldate = {2022-11-23},
   abstract = {Fine-tuning large pre-trained language models on downstream tasks has become the de-facto learning paradigm in NLP. However, conventional approaches fine-tune all the parameters of the pre-trained model, which becomes prohibitive as the model size and the number of tasks grow. Recent work has proposed a variety of parameter-efficient transfer learning methods that only fine-tune a small number of (extra) parameters to attain strong performance. While effective, the critical ingredients for success and the connections among the various methods are poorly understood. In this paper, we break down the design of state-of-the-art parameter-efficient transfer learning methods and present a unified framework that establishes connections between them. Specifically, we re-frame them as modifications to specific hidden states in pre-trained models, and define a set of design dimensions along which different methods vary, such as the function to compute the modification and the position to apply the modification. Through comprehensive empirical studies across machine translation, text summarization, language understanding, and text classification benchmarks, we utilize the unified view to identify important design choices in previous methods. Furthermore, our unified framework enables the transfer of design elements across different approaches, and as a result we are able to instantiate new parameter-efficient fine-tuning methods that tune less parameters than previous methods while being more effective, achieving comparable results to fine-tuning all parameters on all four tasks.},
-  archiveprefix = {arXiv},
+  archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\GNMJ8G4K\\He 等 - 2022 - Towards a Unified View of Parameter-Efficient Tran.pdf;C\:\\Users\\Administrator\\Zotero\\storage\\K2LDYGL2\\2110.html}
+}
+
+@article{2023LLaMAOpenEfficientTouvron,
+  title = {{{LLaMA}}: {{Open}} and {{Efficient Foundation Language Models}}},
+  author = {Touvron, Hugo and Lavril, Thibaut and Izacard, Gautier and Martinet, Xavier and Lachaux, Marie-Anne and Lacroix, Timothee and Rozi{\`e}re, Baptiste and Goyal, Naman and Hambro, Eric and Azhar, Faisal and Rodriguez, Aurelien and Joulin, Armand and Grave, Edouard and Lample, Guillaume},
+  year = {2023},
+  month = feb,
+  abstract = {We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla70B and PaLM-540B. We release all our models to the research community1.},
+  langid = {english},
+  file = {C\:\\Users\\Administrator\\Zotero\\storage\\2WC8JPVW\\Touvron 等 - LLaMA Open and Efficient Foundation Language Mode.pdf}
 }

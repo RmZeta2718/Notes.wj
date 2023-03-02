@@ -52,11 +52,26 @@ a.shape  # (5,1)
 
 # pytorch
 
+### 增加维度 add new dimension
+
+https://stackoverflow.com/a/59603631
+
+### 内存连续性
+
+- [python - What is the difference between contiguous and non-contiguous arrays? - Stack Overflow](https://stackoverflow.com/questions/26998223/what-is-the-difference-between-contiguous-and-non-contiguous-arrays/26999092#26999092)
+- [Difference between view, reshape, transpose and permute in PyTorch - jdhao's digital space](https://jdhao.github.io/2019/07/10/pytorch_view_reshape_transpose_permute/#but-what-does-contiguous-mean)
+
 ### 分布式
 
 https://pytorch.org/tutorials/intermediate/ddp_tutorial.html
 
 ### 复现/Reproducibility
+
+[李沐关于可重复性的讨论](https://www.bilibili.com/video/BV1Y5411c7aY/?p=3&share_source=copy_web&vd_source=ff9df13d97e77634f0683a5b6f354918&t=203)
+- 如何保证可重复性
+    - 随机数种子
+    - 禁用cudnn：cudnn加速矩阵计算会乱序计算，因为浮点误差，所以每次乱序计算的结果不一样
+- 但是实际上不用太关注可重复性，随机性也意味着稳定性、鲁棒性。我们最终想要的是模型的可用性，所以要设计出对初始值等随机因素不敏感的模型。
 
 https://pytorch.org/docs/stable/notes/randomness.html
 
@@ -110,7 +125,7 @@ foo = Foo()
 x = foo()  # x: torch.Tensor
 ```
 
-**该方法的局限性**：内置 Module 不适用（需要pytorch自己定义 `__call__` ）
+**该方法的局限性**：内置 Module 不适用（需要 pytorch 自己定义 `__call__` ）
 
 > 但是内置 Module 的返回类型比较简单（例如就是 `torch.Tensor`），所以勉强可以接受。只有自己写的 Module 可能需要 typing 复杂类型（例如多个返回值）
 
@@ -125,10 +140,10 @@ x = foo()  # x: torch.Tensor
 此外，不建议直接调 `forward` ，因为 `__call__` 里还有 hook 等其他处理。
 
 相关内容：
-- [相关issue](https://github.com/pytorch/pytorch/issues?q=is%3Aissue+label%3A%22module%3A+typing%22+call+in%3Atitle)
-- 1.4之后pyi文件没了是因为[inline了](https://github.com/pytorch/pytorch/issues/36915#issuecomment-692999314)
-- [一个proxy trick(works for pycharm and mypy but not vscode)以及关于内置module的讨论](https://github.com/pytorch/pytorch/issues/74746)
-- 我的[提问](https://discuss.pytorch.org/t/how-to-get-correct-typing-from-nn-module-call/171577)
+- [相关 issue](https://github.com/pytorch/pytorch/issues?q=is%3Aissue+label%3A%22module%3A+typing%22+call+in%3Atitle)
+- 1.4 之后 pyi 文件没了是因为 [inline 了](https://github.com/pytorch/pytorch/issues/36915#issuecomment-692999314)
+- [一个 proxy trick(works for pycharm and mypy but not vscode)以及关于内置 module 的讨论](https://github.com/pytorch/pytorch/issues/74746)
+- 我的 [提问](https://discuss.pytorch.org/t/how-to-get-correct-typing-from-nn-module-call/171577)
 
 #### 灵异事件
 
@@ -157,6 +172,8 @@ nvidia-smi topo -m
 随机初始化通常 $\times 0.01$ ——用较小的值初始化。如果初始化值较大，如果用了 sigmoid 或 tanh 这样的激活函数，那么梯度下降就会很慢。如果不用这样的激活函数就无所谓。
 
 如果网络较深，需要采用其他初始化策略
+
+初始化主要目标是不让网络在一开始训练时梯度爆炸、消失
 
 https://www.bilibili.com/video/BV1FT4y1E74V?p=35&spm_id_from=pageDriver
 
@@ -236,4 +253,10 @@ TF32 类型：1 位符号位、8 位指数位、10 位尾数位
 
 # 代码框架
 
-[深度学习里面，请问有写train函数的模板吗？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/523869554)
+ [深度学习里面，请问有写 train 函数的模板吗？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/523869554)
+
+# 杂项
+
+23.02.18
+
+Tensor.shape 是 Tensor.size() 的别名：[add shape alias by hughperkins · Pull Request #1983 · pytorch/pytorch (github.com)](https://github.com/pytorch/pytorch/pull/1983)

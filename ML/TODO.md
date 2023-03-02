@@ -21,3 +21,7 @@ CS224n
 - [A4](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/assignments/a4.pdf)
 - [A5](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/assignments/a5.pdf)
 - [final1](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/project/default-final-project-handout-squad-track.pdf) [final2](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/project/default-final-project-handout-robustqa-track.pdf)
+
+[[@2021SurveyTransformersLin|A Survey of Transformers, 2021]]
+
+[[@2022RoFormerEnhancedTransformerSu|RoPE]]

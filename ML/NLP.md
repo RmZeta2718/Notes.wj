@@ -79,6 +79,8 @@ cons:
 
 ### BRNN Bidirectional
 
+通常用来对序列抽取特征、填空，而不用作生成（因为缺乏未来信息）
+
 ### Deep RNN
 
 沿 $y$ 方向堆叠 RNN
@@ -287,6 +289,8 @@ $$
 
 BLEU score 不是完美的：如果某个翻译离 ground truth 太远（n-gram 重叠率低），就会分数较低
 
+[BLEU — 动手学深度学习](https://zh.d2l.ai/chapter_recurrent-modern/seq2seq.html#id9)
+
 ### Word segmentation
 
 > 参考 [CS224n](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/readings/cs224n-2019-notes06-NMT_seq2seq_attention.pdf)
@@ -346,6 +350,8 @@ $$
 &\text{Perplexity}=\exp(J(\theta))
 \end{align}
 $$
+
+[动手学深度学习的解释](https://zh.d2l.ai/chapter_recurrent-neural-networks/rnn.html#perplexity)
 
 ### 神经语言模型 NLM
 
