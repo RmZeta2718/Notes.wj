@@ -18,11 +18,11 @@
 
 ### im-select
 
-[VSCodeVim/Vim: Vim for Visual Studio Code (github.com)](https://github.com/VSCodeVim/Vim/#input-method)
+ [VSCodeVim/Vim: Vim for Visual Studio Code (github.com)](https://github.com/VSCodeVim/Vim/#input-method)
 
 https://www.zhihu.com/question/303850876
 
-目前似乎不支持remote上的切换，只有本地有效。
+目前似乎不支持 remote 上的切换，只有本地有效。
 
 ### python
 
@@ -87,8 +87,9 @@ local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地�
 使用默认的 Dark+主题。做了一点小修改：
 - Python 的 type alias 变量默认是变量颜色，改成了 type 的颜色。
     - 参考： [Binaryify/OneDark-Pro: Atom's iconic One Dark theme for Visual Studio Code (github.com)](https://github.com/Binaryify/OneDark-Pro#python--pylance-users) （琢磨换主题的时候在README里看到了怎么自己改，于是还是用默认主题了）
+    - 后来发现，type alias 可以通过 `from torch import Tensor as Tsr` 的方式绕过去（这样 `Tsr` 就是 class 而不是 type alias variable 了）。
 - 函数参数从正体改成斜体（仿照 OneDark）（已删除）
-    - 但是这会导致函数调用时的kwarg也变成斜体（而且不是全部，只有pyi的函数不受影响） [Python Semantic Highlighting of Parameters in Function Calls · Issue #1845 · microsoft/pylance-release (github.com)](https://github.com/microsoft/pylance-release/issues/1845)
+    - 但是这会导致函数调用时的 kwarg 也变成斜体（而且不是全部，只有 pyi 的函数不受影响） [Python Semantic Highlighting of Parameters in Function Calls · Issue #1845 · microsoft/pylance-release (github.com)](https://github.com/microsoft/pylance-release/issues/1845)
 
 ```json
 {

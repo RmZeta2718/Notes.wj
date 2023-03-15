@@ -11,16 +11,34 @@ op.install()
 
 ## better argparse
 
+### Tap
+
 https://github.com/swansonk14/typed-argument-parser
 
 竞品比较
 - argparse：标准库，但是缺少代码补全，因为用了魔法（或者说魔法不够多）
 - tap（本节）：
-    - python原生，通过定义类+类型标注的方式生成元数据，所以有代码补全
+    - python 原生，通过定义类+类型标注的方式生成元数据，所以有代码补全
     - ~~功能是否全面还有待观察~~
-- docopt（在[CS224n作业里](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/assignments/a4.pdf)看到的）：
-    - 需要自己写完整document，通过文档生成元数据，似乎有点麻烦
+- docopt（在 [CS224n 作业里](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/assignments/a4.pdf) 看到的）：
+    - 需要自己写完整 document，通过文档生成元数据，似乎有点麻烦
     - 支持了很多语言，或许其他语言可以试试
+
+### HfArgumentParser
+
+https://huggingface.co/docs/transformers/v4.26.1/en/internal/trainer_utils#transformers.HfArgumentParser
+
+类似于 tap
+
+- 基于 dataclass 定义
+- 文档不全面，因为以 huggingface 内部使用为主（官方用例是 [TrainingArguments](https://huggingface.co/docs/transformers/v4.26.1/en/main_classes/trainer#transformers.TrainingArguments) ），自己也可以用
+- `from transformers.hf_argparser import HfArg` 可以用于声明字段（[PR](https://github.com/huggingface/transformers/pull/20323)），无文档，typing有问题（于是自己重写了）
+
+## Package
+
+ [__init__.py 样例](https://stackoverflow.com/a/29509611)
+
+自动导入 dir 下所有 py（可能已经过时了）： https://stackoverflow.com/a/1057534
 
 ## Python 环境
 
@@ -108,7 +126,7 @@ GIL 导致 python 解释器是单线程的，任何多线程的 python 程序，
 
 ## 代码规范
 
-[Google style](https://google.github.io/styleguide/)
+ [Google style](https://google.github.io/styleguide/)
 
 一些重点：
 - [Comprehensions & Generator Expressions](https://google.github.io/styleguide/pyguide.html#27-comprehensions--generator-expressions)
@@ -118,4 +136,8 @@ GIL 导致 python 解释器是单线程的，任何多线程的 python 程序，
 
 ## 运算符 -> 函数
 
-[operator — Standard operators as functions — Python 3.11.2 documentation](https://docs.python.org/3/library/operator.html#mapping-operators-to-functions)
+ [operator — Standard operators as functions — Python 3.11.2 documentation](https://docs.python.org/3/library/operator.html#mapping-operators-to-functions)
+
+返回类型有多种，但是用户确切地知道是哪一种，如何更优雅地指定（open）：
+- [AnyOf - Union for return types · Issue #566 · python/typing --- AnyOf - 返回类型联合 · Issue #566 · python/typing (github.com)](https://github.com/python/typing/issues/566)
+- [Document why having a union return type is often a problem · Issue #1693 · python/mypy --- 记录为什么具有联合返回类型通常是一个问题 · Issue #1693 · python/mypy (github.com)](https://github.com/python/mypy/issues/1693)
