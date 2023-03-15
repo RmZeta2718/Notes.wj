@@ -16,7 +16,6 @@ aliases: ["LLaMA: Open and Efficient Foundation Language Models", "LLaMA: Open a
 
 训练一个新的大模型，并讨论：
 - 如何降低成本，特别是推理成本
--
 
 ## 论文的总体贡献
 

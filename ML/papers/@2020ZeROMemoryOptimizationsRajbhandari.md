@@ -32,18 +32,28 @@ aliases: ["ZeRO: Memory Optimizations Toward Training Trillion Parameter Models"
 
 ![fig1](https://pdf.cdn.readpaper.com/parsed/fetch_target/53affc1b8f3d34d4f3a0a9664456014f_2_Figure_1.png)
 
-前两种并行（ZeRO-1，ZeRO-2）分别将**优化器**和**梯度**分块存放在每个 GPU 上，需要时通过 all-reduce 合并计算。因为每个 GPU 上有完整参数，所以可以直接计算出该 micro-batch 的梯度。
+#### ZeRO-1，ZeRO-2
+
+前两种并行分别将**优化器**和**梯度**分块存放在每个 GPU 上，需要时通过 all-reduce 合并计算。因为每个 GPU 上有完整参数，所以可以直接计算出该 micro-batch 的梯度。
 
 **通信量相同**。由于原本也需要 all-reduce 操作，这里的通信没有额外开销，只是通信方式的变化：
 - 传统 DP：所有 GPU 发到 GPU0，求和后 GPU0 把结果发给每个 GPU。
-- ZeRO：每个 GPU 按分区，将对应分区发送到对应 GPU，每个 GPU 将自己的分区求和后发回给所有其他 GPU
+- ZeRO：每个 GPU 按分区，将对应分区发送到对应 GPU （scatter-reduce），每个 GPU 将自己的分区求和后发回给所有其他 GPU （all-gather）
 - 每个 GPU 接收其他 GPU 发来的 micro-batch 梯度 $2\Psi$ ，发出当前分区的更新后的参数 $2\Psi$ ，共 $4\Psi$
 
-第三种并行（ZeRO-3）额外把参数也拆分到每个 GPU 上，代价是计算梯度之前需要先通信一遍，获取参数，通信量 $$。
+#### ZeRO-3
+
+第三种并行额外把参数也拆分到每个 GPU 上，代价是计算梯度之前需要先通信一遍（all-gather），获取参数，通信量 $2\Psi$ 。随后是梯度的通信，同ZeRO-1，$4\Psi$ 。共 $6\Psi$ ，即1.5倍通信开销。
 
 ### ZeRO-R
 
-主要针对 activation
+主要针对 activation，和张量并行结合（Megatron-LM）。把activation分散在每个张量并行节点上。因为张量并行里，每个GPU上存储了重复的activation，所以可以分散存。
+
+> 所以DP不能做？怎么和ZeRO-DP结合？DP每个GPU的activation是自己batch上的，不一样，也不能加（吧？）
+
+也可以和[[@2016TrainingDeepNetsChen|Training Deep Nets with Sublinear Memory Cost, 2016]]结合。
+
+10%的额外通讯开销，有时甚至可以offload到CPU
 
 ## 实验
 

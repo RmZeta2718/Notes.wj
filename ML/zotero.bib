@@ -37,6 +37,7 @@
   publisher = {{IEEE}},
   address = {{Las Vegas, NV, USA}},
   doi = {10.1109/CVPR.2016.90},
+  urldate = {2022-10-20},
   abstract = {Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers\textemdash 8\texttimes{} deeper than VGG nets [40] but still having lower complexity. An ensemble of these residual nets achieves 3.57\% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers.},
   isbn = {978-1-4673-8851-1},
   langid = {english},
@@ -94,6 +95,7 @@
   publisher = {{Association for Computational Linguistics}},
   address = {{Melbourne, Australia}},
   doi = {10.18653/v1/P18-1194},
+  urldate = {2022-11-07},
   abstract = {The success of many natural language processing (NLP) tasks is bound by the number and quality of annotated data, but there is often a shortage of such training data. In this paper, we ask the question: ``Can we combine a neural network (NN) with regular expressions (RE) to improve supervised learning for NLP?''. In answer, we develop novel methods to exploit the rich expressiveness of REs at different levels within a NN, showing that the combination significantly enhances the learning effectiveness when a small number of training examples are available. We evaluate our approach by applying it to spoken language understanding for intent detection and slot filling. Experimental results show that our approach is highly effective in exploiting the available training data, giving a clear boost to the RE-unaware NN.},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\N3SNVWVE\\Luo 等 - 2018 - Marrying Up Regular Expressions with Neural Networ.pdf}
 }
@@ -141,6 +143,7 @@
   publisher = {{Association for Computational Linguistics}},
   address = {{Melbourne, Australia}},
   doi = {10.18653/v1/P18-1201},
+  urldate = {2022-10-13},
   abstract = {Most previous supervised event extraction methods have relied on features derived from manual annotations, and thus cannot be applied to new event types without extra annotation effort. We take a fresh look at event extraction and model it as a generic grounding problem: mapping each event mention to a specific type in a target event ontology. We design a transferable architecture of structural and compositional neural networks to jointly represent and map event mentions and types into a shared semantic space. Based on this new framework, we can select, for each event mention, the event type which is semantically closest in this space as its type. By leveraging manual annotations available for a small set of existing event types, our framework can be applied to new unseen event types without additional manual annotations. When tested on 23 unseen event types, our zero-shot framework, without manual annotations, achieved performance comparable to a supervised model trained from 3,000 sentences annotated with 500 event mentions.},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\M92H7XZE\\Huang 等。 - 2018 - Zero-Shot Transfer Learning for Event Extraction.pdf}
 }
@@ -266,6 +269,7 @@
   publisher = {{Association for Computational Linguistics}},
   address = {{Online}},
   doi = {10.18653/v1/2020.acl-main.541},
+  urldate = {2022-11-08},
   abstract = {Existing datasets for regular expression (regex) generation from natural language are limited in complexity; compared to regex tasks that users post on StackOverflow, the regexes in these datasets are simple, and the language used to describe them is not diverse. We introduce StructuredRegex, a new regex synthesis dataset differing from prior ones in three aspects. First, to obtain structurally complex and realistic regexes, we generate the regexes using a probabilistic grammar with pre-defined macros observed from real-world StackOverflow posts. Second, to obtain linguistically diverse natural language descriptions, we show crowdworkers abstract depictions of the underlying regex and ask them to describe the pattern they see, rather than having them paraphrase synthetic language. Third, we augment each regex example with a collection of strings that are and are not matched by the ground truth regex, similar to how real users give examples. Our quantitative and qualitative analysis demonstrates the advantages of StructuredRegex over prior datasets. Further experimental results using various multimodal synthesis techniques highlight the challenge presented by our dataset, including non-local constraints and multi-modal inputs.},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\IP5GLKVH\\Ye 等 - 2020 - Benchmarking Multimodal Regex Synthesis with Compl.pdf}
 }
@@ -356,6 +360,7 @@
   publisher = {{Association for Computational Linguistics}},
   address = {{Online}},
   doi = {10.18653/v1/2020.emnlp-main.53},
+  urldate = {2022-10-13},
   abstract = {Most previous event extraction studies assume a set of target event types and corresponding event annotations are given, which could be very expensive. In this paper, we work on a new task of semi-supervised event type induction, aiming to automatically discover a set of unseen types from a given corpus by leveraging annotations available for a few seen types. We design a Semi-Supervised Vector Quantized Variational Autoencoder framework to automatically learn a discrete latent type representation for each seen and unseen type and optimize them using seen type event annotations. A variational autoencoder is further introduced to enforce the reconstruction of each event mention conditioned on its latent type distribution. Experiments show that our approach can not only achieve state-of-the-art performance on supervised event detection but also discover high-quality new event types.},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\UYUQQDBY\\Huang 和 Ji - 2020 - Semi-supervised New Event Type Induction and Event.pdf}
 }
@@ -404,6 +409,7 @@
   publisher = {{Association for Computational Linguistics}},
   address = {{Online}},
   doi = {10.18653/v1/2020.emnlp-demos.6},
+  urldate = {2022-10-22},
   abstract = {Recent progress in natural language processing has been driven by advances in both model architecture and model pretraining. Transformer architectures have facilitated building higher-capacity models and pretraining has made it possible to effectively utilize this capacity for a wide variety of tasks. Transformers is an open-source library with the goal of opening up these advances to the wider machine learning community. The library consists of carefully engineered state-of-the art Transformer architectures under a unified API. Backing this library is a curated collection of pretrained models made by and available for the community. Transformers is designed to be extensible by researchers, simple for practitioners, and fast and robust in industrial deployments. The library is available at https://github.com/huggingface/transformers.},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\33PCZMJN\\Wolf 等。 - 2020 - Transformers State-of-the-Art Natural Language Pr.pdf}
 }
@@ -418,6 +424,7 @@
   eprint = {arXiv:1910.02054},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.1910.02054},
+  urldate = {2023-02-28},
   abstract = {Large deep learning models offer significant accuracy gains, but training billions to trillions of parameters is challenging. Existing solutions such as data and model parallelisms exhibit fundamental limitations to fit these models into limited device memory, while obtaining computation, communication and development efficiency. We develop a novel solution, Zero Redundancy Optimizer (ZeRO), to optimize memory, vastly improving training speed while increasing the model size that can be efficiently trained. ZeRO eliminates memory redundancies in data- and model-parallel training while retaining low communication volume and high computational granularity, allowing us to scale the model size proportional to the number of devices with sustained high efficiency. Our analysis on memory requirements and communication volume demonstrates: ZeRO has the potential to scale beyond 1 Trillion parameters using today's hardware. We implement and evaluate ZeRO: it trains large models of over 100B parameter with super-linear speedup on 400 GPUs, achieving throughput of 15 Petaflops. This represents an 8x increase in model size and 10x increase in achievable performance over state-of-the-art. In terms of usability, ZeRO can train large models of up to 13B parameters (e.g., larger than Megatron GPT 8.3B and T5 11B) without requiring model parallelism which is harder for scientists to apply. Last but not the least, researchers have used the system breakthroughs of ZeRO to create the world's largest language model (Turing-NLG, 17B parameters) with record breaking accuracy.},
   archiveprefix = {arxiv},
   keywords = {Computer Science - Distributed; Parallel; and Cluster Computing,Computer Science - Machine Learning,Statistics - Machine Learning},
@@ -452,6 +459,7 @@
   publisher = {{IEEE}},
   address = {{Nashville, TN, USA}},
   doi = {10.1109/CVPR46437.2021.01071},
+  urldate = {2022-10-23},
   abstract = {Semi-supervised learning on class-imbalanced data, although a realistic problem, has been under studied. While existing semi-supervised learning (SSL) methods are known to perform poorly on minority classes, we find that they still generate high precision pseudo-labels on minority classes. By exploiting this property, in this work, we propose ClassRebalancing Self-Training (CReST), a simple yet effective framework to improve existing SSL methods on classimbalanced data. CReST iteratively retrains a baseline SSL model with a labeled set expanded by adding pseudolabeled samples from an unlabeled set, where pseudolabeled samples from minority classes are selected more frequently according to an estimated class distribution. We also propose a progressive distribution alignment to adaptively adjust the rebalancing strength dubbed CReST+. We show that CReST and CReST+ improve state-of-the-art SSL algorithms on various class-imbalanced datasets and consistently outperform other popular rebalancing methods. Code has been made available at https://github. com/google-research/crest.},
   isbn = {978-1-66544-509-2},
   langid = {english},
@@ -518,6 +526,7 @@
   publisher = {{Association for Computational Linguistics}},
   address = {{Online and Punta Cana, Dominican Republic}},
   doi = {10.18653/v1/2021.emnlp-main.243},
+  urldate = {2022-11-17},
   abstract = {In this work, we explore ``prompt tuning,'' a simple yet effective mechanism for learning ``soft prompts'' to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3's few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method ``closes the gap'' and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed ``prefix tuning'' of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient ``prompt ensembling.'' We release code and model checkpoints to reproduce our experiments.},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\FTF3FZA3\\Lester 等 - 2021 - The Power of Scale for Parameter-Efficient Prompt .pdf}
 }
@@ -533,6 +542,7 @@
   publisher = {{Association for Computational Linguistics}},
   address = {{Online}},
   doi = {10.18653/v1/2021.acl-long.353},
+  urldate = {2022-11-17},
   abstract = {Fine-tuning is the de facto way of leveraging large pretrained language models for downstream tasks. However, fine-tuning modifies all the language model parameters and therefore necessitates storing a full copy for each task. In this paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for natural language generation tasks, which keeps language model parameters frozen and instead optimizes a sequence of continuous task-specific vectors, which we call the prefix. Prefix-tuning draws inspiration from prompting for language models, allowing subsequent tokens to attend to this prefix as if it were ``virtual tokens''. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for summarization. We show that by learning only 0.1\% of the parameters, prefix-tuning obtains comparable performance in the full data setting, outperforms fine-tuning in low-data settings, and extrapolates better to examples with topics that are unseen during training.},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\PEQNBH77\\Li 和 Liang - 2021 - Prefix-Tuning Optimizing Continuous Prompts for G.pdf}
 }
@@ -593,6 +603,7 @@
   publisher = {{Association for Computational Linguistics}},
   address = {{Online}},
   doi = {10.18653/v1/2021.findings-acl.114},
+  urldate = {2022-10-13},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\AY4TUYVB\\Zhang 等。 - 2021 - Zero-shot Label-Aware Event Trigger and Argument C.pdf}
 }
 
@@ -637,6 +648,7 @@
   eprint = {arXiv:2206.07682},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.2206.07682},
+  urldate = {2023-02-27},
   abstract = {Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks. This paper instead discusses an unpredictable phenomenon that we refer to as emergent abilities of large language models. We consider an ability to be emergent if it is not present in smaller models but is present in larger models. Thus, emergent abilities cannot be predicted simply by extrapolating the performance of smaller models. The existence of such emergence implies that additional scaling could further expand the range of capabilities of language models.},
   archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language},
@@ -691,6 +703,7 @@
   eprint = {arXiv:2205.12647},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.2205.12647},
+  urldate = {2023-02-27},
   abstract = {In this paper, we explore the challenging problem of performing a generative task in a target language when labeled data is only available in English, using summarization as a case study. We assume a strict setting with no access to parallel data or machine translation and find that common transfer learning approaches struggle in this setting, as a generative multilingual model fine-tuned purely on English catastrophically forgets how to generate non-English. Given the recent rise of parameter-efficient adaptation techniques, we conduct the first investigation into how one such method, prompt tuning (Lester et al., 2021), can overcome catastrophic forgetting to enable zero-shot cross-lingual generation. Our experiments show that parameter-efficient prompt tuning provides gains over standard fine-tuning when transferring between less-related languages, e.g., from English to Thai. However, a significant gap still remains between these methods and fully-supervised baselines. To improve cross-lingual transfer further, we explore several approaches, including: (1) mixing in unlabeled multilingual data, and (2) explicitly factoring prompts into recombinable language and task components. Our approaches can provide further quality gains, suggesting that robust zero-shot cross-lingual generation is within reach.},
   archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language},
@@ -707,6 +720,7 @@
   publisher = {{Association for Computational Linguistics}},
   address = {{Seattle, United States}},
   doi = {10.18653/v1/2022.naacl-main.167},
+  urldate = {2022-11-16},
   abstract = {Recently, a boom of papers has shown extraordinary progress in zero-shot and few-shot learning with various prompt-based models. It is commonly argued that prompts help models to learn faster in the same way that humans learn faster when provided with task instructions expressed in natural language. In this study, we experiment with over 30 prompts manually written for natural language inference (NLI). We find that models can learn just as fast with many prompts that are intentionally irrelevant or even pathologically misleading as they do with instructively ``good'' prompts. Further, such patterns hold even for models as large as 175 billion parameters (Brown et al., 2020) as well as the recently proposed instruction-tuned models which are trained on hundreds of prompts (Sanh et al., 2021). That is, instruction-tuned models often produce good predictions with irrelevant and misleading prompts even at zero shots. In sum, notwithstanding prompt-based models' impressive improvement, we find evidence of serious limitations that question the degree to which such improvement is derived from models understanding task instructions in ways analogous to humans' use of task instructions.},
   file = {C\:\\Users\\Administrator\\Zotero\\storage\\QWEBU4VA\\Webson 和 Pavlick - 2022 - Do Prompt-Based Models Really Understand the Meani.pdf}
 }
@@ -787,6 +801,7 @@
   eprint = {arXiv:2203.15556},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.2203.15556},
+  urldate = {2023-02-27},
   abstract = {We investigate the optimal model size and number of tokens for training a transformer language model under a given compute budget. We find that current large language models are significantly undertrained, a consequence of the recent focus on scaling language models whilst keeping the amount of training data constant. By training over 400 language models ranging from 70 million to over 16 billion parameters on 5 to 500 billion tokens, we find that for compute-optimal training, the model size and the number of training tokens should be scaled equally: for every doubling of model size the number of training tokens should also be doubled. We test this hypothesis by training a predicted compute-optimal model, Chinchilla, that uses the same compute budget as Gopher but with 70B parameters and 4\$\textbackslash times\$ more more data. Chinchilla uniformly and significantly outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and Megatron-Turing NLG (530B) on a large range of downstream evaluation tasks. This also means that Chinchilla uses substantially less compute for fine-tuning and inference, greatly facilitating downstream usage. As a highlight, Chinchilla reaches a state-of-the-art average accuracy of 67.5\% on the MMLU benchmark, greater than a 7\% improvement over Gopher.},
   archiveprefix = {arxiv},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},

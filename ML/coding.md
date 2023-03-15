@@ -52,6 +52,12 @@ a.shape  # (5,1)
 
 # pytorch
 
+pytorch 文档七宗罪：
+- tutorial 不够入门，很多细节完全不讲，要自己查 document，甚至上论坛问
+    - 当然，导致论坛比较活跃，或许是个优点
+- 左侧导航栏不会自动跳转到当前位置，右侧导航栏不会自动高亮，总是不知道自己在看哪里的文档
+- 左侧导航栏仅为顶层目录，有时会错过一些文档，这也是为什么找不着自己在看哪里。
+
 ### 增加维度 add new dimension
 
 https://stackoverflow.com/a/59603631
@@ -63,21 +69,34 @@ https://stackoverflow.com/a/59603631
 
 ### 分布式
 
-https://pytorch.org/tutorials/intermediate/ddp_tutorial.html
+ [基础数据并行（DDP）](https://pytorch.org/tutorials/intermediate/ddp_tutorial.html)
+
+ [ZeRO-DP](https://pytorch.org/tutorials/recipes/zero_redundancy_optimizer.html)
+
+ [ZeroRedundancyOptimizer](https://pytorch.org/tutorials/recipes/zero_redundancy_optimizer.html) （无用的文档，存在上位替代。。pytorch文档真烂）
 
 ### 复现/Reproducibility
 
-[李沐关于可重复性的讨论](https://www.bilibili.com/video/BV1Y5411c7aY/?p=3&share_source=copy_web&vd_source=ff9df13d97e77634f0683a5b6f354918&t=203)
+ [李沐关于可重复性的讨论](https://www.bilibili.com/video/BV1Y5411c7aY/?p=3&share_source=copy_web&vd_source=ff9df13d97e77634f0683a5b6f354918&t=203)
 - 如何保证可重复性
     - 随机数种子
-    - 禁用cudnn：cudnn加速矩阵计算会乱序计算，因为浮点误差，所以每次乱序计算的结果不一样
+    - 禁用 cudnn：cudnn 加速矩阵计算会乱序计算，因为浮点误差，所以每次乱序计算的结果不一样
 - 但是实际上不用太关注可重复性，随机性也意味着稳定性、鲁棒性。我们最终想要的是模型的可用性，所以要设计出对初始值等随机因素不敏感的模型。
 
 https://pytorch.org/docs/stable/notes/randomness.html
 
-### 调优
+### 计算性能优化
 
 https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html
+
+key points：
+- [Disable gradient calculation for validation or inference](https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html#disable-gradient-calculation-for-validation-or-inference)
+- [Avoid unnecessary CPU-GPU synchronization](https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html#avoid-unnecessary-cpu-gpu-synchronization)
+    - `print(tensor)`
+    - `cuda_tensor.item()`，`cuda_tensor.nonzero()`
+    - 内存复制： `tensor.to(device)`
+    - 依赖于 cuda tensor 的 python 控制流 `if (cuda_tensor != 0).all()`
+- [Pre-allocate memory in case of variable input length](https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html#pre-allocate-memory-in-case-of-variable-input-length)
 
 https://docs.nvidia.com/deeplearning/performance/index.html#optimizing-performance
 
@@ -259,4 +278,4 @@ TF32 类型：1 位符号位、8 位指数位、10 位尾数位
 
 23.02.18
 
-Tensor.shape 是 Tensor.size() 的别名：[add shape alias by hughperkins · Pull Request #1983 · pytorch/pytorch (github.com)](https://github.com/pytorch/pytorch/pull/1983)
+Tensor.shape 是 Tensor.size() 的别名： [add shape alias by hughperkins · Pull Request #1983 · pytorch/pytorch (github.com)](https://github.com/pytorch/pytorch/pull/1983)
