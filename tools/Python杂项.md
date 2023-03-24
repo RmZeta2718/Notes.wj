@@ -32,7 +32,7 @@ https://huggingface.co/docs/transformers/v4.26.1/en/internal/trainer_utils#trans
 
 - 基于 dataclass 定义
 - 文档不全面，因为以 huggingface 内部使用为主（官方用例是 [TrainingArguments](https://huggingface.co/docs/transformers/v4.26.1/en/main_classes/trainer#transformers.TrainingArguments) ），自己也可以用
-- `from transformers.hf_argparser import HfArg` 可以用于声明字段（[PR](https://github.com/huggingface/transformers/pull/20323)），无文档，typing有问题（于是自己重写了）
+- `from transformers.hf_argparser import HfArg` 可以用于声明字段（ [PR](https://github.com/huggingface/transformers/pull/20323) ），无文档，typing有问题（于是自己重写了）
 
 ## Package
 
@@ -56,21 +56,40 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 
 ### conda sync
 
-#### 直接同步
-
-一般来说虚拟环境在 <u>~/.conda</u> 下
-
-scp 同步
+#### 基于复制的同步
 
 下面的命令可以查看 conda 环境的安装位置
 
-```
+```bash
 conda info
 conda info -e
 conda env list
 ```
 
-#### 元数据同步
+下面假设虚拟环境在 <u>~/.conda</u> 下
+
+Linux 系统上，conda 会尝试硬链接 <u>~/.conda/pkgs</u> 以节省空间 [Is it safe to manually delete all files in pkgs folder in anaconda python? - Stack Overflow](https://stackoverflow.com/questions/56266229/is-it-safe-to-manually-delete-all-files-in-pkgs-folder-in-anaconda-python)
+
+可以用 du 检验（ [du 可以正确计算 hardlink 情况下的磁盘空间占用](https://stackoverflow.com/questions/19951883/du-counting-hardlinks-towards-filesize) ）：`du` 只计算第一次遇到的硬链接，于是：
+- `du -hcd 0 ~/.conda/envs ~/.conda/pkgs` ：<u>pkgs</u> 里有多少没有被 <u>envs</u> 引用（可清理空间）
+- `du -hcd 0 ~/.conda/pkgs ~/.conda/envs` ：<u>envs</u> 里有多少没有被 <u>pkgs</u> 引用（未复用空间，可能因为错误地清理了 <u>pkgs</u>）
+
+清理空间：
+- `conda clean -t` 清理空间（删除 tar）
+- **不要**用 `conda clean -a` 或 `conda clean -p` ，这会删除 <u>pkgs/</u> 下的硬链接，导致新环境无法复用存储空间。
+
+如何在保留硬链接的情况下传输文件？
+ - [`tar` preserve hard links](https://stackoverflow.com/questions/38333481/tar-archive-preserving-hardlinks) + `scp`（不要用纯 `scp`，不能正确处理硬链接）
+ - [`rsync -H` preserve hard links](https://unix.stackexchange.com/questions/44247/how-to-copy-directories-with-preserving-hardlinks) ，但是 [据说](https://serverfault.com/questions/207370/rsync-with-hard-links-freezes/207693#207693) 内存占用很高，不适合大量文件（实践中可以，或许已经优化了）
+
+从 `$host` 同步到本地：
+```bash
+rsync -avhH --partial-dir=.rsync-partial --delete $host:~/.conda ~/
+```
+
+#### 基于元数据的同步
+
+本质上需要重新建立（下载）整个环境，效率较低
 
 ##### conda env
 
@@ -82,7 +101,7 @@ conda env export > myenv.yml
 
 machine2:
 
-```
+```bash
 conda env create -f myenv.yml
 # or
 conda env update -f myenv.yml --prune
@@ -111,6 +130,12 @@ pipreqs
 ```bash
 pip install -r requirements.txt
 ```
+
+#### 基于 sshfs 的同步
+
+根据 vscode 提供的教程（见[[terminal_notes#远程文件同步]]），我认为 conda 环境不适用于 sshfs。
+
+经实验，rsync 可以工作，因此采用 rsync。
 
 ## Python 并发
 
