@@ -82,3 +82,5 @@ https://github.com/gpakosz/.tmux
 - PREFIX w: window preview
 
 Ctrl+a 不好按，于是把 Capslock 换成了 Ctrl（Windows 上用 [PowerToys](https://github.com/microsoft/PowerToys) 换）
+
+tmux 版本 2.6（install from src if not available）。试过 tmux3.0a 和 3.3a，窗口名字不会自动改为 cwd，而是显示 zsh。这似乎是符合预期的（`tmux show-window-options -g automatic-rename-format`），不知道怎么改。
