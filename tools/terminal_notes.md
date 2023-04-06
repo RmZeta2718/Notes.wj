@@ -12,7 +12,10 @@
 
 总结： `rsync` 更好
 
-最佳实践：TODO
+最佳实践：[dotfiles_pub/rsync_push at master · RmZeta2718/dotfiles_pub · GitHub](https://github.com/RmZeta2718/dotfiles_pub/blob/master/bin/rsync_push)
+
+[`rsync -H` preserve hard links](https://unix.stackexchange.com/questions/44247/how-to-copy-directories-with-preserving-hardlinks)
+[`rsync -l`(-a) preserve soft links](https://superuser.com/questions/799354/rsync-and-symbolic-links)
 
  [vscode 的 sshfs 教程](https://code.visualstudio.com/docs/remote/troubleshooting#_using-sshfs-to-access-files-on-your-remote-host) ：best used for single file edits and uploading/downloading content. If you need to use an application that bulk reads/write to many files at once (like a local source control tool), [rsync](https://code.visualstudio.com/docs/remote/troubleshooting#_using-rsync-to-maintain-a-local-copy-of-your-source-code) is a better choice.
 
@@ -84,3 +87,7 @@ https://github.com/gpakosz/.tmux
 Ctrl+a 不好按，于是把 Capslock 换成了 Ctrl（Windows 上用 [PowerToys](https://github.com/microsoft/PowerToys) 换）
 
 tmux 版本 2.6（install from src if not available）。试过 tmux3.0a 和 3.3a，窗口名字不会自动改为 cwd，而是显示 zsh。这似乎是符合预期的（`tmux show-window-options -g automatic-rename-format`），不知道怎么改。
+
+[How can I keep the tmux prefix key pressed between commands? - Super User](https://superuser.com/questions/263940/how-can-i-keep-the-tmux-prefix-key-pressed-between-commands)
+
+`bind -r` 可以让PREFIX连续生效，
