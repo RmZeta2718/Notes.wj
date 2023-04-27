@@ -87,6 +87,8 @@ Linux 系统上，conda 会尝试硬链接 <u>~/.conda/pkgs</u> 以节省空间 
 rsync -avhH --partial-dir=.rsync-partial --delete $host:~/.conda ~/
 ```
 
+该方法缺陷：需要用户名相同，否则部分库存在问题（使用了绝对路径的解释器）
+
 #### 基于元数据的同步
 
 本质上需要重新建立（下载）整个环境，效率较低
