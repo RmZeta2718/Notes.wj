@@ -146,7 +146,17 @@ aliases: ["{{title}}", "{{title}}, {{year}}"]
 
 在 front-matter 中添加 alias=title，方便其他地方提到 title 时可以提示链接/方便主动创建链接，如果论文有别名，如 BERT，可以手动添加额外 alias
 
+### No Dupe Leaves
+
+啥都不支持的obsidian，用户体验极差。
+
+防止打开重复的tab
+
+来自一个 [FR](https://forum.obsidian.md/t/ide-style-navigation-tab-reuse-on-link-opening-tab-management/46671/6) ，在FR没有完成之前，以插件的形式存在。
+
 ### obsidian-proxy-github
+
+浏览和下载第三方插件可能需要打开这个插件。
 
 https://zhuanlan.zhihu.com/p/430538023
 

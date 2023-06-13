@@ -1,7 +1,7 @@
 ---
 aliases: ["Longformer: The Long-Document Transformer", "Longformer: The Long-Document Transformer, 2020", "Longformer"]
 ---
-# Longformer: The Long-Document [[@2017AttentionAllYouVaswani|Transformer]]
+# Longformer: The Long-Document Transformer
 
 - **Journal**: arXiv:2004.05150
 - **Author**: Iz Beltagy, Matthew E. Peters, Arman Cohan
