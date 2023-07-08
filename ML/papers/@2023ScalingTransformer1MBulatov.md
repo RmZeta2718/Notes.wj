@@ -1,5 +1,5 @@
 ---
-aliases: ["Scaling Transformer to 1M tokens and beyond with RMT", "Scaling Transformer to 1M tokens and beyond with RMT, 2023", "RMT"]
+aliases: ["Scaling Transformer to 1M tokens and beyond with RMT", "Scaling Transformer to 1M tokens and beyond with RMT, 2023"]
 ---
 # Scaling Transformer to 1M tokens and beyond with RMT
 
@@ -8,7 +8,7 @@ aliases: ["Scaling Transformer to 1M tokens and beyond with RMT", "Scaling Trans
 - **Year**: 2023
 - **URL**: http://arxiv.org/abs/2304.11062
 - [**Zotero**](zotero://select/items/@2023ScalingTransformer1MBulatov)
-- [**TODO ReadPaper**](https://readpaper.com/...)
+- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4748056461133758465&noteId=1754770000461550336)
 
 ## 论文试图解决的问题
 

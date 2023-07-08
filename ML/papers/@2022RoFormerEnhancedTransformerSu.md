@@ -20,6 +20,18 @@ aliases: ["RoFormer: Enhanced Transformer with Rotary Position Embedding", "RoFo
 
 ### 总体流程
 
+$$
+\begin{pmatrix}
+\cos{m\theta_1}& -\sin{m\theta_1}&0&0&\cdots&0&0\\
+\sin{m\theta_1}&\cos{m\theta_1}&0&0&\cdots&0&0 \\
+0&0&\cos{m\theta_2}& -\sin{m\theta_2}&\cdots&0&0\\
+0&0&\sin{m\theta_2}&\cos{m\theta_2}&\cdots&0&0 \\
+\vdots&\vdots&\vdots&\vdots&\ddots&\vdots&\vdots\\
+0&0&0&0&\cdots&\cos{m\theta_{d/2}}& -\sin{m\theta_{d/2}}\\
+0&0&0&0&\cdots&\sin{m\theta_{d/2}}&\cos{m\theta_{d/2}}
+\end{pmatrix}\begin{pmatrix}q_0\\q_1\\q_2\\q_3\\\vdots\\q_{d-2}\\q_{d-1}\end{pmatrix}
+$$
+
 ## 实验
 
 %% 实现细节、设置。数据集。评估。消融实验 %%

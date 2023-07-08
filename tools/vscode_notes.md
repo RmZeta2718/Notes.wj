@@ -82,6 +82,10 @@ local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地�
 
 用 Sort JSON 插件来排序。vscode 没有自带 settings.json 的排序
 
+### Readonly
+
+经常会不小心修改库文件，23/05版本起终于可以手动指定只读文件了：Readonly Include设置项添加 `**/.conda/**`
+
 ### Theme
 
 使用默认的 Dark+主题。做了一点小修改：

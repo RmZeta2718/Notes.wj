@@ -1,9 +1,9 @@
 ---
-aliases: ["Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation", "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation, 2022"]
+aliases: ["Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation", "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation, 2022", "ALiBi"]
 ---
 # Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation
 
-- **Journal**: arxiv:2108.12409
+- **Journal**: arxiv:2108.12409 #ICLR22
 - **Author**: Ofir Press, Noah A. Smith, Mike Lewis
 - **Year**: 2022
 - **URL**: http://arxiv.org/abs/2108.12409

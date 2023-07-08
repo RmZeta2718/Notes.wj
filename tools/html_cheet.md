@@ -47,3 +47,11 @@ flex
 ```html
 <img src="a.jpg" width = "200" style="position:absolute;right:100px;top:320px;"/>
 ```
+
+### 图片居中
+
+```html
+<img align="center" src="">
+```
+
+和缩放不兼容？（加上width后居中失效）

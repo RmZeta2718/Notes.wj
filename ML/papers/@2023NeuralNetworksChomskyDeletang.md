@@ -8,7 +8,7 @@ aliases: ["Neural Networks and the Chomsky Hierarchy", "Neural Networks and the 
 - **Year**: 2023
 - **URL**: http://arxiv.org/abs/2207.02098
 - [**Zotero**](zotero://select/items/@2023NeuralNetworksChomskyDeletang)
-- [**TODO ReadPaper**](https://readpaper.com/...)
+- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4742436325097996289&noteId=1807043008861906176)
 
 ## 论文试图解决的问题
 

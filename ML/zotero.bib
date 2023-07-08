@@ -765,6 +765,22 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\YB4WJ8S9\\Wei 等 - 2022 - Emergent Abilities of Large Language Models.pdf;C\:\\Users\\27404\\Zotero\\storage\\RNVTGQ9Q\\2206.html}
 }
 
+@online{2022ExploringLengthGeneralizationAnil,
+  title = {Exploring {{Length Generalization}} in {{Large Language Models}}},
+  author = {Anil, Cem and Wu, Yuhuai and Andreassen, Anders and Lewkowycz, Aitor and Misra, Vedant and Ramasesh, Vinay and Slone, Ambrose and Gur-Ari, Guy and Dyer, Ethan and Neyshabur, Behnam},
+  date = {2022-11-14},
+  eprint = {2207.04901},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2207.04901},
+  url = {http://arxiv.org/abs/2207.04901},
+  urldate = {2023-07-04},
+  abstract = {The ability to extrapolate from short problem instances to longer ones is an important form of out-of-distribution generalization in reasoning tasks, and is crucial when learning from datasets where longer problem instances are rare. These include theorem proving, solving quantitative mathematics problems, and reading/summarizing novels. In this paper, we run careful empirical studies exploring the length generalization capabilities of transformer-based language models. We first establish that naively finetuning transformers on length generalization tasks shows significant generalization deficiencies independent of model scale. We then show that combining pretrained large language models' in-context learning abilities with scratchpad prompting (asking the model to output solution steps before producing an answer) results in a dramatic improvement in length generalization. We run careful failure analyses on each of the learning modalities and identify common sources of mistakes that highlight opportunities in equipping language models with the ability to generalize to longer problems.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\Z5R4HYK3\\Anil 等 - 2022 - Exploring Length Generalization in Large Language .pdf;C\:\\Users\\27404\\Zotero\\storage\\MLYK5M7D\\2207.html}
+}
+
 @online{2022GLMGeneralLanguageDu,
   title = {{{GLM}}: {{General Language Model Pretraining}} with {{Autoregressive Blank Infilling}}},
   shorttitle = {{{GLM}}},
@@ -1059,6 +1075,55 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\JZLEKQU2\\Balestriero 等 - 2023 - A Cookbook of Self-Supervised Learning.pdf;C\:\\Users\\27404\\Zotero\\storage\\ZDHSCTVA\\2304.html}
 }
 
+@online{2023DissectingTransformerLengthChi,
+  title = {Dissecting {{Transformer Length Extrapolation}} via the {{Lens}} of {{Receptive Field Analysis}}},
+  author = {Chi, Ta-Chung and Fan, Ting-Han and Rudnicky, Alexander I. and Ramadge, Peter J.},
+  date = {2023-05-23},
+  eprint = {2212.10356},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2212.10356},
+  url = {http://arxiv.org/abs/2212.10356},
+  urldate = {2023-07-04},
+  abstract = {Length extrapolation permits training a transformer language model on short sequences that preserves perplexities when tested on substantially longer sequences. A relative positional embedding design, ALiBi, has had the widest usage to date. We dissect ALiBi via the lens of receptive field analysis empowered by a novel cumulative normalized gradient tool. The concept of receptive field further allows us to modify the vanilla Sinusoidal positional embedding to create \textasciitilde\textbackslash textbf\{Sandwich\}, the first parameter-free relative positional embedding design that truly length information uses longer than the training sequence. Sandwich shares with KERPLE and T5 the same logarithmic decaying temporal bias pattern with learnable relative positional embeddings; these elucidate future extrapolatable positional embedding design.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\ZDCIW7EN\\Chi 等 - 2023 - Dissecting Transformer Length Extrapolation via th.pdf;C\:\\Users\\27404\\Zotero\\storage\\5Q5C3PXG\\2212.html}
+}
+
+@online{2023ExtendingContextWindowChen,
+  title = {Extending {{Context Window}} of {{Large Language Models}} via {{Positional Interpolation}}},
+  author = {Chen, Shouyuan and Wong, Sherman and Chen, Liangjian and Tian, Yuandong},
+  date = {2023-06-28},
+  eprint = {2306.15595},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2306.15595},
+  url = {http://arxiv.org/abs/2306.15595},
+  urldate = {2023-07-03},
+  abstract = {We present Position Interpolation (PI) that extends the context window sizes of RoPE-based pretrained LLMs such as LLaMA models to up to 32768 with minimal fine-tuning (within 1000 steps), while demonstrating strong empirical results on various tasks that require long context, including passkey retrieval, language modeling, and long document summarization from LLaMA 7B to 65B. Meanwhile, the extended model by Position Interpolation preserve quality relatively well on tasks within its original context window. To achieve this goal, Position Interpolation linearly down-scales the input position indices to match the original context window size, rather than extrapolating beyond the trained context length which may lead to catastrophically high attention scores that completely ruin the self-attention mechanism. Our theoretical study shows that the upper bound of interpolation is at least \$\textbackslash sim 600 \textbackslash times\$ smaller than that of extrapolation, further demonstrating its stability. Models extended via Position Interpolation retain its original architecture and can reuse most pre-existing optimization and infrastructure.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\7TB6KQTT\\Chen 等 - 2023 - Extending Context Window of Large Language Models .pdf;C\:\\Users\\27404\\Zotero\\storage\\APS2SNHB\\2306.html}
+}
+
+@online{2023LandmarkAttentionRandomAccessMohtashami,
+  title = {Landmark {{Attention}}: {{Random-Access Infinite Context Length}} for {{Transformers}}},
+  shorttitle = {Landmark {{Attention}}},
+  author = {Mohtashami, Amirkeivan and Jaggi, Martin},
+  date = {2023-05-25},
+  eprint = {2305.16300},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2305.16300},
+  url = {http://arxiv.org/abs/2305.16300},
+  urldate = {2023-07-05},
+  abstract = {While transformers have shown remarkable success in natural language processing, their attention mechanism's large memory requirements have limited their ability to handle longer contexts. Prior approaches, such as recurrent memory or retrieval-based augmentation, have either compromised the random-access flexibility of attention (i.e., the capability to select any token in the entire context) or relied on separate mechanisms for relevant context retrieval, which may not be compatible with the model's attention. In this paper, we present a novel approach that allows access to the complete context while retaining random-access flexibility, closely resembling running attention on the entire context. Our method uses a landmark token to represent each block of the input and trains the attention to use it for selecting relevant blocks, enabling retrieval of blocks directly through the attention mechanism instead of by relying on a separate mechanism. Our approach seamlessly integrates with specialized data structures and the system's memory hierarchy, enabling processing of arbitrarily long context lengths. We demonstrate that our method can obtain comparable performance with Transformer-XL while significantly reducing the number of retrieved tokens in each step. Finally, we show that fine-tuning LLaMA 7B with our method successfully extends its context length capacity up to 32k tokens, allowing for inference at the context lengths of GPT-4.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\IXBRTL9X\\Mohtashami 和 Jaggi - 2023 - Landmark Attention Random-Access Infinite Context.pdf;C\:\\Users\\27404\\Zotero\\storage\\ULPZSXHV\\2305.html}
+}
+
 @online{2023LearningCompressPromptsMu,
   title = {Learning to {{Compress Prompts}} with {{Gist Tokens}}},
   author = {Mu, Jesse and Li, Xiang Lisa and Goodman, Noah},
@@ -1083,6 +1148,23 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\2WC8JPVW\\Touvron 等 - LLaMA Open and Efficient Foundation Language Mode.pdf}
 }
 
+@online{2023LongNetScalingTransformersDing,
+  title = {{{LongNet}}: {{Scaling Transformers}} to 1,000,000,000 {{Tokens}}},
+  shorttitle = {{{LongNet}}},
+  author = {Ding, Jiayu and Ma, Shuming and Dong, Li and Zhang, Xingxing and Huang, Shaohan and Wang, Wenhui and Wei, Furu},
+  date = {2023-07-05},
+  eprint = {2307.02486},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2307.02486},
+  url = {http://arxiv.org/abs/2307.02486},
+  urldate = {2023-07-08},
+  abstract = {Scaling sequence length has become a critical demand in the era of large language models. However, existing methods struggle with either computational complexity or model expressivity, rendering the maximum sequence length restricted. In this work, we introduce LongNet, a Transformer variant that can scale sequence length to more than 1 billion tokens, without sacrificing the performance on shorter sequences. Specifically, we propose dilated attention, which expands the attentive field exponentially as the distance grows. LongNet has significant advantages: 1) it has a linear computation complexity and a logarithm dependency between tokens; 2) it can be served as a distributed trainer for extremely long sequences; 3) its dilated attention is a drop-in replacement for standard attention, which can be seamlessly integrated with the existing Transformer-based optimization. Experiments results demonstrate that LongNet yields strong performance on both long-sequence modeling and general language tasks. Our work opens up new possibilities for modeling very long sequences, e.g., treating a whole corpus or even the entire Internet as a sequence.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\HILTSENP\\Ding 等 - 2023 - LongNet Scaling Transformers to 1,000,000,000 Tok.pdf;C\:\\Users\\27404\\Zotero\\storage\\GFI9MD6U\\2307.html}
+}
+
 @online{2023NeuralNetworksChomskyDeletang,
   title = {Neural {{Networks}} and the {{Chomsky Hierarchy}}},
   author = {Delétang, Grégoire and Ruoss, Anian and Grau-Moya, Jordi and Genewein, Tim and Wenliang, Li Kevin and Catt, Elliot and Cundy, Chris and Hutter, Marcus and Legg, Shane and Veness, Joel and Ortega, Pedro A.},
@@ -1097,6 +1179,22 @@
   pubstate = {preprint},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Formal Languages and Automata Theory,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\JICJ7K7X\\Delétang 等 - 2023 - Neural Networks and the Chomsky Hierarchy.pdf;C\:\\Users\\27404\\Zotero\\storage\\LJ5HI7LF\\2207.html}
+}
+
+@online{2023RandomizedPositionalEncodingsRuoss,
+  title = {Randomized {{Positional Encodings Boost Length Generalization}} of {{Transformers}}},
+  author = {Ruoss, Anian and Delétang, Grégoire and Genewein, Tim and Grau-Moya, Jordi and Csordás, Róbert and Bennani, Mehdi and Legg, Shane and Veness, Joel},
+  date = {2023-05-26},
+  eprint = {2305.16843},
+  eprinttype = {arxiv},
+  eprintclass = {cs, stat},
+  doi = {10.48550/arXiv.2305.16843},
+  url = {http://arxiv.org/abs/2305.16843},
+  urldate = {2023-07-05},
+  abstract = {Transformers have impressive generalization capabilities on tasks with a fixed context length. However, they fail to generalize to sequences of arbitrary length, even for seemingly simple tasks such as duplicating a string. Moreover, simply training on longer sequences is inefficient due to the quadratic computation complexity of the global attention mechanism. In this work, we demonstrate that this failure mode is linked to positional encodings being out-of-distribution for longer sequences (even for relative encodings) and introduce a novel family of positional encodings that can overcome this problem. Concretely, our randomized positional encoding scheme simulates the positions of longer sequences and randomly selects an ordered subset to fit the sequence's length. Our large-scale empirical evaluation of 6000 models across 15 algorithmic reasoning tasks shows that our method allows Transformers to generalize to sequences of unseen length (increasing test accuracy by 12.0\% on average).},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\SSQSQ8CT\\Ruoss 等 - 2023 - Randomized Positional Encodings Boost Length Gener.pdf;C\:\\Users\\27404\\Zotero\\storage\\7WEBHEP8\\2305.html}
 }
 
 @online{2023ScalingTransformer1MBulatov,
