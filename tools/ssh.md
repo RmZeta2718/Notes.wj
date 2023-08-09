@@ -1,6 +1,6 @@
 # SSH
 
-Tutorial：https://www.linode.com/docs/guides/use-public-key-authentication-with-ssh/
+Tutorial： https://www.linode.com/docs/guides/use-public-key-authentication-with-ssh/
 
 ### 权限
 

@@ -36,7 +36,7 @@ https://huggingface.co/docs/transformers/v4.26.1/en/internal/trainer_utils#trans
 
 ## Package
 
- [__init__.py 样例](https://stackoverflow.com/a/29509611)
+ [`__init__.py` 样例](https://stackoverflow.com/a/29509611)
 
 自动导入 dir 下所有 py（可能已经过时了）： https://stackoverflow.com/a/1057534
 

@@ -59,12 +59,12 @@ local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地�
         "eamodio.gitlens",
         "formulahendry.code-runner",
         "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker",
         "ms-python.isort",
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter",
         "shakram02.bash-beautify",
-        "shd101wyy.markdown-preview-enhanced",
         "streetsidesoftware.code-spell-checker",
         "Thinker.sort-json",
         "yzhang.markdown-all-in-one"

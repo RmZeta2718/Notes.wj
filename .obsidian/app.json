@@ -22,9 +22,6 @@
   "promptDelete": false,
   "tabSize": 4,
   "showInlineTitle": false,
-  "spellcheckLanguages": [
-    "zh-CN",
-    "en-US"
-  ],
+  "spellcheckLanguages": null,
   "autoPairMarkdown": false
 }
