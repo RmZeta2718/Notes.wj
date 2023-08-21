@@ -91,3 +91,7 @@ tmux 版本 2.6（install from src if not available）。试过 tmux3.0a 和 3.3
 [How can I keep the tmux prefix key pressed between commands? - Super User](https://superuser.com/questions/263940/how-can-i-keep-the-tmux-prefix-key-pressed-between-commands)
 
 `bind -r` 可以让PREFIX连续生效，
+
+### shell script
+
+允许编辑正在运行的shell脚本： https://stackoverflow.com/a/2358432 （否则修改script后，正在运行的script会出问题，因为shell是一行一行读取文件的，没有一次全部加载进来）

@@ -16,6 +16,9 @@ aliases: ["Training Compute-Optimal Large Language Models", "Training Compute-Op
 
 ## 论文的总体贡献
 
+- 提出了模型大小和训练数据需要同步增长。
+- 发现现有的大部分模型训练量不够
+
 ## 论文提供的关键元素、关键设计
 
 ### 总体流程

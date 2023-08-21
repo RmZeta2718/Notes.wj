@@ -270,12 +270,39 @@ https://blogs.nvidia.com/blog/2020/05/14/tensorfloat-32-precision-format/
 
 TF32 类型：1 位符号位、8 位指数位、10 位尾数位
 
-# 代码框架
+# 开源库
+
+## 框架
 
  [深度学习里面，请问有写 train 函数的模板吗？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/523869554)
 
+### AllenNLP
+
+[allenai/allennlp: An open-source NLP research library, built on PyTorch. (github.com)](https://github.com/allenai/allennlp)
+
+[nyu-mll/jiant: jiant is an nlp toolkit (github.com)](https://github.com/nyu-mll/jiant/tree/master)
+
+## 工具
+
+### einops
+
+可以支持不同框架的 Tensor，代码： https://github.com/arogozhnikov/einops/blob/master/einops/_backends.py
+
+> 为什么要 lazy import
+
+见 docstring：
+- backends may not be installed
+- importing all available backends will drive to significant memory footprint
+- backends may by present but installed with errors (but never used), importing may drive to crashes
+
+> 如何 lazy import
+
+ `get_backend()` 函数获取 Tensor 对应的后端框架，返回 `AbstractBackend` 这个抽象类接口。
+ - 其核心逻辑是查看 `sys.modules` （其中记录了目前已经 import 的所有模块），做到只 import 已经成功 import 的模块。
+ - 然后再通过 `is_appropriate_type()` 判断 Tensor 是否属于这个框架。这是个抽象函数，由各个后端对应的子类实现。例如 `numpy` 实现为 `isinstance(tensor, self.np.ndarray)`
 # 杂项
 
 23.02.18
 
 Tensor.shape 是 Tensor.size() 的别名： [add shape alias by hughperkins · Pull Request #1983 · pytorch/pytorch (github.com)](https://github.com/pytorch/pytorch/pull/1983)
+

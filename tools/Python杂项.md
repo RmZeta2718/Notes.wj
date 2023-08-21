@@ -34,6 +34,25 @@ https://huggingface.co/docs/transformers/v4.26.1/en/internal/trainer_utils#trans
 - 文档不全面，因为以 huggingface 内部使用为主（官方用例是 [TrainingArguments](https://huggingface.co/docs/transformers/v4.26.1/en/main_classes/trainer#transformers.TrainingArguments) ），自己也可以用
 - `from transformers.hf_argparser import HfArg` 可以用于声明字段（ [PR](https://github.com/huggingface/transformers/pull/20323) ），无文档，typing有问题（于是自己重写了）
 
+### Spock
+
+https://github.com/fidelity/spock
+
+### Hydra
+
+https://github.com/facebookresearch/hydra
+
+### Pyrallis
+
+https://github.com/eladrich/pyrallis
+
+derived from `simple-parsing` and inspired by `Hydra`
+
+https://github.com/eladrich/pyrallis#why-another-parsing-library
+
+- 又能读文件又能读命令行！
+- 基于dataclass
+
 ## Package
 
  [`__init__.py` 样例](https://stackoverflow.com/a/29509611)
