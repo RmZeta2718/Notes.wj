@@ -298,15 +298,6 @@
       "key": "L"
     }
   ],
-  "editor:toggle-checklist-status": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "C"
-    }
-  ],
   "obsidian-underline:toggle-link-block": [],
   "obsidian-underline:toggle-link-heading": [],
   "obsidian-underline:toggle-center-tag": [],
@@ -326,6 +317,25 @@
         "Shift"
       ],
       "key": "2"
+    }
+  ],
+  "editor:toggle-checklist-status": [],
+  "copy-as-html:copy-as-html-command": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "C"
+    }
+  ],
+  "copy-document-as-html:copy-selection-as-html": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "C"
     }
   ]
 }
