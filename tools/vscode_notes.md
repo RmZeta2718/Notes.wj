@@ -31,6 +31,26 @@ https://www.zhihu.com/question/303850876
 - Python: Restart Language Server
 - Developer: Reload Window
 
+### python formatting
+
+black + isort
+
+isort 默认的 format 很丑陋，加上 README 里的 `"isort.args": ["--profile", "black"]`  之后就正常了。
+
+shortcut 修改 `Organize Imports` `Shift+Alt+O` ->`Shift+Alt+F` ，于是格式化时会同时 isort
+
+自动保存时不会触发 isort，但是会触发 format。因此依赖自动 format 有时会不一致。
+
+```json
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    }
+    "editor.formatOnSave": true,
+```
+
+根据 [editor.codeActionsOnSave not triggered from autosave · Issue #123875 · microsoft/vscode (github.com)](https://github.com/microsoft/vscode/issues/123875) ，这是 feature。
 ### Customize C formatting style
 
  [reference](https://zamhuang.medium.com/vscode-how-to-customize-c-s-coding-style-in-vscode-ad16d87e93bf)
@@ -58,15 +78,19 @@ local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地�
         "DavidAnson.vscode-markdownlint",
         "eamodio.gitlens",
         "formulahendry.code-runner",
+        "foxundermoon.shell-format",
+        "GitHub.copilot",
+        "jbockle.jbockle-format-files",
         "mhutchie.git-graph",
         "ms-azuretools.vscode-docker",
+        "ms-python.black-formatter",
         "ms-python.isort",
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter",
-        "shakram02.bash-beautify",
         "streetsidesoftware.code-spell-checker",
         "Thinker.sort-json",
+        "timonwong.shellcheck",
         "yzhang.markdown-all-in-one"
     ],
 }
@@ -84,7 +108,7 @@ local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地�
 
 ### Readonly
 
-经常会不小心修改库文件，23/05版本起终于可以手动指定只读文件了：Readonly Include设置项添加 `**/.conda/**`
+经常会不小心修改库文件，23/05 版本起终于可以手动指定只读文件了：Readonly Include 设置项添加 `**/.conda/**`
 
 ### Theme
 
