@@ -274,7 +274,11 @@ TF32 类型：1 位符号位、8 位指数位、10 位尾数位
 
 ## 框架
 
- [深度学习里面，请问有写 train 函数的模板吗？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/523869554)
+[深度学习里面，请问有写 train 函数的模板吗？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/523869554)
+
+[Pytorch Lightning 和 HuggingFace 的 Trainer 哪个好用？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/521501258)
+
+[Pytorch Lightning 完全攻略 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/353985363)
 
 ### AllenNLP
 
