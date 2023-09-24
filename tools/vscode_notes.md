@@ -12,19 +12,19 @@
 
 > \[\]内的是我修改的快捷键
 
+其他快捷键参考
+- https://github.com/VSCodeVim/Vim#-faq
+- https://github.com/VSCodeVim/Vim/issues/754#issuecomment-284302205
+
 ### 自动保存
 
 文件--自动保存
 
-### im-select
+## python
 
- [VSCodeVim/Vim: Vim for Visual Studio Code (github.com)](https://github.com/VSCodeVim/Vim/#input-method)
+A good tutorial: https://realpython.com/advanced-visual-studio-code-python
 
-https://www.zhihu.com/question/303850876
-
-目前似乎不支持 remote 上的切换，只有本地有效。
-
-### python
+### refresh language server
 
 有时候更新了环境，但是代码提示没有刷新，这时可以重启 language server 刷新（或者直接 reload 整个 vscode）
 
@@ -37,7 +37,7 @@ black + isort
 
 isort 默认的 format 很丑陋，加上 README 里的 `"isort.args": ["--profile", "black"]`  之后就正常了。
 
-shortcut 修改 `Organize Imports` `Shift+Alt+O` ->`Shift+Alt+F` ，于是格式化时会同时 isort
+试图将 shortcut 修改 `Organize Imports` `Shift+Alt+O` ->`Shift+Alt+F` ，结果覆盖了原有的 formatting
 
 自动保存时不会触发 isort，但是会触发 format。因此依赖自动 format 有时会不一致。
 
@@ -51,17 +51,78 @@ shortcut 修改 `Organize Imports` `Shift+Alt+O` ->`Shift+Alt+F` ，于是格式
 ```
 
 根据 [editor.codeActionsOnSave not triggered from autosave · Issue #123875 · microsoft/vscode (github.com)](https://github.com/microsoft/vscode/issues/123875) ，这是 feature。
-### Customize C formatting style
+## Customize C formatting style
 
  [reference](https://zamhuang.medium.com/vscode-how-to-customize-c-s-coding-style-in-vscode-ad16d87e93bf)
 
 modify `C_Cpp.clang_format_fallbackStyle` to `{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}` (and the original value was `Visual Studio` )
 
-### Remote
+## vim
+
+ [🎩 VSCodeVim tricks!](https://github.com/VSCodeVim/Vim#-vscodevim-tricks) ：`gh` = 鼠标悬停，`gd` = `ctrl + click`
+
+vim fold problem (see README)
+
+```json
+    "vim.foldfix": true,
+```
+
+解决~~（移除）~~ vim 中复制的问题
+
+```json
+    "vim.handleKeys": {
+        // https://github.com/VSCodeVim/Vim/issues/1437#issuecomment-318524668
+        "<C-c>": false
+    },
+```
+
+~~easymotion 集成 keybinding~~已被 flash 替代
+
+```json
+    "vim.easymotion": true,
+    // https://github.com/VSCodeVim/Vim/issues/1481#issuecomment-469573631
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [ "f" ],
+            "after": [ "leader", "leader", "s" ]
+        },
+        {
+            "before": [ "F" ],
+            "after": [ "leader", "leader", "2", "s" ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [ "f" ],
+            "after": [ "leader", "leader", "s" ]
+        },
+        {
+            "before": [ "F" ],
+            "after": [ "leader", "leader", "2", "s" ]
+        }
+    ],
+```
+
+在著名 [学习网站](https://www.bilibili.com/video/BV1ZH4y1S7jb) 发现了 [CVim](https://marketplace.visualstudio.com/items?itemName=cuixiaorui.cvim) ，支持了flash，比easymotion更好用。
+
+```json
+    "vim.flash.enable": true,
+```
+
+### im-select
+
+ [VSCodeVim/Vim: Vim for Visual Studio Code (github.com)](https://github.com/VSCodeVim/Vim/#input-method)
+
+https://www.zhihu.com/question/303850876
+
+~~目前似乎不支持 remote 上的切换，只有本地有效~~。
+远程使用方法： https://github.com/VSCodeVim/Vim/issues/8324#issuecomment-1604903912
+
+## Remote
 
 偶然间读了下 [官方文档](https://code.visualstudio.com/docs/remote/ssh) ，收获不小。
 
-#### 插件
+### 插件
 
 local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地、代码类插件在远程
 
@@ -75,12 +136,17 @@ local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地�
 {
     "remote.SSH.defaultExtensions": [
         "chrisdias.vscode-opennewinstance",
+        "christian-kohler.path-intellisense",
         "DavidAnson.vscode-markdownlint",
+        "DiogoNolasco.pyinit",
         "eamodio.gitlens",
         "formulahendry.code-runner",
         "foxundermoon.shell-format",
+        "Gerrnperl.outline-map",
         "GitHub.copilot",
         "jbockle.jbockle-format-files",
+        "mads-hartmann.bash-ide-vscode",
+        "mechatroner.rainbow-csv",
         "mhutchie.git-graph",
         "ms-azuretools.vscode-docker",
         "ms-python.black-formatter",
@@ -88,6 +154,7 @@ local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地�
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter",
+        "redhat.vscode-yaml",
         "streetsidesoftware.code-spell-checker",
         "Thinker.sort-json",
         "timonwong.shellcheck",
@@ -105,6 +172,8 @@ local 和 remote 用到的插件是不一样的，一般 UI 类插件在本地�
 ## settings
 
 用 Sort JSON 插件来排序。vscode 没有自带 settings.json 的排序
+
+sort level 设置为 2，避免 sort vim keybinding
 
 ### Readonly
 

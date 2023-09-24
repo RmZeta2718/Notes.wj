@@ -168,6 +168,16 @@ x = foo()  # x: torch.Tensor
 
 pytorch1.4 有 pyi 文件，内置了 `__call__` trick，但是 pytorch1.12 没有了。不知道是安装方式问题还是其他原因。
 
+# Huggingface
+
+`datasets.map()` 的 function 中不能直接用 args，会导致每次运行的 Hash 都不一样，进而无法 cache 预处理结果。解决方案：用 partial 包一下，用到的每个 args 单独传进去
+
+ `PretrainedConfig.from_pretrained.kwargs` [doc](https://huggingface.co/docs/transformers/main_classes/configuration#transformers.PretrainedConfig.from_pretrained.kwargs) 是初始化之后覆盖，因此这里添加的参数在 `__init__()` 中不可见
+
+> 见 [transformers/configuration_utils.py#L747](https://github.com/huggingface/transformers/blob/05de038f3d249ce96740885f85fd8d0aa00c29bc/src/transformers/configuration_utils.py#L747) ~ [transformers/configuration_utils.py#L763](https://github.com/huggingface/transformers/blob/05de038f3d249ce96740885f85fd8d0aa00c29bc/src/transformers/configuration_utils.py#L763)
+
+在 `from_pretrained()` 里传模型 config 需要谨慎，避免 config 变量名与 HF 参数重名
+
 # Monitor
 
 ### 基础 GPU 监控
@@ -274,17 +284,17 @@ TF32 类型：1 位符号位、8 位指数位、10 位尾数位
 
 ## 框架
 
-[深度学习里面，请问有写 train 函数的模板吗？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/523869554)
+ [深度学习里面，请问有写 train 函数的模板吗？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/523869554)
 
-[Pytorch Lightning 和 HuggingFace 的 Trainer 哪个好用？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/521501258)
+ [Pytorch Lightning 和 HuggingFace 的 Trainer 哪个好用？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/521501258)
 
-[Pytorch Lightning 完全攻略 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/353985363)
+ [Pytorch Lightning 完全攻略 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/353985363)
 
 ### AllenNLP
 
-[allenai/allennlp: An open-source NLP research library, built on PyTorch. (github.com)](https://github.com/allenai/allennlp)
+ [allenai/allennlp: An open-source NLP research library, built on PyTorch. (github.com)](https://github.com/allenai/allennlp)
 
-[nyu-mll/jiant: jiant is an nlp toolkit (github.com)](https://github.com/nyu-mll/jiant/tree/master)
+ [nyu-mll/jiant: jiant is an nlp toolkit (github.com)](https://github.com/nyu-mll/jiant/tree/master)
 
 ## 工具
 
@@ -309,4 +319,3 @@ TF32 类型：1 位符号位、8 位指数位、10 位尾数位
 23.02.18
 
 Tensor.shape 是 Tensor.size() 的别名： [add shape alias by hughperkins · Pull Request #1983 · pytorch/pytorch (github.com)](https://github.com/pytorch/pytorch/pull/1983)
-

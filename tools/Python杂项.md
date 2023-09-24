@@ -51,7 +51,7 @@ derived from `simple-parsing` and inspired by `Hydra`
 https://github.com/eladrich/pyrallis#why-another-parsing-library
 
 - 又能读文件又能读命令行！
-- 基于dataclass
+- 基于 dataclass
 
 ## Package
 
@@ -60,6 +60,12 @@ https://github.com/eladrich/pyrallis#why-another-parsing-library
 自动导入 dir 下所有 py（可能已经过时了）： https://stackoverflow.com/a/1057534
 
 ## Python 环境
+
+### conda / pip 不兼容
+
+ [Managing environments — conda 23.7.4.dev62 documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#using-pip-in-an-environment)
+- 仅在安装完所有 conda 包之后使用 pip
+- pip 后尽量不要再用 conda，因为 pip 的操作对 conda 不可见。只能重新建环境。
 
 ### 换源
 
@@ -87,7 +93,11 @@ conda env list
 
 下面假设虚拟环境在 <u>~/.conda</u> 下
 
-Linux 系统上，conda 会尝试硬链接 <u>~/.conda/pkgs</u> 以节省空间 [Is it safe to manually delete all files in pkgs folder in anaconda python? - Stack Overflow](https://stackoverflow.com/questions/56266229/is-it-safe-to-manually-delete-all-files-in-pkgs-folder-in-anaconda-python)
+Linux 系统上，conda 会尝试硬链接 <u>~/.conda/pkgs</u> 以节省空间
+- [Linking the files in the environment — conda 23.7.3 documentation](https://docs.conda.io/projects/conda/en/stable/dev-guide/deep-dives/install.html#linking-the-files-in-the-environment)
+- [Linking packages from package cache into environments](https://www.anaconda.com/blog/understanding-and-improving-condas-performance)
+- [Is it safe to manually delete all files in pkgs folder in anaconda python? - Stack Overflow](https://stackoverflow.com/questions/56266229/is-it-safe-to-manually-delete-all-files-in-pkgs-folder-in-anaconda-python)
+- [option to use soft links instead of hard links · Issue #3308 · conda/conda --- 使用软链接代替硬链接的选项 · Issue #3308 · conda/conda (github.com)](https://github.com/conda/conda/issues/3308)
 
 可以用 du 检验（ [du 可以正确计算 hardlink 情况下的磁盘空间占用](https://stackoverflow.com/questions/19951883/du-counting-hardlinks-towards-filesize) ）：`du` 只计算第一次遇到的硬链接，于是：
 - `du -hcd 0 ~/.conda/envs ~/.conda/pkgs` ：<u>pkgs</u> 里有多少没有被 <u>envs</u> 引用（可清理空间）
@@ -157,6 +167,10 @@ pip install -r requirements.txt
 根据 vscode 提供的教程（见[[terminal_notes#远程文件同步]]），我认为 conda 环境不适用于 sshfs。
 
 经实验，rsync 可以工作，因此采用 rsync。
+
+## typing
+
+ [pyright/docs/type-concepts.md at main · microsoft/pyright (github.com)](https://github.com/microsoft/pyright/blob/main/docs/type-concepts.md)
 
 ## Python 并发
 
