@@ -6,7 +6,10 @@
   "obsidian-completr",
   "obsidian-pangu",
   "vim-im-select",
-  "obsidian-underline",
   "no-dupe-leaves",
-  "copy-document-as-html"
+  "copy-document-as-html",
+  "editing-toolbar",
+  "obsidian-quiet-outline",
+  "dataview",
+  "tag-wrangler"
 ]

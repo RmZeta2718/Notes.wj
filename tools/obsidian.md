@@ -91,6 +91,8 @@ https://forum.obsidian.md/t/need-help-with-ccs-themes/20784/2
 
 ## 插件
 
+ [精华插件合集 | obsidian 文档咖啡豆版](https://obsidian.vip/zh/community-plugins/Recommended-plugins.html)
+
 ### pangu
 
 盘古。中英文中间加空格： `Alt+Shift+F`（vscode style shortcut）
@@ -148,11 +150,17 @@ aliases: ["{{title}}", "{{title}}, {{year}}"]
 
 ### No Dupe Leaves
 
-啥都不支持的obsidian，用户体验极差。
+啥都不支持的 obsidian，用户体验极差。
 
-防止打开重复的tab
+防止打开重复的 tab
 
 来自一个 [FR](https://forum.obsidian.md/t/ide-style-navigation-tab-reuse-on-link-opening-tab-management/46671/6) ，在FR没有完成之前，以插件的形式存在。
+
+### Editing Toolbar
+
+支持一个 word 一样的工具栏，还顺手支持了下划线、code block 的命令（obsidian 怎么到现在都没有这些东西啊）
+
+heading 等功能不知道是内部自己实现了还是调用了 obsidian 的命令。配置看起来很奇怪。
 
 ### obsidian-proxy-github
 
@@ -166,9 +174,11 @@ https://zhuanlan.zhihu.com/p/430538023
 
 很好，v1.0 已内置
 
-### Underline
+### ~~Underline~~
 
-残破不堪的 obsidian，为什么这都要插件？为什么不内置？
+~~残破不堪的 obsidian，为什么这都要插件？为什么不内置？~~
+
+被 Editing Toolbar 代替
 
 ### Vimrc Support
 
@@ -203,3 +213,7 @@ https://forum.obsidian.md/t/unlinked-mentions-for-headings-and-paragraphs/26612
 ### 不再显示某些 unlinked mention
 
 https://forum.obsidian.md/t/dismiss-specific-unlinked-mentions/42583
+
+## Reference
+
+ [Obsidian 文档咖啡豆版 | Obsidian Docs by CoffeeBean](https://obsidian.vip/)

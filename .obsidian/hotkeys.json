@@ -71,8 +71,8 @@
     },
     {
       "modifiers": [
-        "Mod",
-        "Shift"
+        "Alt",
+        "Mod"
       ],
       "key": "3"
     }
@@ -120,14 +120,6 @@
         "Shift"
       ],
       "key": "-"
-    }
-  ],
-  "workspace:goto-tab-1": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "1"
     }
   ],
   "workspace:goto-tab-2": [
@@ -304,19 +296,10 @@
   "file-explorer:reveal-active-file": [
     {
       "modifiers": [
-        "Mod",
-        "Shift"
+        "Alt",
+        "Mod"
       ],
       "key": "1"
-    }
-  ],
-  "outline:open": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "2"
     }
   ],
   "editor:toggle-checklist-status": [],
@@ -336,6 +319,49 @@
         "Shift"
       ],
       "key": "C"
+    }
+  ],
+  "obsidian-quiet-outline:quiet-outline": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "2"
+    }
+  ],
+  "tag-pane:open": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "4"
+    }
+  ],
+  "workspace:goto-tab-1": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
+    }
+  ],
+  "editing-toolbar:codeblock": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "C"
+    }
+  ],
+  "editing-toolbar:underline": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "U"
     }
   ]
 }
