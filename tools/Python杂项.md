@@ -172,6 +172,10 @@ pip install -r requirements.txt
 
  [pyright/docs/type-concepts.md at main · microsoft/pyright (github.com)](https://github.com/microsoft/pyright/blob/main/docs/type-concepts.md)
 
+typing unused param： `del param`
+
+> https://stackoverflow.com/a/14836005/17347885
+
 ## Python 并发
 
 多进程（进程池）： https://superfastpython.com/processpoolexecutor-in-python/

@@ -12,10 +12,10 @@
 
 总结： `rsync` 更好
 
-最佳实践：[dotfiles_pub/rsync_push at master · RmZeta2718/dotfiles_pub · GitHub](https://github.com/RmZeta2718/dotfiles_pub/blob/master/bin/rsync_push)
+最佳实践： [dotfiles_pub/bin/rsync_script at master · RmZeta2718/dotfiles_pub (github.com)](https://github.com/RmZeta2718/dotfiles_pub/blob/master/bin/rsync_script)
 
-[`rsync -H` preserve hard links](https://unix.stackexchange.com/questions/44247/how-to-copy-directories-with-preserving-hardlinks)
-[`rsync -l`(-a) preserve soft links](https://superuser.com/questions/799354/rsync-and-symbolic-links)
+ [`rsync -H` preserve hard links](https://unix.stackexchange.com/questions/44247/how-to-copy-directories-with-preserving-hardlinks)
+ [`rsync -l`(-a) preserve soft links](https://superuser.com/questions/799354/rsync-and-symbolic-links)
 
  [vscode 的 sshfs 教程](https://code.visualstudio.com/docs/remote/troubleshooting#_using-sshfs-to-access-files-on-your-remote-host) ：best used for single file edits and uploading/downloading content. If you need to use an application that bulk reads/write to many files at once (like a local source control tool), [rsync](https://code.visualstudio.com/docs/remote/troubleshooting#_using-rsync-to-maintain-a-local-copy-of-your-source-code) is a better choice.
 
@@ -78,20 +78,51 @@ vim mode：
 
 ### tmux
 
-https://github.com/gpakosz/.tmux
+oh-my-tmux: https://github.com/gpakosz/.tmux
 
 坑：需要自己调整一下 local 里的 `tmux_conf_theme_left_separator_XXX`，不然不显示 Powerline 字符。。（见 [Status line separators on windows? · Issue #419 · gpakosz/.tmux (github.com)](https://github.com/gpakosz/.tmux#troubleshooting) ）
 
 - PREFIX w: window preview
 
-Ctrl+a 不好按，于是把 Capslock 换成了 Ctrl（Windows 上用 [PowerToys](https://github.com/microsoft/PowerToys) 换）
+~~Ctrl+a 不好按，于是把 Capslock 换成了 Ctrl（Windows 上用 [PowerToys](https://github.com/microsoft/PowerToys) 换）~~ Capslock 换成 Esc 了
 
-tmux 版本 2.6（install from src if not available）。试过 tmux3.0a 和 3.3a，窗口名字不会自动改为 cwd，而是显示 zsh。这似乎是符合预期的（`tmux show-window-options -g automatic-rename-format`），不知道怎么改。
+~~tmux 版本 2.6（install from src if not available）。试过 tmux3.0a 和 3.3a，窗口名字不会自动改为 cwd，而是显示 zsh。这似乎是符合预期的（`tmux show-window-options -g automatic-rename-format`），不知道怎么改。~~ 在 3.3a 上 `set -g allow-rename on`，可行
 
-[How can I keep the tmux prefix key pressed between commands? - Super User](https://superuser.com/questions/263940/how-can-i-keep-the-tmux-prefix-key-pressed-between-commands)
+> [How to automatically rename tmux windows to the current directory - Stack Overflow](https://stackoverflow.com/questions/28376611/how-to-automatically-rename-tmux-windows-to-the-current-directory/68043814#68043814)
 
-`bind -r` 可以让PREFIX连续生效，
+`bind -r` 可以让 PREFIX 连续生效
+
+> [How can I keep the tmux prefix key pressed between commands? - Super User](https://superuser.com/questions/263940/how-can-i-keep-the-tmux-prefix-key-pressed-between-commands)
+
+### vim
+
+没有好用的 ssh+vim 复制方案。替代选项
+- 直接在 vscode 里打开
+- cat 到终端复制
+- （Windows Terminal）按住 shift 拖动选中
+
+> [macos - vim + COPY + mac over SSH - Stack Overflow](https://stackoverflow.com/questions/10694516/vim-copy-mac-over-ssh)
+
+### ssh
+
+Tutorial： https://www.linode.com/docs/guides/use-public-key-authentication-with-ssh/
+
+相关文件的权限： https://superuser.com/a/1559867
+
+debug： `-v`
+
+指定 key：在 `~/.ssh/config` 中添加
+
+```
+IdentityFile /home/myuser/.ssh/keyhello
+```
+
+从哪里 ssh 过来的：
+
+```
+echo $SSH_CONNECTION
+```
 
 ### shell script
 
-允许编辑正在运行的shell脚本： https://stackoverflow.com/a/2358432 （否则修改script后，正在运行的script会出问题，因为shell是一行一行读取文件的，没有一次全部加载进来）
+允许编辑正在运行的 shell 脚本： https://stackoverflow.com/a/2358432 （否则修改 script 后，正在运行的 script 会出问题，因为 shell 是一行一行读取文件的，没有一次全部加载进来）
