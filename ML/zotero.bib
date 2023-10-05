@@ -1247,6 +1247,23 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\JICJ7K7X\\Delétang 等 - 2023 - Neural Networks and the Chomsky Hierarchy.pdf;C\:\\Users\\27404\\Zotero\\storage\\LJ5HI7LF\\2207.html}
 }
 
+@online{2023PoSEEfficientContextZhu,
+  title = {{{PoSE}}: {{Efficient Context Window Extension}} of {{LLMs}} via {{Positional Skip-wise Training}}},
+  shorttitle = {{{PoSE}}},
+  author = {Zhu, Dawei and Yang, Nan and Wang, Liang and Song, Yifan and Wu, Wenhao and Wei, Furu and Li, Sujian},
+  date = {2023-09-19},
+  eprint = {2309.10400},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2309.10400},
+  url = {http://arxiv.org/abs/2309.10400},
+  urldate = {2023-10-03},
+  abstract = {In this paper, we introduce Positional Skip-wisE (PoSE) training for efficient adaptation of large language models\textasciitilde (LLMs) to extremely long context windows. PoSE decouples train length from target context window size by simulating long inputs using a fixed context window with manipulated position indices during training. Concretely, we select several short chunks from a long input sequence, and introduce distinct skipping bias terms to modify the position indices of each chunk. These bias terms, along with the length of each chunk, are altered for each training example, allowing the model to adapt to all positions within the target context window without training on full length inputs. Experiments show that, compared with fine-tuning on the full length, PoSE greatly reduces memory and time overhead with minimal impact on performance. Leveraging this advantage, we have successfully extended the LLaMA model to 128k tokens. Furthermore, we empirically confirm that PoSE is compatible with all RoPE-based LLMs and various position interpolation strategies. Notably, by decoupling fine-tuning length from target context window, PoSE can theoretically extend the context window infinitely, constrained only by memory usage for inference. With ongoing advancements for efficient inference, we believe PoSE holds great promise for scaling the context window even further.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\YVLMZ8JF\\Zhu 等 - 2023 - PoSE Efficient Context Window Extension of LLMs v.pdf;C\:\\Users\\27404\\Zotero\\storage\\988AVEFG\\2309.html}
+}
+
 @online{2023RandomizedPositionalEncodingsRuoss,
   title = {Randomized {{Positional Encodings Boost Length Generalization}} of {{Transformers}}},
   author = {Ruoss, Anian and Delétang, Grégoire and Genewein, Tim and Grau-Moya, Jordi and Csordás, Róbert and Bennani, Mehdi and Legg, Shane and Veness, Joel},

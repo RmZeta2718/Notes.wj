@@ -62,14 +62,6 @@ find . -type f -exec dos2unix {} \;
 
 https://stackoverflow.com/questions/7068179/convert-line-endings-for-whole-directory-tree-git
 
-### nohup
-
-可能不太好？输出没了：
-https://stackoverflow.com/questions/625409/how-do-i-put-an-already-running-process-under-nohup
-
-这个也不太行
-https://github.com/nelhage/reptyr
-
 ### zsh
 
 vim mode：
@@ -125,4 +117,37 @@ echo $SSH_CONNECTION
 
 ### shell script
 
-允许编辑正在运行的 shell 脚本： https://stackoverflow.com/a/2358432 （否则修改 script 后，正在运行的 script 会出问题，因为 shell 是一行一行读取文件的，没有一次全部加载进来）
+允许编辑正在运行的 shell 脚本（否则修改 script 后，正在运行的 script 会出问题，因为 shell 是一行一行读取文件的，没有一次全部加载进来）
+
+> https://stackoverflow.com/a/2358432
+
+```bash
+{
+    # ...
+    exit
+}
+```
+
+bash good practice
+
+> https://gist.github.com/mohanpedala/1e2ff5661761d3abd0385e8223e16425
+
+```bash
+set -euo pipefail
+```
+
+在某个程序完成后，自动开始执行下一个任务。找到正在运行的程序的 pid，通过下面的命令等待其完成，然后在后面添加新的任务。note：等待 bash pid, not python, 因为bash可能调用python若干次。
+
+> https://stackoverflow.com/a/41613532/17347885
+
+```bash
+tail --pid="pid_of_proc" -f /dev/null
+```
+
+### nohup
+
+可能不太好？输出没了：
+https://stackoverflow.com/questions/625409/how-do-i-put-an-already-running-process-under-nohup
+
+这个也不太行
+https://github.com/nelhage/reptyr
