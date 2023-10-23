@@ -68,6 +68,10 @@ vim mode：
 - omz 的 [vi 插件](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode) 不够好。目前（23/03/01）不支持 `ci"` 这样的操作，且模式prompt有点问题（不知道是不是bug）
 - 正在用： https://github.com/jeffreytse/zsh-vi-mode
 
+主题： [romkatv/powerlevel10k: A Zsh theme (github.com)](https://github.com/romkatv/powerlevel10k)
+
+修改：conda 环境背景色 `POWERLEVEL9K_ANACONDA_BACKGROUND: 4 -> 6` （在我的 Windows Terminal 调色板下，4 看不清）
+
 ### tmux
 
 oh-my-tmux: https://github.com/gpakosz/.tmux
@@ -136,7 +140,7 @@ bash good practice
 set -euo pipefail
 ```
 
-在某个程序完成后，自动开始执行下一个任务。找到正在运行的程序的 pid，通过下面的命令等待其完成，然后在后面添加新的任务。note：等待 bash pid, not python, 因为bash可能调用python若干次。
+在某个程序完成后，自动开始执行下一个任务。找到正在运行的程序的 pid，通过下面的命令等待其完成，然后在后面添加新的任务。note：等待 bash pid, not python, 因为 bash 可能调用 python 若干次。
 
 > https://stackoverflow.com/a/41613532/17347885
 

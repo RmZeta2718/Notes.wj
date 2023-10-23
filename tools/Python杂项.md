@@ -205,3 +205,7 @@ GIL 导致 python 解释器是单线程的，任何多线程的 python 程序，
 返回类型有多种，但是用户确切地知道是哪一种，如何更优雅地指定（open）：
 - [AnyOf - Union for return types · Issue #566 · python/typing --- AnyOf - 返回类型联合 · Issue #566 · python/typing (github.com)](https://github.com/python/typing/issues/566)
 - [Document why having a union return type is often a problem · Issue #1693 · python/mypy --- 记录为什么具有联合返回类型通常是一个问题 · Issue #1693 · python/mypy (github.com)](https://github.com/python/mypy/issues/1693)
+
+## logging
+
+[Logging HOWTO — Python 3.12.0 documentation --- 日志记录指南 — Python 3.12.0 文档](https://docs.python.org/3/howto/logging.html)
