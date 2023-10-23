@@ -148,6 +148,32 @@ aliases: ["{{title}}", "{{title}}, {{year}}"]
 
 在 front-matter 中添加 alias=title，方便其他地方提到 title 时可以提示链接/方便主动创建链接，如果论文有别名，如 BERT，可以手动添加额外 alias
 
+### Completr
+
+自动补全
+
+### Copy Document as HTML
+
+应该内置。
+
+复制富文本而非源代码
+
+### Dataview
+
+### Editing Toolbar
+
+支持一个 word 一样的工具栏，还顺手支持了下划线、code block 的命令（obsidian 怎么到现在都没有这些东西啊）
+
+heading 等功能不知道是内部自己实现了还是调用了 obsidian 的命令。配置看起来很奇怪。
+
+### Lapel
+
+仿照 Typora 的标题层级注释
+
+### Latex Suite
+
+支持类 Typora 的浮动实时渲染。snippets 我到是不怎么用
+
 ### No Dupe Leaves
 
 啥都不支持的 obsidian，用户体验极差。
@@ -156,23 +182,25 @@ aliases: ["{{title}}", "{{title}}, {{year}}"]
 
 来自一个 [FR](https://forum.obsidian.md/t/ide-style-navigation-tab-reuse-on-link-opening-tab-management/46671/6) ，在FR没有完成之前，以插件的形式存在。
 
-### Editing Toolbar
-
-支持一个 word 一样的工具栏，还顺手支持了下划线、code block 的命令（obsidian 怎么到现在都没有这些东西啊）
-
-heading 等功能不知道是内部自己实现了还是调用了 obsidian 的命令。配置看起来很奇怪。
-
 ### obsidian-proxy-github
 
-浏览和下载第三方插件可能需要打开这个插件。
+浏览和下载第三方插件可能需要打开这个插件。（最近似乎不需要了）
 
 https://zhuanlan.zhihu.com/p/430538023
+
+### Quiet Outline
+
+更好的大纲页，自动展开到当前位置
 
 ### ~~Shortcuts extender~~
 
 ~~只用到了 `ctrl+1` 这些 headings 快捷键，其他快捷键都关掉了~~
 
 很好，v1.0 已内置
+
+### Tag Wrangler
+
+Rename a tag
 
 ### ~~Underline~~
 
