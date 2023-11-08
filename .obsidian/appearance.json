@@ -4,8 +4,7 @@
   "translucency": false,
   "cssTheme": "",
   "enabledCssSnippets": [
-    "math",
-    "headings"
+    "math"
   ],
   "monospaceFontFamily": "Fira Code",
   "baseFontSizeAction": false,

@@ -261,7 +261,6 @@
       "key": "Numpad0"
     }
   ],
-  "workspace:copy-url": [],
   "markdown:toggle-preview": [],
   "obsidian-completr:completr-blacklist-current-word": [],
   "obsidian-completr:completr-bypass-tab-key": [],
@@ -272,22 +271,6 @@
         "Shift"
       ],
       "key": "F"
-    }
-  ],
-  "editor:toggle-code": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "K"
-    }
-  ],
-  "editor:insert-link": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "L"
     }
   ],
   "obsidian-underline:toggle-link-block": [],
@@ -302,7 +285,6 @@
       "key": "1"
     }
   ],
-  "editor:toggle-checklist-status": [],
   "copy-as-html:copy-as-html-command": [
     {
       "modifiers": [
