@@ -16,10 +16,6 @@
 - https://github.com/VSCodeVim/Vim#-faq
 - https://github.com/VSCodeVim/Vim/issues/754#issuecomment-284302205
 
-### 自动保存
-
-文件--自动保存
-
 ## python
 
 A good tutorial: https://realpython.com/advanced-visual-studio-code-python
@@ -200,3 +196,26 @@ sort level 设置为 2，避免 sort vim keybinding
     },
 }
 ```
+
+### VS Code file watcher is running out of handles
+
+ [Visual Studio Code is unable to watch for file changes in this large workspace](https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc)
+
+对于工作区之外的 exclude，必须使用绝对路径，而不能用 glob： https://github.com/microsoft/vscode/issues/137872#issuecomment-1373195903
+
+因此将 conda 绝对路径添加到 `files.watcherExclude` 即可
+
+> 当前 conda 在符号链接下，但是必须使用 realpath。可能与 [[#符号链接问题]] 有关
+
+如何查看 watch 的文件： https://github.com/microsoft/vscode/issues/160252#issuecomment-1239461057
+
+## Bugs
+
+### 符号链接问题
+
+如果 workspace 的路径中包含符号链接，Search 会打开绝对路径而非符号链接。
+
+work around：打开绝对路径（`realpath`）
+
+- 不打算修复： [Symbolic links to folders can lead to the same file opened in two tabs · Issue #100533 · microsoft/vscode (github.com)](https://github.com/microsoft/vscode/issues/100533)
+- [Add option to always open files at their canonical path · Issue #130082 · microsoft/vscode (github.com)](https://github.com/microsoft/vscode/issues/130082)

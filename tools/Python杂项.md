@@ -79,6 +79,14 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 
 或者直接写在 `~/.condarc` 中，见上文链接
 
+#### pip
+
+
+```bash
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+
 ### conda sync
 
 #### 基于复制的同步

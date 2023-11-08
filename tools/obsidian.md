@@ -2,7 +2,7 @@
 
 ### checkbox
 
-`ctrl+shift+C` 创建/切换
+`ctrl+L` 创建/切换（切换待办事项状态）
 
 - [ ] 1
 
