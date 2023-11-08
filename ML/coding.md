@@ -178,6 +178,18 @@ pytorch1.4 有 pyi 文件，内置了 `__call__` trick，但是 pytorch1.12 没�
 
 在 `from_pretrained()` 里传模型 config 需要谨慎，避免 config 变量名与 HF 参数重名
 
+load model without init
+
+```python
+from accelerate import init_empty_weights
+from transformers import AutoModelForCausalLM
+
+with init_empty_weights():
+    model = AutoModelForCausalLM.from_pretrained("gpt2")
+```
+
+> 不要在 `init_empty_weights` 里比较参数是否相同（`parameter is parameter`）
+
 # Monitor
 
 ### 基础 GPU 监控
@@ -206,11 +218,13 @@ nvidia-smi topo -m
 
 https://www.bilibili.com/video/BV1FT4y1E74V?p=35&spm_id_from=pageDriver
 
-# Performance (on Nvidia GPU)
+# CUDA
+
+## Performance
 
 https://docs.nvidia.com/deeplearning/performance/index.html
 
-## 性能瓶颈
+### 性能瓶颈
 
 https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html
 
@@ -228,7 +242,7 @@ $$
 
 于是，如果算法的 Arithmetic Intensity 大于硬件的 `ops: byte` 比率，则是计算瓶颈（math limited），即 GPU 性能饱和，否则是内存瓶颈（memory limited），即没有用满 GPU 性能。
 
-### 常见运算
+#### 常见运算
 
 - Elementwise Operations：一元或二元运算符
     - 内存瓶颈
@@ -240,7 +254,7 @@ $$
     - 矩阵足够大时是计算瓶颈，矩阵太小时是内存瓶颈
     - 如：全连接，卷积
 
-## 矩阵乘法
+### 矩阵乘法
 
 https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html
 
@@ -254,7 +268,7 @@ $$
 - $M=8192,N=128,K=8192$ ，则 Arithmetic Intensity 是 `124.1 FLOPS/B` ，比 V100 GPU 的 `138.9 FLOPS: B` 要低，所以是内存瓶颈（memory limited）
 - 对于矩阵和向量的乘法，有 $M=1$ 或者 $N=1$ 。这种情况下总是内存瓶颈，因为 Arithmetic Intensity 总是小于 1
 
-### 对齐
+#### 对齐
 
 矩阵的大小是某个值的倍数。这个值与运算的类型（INT8、FP16、TF32、FP64）和库版本（cuBLAS、cuDNN）有关。通常是 2 的幂，越大越好。
 
@@ -262,7 +276,7 @@ $$
 
 因此，隐藏层维度最好设置为 512、1024 等足够大的“整数”。
 
-## 混合精度
+### 混合精度
 
 优点：
 - 占据更少的内存
@@ -274,11 +288,24 @@ $$
 
 实践： https://developer.nvidia.com/automatic-mixed-precision
 
-### 数值类型
+#### 数值类型
 
 https://blogs.nvidia.com/blog/2020/05/14/tensorfloat-32-precision-format/
 
 TF32 类型：1 位符号位、8 位指数位、10 位尾数位
+
+## CUDA 编程优化
+
+https://www.bilibili.com/video/BV1Ey4y1c7wM
+
+- Global Memory 需要合并访问（所有线程访问同一连续区域）
+    - Warp 的线程读写 memory 时会被合并为尽可能少的 transaction
+    - Stride 是典型的非合并访问的例子，访问的范围因为 stride 间隔而分得很开
+- Shared Memory 避免 memory bank 冲突（避免所有线程访问同一个 bank）
+
+### FHMA
+
+https://www.bilibili.com/video/BV1Ey4y1c7wM/?t=1353
 
 # 开源库
 
