@@ -1,5 +1,8 @@
 ---
-aliases: ["Extending Context Window of Large Language Models via Positional Interpolation", "Extending Context Window of Large Language Models via Positional Interpolation, 2023"]
+aliases:
+  - Extending Context Window of Large Language Models via Positional Interpolation
+  - Extending Context Window of Large Language Models via Positional Interpolation, 2023
+  - RoPE-PI
 ---
 # Extending Context Window of Large Language Models via Positional Interpolation
 

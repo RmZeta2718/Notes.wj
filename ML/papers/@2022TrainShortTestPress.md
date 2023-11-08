@@ -1,5 +1,8 @@
 ---
-aliases: ["Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation", "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation, 2022", "ALiBi"]
+aliases:
+  - "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation"
+  - "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation, 2022"
+  - ALiBi
 ---
 # Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation
 
@@ -23,6 +26,10 @@ aliases: ["Train Short, Test Long: Attention with Linear Biases Enables Input Le
 去除 Positional Embedding，在 Attention 中引入距离惩罚。
 
 ## 论文提供的关键元素、关键设计
+
+![](https://pdf.cdn.readpaper.com/parsed/fetch_target/3d59167f9dd3b4cbbfddf9f34e46f8f3_4_Figure_3.png)
+
+训练复杂度不变，因为本来就需要加 mask，这里只是将 mask 修改了一个模板
 
 ## 实验
 
@@ -49,7 +56,7 @@ early token curse：不重叠的 eval 会导致前几个 token 没有足够的�
 - Sliding window evaluation：
 ![fig11](https://pdf.cdn.readpaper.com/parsed/fetch_target/3d59167f9dd3b4cbbfddf9f34e46f8f3_23_Figure_11.png)
 
-证明sliding window（去除early token curse的影响）没有出现性能提升。
+证明 sliding window（去除 early token curse 的影响）没有出现性能提升。
 
 ## 相关研究
 
