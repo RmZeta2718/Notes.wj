@@ -2,6 +2,7 @@
 aliases:
   - Efficient Streaming Language Models with Attention Sinks
   - Efficient Streaming Language Models with Attention Sinks, 2023
+  - StreamingLLM
 ---
 # Efficient Streaming Language Models with Attention Sinks
 

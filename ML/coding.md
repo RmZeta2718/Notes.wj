@@ -170,13 +170,49 @@ pytorch1.4 有 pyi 文件，内置了 `__call__` trick，但是 pytorch1.12 没�
 
 # Huggingface
 
-`datasets.map()` 的 function 中不能直接用 args，会导致每次运行的 Hash 都不一样，进而无法 cache 预处理结果。解决方案：用 partial 包一下，用到的每个 args 单独传进去
+## datasets
+
+预处理根据运行时相关函数和参数的 Hash 来复用预处理的 cache。需要避免 Hash 变化导致的重复预处理。具体来说：
+
+- datasets 库版本需要保持一致
+- `datasets.map()` 的 function 中不能直接用 args，否则非 dataset 相关 args 的变化会导致整个 Hash 变化。解决方案：用 partial 包一下，用到的每个 args 单独传进去（或仅传入 dataset 相关 args 的子 dataclass，而非整个 args dataclass）
+
+> 实际上 huggingface 的 example 没有这个问题，因为 dataset args 是单独的 dataclass，在我把各个 args 组合为大的 dataclass 才导致的这个问题。
+
+### 加载缓慢
+
+通过 viztracer，看到 `_memory_mapped_arrow_table_from_file (datasets/table.py)` 中的 `RecordBatchStreamReader.read_all` 占用了大量时间。（v2.14.6）
+
+搜索相关 issue：
+- [Slow dataloading with big datasets issue persists · Issue #2252 · huggingface/datasets](https://github.com/huggingface/datasets/issues/2252)
+    - 
+- 可能的改进： [Load a cached dataset as iterable · Issue #5481 · huggingface/datasets](https://github.com/huggingface/datasets/issues/5481)
+
+## transformers
+
+### config
 
  `PretrainedConfig.from_pretrained.kwargs` [doc](https://huggingface.co/docs/transformers/main_classes/configuration#transformers.PretrainedConfig.from_pretrained.kwargs) 是初始化之后覆盖，因此这里添加的参数在 `__init__()` 中不可见
 
 > 见 [transformers/configuration_utils.py#L747](https://github.com/huggingface/transformers/blob/05de038f3d249ce96740885f85fd8d0aa00c29bc/src/transformers/configuration_utils.py#L747) ~ [transformers/configuration_utils.py#L763](https://github.com/huggingface/transformers/blob/05de038f3d249ce96740885f85fd8d0aa00c29bc/src/transformers/configuration_utils.py#L763)
 
 在 `from_pretrained()` 里传模型 config 需要谨慎，避免 config 变量名与 HF 参数重名
+
+### transformers + flash attention
+
+ [How to use Flash Attention 2 with huggingface models ? · Issue #320 · Dao-AILab/flash-attention (github.com)](https://github.com/Dao-AILab/flash-attention/issues/320)
+
+ [Overview (huggingface.co)](https://huggingface.co/docs/optimum/bettertransformer/overview)
+
+ [torch.nn.functional.scaled_dot_product_attention — PyTorch master documentation](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention)
+
+huggingface llama + flash attention: [[`core` ] Integrate Flash attention 2 in most used models by younesbelkada · Pull Request #25598 · huggingface/transformers (github.com)](https://github.com/huggingface/transformers/pull/25598)
+
+blog [Extended Guide: Instruction-tune Llama 2](https://www.philschmid.de/instruction-tune-llama-2)
+
+## tricks
+
+### 仅加载模型结构
 
 load model without init
 

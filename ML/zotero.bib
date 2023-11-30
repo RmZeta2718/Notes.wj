@@ -1214,6 +1214,23 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\VMA5GQ9L\\Bai 等 - 2023 - LongBench A Bilingual, Multitask Benchmark for Lo.pdf;C\:\\Users\\27404\\Zotero\\storage\\F8Q5FIH9\\2308.html}
 }
 
+@online{2023LongLoRAEfficientFinetuningChen,
+  title = {{{LongLoRA}}: {{Efficient Fine-tuning}} of {{Long-Context Large Language Models}}},
+  shorttitle = {{{LongLoRA}}},
+  author = {Chen, Yukang and Qian, Shengju and Tang, Haotian and Lai, Xin and Liu, Zhijian and Han, Song and Jia, Jiaya},
+  date = {2023-09-21},
+  eprint = {2309.12307},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  url = {http://arxiv.org/abs/2309.12307},
+  urldate = {2023-11-29},
+  abstract = {We present LongLoRA, an efficient fine-tuning approach that extends the context sizes of pre-trained large language models (LLMs), with limited computation cost. Typically, training LLMs with long context sizes is computationally expensive, requiring extensive training hours and GPU resources. For example, training on the context length of 8192 needs 16× computational costs in self-attention layers as that of 2048. In this paper, we speed up the context extension of LLMs in two aspects. On the one hand, although dense global attention is needed during inference, finetuning the model can be effectively and efficiently done by sparse local attention. The proposed shift short attention (S2-Attn) effectively enables context extension, leading to non-trivial computation saving with similar performance to fine-tuning with vanilla attention. Particularly, it can be implemented with only two lines of code in training, while being optional in inference. On the other hand, we revisit the parameter-efficient fine-tuning regime for context expansion. Notably, we find that LoRA for context extension works well under the premise of trainable embedding and normalization. LongLoRA demonstrates strong empirical results on various tasks on LLaMA2 models from 7B/13B to 70B. LongLoRA adopts LLaMA2 7B from 4k context to 100k, or LLaMA2 70B to 32k on a single 8× A100 machine. LongLoRA extends models’ context while retaining their original architectures, and is compatible with most existing techniques, like FlashAttention-2. In addition, to make LongLoRA practical, we collect a dataset, LongQA, for supervised finetuning. It contains more than 3k long context question-answer pairs. All our code, models, dataset, and demo are available at github.com/dvlab-research/LongLoRA.},
+  langid = {english},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C:\Users\27404\Zotero\storage\PYD66MVE\Chen 等 - 2023 - LongLoRA Efficient Fine-tuning of Long-Context La.pdf}
+}
+
 @online{2023LongNetScalingTransformersDing,
   title = {{{LongNet}}: {{Scaling Transformers}} to 1,000,000,000 {{Tokens}}},
   shorttitle = {{{LongNet}}},

@@ -28,6 +28,10 @@ git config submodule.my-submodule.url otheruser@server:/pathtorepos
 
 https://stackoverflow.com/questions/6031494/git-submodules-and-ssh-access
 
+submodule branch
+
+[How can I specify a branch/tag when adding a Git submodule? - Stack Overflow](https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule)
+
 ### 文件权限
 
 git只管理文件的可执行bit。git不能管理文件的读写权限。

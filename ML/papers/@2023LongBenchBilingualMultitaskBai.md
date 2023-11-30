@@ -1,5 +1,8 @@
 ---
-aliases: ["LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding", "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding, 2023"]
+aliases:
+  - "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding"
+  - "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding, 2023"
+  - LongBench
 ---
 # LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding
 

@@ -12,7 +12,7 @@
   "showUnsupportedFiles": false,
   "attachmentFolderPath": "./assets",
   "showFrontmatter": true,
-  "spellcheck": true,
+  "spellcheck": false,
   "pdfExportSettings": {
     "pageSize": "Letter",
     "landscape": false,
