@@ -1264,6 +1264,23 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\FTHDY3ST\\Rubin 和 Berant - 2023 - Long-range Language Modeling with Self-retrieval.pdf;C\:\\Users\\27404\\Zotero\\storage\\A6HHMPQ6\\2306.html}
 }
 
+@online{2023MambaLinearTimeSequenceGu,
+  title = {Mamba: {{Linear-Time Sequence Modeling}} with {{Selective State Spaces}}},
+  shorttitle = {Mamba},
+  author = {Gu, Albert and Dao, Tri},
+  date = {2023-12-01},
+  eprint = {2312.00752},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2312.00752},
+  url = {http://arxiv.org/abs/2312.00752},
+  urldate = {2023-12-05},
+  abstract = {Foundation models, now powering most of the exciting applications in deep learning, are almost universally based on the Transformer architecture and its core attention module. Many subquadratic-time architectures such as linear attention, gated convolution and recurrent models, and structured state space models (SSMs) have been developed to address Transformers' computational inefficiency on long sequences, but they have not performed as well as attention on important modalities such as language. We identify that a key weakness of such models is their inability to perform content-based reasoning, and make several improvements. First, simply letting the SSM parameters be functions of the input addresses their weakness with discrete modalities, allowing the model to selectively propagate or forget information along the sequence length dimension depending on the current token. Second, even though this change prevents the use of efficient convolutions, we design a hardware-aware parallel algorithm in recurrent mode. We integrate these selective SSMs into a simplified end-to-end neural network architecture without attention or even MLP blocks (Mamba). Mamba enjoys fast inference (5\$\textbackslash times\$ higher throughput than Transformers) and linear scaling in sequence length, and its performance improves on real data up to million-length sequences. As a general sequence model backbone, Mamba achieves state-of-the-art performance across several modalities such as language, audio, and genomics. On language modeling, our Mamba-3B model outperforms Transformers of the same size and matches Transformers twice its size, both in pretraining and downstream evaluation.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\RUABEXGT\\Gu 和 Dao - 2023 - Mamba Linear-Time Sequence Modeling with Selectiv.pdf;C\:\\Users\\27404\\Zotero\\storage\\BJR7F7UE\\2312.html}
+}
+
 @online{2023NeuralNetworksChomskyDeletang,
   title = {Neural {{Networks}} and the {{Chomsky Hierarchy}}},
   author = {Delétang, Grégoire and Ruoss, Anian and Grau-Moya, Jordi and Genewein, Tim and Wenliang, Li Kevin and Catt, Elliot and Cundy, Chris and Hutter, Marcus and Legg, Shane and Veness, Joel and Ortega, Pedro A.},
@@ -1342,4 +1359,21 @@
   pubstate = {preprint},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\W9ARRCW7\\Bertsch 等 - 2023 - Unlimiformer Long-Range Transformers with Unlimit.pdf;C\:\\Users\\27404\\Zotero\\storage\\TSL9XJZ2\\2305.html}
+}
+
+@online{2023YaRNEfficientContextPeng,
+  title = {{{YaRN}}: {{Efficient Context Window Extension}} of {{Large Language Models}}},
+  shorttitle = {{{YaRN}}},
+  author = {Peng, Bowen and Quesnelle, Jeffrey and Fan, Honglu and Shippole, Enrico},
+  date = {2023-11-01},
+  eprint = {2309.00071},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2309.00071},
+  url = {http://arxiv.org/abs/2309.00071},
+  urldate = {2023-12-05},
+  abstract = {Rotary Position Embeddings (RoPE) have been shown to effectively encode positional information in transformer-based language models. However, these models fail to generalize past the sequence length they were trained on. We present YaRN (Yet another RoPE extensioN method), a compute-efficient method to extend the context window of such models, requiring 10x less tokens and 2.5x less training steps than previous methods. Using YaRN, we show that LLaMA models can effectively utilize and extrapolate to context lengths much longer than their original pre-training would allow, while also surpassing previous the state-of-the-art at context window extension. In addition, we demonstrate that YaRN exhibits the capability to extrapolate beyond the limited context of a fine-tuning dataset. The models fine-tuned using YaRN has been made available and reproduced online up to 128k context length at https://github.com/jquesnelle/yarn},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\32KPEGSC\\Peng 等 - 2023 - YaRN Efficient Context Window Extension of Large .pdf;C\:\\Users\\27404\\Zotero\\storage\\XMK8KK5M\\2309.html}
 }

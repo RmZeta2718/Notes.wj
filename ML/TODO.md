@@ -1,11 +1,11 @@
-- [ ] 视频笔记 [信息量 ｜熵 ｜ 交叉熵 ｜KL 散度 （相对熵）｜交叉熵损失函数_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1L8411X7ZZ/?spm_id_from=333.999.top_right_bar_window_history.content.click&vd_source=0351845a83270d548d966eeb2ab72c06)
-- [ ] 代码笔记 resize token embedding
 - [ ] 了解 DummyScheduler 是怎么影响 optimizer parameter group 的
 - [ ] 了解 flash attention
 - [ ] GPT2+flash attention
-- [ ] trainer scheduler min value https://github.com/huggingface/transformers/issues/26209
-- [ ] 大数据集 `load_dataset` 为什么花这么长时间（[Slow dataloading with big datasets issue persists · Issue #2252 · huggingface/datasets (github.com)](https://github.com/huggingface/datasets/issues/2252)）
-- [ ] [Long-Context下LLM模型架构全面介绍 (qq.com)](https://mp.weixin.qq.com/s/HjIRk0BzhRAB_4yfpiI2jQ)
+- [ ] trainer scheduler min value https://github.com/huggingface/transformers/issues/26209 提 PR
+- [ ] 大数据集 `load_dataset` 为什么花这么长时间（ [Slow dataloading with big datasets issue persists · Issue #2252 · huggingface/datasets (github.com)](https://github.com/huggingface/datasets/issues/2252) ）
+- [ ] [Long-Context 下 LLM 模型架构全面介绍 (qq.com)](https://mp.weixin.qq.com/s/HjIRk0BzhRAB_4yfpiI2jQ)
+- [ ] 实现 alibi 的 sliding window eval
+- [ ] 整理 long ctx 模型
 
 https://self-supervised.cs.jhu.edu/
 

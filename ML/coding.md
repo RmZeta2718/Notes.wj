@@ -185,7 +185,7 @@ pytorch1.4 有 pyi 文件，内置了 `__call__` trick，但是 pytorch1.12 没�
 
 搜索相关 issue：
 - [Slow dataloading with big datasets issue persists · Issue #2252 · huggingface/datasets](https://github.com/huggingface/datasets/issues/2252)
-    - 
+    -
 - 可能的改进： [Load a cached dataset as iterable · Issue #5481 · huggingface/datasets](https://github.com/huggingface/datasets/issues/5481)
 
 ## transformers
@@ -198,6 +198,16 @@ pytorch1.4 有 pyi 文件，内置了 `__call__` trick，但是 pytorch1.12 没�
 
 在 `from_pretrained()` 里传模型 config 需要谨慎，避免 config 变量名与 HF 参数重名
 
+### resize token embedding
+
+`transformers/modeling_utils.py:1538(v4.35.2)`
+
+- 通过模型定义的 `get_input_embeddings()` 和 `get_output_embeddings()` 获得输入输出 embedding
+- 创建新的 embedding module：`transformers/modeling_utils.py:1682`
+- 将旧的数据复制过去（无梯度）：`transformers/modeling_utils.py:1704`
+- 同时迁移 embedding 模块上的 hook，否则会导致错误（例如 `device_map = 'auto'` 用到了 hook： [issue](https://github.com/huggingface/transformers/issues/25554#issuecomment-1683021010) ）
+- 重新绑定输入输出 embedding：`modeling_utils.py:1572`
+
 ### transformers + flash attention
 
  [How to use Flash Attention 2 with huggingface models ? · Issue #320 · Dao-AILab/flash-attention (github.com)](https://github.com/Dao-AILab/flash-attention/issues/320)
@@ -209,6 +219,10 @@ pytorch1.4 有 pyi 文件，内置了 `__call__` trick，但是 pytorch1.12 没�
 huggingface llama + flash attention: [[`core` ] Integrate Flash attention 2 in most used models by younesbelkada · Pull Request #25598 · huggingface/transformers (github.com)](https://github.com/huggingface/transformers/pull/25598)
 
 blog [Extended Guide: Instruction-tune Llama 2](https://www.philschmid.de/instruction-tune-llama-2)
+
+### trainer
+
+根据 [文档](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.Trainer.get_train_dataloader) ，trainer 的 dataloader 在 dataset 支持 len 时默认使用随机 sampler，否则（例如 streaming dataset）不使用 sampler
 
 ## tricks
 
