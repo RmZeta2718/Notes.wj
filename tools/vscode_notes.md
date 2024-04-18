@@ -209,6 +209,17 @@ sort level 设置为 2，避免 sort vim keybinding
 
 如何查看 watch 的文件： https://github.com/microsoft/vscode/issues/160252#issuecomment-1239461057
 
+## devcontainer
+
+在 `devcontainer.json` 中添加主机proxy：
+
+```json
+"remoteEnv": {
+    "HTTP_PROXY": "http://host.docker.internal:7890",
+    "HTTPS_PROXY": "http://host.docker.internal:7890"
+},
+```
+
 ## Bugs
 
 ### 符号链接问题

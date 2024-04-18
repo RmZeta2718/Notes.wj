@@ -217,3 +217,50 @@ GIL 导致 python 解释器是单线程的，任何多线程的 python 程序，
 ## logging
 
 [Logging HOWTO — Python 3.12.0 documentation --- 日志记录指南 — Python 3.12.0 文档](https://docs.python.org/3/howto/logging.html)
+
+## VSCode 调试
+
+> [How to debug remote Python script in VS Code - Stack Overflow](https://stackoverflow.com/questions/73378057/how-to-debug-remote-python-script-in-vs-code)
+
+VSCode 调试痛点：
+- 需要编写 `launch.json` 文件，主要包含命令行参数与环境变量
+- 然而通常运行代码通过脚本完成，其中包含大量命令行参数与环境变量，难以移植到vscode，且难以维护
+
+解决方案：可以通过vscode远程调试连接到一个python调试器程序，这个程序可以是从脚本（命令行）启动的。从而在正常运行和调试之间无缝切换。
+
+1. 运行程序时通过 `debugpy` 模块启动，此时程序会等待vscode启动
+
+```bash
+python3 -m debugpy --listen localhost:5678 --wait-for-client app.py ...
+```
+
+2. 从vscode启动远程调试
+
+vscode生成的 `launch.json` 模板大致如下
+
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Remote Attach",
+            "type": "python",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5678
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "."
+                }
+            ],
+            "justMyCode": false
+        }
+    ]
+}
+```
