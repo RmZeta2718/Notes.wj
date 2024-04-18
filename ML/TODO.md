@@ -4,8 +4,11 @@
 - [ ] trainer scheduler min value https://github.com/huggingface/transformers/issues/26209 提 PR
 - [ ] 大数据集 `load_dataset` 为什么花这么长时间（ [Slow dataloading with big datasets issue persists · Issue #2252 · huggingface/datasets (github.com)](https://github.com/huggingface/datasets/issues/2252) ）
 - [ ] [Long-Context 下 LLM 模型架构全面介绍 (qq.com)](https://mp.weixin.qq.com/s/HjIRk0BzhRAB_4yfpiI2jQ)
-- [ ] 实现 alibi 的 sliding window eval
 - [ ] 整理 long ctx 模型
+- [ ] 整理NoPE论文
+    - [ ] The Impact of Positional Encoding on Length Generalization in Transformers
+- [ ] 验证parser、viztracer issue
+- [ ] [WezTerm - Wez's Terminal Emulator (wezfurlong.org)](https://wezfurlong.org/wezterm/index.html)
 
 https://self-supervised.cs.jhu.edu/
 

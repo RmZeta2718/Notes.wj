@@ -222,7 +222,7 @@ blog [Extended Guide: Instruction-tune Llama 2](https://www.philschmid.de/instru
 
 ### trainer
 
-根据 [文档](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.Trainer.get_train_dataloader) ，trainer 的 dataloader 在 dataset 支持 len 时默认使用随机 sampler，否则（例如 streaming dataset）不使用 sampler
+根据 [文档](https://huggingface.co/docs/transformers/main_classes/trainer#transformers.Trainer.get_train_dataloader) ，trainer 的 dataloader 在 dataset 支持 len 时默认使用随机 sampler，否则（例如 streaming dataset）不使用 sampler ([论坛](https://discuss.huggingface.co/t/how-to-ensure-the-dataset-is-shuffled-for-each-epoch-using-trainer-and-datasets/4212/5))
 
 ## tricks
 

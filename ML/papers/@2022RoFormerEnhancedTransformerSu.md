@@ -32,6 +32,13 @@ $$
 \end{pmatrix}\begin{pmatrix}q_0\\q_1\\q_2\\q_3\\\vdots\\q_{d-2}\\q_{d-1}\end{pmatrix}
 $$
 
+$$
+\left(\begin{array}{c}\cos m \theta_{0} \\\cos m \theta_{0} \\\cos m \theta_{1} \\\cos m \theta_{1} \\\vdots \\\cos m \theta_{d / 2-1} \\\cos m \theta_{d / 2-1}\end{array}\right)
+\otimes\left(\begin{array}{c} q_{0} \\q_{1} \\q_{2} \\q_{3} \\\vdots \\q_{d-2} \\q_{d-1}\end{array}\right)
++\left(\begin{array}{c}\sin m \theta_{0} \\\sin m \theta_{0} \\\sin m \theta_{1} \\\sin m \theta_{1} \\\vdots \\\sin m \theta_{d / 2-1} \\\sin m \theta_{d / 2-1}\end{array}\right)
+\otimes\left(\begin{array}{c}-q_{1} \\q_{0} \\-q_{3} \\q_{2} \\\vdots \\-q_{d-1} \\q_{d-2}\end{array}\right)
+$$
+
 ## 实验
 
 %% 实现细节、设置。数据集。评估。消融实验 %%
