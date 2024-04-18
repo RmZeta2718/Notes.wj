@@ -65,7 +65,6 @@
   font-size: 22px;
 }
 .quiet-outline code {
-  color: var(--text-color-code, var(--code-normal));
   font-weight: bold;
   font-family: var(--font-monospace);
   background-color: var(--code-background);
@@ -155,6 +154,17 @@
 }
 .n-tree-node.located p {
   color: var(--8de97876-locatedColor);
+}
+.quiet-outline .n-tree .n-tree-node .n-tree-node-content .n-tree-node-content__prefix {
+  margin-right: 0;
+}
+.quiet-outline .n-tree .n-tree-node .n-tree-node-content .n-tree-node-content__prefix > *:last-child {
+  margin-right: 8px;
+}
+.n-tree-node-switcher__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* src/main.css */

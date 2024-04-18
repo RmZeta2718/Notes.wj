@@ -5,12 +5,12 @@
   "lapel",
   "obsidian-completr",
   "obsidian-pangu",
-  "vim-im-select",
   "no-dupe-leaves",
   "copy-document-as-html",
-  "editing-toolbar",
-  "obsidian-quiet-outline",
   "dataview",
   "tag-wrangler",
-  "obsidian-latex-suite"
+  "obsidian-latex-suite",
+  "vim-im-select",
+  "editing-toolbar",
+  "obsidian-quiet-outline"
 ]
