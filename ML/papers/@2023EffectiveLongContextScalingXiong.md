@@ -11,7 +11,7 @@ aliases:
 - **Year**: 2023
 - **URL**: http://arxiv.org/abs/2309.16039
 - [**Zotero**](zotero://select/items/@2023EffectiveLongContextScalingXiong)
-- [**TODO ReadPaper**](https://readpaper.com/...)
+- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4822670164549959681&noteId=2281115421933392384) 
 
 ## 论文试图解决的问题
 
