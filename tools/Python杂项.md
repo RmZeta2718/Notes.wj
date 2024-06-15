@@ -218,6 +218,8 @@ GIL 导致 python 解释器是单线程的，任何多线程的 python 程序，
 
 [Logging HOWTO — Python 3.12.0 documentation --- 日志记录指南 — Python 3.12.0 文档](https://docs.python.org/3/howto/logging.html)
 
+https://www.bilibili.com/video/BV1Ve411Y7Bv
+
 ## VSCode 调试
 
 > [How to debug remote Python script in VS Code - Stack Overflow](https://stackoverflow.com/questions/73378057/how-to-debug-remote-python-script-in-vs-code)
@@ -263,4 +265,33 @@ vscode生成的 `launch.json` 模板大致如下
         }
     ]
 }
+```
+
+## Monkey Patch
+
+### class method
+
+https://www.bilibili.com/video/BV1pa411e7tQ
+
+https://stackoverflow.com/questions/46525069/how-is-types-methodtype-used
+
+```python
+class A:
+    def f(self):
+        return "A.f()"
+
+def new_f(self):
+    return "A.f() modified"
+
+a = A()
+
+A.f = new_f
+a.f()  # modified
+
+### or ###
+
+import types
+a.f = types.MethodType(new_f, a)
+a.f()  # modified
+
 ```

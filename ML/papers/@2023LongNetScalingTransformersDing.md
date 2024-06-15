@@ -26,6 +26,10 @@ LongNet
 - 可以分布式地在超长序列上训练
 - dilated attention是即插即用的，可以集成到已有的模型上。且可以利用现有的所有优化方法（如量化）
 
+官方代码： [torchscale/torchscale/component/dilated_attention.py at main · microsoft/torchscale (github.com)](https://github.com/microsoft/torchscale/blob/main/torchscale/component/dilated_attention.py)
+
+非官方代码： [dilated-attention-pytorch/dilated_attention_pytorch/dilated_attention.py at main · fkodom/dilated-attention-pytorch (github.com)](https://github.com/fkodom/dilated-attention-pytorch/blob/main/dilated_attention_pytorch/dilated_attention.py)
+
 ## 论文提供的关键元素、关键设计
 
 ### 总体流程

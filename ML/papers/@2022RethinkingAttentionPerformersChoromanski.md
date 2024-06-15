@@ -8,7 +8,7 @@ aliases: ["Rethinking Attention with Performers", "Rethinking Attention with Per
 - **Year**: 2022
 - **URL**: http://arxiv.org/abs/2009.14794
 - [**Zotero**](zotero://select/items/@2022RethinkingAttentionPerformersChoromanski)
-- [**TODO ReadPaper**](https://readpaper.com/...)
+- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4500359394679742465&noteId=2321722521382608896)
 
 ## 论文试图解决的问题
 
@@ -17,6 +17,8 @@ aliases: ["Rethinking Attention with Performers", "Rethinking Attention with Per
 ## 论文的总体贡献
 
 ## 论文提供的关键元素、关键设计
+
+![](https://pdf.cdn.readpaper.com/parsed/fetch_target/3cf2299d57099285885071aa0d8af0db_2_Figure_1.png)
 
 ### 总体流程
 

@@ -113,3 +113,7 @@ GitHub 上需要重新添加 ssh key，添加时需要将 key type（从 Authent
 ```
 
 `ipconfig /flushdns`
+
+## 技巧
+
+[Git Tips and Tricks (gitbutler.com)](https://blog.gitbutler.com/git-tips-and-tricks/)

@@ -3,7 +3,7 @@ aliases: ["Focused Transformer: Contrastive Training for Context Scaling", "Focu
 ---
 # Focused Transformer: Contrastive Training for Context Scaling
 
-- **Journal**: arxiv:2307.03170
+- **Journal**: arxiv:2307.03170 #NeurIPS/23
 - **Author**: Szymon Tworkowski, Konrad Staniszewski, Mikołaj Pacek, Yuhuai Wu, Henryk Michalewski, Piotr Miłoś
 - **Year**: 2023
 - **URL**: http://arxiv.org/abs/2307.03170

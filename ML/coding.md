@@ -287,10 +287,10 @@ $$
 T_\text{math}/T_\text{mem}=\dfrac{\#\text{ops}}{\mathrm{BW_{math}}}\left/\dfrac{\#\text{bytes}}{\mathrm{BW_{mem}}}\right.=\dfrac{\#\text{ops}}{\#\text{bytes}}\left/\dfrac{\mathrm{BW_{math}}}{\mathrm{BW_{mem}}}\right.
 $$
 
-- $\dfrac{\#\text{ops}}{\#\text{bytes}}$ 取决于算法，称作算术强度（Arithmetic Intensity）。单位：`FLOPS/B`
+- $\dfrac{\#\text{ops}}{\#\text{bytes}}$ 取决于算法，称作算术强度（Arithmetic Intensity）。单位：`FLOPs/B`
 - $\dfrac{\mathrm{BW_{math}}}{\mathrm{BW_{mem}}}$ 取决于硬件，称作 `ops: byte` 比率。
 
-于是，如果算法的 Arithmetic Intensity 大于硬件的 `ops: byte` 比率，则是计算瓶颈（math limited），即 GPU 性能饱和，否则是内存瓶颈（memory limited），即没有用满 GPU 性能。
+于是，如果算法的 Arithmetic Intensity 大于硬件的 `ops:byte` 比率，则是计算瓶颈（math limited），即 GPU 性能饱和，否则是内存瓶颈（memory limited），即没有用满 GPU 性能。
 
 #### 常见运算
 
@@ -315,7 +315,7 @@ $$
 $$
 
 例如：
-- $M=8192,N=128,K=8192$ ，则 Arithmetic Intensity 是 `124.1 FLOPS/B` ，比 V100 GPU 的 `138.9 FLOPS: B` 要低，所以是内存瓶颈（memory limited）
+- $M=8192,N=128,K=8192$ ，则 Arithmetic Intensity 是 `124.1 FLOPs/B` ，比 V100 GPU 的 `138.9 FLOPs/B` 要低，所以是内存瓶颈（memory limited）
 - 对于矩阵和向量的乘法，有 $M=1$ 或者 $N=1$ 。这种情况下总是内存瓶颈，因为 Arithmetic Intensity 总是小于 1
 
 #### 对齐

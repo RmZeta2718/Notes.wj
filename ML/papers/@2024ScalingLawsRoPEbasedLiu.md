@@ -5,7 +5,7 @@ aliases:
 ---
 # Scaling Laws of RoPE-based Extrapolation
 
-- **Journal**: arxiv:2310.05209 #ICLR24 
+- **Journal**: arxiv:2310.05209 #ICLR/24 
 - **Author**: Xiaoran Liu, Hang Yan, Shuo Zhang, Chenxin An, Xipeng Qiu, Dahua Lin
 - **Year**: 2024
 - **URL**: http://arxiv.org/abs/2310.05209
@@ -15,6 +15,7 @@ aliases:
 ## 论文试图解决的问题
 
 %% 是否是新的问题。现状、难点。motivation %%
+
 
 ## 论文的总体贡献
 

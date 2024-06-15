@@ -295,6 +295,23 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\LYHYCH8N\\Xu 等。 - 2019 - Understanding and Improving Layer Normalization.pdf;C\:\\Users\\27404\\Zotero\\storage\\DNI5Z6AD\\1911.html}
 }
 
+@online{2019WhatDoesBERTClark,
+  title = {What {{Does BERT Look At}}? {{An Analysis}} of {{BERT}}'s {{Attention}}},
+  shorttitle = {What {{Does BERT Look At}}?},
+  author = {Clark, Kevin and Khandelwal, Urvashi and Levy, Omer and Manning, Christopher D.},
+  date = {2019-06-10},
+  eprint = {1906.04341},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.1906.04341},
+  url = {http://arxiv.org/abs/1906.04341},
+  urldate = {2024-05-20},
+  abstract = {Large pre-trained neural networks such as BERT have had great recent success in NLP, motivating a growing body of research investigating what aspects of language they are able to learn from unlabeled data. Most recent analysis has focused on model outputs (e.g., language model surprisal) or internal vector representations (e.g., probing classifiers). Complementary to these works, we propose methods for analyzing the attention mechanisms of pre-trained models and apply them to BERT. BERT's attention heads exhibit patterns such as attending to delimiter tokens, specific positional offsets, or broadly attending over the whole sentence, with heads in the same layer often exhibiting similar behaviors. We further show that certain attention heads correspond well to linguistic notions of syntax and coreference. For example, we find heads that attend to the direct objects of verbs, determiners of nouns, objects of prepositions, and coreferent mentions with remarkably high accuracy. Lastly, we propose an attention-based probing classifier and use it to further demonstrate that substantial syntactic information is captured in BERT's attention.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\ZBP5FJGE\\Clark 等 - 2019 - What Does BERT Look At An Analysis of BERT's Atte.pdf;C\:\\Users\\27404\\Zotero\\storage\\XAQYEA5U\\1906.html}
+}
+
 @inproceedings{2020BenchmarkingMultimodalRegexYe,
   title = {Benchmarking {{Multimodal Regex Synthesis}} with {{Complex Structures}}},
   booktitle = {Proceedings of the 58th {{Annual Meeting}} of the {{Association}} for {{Computational Linguistics}}},
@@ -547,6 +564,23 @@
   file = {C:\Users\27404\Zotero\storage\HECMDF3B\Wei 等。 - 2021 - CReST A Class-Rebalancing Self-Training Framework.pdf}
 }
 
+@online{2021DataMovementAllIvanov,
+  title = {Data {{Movement Is All You Need}}: {{A Case Study}} on {{Optimizing Transformers}}},
+  shorttitle = {Data {{Movement Is All You Need}}},
+  author = {Ivanov, Andrei and Dryden, Nikoli and Ben-Nun, Tal and Li, Shigang and Hoefler, Torsten},
+  date = {2021-11-08},
+  eprint = {2007.00072},
+  eprinttype = {arxiv},
+  eprintclass = {cs, stat},
+  doi = {10.48550/arXiv.2007.00072},
+  url = {http://arxiv.org/abs/2007.00072},
+  urldate = {2024-06-12},
+  abstract = {Transformers are one of the most important machine learning workloads today. Training one is a very compute-intensive task, often taking days or weeks, and significant attention has been given to optimizing transformers. Despite this, existing implementations do not efficiently utilize GPUs. We find that data movement is the key bottleneck when training. Due to Amdahl's Law and massive improvements in compute performance, training has now become memory-bound. Further, existing frameworks use suboptimal data layouts. Using these insights, we present a recipe for globally optimizing data movement in transformers. We reduce data movement by up to 22.91\% and overall achieve a 1.30x performance improvement over state-of-the-art frameworks when training a BERT encoder layer and 1.19x for the entire BERT. Our approach is applicable more broadly to optimizing deep neural networks, and offers insight into how to tackle emerging performance bottlenecks.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\SD9LB7AM\\Ivanov 等 - 2021 - Data Movement Is All You Need A Case Study on Opt.pdf;C\:\\Users\\27404\\Zotero\\storage\\TNR8MXBW\\2007.html}
+}
+
 @online{2021FactualProbingMASKZhong,
   title = {Factual {{Probing Is}} [{{MASK}}]: {{Learning}} vs. {{Learning}} to {{Recall}}},
   shorttitle = {Factual {{Probing Is}} [{{MASK}}]},
@@ -797,6 +831,23 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\Z5R4HYK3\\Anil 等 - 2022 - Exploring Length Generalization in Large Language .pdf;C\:\\Users\\27404\\Zotero\\storage\\MLYK5M7D\\2207.html}
 }
 
+@online{2022FlashAttentionFastMemoryEfficientDao,
+  title = {{{FlashAttention}}: {{Fast}} and {{Memory-Efficient Exact Attention}} with {{IO-Awareness}}},
+  shorttitle = {{{FlashAttention}}},
+  author = {Dao, Tri and Fu, Daniel Y. and Ermon, Stefano and Rudra, Atri and Ré, Christopher},
+  date = {2022-06-23},
+  eprint = {2205.14135},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2205.14135},
+  url = {http://arxiv.org/abs/2205.14135},
+  urldate = {2024-06-11},
+  abstract = {Transformers are slow and memory-hungry on long sequences, since the time and memory complexity of self-attention are quadratic in sequence length. Approximate attention methods have attempted to address this problem by trading off model quality to reduce the compute complexity, but often do not achieve wall-clock speedup. We argue that a missing principle is making attention algorithms IO-aware -- accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm that uses tiling to reduce the number of memory reads/writes between GPU high bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of FlashAttention, showing that it requires fewer HBM accesses than standard attention, and is optimal for a range of SRAM sizes. We also extend FlashAttention to block-sparse attention, yielding an approximate attention algorithm that is faster than any existing approximate attention method. FlashAttention trains Transformers faster than existing baselines: 15\% end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the MLPerf 1.1 training speed record, 3\$\textbackslash times\$ speedup on GPT-2 (seq. length 1K), and 2.4\$\textbackslash times\$ speedup on long-range arena (seq. length 1K-4K). FlashAttention and block-sparse FlashAttention enable longer context in Transformers, yielding higher quality models (0.7 better perplexity on GPT-2 and 6.4 points of lift on long-document classification) and entirely new capabilities: the first Transformers to achieve better-than-chance performance on the Path-X challenge (seq. length 16K, 61.4\% accuracy) and Path-256 (seq. length 64K, 63.1\% accuracy).},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\2JNDE4F5\\Dao 等 - 2022 - FlashAttention Fast and Memory-Efficient Exact At.pdf;C\:\\Users\\27404\\Zotero\\storage\\49IFC72J\\2205.html}
+}
+
 @online{2022GLMGeneralLanguageDu,
   title = {{{GLM}}: {{General Language Model Pretraining}} with {{Autoregressive Blank Infilling}}},
   shorttitle = {{{GLM}}},
@@ -1044,6 +1095,22 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\RI89IJ2Z\\Press 等 - 2022 - Train Short, Test Long Attention with Linear Bias.pdf;C\:\\Users\\27404\\Zotero\\storage\\IHDG44DV\\2108.html}
 }
 
+@online{2022TransformerLanguageModelsHaviv,
+  title = {Transformer {{Language Models}} without {{Positional Encodings Still Learn Positional Information}}},
+  author = {Haviv, Adi and Ram, Ori and Press, Ofir and Izsak, Peter and Levy, Omer},
+  date = {2022-12-05},
+  eprint = {2203.16634},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2203.16634},
+  url = {http://arxiv.org/abs/2203.16634},
+  urldate = {2024-06-03},
+  abstract = {Causal transformer language models (LMs), such as GPT-3, typically require some form of positional encoding, such as positional embeddings. However, we show that LMs without any explicit positional encoding are still competitive with standard models, and that this phenomenon is robust across different datasets, model sizes, and sequence lengths. Probing experiments reveal that such models acquire an implicit notion of absolute positions throughout the network, effectively compensating for the missing information. We conjecture that causal attention enables the model to infer the number of predecessors that each token can attend to, thereby approximating its absolute position. Our findings indicate that causal LMs might derive positional awareness not only from the explicit positioning mechanism, but also from the effects of the causal mask.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\93FC2HD3\\Haviv 等 - 2022 - Transformer Language Models without Positional Enc.pdf;C\:\\Users\\27404\\Zotero\\storage\\JB2TKVS3\\2203.html}
+}
+
 @online{2022UnifiedViewParameterEfficientHe,
   title = {Towards a {{Unified View}} of {{Parameter-Efficient Transfer Learning}}},
   author = {He, Junxian and Zhou, Chunting and Ma, Xuezhe and Berg-Kirkpatrick, Taylor and Neubig, Graham},
@@ -1057,6 +1124,23 @@
   pubstate = {preprint},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\GNMJ8G4K\\He 等 - 2022 - Towards a Unified View of Parameter-Efficient Tran.pdf;C\:\\Users\\27404\\Zotero\\storage\\K2LDYGL2\\2110.html}
+}
+
+@online{2023_2HeavyHitterOracleZhang,
+  title = {H\$\_2\${{O}}: {{Heavy-Hitter Oracle}} for {{Efficient Generative Inference}} of {{Large Language Models}}},
+  shorttitle = {H\$\_2\${{O}}},
+  author = {Zhang, Zhenyu and Sheng, Ying and Zhou, Tianyi and Chen, Tianlong and Zheng, Lianmin and Cai, Ruisi and Song, Zhao and Tian, Yuandong and Ré, Christopher and Barrett, Clark and Wang, Zhangyang and Chen, Beidi},
+  date = {2023-12-18},
+  eprint = {2306.14048},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2306.14048},
+  url = {http://arxiv.org/abs/2306.14048},
+  urldate = {2024-05-14},
+  abstract = {Large Language Models (LLMs), despite their recent impressive accomplishments, are notably cost-prohibitive to deploy, particularly for applications involving long-content generation, such as dialogue systems and story writing. Often, a large amount of transient state information, referred to as the KV cache, is stored in GPU memory in addition to model parameters, scaling linearly with the sequence length and batch size. In this paper, we introduce a novel approach for implementing the KV cache which significantly reduces its memory footprint. Our approach is based on the noteworthy observation that a small portion of tokens contributes most of the value when computing attention scores. We call these tokens Heavy Hitters (H\$\_2\$). Through a comprehensive investigation, we find that (i) the emergence of H\$\_2\$ is natural and strongly correlates with the frequent co-occurrence of tokens in the text, and (ii) removing them results in significant performance degradation. Based on these insights, we propose Heavy Hitter Oracle (H\$\_2\$O), a KV cache eviction policy that dynamically retains a balance of recent and H\$\_2\$ tokens. We formulate the KV cache eviction as a dynamic submodular problem and prove (under mild assumptions) a theoretical guarantee for our novel eviction algorithm which could help guide future work. We validate the accuracy of our algorithm with OPT, LLaMA, and GPT-NeoX across a wide range of tasks. Our implementation of H\$\_2\$O with 20\% heavy hitters improves the throughput over three leading inference systems DeepSpeed Zero-Inference, Hugging Face Accelerate, and FlexGen by up to 29\$\textbackslash times\$, 29\$\textbackslash times\$, and 3\$\textbackslash times\$ on OPT-6.7B and OPT-30B. With the same batch size, H2O can reduce the latency by up to 1.9\$\textbackslash times\$. The code is available at https://github.com/FMInference/H2O.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\K7EL5IK7\\Zhang 等 - 2023 - H$_2$O Heavy-Hitter Oracle for Efficient Generati.pdf;C\:\\Users\\27404\\Zotero\\storage\\5ZDCW7YU\\2306.html}
 }
 
 @online{2023AreEmergentAbilitiesSchaeffer,
@@ -1251,6 +1335,22 @@
   pubstate = {preprint},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\R6R47RIS\\Yu 等 - 2023 - Language Models are Super Mario Absorbing Abiliti.pdf;C\:\\Users\\27404\\Zotero\\storage\\VNG6YL2C\\2311.html}
+}
+
+@online{2023LatentPositionalInformationChi,
+  title = {Latent {{Positional Information}} Is in the {{Self-Attention Variance}} of {{Transformer Language Models Without Positional Embeddings}}},
+  author = {Chi, Ta-Chung and Fan, Ting-Han and Chen, Li-Wei and Rudnicky, Alexander I. and Ramadge, Peter J.},
+  date = {2023-05-22},
+  eprint = {2305.13571},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2305.13571},
+  url = {http://arxiv.org/abs/2305.13571},
+  urldate = {2024-06-03},
+  abstract = {The use of positional embeddings in transformer language models is widely accepted. However, recent research has called into question the necessity of such embeddings. We further extend this inquiry by demonstrating that a randomly initialized and frozen transformer language model, devoid of positional embeddings, inherently encodes strong positional information through the shrinkage of self-attention variance. To quantify this variance, we derive the underlying distribution of each step within a transformer layer. Through empirical validation using a fully pretrained model, we show that the variance shrinkage effect still persists after extensive gradient updates. Our findings serve to justify the decision to discard positional embeddings and thus facilitate more efficient pretraining of transformer language models.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\ID3B3IUW\\Chi 等 - 2023 - Latent Positional Information is in the Self-Atten.pdf;C\:\\Users\\27404\\Zotero\\storage\\3YGFSTBJ\\2305.html}
 }
 
 @online{2023LearningCompressPromptsMu,
@@ -1459,6 +1559,23 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\KEPR97US\\Bulatov 等 - 2023 - Scaling Transformer to 1M tokens and beyond with R.pdf;C\:\\Users\\27404\\Zotero\\storage\\CF2385BT\\2304.html}
 }
 
+@online{2023ScissorhandsExploitingPersistenceLiu,
+  title = {Scissorhands: {{Exploiting}} the {{Persistence}} of {{Importance Hypothesis}} for {{LLM KV Cache Compression}} at {{Test Time}}},
+  shorttitle = {Scissorhands},
+  author = {Liu, Zichang and Desai, Aditya and Liao, Fangshuo and Wang, Weitao and Xie, Victor and Xu, Zhaozhuo and Kyrillidis, Anastasios and Shrivastava, Anshumali},
+  date = {2023-08-28},
+  eprint = {2305.17118},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2305.17118},
+  url = {http://arxiv.org/abs/2305.17118},
+  urldate = {2024-05-14},
+  abstract = {Large language models(LLMs) have sparked a new wave of exciting AI applications. Hosting these models at scale requires significant memory resources. One crucial memory bottleneck for the deployment stems from the context window. It is commonly recognized that model weights are memory hungry; however, the size of key-value embedding stored during the generation process (KV cache) can easily surpass the model size. The enormous size of the KV cache puts constraints on the inference batch size, which is crucial for high throughput inference workload. Inspired by an interesting observation of the attention scores, we hypothesize the persistence of importance: only pivotal tokens, which had a substantial influence at one step, will significantly influence future generations. Based on our empirical verification and theoretical analysis around this hypothesis, we propose Scissorhands, a system that maintains the memory usage of the KV cache at a fixed budget without finetuning the model. In essence, Scissorhands manages the KV cache by storing the pivotal tokens with a higher probability. We validate that Scissorhands reduces the inference memory usage of the KV cache by up to 5X without compromising model quality. We further demonstrate that Scissorhands can be combined with 4-bit quantization, traditionally used to compress model weights, to achieve up to 20X compression.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\RCVP7B2S\\Liu 等 - 2023 - Scissorhands Exploiting the Persistence of Import.pdf;C\:\\Users\\27404\\Zotero\\storage\\GURB2L7Q\\2305.html}
+}
+
 @online{2023UnlimiformerLongRangeTransformersBertsch,
   title = {Unlimiformer: {{Long-Range Transformers}} with {{Unlimited Length Input}}},
   shorttitle = {Unlimiformer},
@@ -1492,6 +1609,57 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\32KPEGSC\\Peng 等 - 2023 - YaRN Efficient Context Window Extension of Large .pdf;C\:\\Users\\27404\\Zotero\\storage\\XMK8KK5M\\2309.html}
 }
 
+@online{2024BaseRoPEBoundsMen,
+  title = {Base of {{RoPE Bounds Context Length}}},
+  author = {Men, Xin and Xu, Mingyu and Wang, Bingning and Zhang, Qingyu and Lin, Hongyu and Han, Xianpei and Chen, Weipeng},
+  date = {2024-05-23},
+  eprint = {2405.14591},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2405.14591},
+  url = {http://arxiv.org/abs/2405.14591},
+  urldate = {2024-06-10},
+  abstract = {Position embedding is a core component of current Large Language Models (LLMs). Rotary position embedding (RoPE), a technique that encodes the position information with a rotation matrix, has been the de facto choice for position embedding in many LLMs, such as the Llama series. RoPE has been further utilized to extend long context capability, which is roughly based on adjusting the \textbackslash textit\{base\} parameter of RoPE to mitigate out-of-distribution (OOD) problems in position embedding. However, in this paper, we find that LLMs may obtain a superficial long-context ability based on the OOD theory. We revisit the role of RoPE in LLMs and propose a novel property of long-term decay, we derive that the \textbackslash textit\{base of RoPE bounds context length\}: there is an absolute lower bound for the base value to obtain certain context length capability. Our work reveals the relationship between context length and RoPE base both theoretically and empirically, which may shed light on future long context training.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\TMFEQBPL\\Men 等 - 2024 - Base of RoPE Bounds Context Length.pdf;C\:\\Users\\27404\\Zotero\\storage\\TZQGT8VV\\2405.html}
+}
+
+@online{2024CodeLlamaOpenRoziere,
+  title = {Code {{Llama}}: {{Open Foundation Models}} for {{Code}}},
+  shorttitle = {Code {{Llama}}},
+  author = {Rozière, Baptiste and Gehring, Jonas and Gloeckle, Fabian and Sootla, Sten and Gat, Itai and Tan, Xiaoqing Ellen and Adi, Yossi and Liu, Jingyu and Sauvestre, Romain and Remez, Tal and Rapin, Jérémy and Kozhevnikov, Artyom and Evtimov, Ivan and Bitton, Joanna and Bhatt, Manish and Ferrer, Cristian Canton and Grattafiori, Aaron and Xiong, Wenhan and Défossez, Alexandre and Copet, Jade and Azhar, Faisal and Touvron, Hugo and Martin, Louis and Usunier, Nicolas and Scialom, Thomas and Synnaeve, Gabriel},
+  date = {2024-01-31},
+  eprint = {2308.12950},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2308.12950},
+  url = {http://arxiv.org/abs/2308.12950},
+  urldate = {2024-06-13},
+  abstract = {We release Code Llama, a family of large language models for code based on Llama 2 providing state-of-the-art performance among open models, infilling capabilities, support for large input contexts, and zero-shot instruction following ability for programming tasks. We provide multiple flavors to cover a wide range of applications: foundation models (Code Llama), Python specializations (Code Llama - Python), and instruction-following models (Code Llama - Instruct) with 7B, 13B, 34B and 70B parameters each. All models are trained on sequences of 16k tokens and show improvements on inputs with up to 100k tokens. 7B, 13B and 70B Code Llama and Code Llama - Instruct variants support infilling based on surrounding content. Code Llama reaches state-of-the-art performance among open models on several code benchmarks, with scores of up to 67\% and 65\% on HumanEval and MBPP, respectively. Notably, Code Llama - Python 7B outperforms Llama 2 70B on HumanEval and MBPP, and all our models outperform every other publicly available model on MultiPL-E. We release Code Llama under a permissive license that allows for both research and commercial use.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\Z4YFF7VA\\Rozière 等 - 2024 - Code Llama Open Foundation Models for Code.pdf;C\:\\Users\\27404\\Zotero\\storage\\XJSAINVG\\2308.html}
+}
+
+@online{2024CountingStarsMultievidencePositionawareSong,
+  title = {Counting-{{Stars}}: {{A Multi-evidence}}, {{Position-aware}}, and {{Scalable Benchmark}} for {{Evaluating Long-Context Large Language Models}}},
+  shorttitle = {Counting-{{Stars}}},
+  author = {Song, Mingyang and Zheng, Mao and Luo, Xuan},
+  date = {2024-03-18},
+  eprint = {2403.11802},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2403.11802},
+  url = {http://arxiv.org/abs/2403.11802},
+  urldate = {2024-06-11},
+  abstract = {While recent research endeavors have focused on developing Large Language Models (LLMs) with robust long-context capabilities, due to the lack of long-context benchmarks, relatively little is known about how well the performance of long-context LLMs. To address this gap, we propose a multi-evidence, position-aware, and scalable benchmark for evaluating long-context LLMs, named Counting-Stars, which evaluates long-context LLMs by using two tasks: multi-evidence acquisition and multi-evidence reasoning. Based on the Counting-Stars test, we conduct experiments to evaluate long-context LLMs (i.e., GPT-4 Turbo, Gemini 1.5 Pro, Claude3 Opus, GLM-4, and Moonshot-v1). Experimental results demonstrate that Gemini 1.5 Pro achieves the best overall results, while the performance of GPT-4 Turbo is the most stable across various tasks. Furthermore, our analysis of these LLMs, which are extended to handle long-context scenarios, indicates that there is potential for improvement as the length of the input context and the intricacy of the tasks are increasing.},
+  pubstate = {preprint},
+  version = {1},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\2C87CWWR\\Song 等 - 2024 - Counting-Stars A Multi-evidence, Position-aware, .pdf;C\:\\Users\\27404\\Zotero\\storage\\IXWVUHKV\\2403.html}
+}
+
 @online{2024DataEngineeringScalingFu,
   title = {Data {{Engineering}} for {{Scaling Language Models}} to {{128K Context}}},
   author = {Fu, Yao and Panda, Rameswar and Niu, Xinyao and Yue, Xiang and Hajishirzi, Hannaneh and Kim, Yoon and Peng, Hao},
@@ -1505,6 +1673,22 @@
   pubstate = {preprint},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\SAH92XUH\\Fu 等 - 2024 - Data Engineering for Scaling Language Models to 12.pdf;C\:\\Users\\27404\\Zotero\\storage\\IYXZ827I\\2402.html}
+}
+
+@online{2024ExtendingLLMsContextZhanga,
+  title = {Extending {{LLMs}}' {{Context Window}} with 100 {{Samples}}},
+  author = {Zhang, Yikai and Li, Junlong and Liu, Pengfei},
+  date = {2024-01-13},
+  eprint = {2401.07004},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2401.07004},
+  url = {http://arxiv.org/abs/2401.07004},
+  urldate = {2024-06-13},
+  abstract = {Large Language Models (LLMs) are known to have limited extrapolation ability beyond their pre-trained context window, constraining their application in downstream tasks with lengthy inputs. Recent studies have sought to extend LLMs' context window by modifying rotary position embedding (RoPE), a popular position encoding method adopted by well-known LLMs such as LLaMA, PaLM, and GPT-NeoX. However, prior works like Position Interpolation (PI) and YaRN are resource-intensive and lack comparative experiments to assess their applicability. In this work, we identify the inherent need for LLMs' attention entropy (i.e. the information entropy of attention scores) to maintain stability and introduce a novel extension to RoPE which combines adjusting RoPE's base frequency and scaling the attention logits to help LLMs efficiently adapt to a larger context window. We validate the superiority of our method in both fine-tuning performance and robustness across different context window sizes on various context-demanding tasks. Notably, our method extends the context window of LLaMA-2-7B-Chat to 16,384 with only 100 samples and 6 training steps, showcasing extraordinary efficiency. Finally, we also explore how data compositions and training curricula affect context window extension for specific downstream tasks, suggesting fine-tuning LLMs with lengthy conversations as a good starting point. We release our code and SFT data at https://github.com/GAIR-NLP/Entropy-ABF.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\NBP6J3DB\\Zhang 等 - 2024 - Extending LLMs' Context Window with 100 Samples.pdf;C\:\\Users\\27404\\Zotero\\storage\\FHCWSEI9\\2401.html}
 }
 
 @online{2024LeaveNoContextMunkhdalai,
@@ -1557,6 +1741,23 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\YVR35VZY\\Chen 等 - 2024 - LongLoRA Efficient Fine-tuning of Long-Context La.pdf;C\:\\Users\\27404\\Zotero\\storage\\SZAJAZS7\\2309.html}
 }
 
+@online{2024LongRoPEExtendingLLMDing,
+  title = {{{LongRoPE}}: {{Extending LLM Context Window Beyond}} 2 {{Million Tokens}}},
+  shorttitle = {{{LongRoPE}}},
+  author = {Ding, Yiran and Zhang, Li Lyna and Zhang, Chengruidong and Xu, Yuanyuan and Shang, Ning and Xu, Jiahang and Yang, Fan and Yang, Mao},
+  date = {2024-02-21},
+  eprint = {2402.13753},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2402.13753},
+  url = {http://arxiv.org/abs/2402.13753},
+  urldate = {2024-06-13},
+  abstract = {Large context window is a desirable feature in large language models (LLMs). However, due to high fine-tuning costs, scarcity of long texts, and catastrophic values introduced by new token positions, current extended context windows are limited to around 128k tokens. This paper introduces LongRoPE that, for the first time, extends the context window of pre-trained LLMs to an impressive 2048k tokens, with up to only 1k fine-tuning steps at within 256k training lengths, while maintaining performance at the original short context window. This is achieved by three key innovations: (i) we identify and exploit two forms of non-uniformities in positional interpolation through an efficient search, providing a better initialization for fine-tuning and enabling an 8x extension in non-fine-tuning scenarios; (ii) we introduce a progressive extension strategy that first fine-tunes a 256k length LLM and then conducts a second positional interpolation on the fine-tuned extended LLM to achieve a 2048k context window; (iii) we readjust LongRoPE on 8k length to recover the short context window performance. Extensive experiments on LLaMA2 and Mistral across various tasks demonstrate the effectiveness of our method. Models extended via LongRoPE retain the original architecture with minor modifications to the positional embedding, and can reuse most pre-existing optimizations.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\IV6RRI2H\\Ding 等 - 2024 - LongRoPE Extending LLM Context Window Beyond 2 Mi.pdf;C\:\\Users\\27404\\Zotero\\storage\\AP62E2FK\\2402.html}
+}
+
 @online{2024MegalodonEfficientLLMMa,
   title = {Megalodon: {{Efficient LLM Pretraining}} and {{Inference}} with {{Unlimited Context Length}}},
   shorttitle = {Megalodon},
@@ -1571,6 +1772,23 @@
   pubstate = {preprint},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\LXVW2HN3\\Ma 等 - 2024 - Megalodon Efficient LLM Pretraining and Inference.pdf;C\:\\Users\\27404\\Zotero\\storage\\8FHCLQZE\\2404.html}
+}
+
+@online{2024ModelTellsYouGe,
+  title = {Model {{Tells You What}} to {{Discard}}: {{Adaptive KV Cache Compression}} for {{LLMs}}},
+  shorttitle = {Model {{Tells You What}} to {{Discard}}},
+  author = {Ge, Suyu and Zhang, Yunan and Liu, Liyuan and Zhang, Minjia and Han, Jiawei and Gao, Jianfeng},
+  date = {2024-01-29},
+  eprint = {2310.01801},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2310.01801},
+  url = {http://arxiv.org/abs/2310.01801},
+  urldate = {2024-05-09},
+  abstract = {In this study, we introduce adaptive KV cache compression, a plug-and-play method that reduces the memory footprint of generative inference for Large Language Models (LLMs). Different from the conventional KV cache that retains key and value vectors for all context tokens, we conduct targeted profiling to discern the intrinsic structure of attention modules. Based on the recognized structure, we then construct the KV cache in an adaptive manner: evicting long-range contexts on attention heads emphasizing local contexts, discarding non-special tokens on attention heads centered on special tokens, and only employing the standard KV cache for attention heads that broadly attend to all tokens. Moreover, with the lightweight attention profiling used to guide the construction of the adaptive KV cache, FastGen can be deployed without resource-intensive fine-tuning or re-training. In our experiments across various asks, FastGen demonstrates substantial reduction on GPU memory consumption with negligible generation quality loss. We will release our code and the compatible CUDA kernel for reproducibility.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\BCKUVX3S\\Ge 等 - 2024 - Model Tells You What to Discard Adaptive KV Cache.pdf;C\:\\Users\\27404\\Zotero\\storage\\WSKMK4HQ\\2310.html}
 }
 
 @online{2024ScalingLawsRoPEbasedLiu,

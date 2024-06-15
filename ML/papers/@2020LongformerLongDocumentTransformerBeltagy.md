@@ -6,7 +6,7 @@ aliases: ["Longformer: The Long-Document Transformer", "Longformer: The Long-Doc
 - **Journal**: arXiv:2004.05150
 - **Author**: Iz Beltagy, Matthew E. Peters, Arman Cohan
 - **Year**: 2020
-- **URL**:
+- **URL**: https://arxiv.org/abs/2004.05150
 - [**Zotero**](zotero://select/items/@2020LongformerLongDocumentTransformerBeltagy)
 - [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4500345191331946498&noteId=1744650709602988800)
 

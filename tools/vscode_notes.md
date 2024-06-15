@@ -53,6 +53,11 @@ isort 默认的 format 很丑陋，加上 README 里的 `"isort.args": ["--profi
 
 modify `C_Cpp.clang_format_fallbackStyle` to `{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}` (and the original value was `Visual Studio` )
 
+
+## git
+
+比较**当前**文件的历史版本：`GitLens: Open Changes with Branch or Tag...`
+
 ## vim
 
  [🎩 VSCodeVim tricks!](https://github.com/VSCodeVim/Vim#-vscodevim-tricks) ：`gh` = 鼠标悬停，`gd` = `ctrl + click`

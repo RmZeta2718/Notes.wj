@@ -3,7 +3,7 @@ aliases: ["Dissecting Transformer Length Extrapolation via the Lens of Receptive
 ---
 # Dissecting Transformer Length Extrapolation via the Lens of Receptive Field Analysis
 
-- **Journal**: #ACL23
+- **Journal**: #ACL/23
 - **Author**: Ta-Chung Chi, Ting-Han Fan, Alexander I. Rudnicky, Peter J. Ramadge
 - **Year**: 2023
 - **URL**: http://arxiv.org/abs/2212.10356

@@ -3,7 +3,7 @@ aliases: ["Simple Local Attentions Remain Competitive for Long-Context Tasks", "
 ---
 # Simple Local Attentions Remain Competitive for Long-Context Tasks
 
-- **Journal**: arxiv:2112.07210 #NAACL22
+- **Journal**: arxiv:2112.07210 #NAACL/22
 - **Author**: Wenhan Xiong, Barlas Oğuz, Anchit Gupta, Xilun Chen, Diana Liskovich, Omer Levy, Wen-tau Yih, Yashar Mehdad
 - **Year**: 2022
 - **URL**: http://arxiv.org/abs/2112.07210

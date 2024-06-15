@@ -6,7 +6,7 @@ aliases:
 ---
 # YaRN: Efficient Context Window Extension of Large Language Models
 
-- **Journal**: arxiv:2309.00071
+- **Journal**: arxiv:2309.00071 #ICLR/24 
 - **Author**: Bowen Peng, Jeffrey Quesnelle, Honglu Fan, Enrico Shippole
 - **Year**: 2023
 - **URL**: http://arxiv.org/abs/2309.00071

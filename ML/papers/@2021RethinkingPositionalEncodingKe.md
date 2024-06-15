@@ -3,12 +3,12 @@ aliases: ["Rethinking Positional Encoding in Language Pre-training", "Rethinking
 ---
 # Rethinking Positional Encoding in Language Pre-training
 
-- **Journal**: arxiv:2006.15595
+- **Journal**: arxiv:2006.15595 #ICLR/21
 - **Author**: Guolin Ke, Di He, Tie-Yan Liu
 - **Year**: 2021
 - **URL**: http://arxiv.org/abs/2006.15595
 - [**Zotero**](zotero://select/items/@2021RethinkingPositionalEncodingKe)
-- [**TODO ReadPaper**](https://readpaper.com/...)
+- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4546344292888240129&noteId=1795371363412548608)
 
 ## 论文试图解决的问题
 

@@ -3,7 +3,7 @@ aliases: ["Exploring Length Generalization in Large Language Models", "Exploring
 ---
 # Exploring Length Generalization in Large Language Models
 
-- **Journal**: #NeurIPS2022
+- **Journal**: #NeurIPS/22
 - **Author**: Cem Anil, Yuhuai Wu, Anders Andreassen, Aitor Lewkowycz, Vedant Misra, Vinay Ramasesh, Ambrose Slone, Guy Gur-Ari, Ethan Dyer, Behnam Neyshabur
 - **Year**: 2022
 - **URL**: http://arxiv.org/abs/2207.04901
