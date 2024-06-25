@@ -10,7 +10,7 @@ aliases:
 - **Year**: 2024
 - **URL**: http://arxiv.org/abs/2310.05209
 - [**Zotero**](zotero://select/items/@2024ScalingLawsRoPEbasedLiu)
-- [**TODO ReadPaper**](https://readpaper.com/...)
+- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4866094149077565441&noteId=2362157880994064384)
 
 ## 论文试图解决的问题
 

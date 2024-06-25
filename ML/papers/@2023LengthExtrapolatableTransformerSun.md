@@ -23,11 +23,11 @@ aliases:
 
 $\operatorname{RoPE}(\boldsymbol{x}, m)=\mathcal{R}_m\boldsymbol{x}$
 
-$\begin{cases}\operatorname{xPos}_q(\boldsymbol{q}^{(n)}, n)=\mathcal{R}_n\boldsymbol{q}^{(n)}\xi^n\\ \operatorname{xPos}_k(\boldsymbol{k}^{(m)}, m)=\mathcal{R}_m\boldsymbol{k}^{(m)}\xi^{-m} \end{cases}$
+$\begin{cases}\operatorname{xPos}_q(\boldsymbol{q}^{(n)}, n)=\mathcal{R}_n\boldsymbol{q}^{(n)}\xi^{-n}\\ \operatorname{xPos}_k(\boldsymbol{k}^{(m)}, m)=\mathcal{R}_m\boldsymbol{k}^{(m)}\xi^m \end{cases}$
 
 $\xi_i=\dfrac{\frac{2i}{d}+\gamma}{1+\gamma}\in(0,1]$
 
-$\begin{align}\langle\operatorname{xPos}(\boldsymbol{q}^{(n)}, n),\ \operatorname{xPos}(\boldsymbol{k}^{(m)}, m)\rangle&=(\mathcal{R}_n\boldsymbol{q}^{(n)}\xi^n)^T\mathcal{R}_m\boldsymbol{k}^{(m)}\xi^{-m}\\&=\boldsymbol{q}^{(n)T}\mathcal{R}_{m-n}\boldsymbol{k}^{(m)}\xi^{m-n}\\&=\langle\operatorname{xPos}(\boldsymbol{q}^{(n)}, 0),\ \operatorname{xPos}(\boldsymbol{k}^{(m)}, m-n)\rangle\\&=\xi^{m-n}\langle\operatorname{RoPE}(\boldsymbol{q}^{(n)}, 0),\ \operatorname{RoPE}(\boldsymbol{k}^{(m)}, m-n)\rangle\end{align}$
+$\begin{align}\langle\operatorname{xPos}_q(\boldsymbol{q}^{(n)}, n),\ \operatorname{xPos}_k(\boldsymbol{k}^{(m)}, m)\rangle&=(\mathcal{R}_n\boldsymbol{q}^{(n)}\xi^{-n})^T\mathcal{R}_m\boldsymbol{k}^{(m)}\xi^m\\&=\boldsymbol{q}^{(n)T}\mathcal{R}_{m-n}\boldsymbol{k}^{(m)}\xi^{m-n}\\&=\langle\operatorname{xPos}_q(\boldsymbol{q}^{(n)}, 0),\ \operatorname{xPos}_k(\boldsymbol{k}^{(m)}, m-n)\rangle\\&=\xi^{m-n}\langle\operatorname{RoPE}(\boldsymbol{q}^{(n)}, 0),\ \operatorname{RoPE}(\boldsymbol{k}^{(m)}, m-n)\rangle\end{align}$
 
 Causal LM: $m-n\le0\Rightarrow\xi^{m-n}\in(0,1]$
 

@@ -55,3 +55,13 @@ flex
 ```
 
 和缩放不兼容？（加上width后居中失效）
+
+### 表格字号（缩放）
+
+```html
+<style scoped>
+table {
+  font-size: 20px;
+}
+</style>
+```

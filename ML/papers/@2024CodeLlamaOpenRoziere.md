@@ -2,6 +2,7 @@
 aliases:
   - "Code Llama: Open Foundation Models for Code"
   - "Code Llama: Open Foundation Models for Code, 2024"
+  - CodeLlama
 ---
 # Code Llama: Open Foundation Models for Code
 
@@ -19,6 +20,8 @@ aliases:
 [Introducing Code Llama, a state-of-the-art large language model for coding (meta.com)](https://ai.meta.com/blog/code-llama-large-language-model-coding/)
 
 ## 论文的总体贡献
+
+![fig2](https://pdf.cdn.readpaper.com/parsed/fetch_target/19f70d19509f510aabd37a4985eb81e7_2_Figure_2_1067896127.png)
 
 ## 论文提供的关键元素、关键设计
 
