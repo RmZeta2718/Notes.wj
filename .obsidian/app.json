@@ -23,5 +23,8 @@
   "tabSize": 4,
   "showInlineTitle": false,
   "spellcheckLanguages": null,
-  "autoPairMarkdown": false
+  "autoPairMarkdown": false,
+  "foldIndent": false,
+  "foldHeading": false,
+  "showRibbon": true
 }
