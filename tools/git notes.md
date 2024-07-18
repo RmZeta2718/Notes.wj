@@ -117,3 +117,16 @@ GitHub 上需要重新添加 ssh key，添加时需要将 key type（从 Authent
 ## 技巧
 
 [Git Tips and Tricks (gitbutler.com)](https://blog.gitbutler.com/git-tips-and-tricks/)
+
+## Github private fork
+
+[创建公共存储库的私有分支 --- Create a private fork of a public repository (github.com)](https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274)
+
+## shallow clone
+
+[Get up to speed with partial clone and shallow clone - The GitHub Blog](https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/)
+
+```bash
+gcl --filter=blob:none
+```
+

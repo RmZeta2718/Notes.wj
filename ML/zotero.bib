@@ -21,7 +21,7 @@
   url = {http://arxiv.org/abs/1406.2661},
   urldate = {2022-10-24},
   abstract = {We propose a new framework for estimating generative models via an adversarial process, in which we simultaneously train two models: a generative model G that captures the data distribution, and a discriminative model D that estimates the probability that a sample came from the training data rather than G. The training procedure for G is to maximize the probability of D making a mistake. This framework corresponds to a minimax two-player game. In the space of arbitrary functions G and D, a unique solution exists, with G recovering the training data distribution and D equal to 1/2 everywhere. In the case where G and D are defined by multilayer perceptrons, the entire system can be trained with backpropagation. There is no need for any Markov chains or unrolled approximate inference networks during either training or generation of samples. Experiments demonstrate the potential of the framework through qualitative and quantitative evaluation of the generated samples.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\VSCRBY8A\\Goodfellow 等。 - 2014 - Generative Adversarial Networks.pdf;C\:\\Users\\27404\\Zotero\\storage\\UV6WZASM\\1406.html}
 }
@@ -67,7 +67,7 @@
   url = {http://arxiv.org/abs/1604.06174},
   urldate = {2023-03-02},
   abstract = {We propose a systematic approach to reduce the memory consumption of deep neural network training. Specifically, we design an algorithm that costs O(sqrt(n)) memory to train a n layer network, with only the computational cost of an extra forward pass per mini-batch. As many of the state-of-the-art models hit the upper bound of the GPU memory, our algorithm allows deeper and more complex models to be explored, and helps advance the innovations in deep learning research. We focus on reducing the memory cost to store the intermediate feature maps and gradients during training. Computation graph analysis is used for automatic in-place operation and memory sharing optimizations. We show that it is possible to trade computation for memory - giving a more memory efficient training algorithm with a little extra computation cost. In the extreme case, our analysis also shows that the memory consumption can be reduced to O(log n) with as little as O(n log n) extra cost for forward computation. Our experiments show that we can reduce the memory cost of a 1,000-layer deep residual network from 48G to 7G with only 30 percent additional running time cost on ImageNet problems. Similarly, significant memory cost reduction is observed in training complex recurrent neural networks on very long sequences.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\YEGKJYFM\\Chen 等 - 2016 - Training Deep Nets with Sublinear Memory Cost.pdf;C\:\\Users\\27404\\Zotero\\storage\\2ISV2I4X\\1604.html}
 }
@@ -122,7 +122,7 @@
   url = {http://arxiv.org/abs/1710.03740},
   urldate = {2022-10-23},
   abstract = {Deep neural networks have enabled progress in a wide variety of applications. Growing the size of the neural network typically results in improved accuracy. As model sizes grow, the memory and compute requirements for training these models also increases. We introduce a technique to train deep neural networks using half precision floating point numbers. In our technique, weights, activations and gradients are stored in IEEE half-precision format. Half-precision floating numbers have limited numerical range compared to single-precision numbers. We propose two techniques to handle this loss of information. Firstly, we recommend maintaining a single-precision copy of the weights that accumulates the gradients after each optimizer step. This single-precision copy is rounded to half-precision format during training. Secondly, we propose scaling the loss appropriately to handle the loss of information with half-precision gradients. We demonstrate that this approach works for a wide variety of models including convolution neural networks, recurrent neural networks and generative adversarial networks. This technique works for large scale models with more than 100 million parameters trained on large datasets. Using this approach, we can reduce the memory consumption of deep learning models by nearly 2x. In future processors, we can also expect a significant computation speedup using half-precision hardware units.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\GQGJ6V7J\\Micikevicius 等。 - 2018 - Mixed Precision Training.pdf;C\:\\Users\\27404\\Zotero\\storage\\X8BGR2QU\\1710.html}
 }
@@ -184,7 +184,7 @@
   url = {http://arxiv.org/abs/1810.04805},
   urldate = {2022-10-24},
   abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5\% (7.7\% point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\G6PEDC25\\Devlin 等。 - 2019 - BERT Pre-training of Deep Bidirectional Transform.pdf;C\:\\Users\\27404\\Zotero\\storage\\JIQ5JKSA\\1810.html}
 }
@@ -200,7 +200,7 @@
   url = {http://arxiv.org/abs/1810.04805},
   urldate = {2022-11-23},
   abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5\% (7.7\% point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\WTHCXZZB\\Devlin 等 - 2019 - BERT Pre-training of Deep Bidirectional Transform.pdf;C\:\\Users\\27404\\Zotero\\storage\\EVLGN4DN\\1810.html}
 }
@@ -217,7 +217,7 @@
   url = {http://arxiv.org/abs/1811.06965},
   urldate = {2023-05-21},
   abstract = {Scaling up deep neural network capacity has been known as an effective approach to improving model quality for several different machine learning tasks. In many cases, increasing model capacity beyond the memory limit of a single accelerator has required developing special algorithms or infrastructure. These solutions are often architecture-specific and do not transfer to other tasks. To address the need for efficient and task-independent model parallelism, we introduce GPipe, a pipeline parallelism library that allows scaling any network that can be expressed as a sequence of layers. By pipelining different sub-sequences of layers on separate accelerators, GPipe provides the flexibility of scaling a variety of different networks to gigantic sizes efficiently. Moreover, GPipe utilizes a novel batch-splitting pipelining algorithm, resulting in almost linear speedup when a model is partitioned across multiple accelerators. We demonstrate the advantages of GPipe by training large-scale neural networks on two different tasks with distinct network architectures: (i) Image Classification: We train a 557-million-parameter AmoebaNet model and attain a top-1 accuracy of 84.4\% on ImageNet-2012, (ii) Multilingual Neural Machine Translation: We train a single 6-billion-parameter, 128-layer Transformer model on a corpus spanning over 100 languages and achieve better quality than all bilingual models.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition},
   file = {C\:\\Users\\27404\\Zotero\\storage\\XZT4J3F5\\Huang 等 - 2019 - GPipe Efficient Training of Giant Neural Networks.pdf;C\:\\Users\\27404\\Zotero\\storage\\YY4HHXAH\\1811.html}
 }
@@ -275,7 +275,7 @@
   url = {http://arxiv.org/abs/1901.02860},
   urldate = {2023-05-17},
   abstract = {Transformers have a potential of learning longer-term dependency, but are limited by a fixed-length context in the setting of language modeling. We propose a novel neural architecture Transformer-XL that enables learning dependency beyond a fixed length without disrupting temporal coherence. It consists of a segment-level recurrence mechanism and a novel positional encoding scheme. Our method not only enables capturing longer-term dependency, but also resolves the context fragmentation problem. As a result, Transformer-XL learns dependency that is 80\% longer than RNNs and 450\% longer than vanilla Transformers, achieves better performance on both short and long sequences, and is up to 1,800+ times faster than vanilla Transformers during evaluation. Notably, we improve the state-of-the-art results of bpc/perplexity to 0.99 on enwiki8, 1.08 on text8, 18.3 on WikiText-103, 21.8 on One Billion Word, and 54.5 on Penn Treebank (without finetuning). When trained only on WikiText-103, Transformer-XL manages to generate reasonably coherent, novel text articles with thousands of tokens. Our code, pretrained models, and hyperparameters are available in both Tensorflow and PyTorch.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\6FI84XTM\\Dai 等 - 2019 - Transformer-XL Attentive Language Models Beyond a.pdf;C\:\\Users\\27404\\Zotero\\storage\\7BU7WAY6\\1901.html}
 }
@@ -290,7 +290,7 @@
   url = {http://arxiv.org/abs/1911.07013},
   urldate = {2022-10-21},
   abstract = {Layer normalization (LayerNorm) is a technique to normalize the distributions of intermediate layers. It enables smoother gradients, faster training, and better generalization accuracy. However, it is still unclear where the effectiveness stems from. In this paper, our main contribution is to take a step further in understanding LayerNorm. Many of previous studies believe that the success of LayerNorm comes from forward normalization. Unlike them, we find that the derivatives of the mean and variance are more important than forward normalization by re-centering and re-scaling backward gradients. Furthermore, we find that the parameters of LayerNorm, including the bias and gain, increase the risk of over-fitting and do not work in most cases. Experiments show that a simple version of LayerNorm (LayerNorm-simple) without the bias and gain outperforms LayerNorm on four datasets. It obtains the state-of-the-art performance on En-Vi machine translation. To address the over-fitting problem, we propose a new normalization method, Adaptive Normalization (AdaNorm), by replacing the bias and gain with a new transformation function. Experiments show that AdaNorm demonstrates better results than LayerNorm on seven out of eight datasets.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\LYHYCH8N\\Xu 等。 - 2019 - Understanding and Improving Layer Normalization.pdf;C\:\\Users\\27404\\Zotero\\storage\\DNI5Z6AD\\1911.html}
 }
@@ -307,7 +307,7 @@
   url = {http://arxiv.org/abs/1906.04341},
   urldate = {2024-05-20},
   abstract = {Large pre-trained neural networks such as BERT have had great recent success in NLP, motivating a growing body of research investigating what aspects of language they are able to learn from unlabeled data. Most recent analysis has focused on model outputs (e.g., language model surprisal) or internal vector representations (e.g., probing classifiers). Complementary to these works, we propose methods for analyzing the attention mechanisms of pre-trained models and apply them to BERT. BERT's attention heads exhibit patterns such as attending to delimiter tokens, specific positional offsets, or broadly attending over the whole sentence, with heads in the same layer often exhibiting similar behaviors. We further show that certain attention heads correspond well to linguistic notions of syntax and coreference. For example, we find heads that attend to the direct objects of verbs, determiners of nouns, objects of prepositions, and coreferent mentions with remarkably high accuracy. Lastly, we propose an attention-based probing classifier and use it to further demonstrate that substantial syntactic information is captured in BERT's attention.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\ZBP5FJGE\\Clark 等 - 2019 - What Does BERT Look At An Analysis of BERT's Atte.pdf;C\:\\Users\\27404\\Zotero\\storage\\XAQYEA5U\\1906.html}
 }
@@ -338,7 +338,7 @@
   url = {http://arxiv.org/abs/2005.12872},
   urldate = {2022-12-07},
   abstract = {We present a new method that views object detection as a direct set prediction problem. Our approach streamlines the detection pipeline, effectively removing the need for many hand-designed components like a non-maximum suppression procedure or anchor generation that explicitly encode our prior knowledge about the task. The main ingredients of the new framework, called DEtection TRansformer or DETR, are a set-based global loss that forces unique predictions via bipartite matching, and a transformer encoder-decoder architecture. Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel. The new model is conceptually simple and does not require a specialized library, unlike many other modern detectors. DETR demonstrates accuracy and run-time performance on par with the well-established and highly-optimized Faster RCNN baseline on the challenging COCO object detection dataset. Moreover, DETR can be easily generalized to produce panoptic segmentation in a unified manner. We show that it significantly outperforms competitive baselines. Training code and pretrained models are available at https://github.com/facebookresearch/detr.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition}
 }
 
@@ -352,7 +352,7 @@
   url = {http://arxiv.org/abs/2005.12872},
   urldate = {2022-12-07},
   abstract = {We present a new method that views object detection as a direct set prediction problem. Our approach streamlines the detection pipeline, effectively removing the need for many hand-designed components like a non-maximum suppression procedure or anchor generation that explicitly encode our prior knowledge about the task. The main ingredients of the new framework, called DEtection TRansformer or DETR, are a set-based global loss that forces unique predictions via bipartite matching, and a transformer encoder-decoder architecture. Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel. The new model is conceptually simple and does not require a specialized library, unlike many other modern detectors. DETR demonstrates accuracy and run-time performance on par with the well-established and highly-optimized Faster RCNN baseline on the challenging COCO object detection dataset. Moreover, DETR can be easily generalized to produce panoptic segmentation in a unified manner. We show that it significantly outperforms competitive baselines. Training code and pretrained models are available at https://github.com/facebookresearch/detr.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition}
 }
 
@@ -366,7 +366,7 @@
   url = {http://arxiv.org/abs/1910.10683},
   urldate = {2022-11-24},
   abstract = {Transfer learning, where a model is first pre-trained on a data-rich task before being fine-tuned on a downstream task, has emerged as a powerful technique in natural language processing (NLP). The effectiveness of transfer learning has given rise to a diversity of approaches, methodology, and practice. In this paper, we explore the landscape of transfer learning techniques for NLP by introducing a unified framework that converts all text-based language problems into a text-to-text format. Our systematic study compares pre-training objectives, architectures, unlabeled data sets, transfer approaches, and other factors on dozens of language understanding tasks. By combining the insights from our exploration with scale and our new ``Colossal Clean Crawled Corpus'', we achieve state-of-the-art results on many benchmarks covering summarization, question answering, text classification, and more. To facilitate future work on transfer learning for NLP, we release our data set, pre-trained models, and code.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\KVWQ4D78\\Raffel 等 - 2020 - Exploring the Limits of Transfer Learning with a U.pdf;C\:\\Users\\27404\\Zotero\\storage\\6V28EUKP\\1910.html}
 }
@@ -397,7 +397,7 @@
   url = {http://arxiv.org/abs/2004.05150},
   urldate = {2023-04-18},
   abstract = {Transformer-based models are unable to process long sequences due to their self-attention operation, which scales quadratically with the sequence length. To address this limitation, we introduce the Longformer with an attention mechanism that scales linearly with sequence length, making it easy to process documents of thousands of tokens or longer. Longformer's attention mechanism is a drop-in replacement for the standard self-attention and combines a local windowed attention with a task motivated global attention. Following prior work on long-sequence transformers, we evaluate Longformer on character-level language modeling and achieve state-of-the-art results on text8 and enwik8. In contrast to most prior work, we also pretrain Longformer and finetune it on a variety of downstream tasks. Our pretrained Longformer consistently outperforms RoBERTa on long document tasks and sets new state-of-the-art results on WikiHop and TriviaQA. We finally introduce the Longformer-Encoder-Decoder (LED), a Longformer variant for supporting long document generative sequence-to-sequence tasks, and demonstrate its effectiveness on the arXiv summarization dataset.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\PW38QRDM\\Beltagy 等 - 2020 - Longformer The Long-Document Transformer.pdf;C\:\\Users\\27404\\Zotero\\storage\\BKT2MWVN\\2004.html}
 }
@@ -414,7 +414,7 @@
   url = {http://arxiv.org/abs/2011.04006},
   urldate = {2023-04-28},
   abstract = {Transformers do not scale very well to long sequence lengths largely because of quadratic self-attention complexity. In the recent months, a wide spectrum of efficient, fast Transformers have been proposed to tackle this problem, more often than not claiming superior or comparable model quality to vanilla Transformer models. To this date, there is no well-established consensus on how to evaluate this class of models. Moreover, inconsistent benchmarking on a wide spectrum of tasks and datasets makes it difficult to assess relative model quality amongst many models. This paper proposes a systematic and unified benchmark, LRA, specifically focused on evaluating model quality under long-context scenarios. Our benchmark is a suite of tasks consisting of sequences ranging from \$1K\$ to \$16K\$ tokens, encompassing a wide range of data types and modalities such as text, natural, synthetic images, and mathematical expressions requiring similarity, structural, and visual-spatial reasoning. We systematically evaluate ten well-established long-range Transformer models (Reformers, Linformers, Linear Transformers, Sinkhorn Transformers, Performers, Synthesizers, Sparse Transformers, and Longformers) on our newly proposed benchmark suite. LRA paves the way towards better understanding this class of efficient Transformer models, facilitates more research in this direction, and presents new challenging tasks to tackle. Our benchmark code will be released at https://github.com/google-research/long-range-arena.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Information Retrieval,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\BEL3U2MW\\Tay 等 - 2020 - Long Range Arena A Benchmark for Efficient Transf.pdf;C\:\\Users\\27404\\Zotero\\storage\\2UBUPJIV\\2011.html}
 }
@@ -429,7 +429,7 @@
   url = {http://arxiv.org/abs/1911.05722},
   urldate = {2022-12-05},
   abstract = {We present Momentum Contrast (MoCo) for unsupervised visual representation learning. From a perspective on contrastive learning as dictionary look-up, we build a dynamic dictionary with a queue and a moving-averaged encoder. This enables building a large and consistent dictionary on-the-fly that facilitates contrastive unsupervised learning. MoCo provides competitive results under the common linear protocol on ImageNet classification. More importantly, the representations learned by MoCo transfer well to downstream tasks. MoCo can outperform its supervised pre-training counterpart in 7 detection/segmentation tasks on PASCAL VOC, COCO, and other datasets, sometimes surpassing it by large margins. This suggests that the gap between unsupervised and supervised representation learning has been largely closed in many vision tasks.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition},
   file = {C\:\\Users\\27404\\Zotero\\storage\\GQEX33E2\\He 等 - 2020 - Momentum Contrast for Unsupervised Visual Represen.pdf;C\:\\Users\\27404\\Zotero\\storage\\MBNSM398\\1911.html}
 }
@@ -475,7 +475,7 @@
   url = {http://arxiv.org/abs/2002.05709},
   urldate = {2022-12-05},
   abstract = {This paper presents SimCLR: a simple framework for contrastive learning of visual representations. We simplify recently proposed contrastive self-supervised learning algorithms without requiring specialized architectures or a memory bank. In order to understand what enables the contrastive prediction tasks to learn useful representations, we systematically study the major components of our framework. We show that (1) composition of data augmentations plays a critical role in defining effective predictive tasks, (2) introducing a learnable nonlinear transformation between the representation and the contrastive loss substantially improves the quality of the learned representations, and (3) contrastive learning benefits from larger batch sizes and more training steps compared to supervised learning. By combining these findings, we are able to considerably outperform previous methods for self-supervised and semi-supervised learning on ImageNet. A linear classifier trained on self-supervised representations learned by SimCLR achieves 76.5\% top-1 accuracy, which is a 7\% relative improvement over previous state-of-the-art, matching the performance of a supervised ResNet-50. When fine-tuned on only 1\% of the labels, we achieve 85.8\% top-5 accuracy, outperforming AlexNet with 100X fewer labels.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\WE5V8Y8W\\Chen 等 - 2020 - A Simple Framework for Contrastive Learning of Vis.pdf;C\:\\Users\\27404\\Zotero\\storage\\T9C2NE63\\2002.html}
 }
@@ -508,7 +508,7 @@
   url = {http://arxiv.org/abs/1910.02054},
   urldate = {2023-02-28},
   abstract = {Large deep learning models offer significant accuracy gains, but training billions to trillions of parameters is challenging. Existing solutions such as data and model parallelisms exhibit fundamental limitations to fit these models into limited device memory, while obtaining computation, communication and development efficiency. We develop a novel solution, Zero Redundancy Optimizer (ZeRO), to optimize memory, vastly improving training speed while increasing the model size that can be efficiently trained. ZeRO eliminates memory redundancies in data- and model-parallel training while retaining low communication volume and high computational granularity, allowing us to scale the model size proportional to the number of devices with sustained high efficiency. Our analysis on memory requirements and communication volume demonstrates: ZeRO has the potential to scale beyond 1 Trillion parameters using today's hardware. We implement and evaluate ZeRO: it trains large models of over 100B parameter with super-linear speedup on 400 GPUs, achieving throughput of 15 Petaflops. This represents an 8x increase in model size and 10x increase in achievable performance over state-of-the-art. In terms of usability, ZeRO can train large models of up to 13B parameters (e.g., larger than Megatron GPT 8.3B and T5 11B) without requiring model parallelism which is harder for scientists to apply. Last but not the least, researchers have used the system breakthroughs of ZeRO to create the world's largest language model (Turing-NLG, 17B parameters) with record breaking accuracy.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Distributed Parallel and Cluster Computing,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\XMKCTL3U\\Rajbhandari 等 - 2020 - ZeRO Memory Optimizations Toward Training Trillio.pdf;C\:\\Users\\27404\\Zotero\\storage\\FVBSS4MV\\1910.html}
 }
@@ -525,7 +525,7 @@
   url = {http://arxiv.org/abs/2007.14062},
   urldate = {2024-06-16},
   abstract = {Transformers-based models, such as BERT, have been one of the most successful deep learning models for NLP. Unfortunately, one of their core limitations is the quadratic dependency (mainly in terms of memory) on the sequence length due to their full attention mechanism. To remedy this, we propose, BigBird, a sparse attention mechanism that reduces this quadratic dependency to linear. We show that BigBird is a universal approximator of sequence functions and is Turing complete, thereby preserving these properties of the quadratic, full attention model. Along the way, our theoretical analysis reveals some of the benefits of having \$O(1)\$ global tokens (such as CLS), that attend to the entire sequence as part of the sparse attention mechanism. The proposed sparse attention can handle sequences of length up to 8x of what was previously possible using similar hardware. As a consequence of the capability to handle longer context, BigBird drastically improves performance on various NLP tasks such as question answering and summarization. We also propose novel applications to genomics data.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\JM33XA3D\\Zaheer 等 - 2021 - Big Bird Transformers for Longer Sequences.pdf;C\:\\Users\\27404\\Zotero\\storage\\B33JSTBQ\\2007.html}
 }
@@ -541,7 +541,7 @@
   url = {http://arxiv.org/abs/2105.14485},
   urldate = {2022-10-13},
   abstract = {Event extraction (EE) has considerably benefited from pre-trained language models (PLMs) by fine-tuning. However, existing pre-training methods have not involved modeling event characteristics, resulting in the developed EE models cannot take full advantage of large-scale unsupervised data. To this end, we propose CLEVE, a contrastive pre-training framework for EE to better learn event knowledge from large unsupervised data and their semantic structures (e.g. AMR) obtained with automatic parsers. CLEVE contains a text encoder to learn event semantics and a graph encoder to learn event structures respectively. Specifically, the text encoder learns event semantic representations by self-supervised contrastive learning to represent the words of the same events closer than those unrelated words; the graph encoder learns event structure representations by graph contrastive pre-training on parsed event-related semantic structures. The two complementary representations then work together to improve both the conventional supervised EE and the unsupervised "liberal" EE, which requires jointly extracting events and discovering event schemata without any annotated data. Experiments on ACE 2005 and MAVEN datasets show that CLEVE achieves significant improvements, especially in the challenging unsupervised setting. The source code and pre-trained checkpoints can be obtained from https://github.com/THU-KEG/CLEVE.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\DI9HLV2H\\Wang 等。 - 2021 - CLEVE Contrastive Pre-training for Event Extracti.pdf;C\:\\Users\\27404\\Zotero\\storage\\CNBRZFUQ\\2105.html}
 }
@@ -557,7 +557,7 @@
   url = {http://arxiv.org/abs/2109.09234},
   urldate = {2024-04-14},
   abstract = {Probing experiments investigate the extent to which neural representations make properties -- like part-of-speech -- predictable. One suggests that a representation encodes a property if probing that representation produces higher accuracy than probing a baseline representation like non-contextual word embeddings. Instead of using baselines as a point of comparison, we're interested in measuring information that is contained in the representation but not in the baseline. For example, current methods can detect when a representation is more useful than the word identity (a baseline) for predicting part-of-speech; however, they cannot detect when the representation is predictive of just the aspects of part-of-speech not explainable by the word identity. In this work, we extend a theory of usable information called \$\textbackslash mathcal\{V\}\$-information and propose conditional probing, which explicitly conditions on the information in the baseline. In a case study, we find that after conditioning on non-contextual word embeddings, properties like part-of-speech are accessible at deeper layers of a network than previously thought.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\EM8YJYWG\\Hewitt 等 - 2021 - Conditional probing measuring usable information .pdf;C\:\\Users\\27404\\Zotero\\storage\\BYERHFVY\\2109.html}
 }
@@ -593,7 +593,7 @@
   url = {http://arxiv.org/abs/2007.00072},
   urldate = {2024-06-12},
   abstract = {Transformers are one of the most important machine learning workloads today. Training one is a very compute-intensive task, often taking days or weeks, and significant attention has been given to optimizing transformers. Despite this, existing implementations do not efficiently utilize GPUs. We find that data movement is the key bottleneck when training. Due to Amdahl's Law and massive improvements in compute performance, training has now become memory-bound. Further, existing frameworks use suboptimal data layouts. Using these insights, we present a recipe for globally optimizing data movement in transformers. We reduce data movement by up to 22.91\% and overall achieve a 1.30x performance improvement over state-of-the-art frameworks when training a BERT encoder layer and 1.19x for the entire BERT. Our approach is applicable more broadly to optimizing deep neural networks, and offers insight into how to tackle emerging performance bottlenecks.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\SD9LB7AM\\Ivanov 等 - 2021 - Data Movement Is All You Need A Case Study on Opt.pdf;C\:\\Users\\27404\\Zotero\\storage\\TNR8MXBW\\2007.html}
 }
@@ -609,7 +609,7 @@
   url = {http://arxiv.org/abs/2104.05240},
   urldate = {2022-11-22},
   abstract = {Petroni et al. (2019) demonstrated that it is possible to retrieve world facts from a pre-trained language model by expressing them as cloze-style prompts and interpret the model's prediction accuracy as a lower bound on the amount of factual information it encodes. Subsequent work has attempted to tighten the estimate by searching for better prompts, using a disjoint set of facts as training data. In this work, we make two complementary contributions to better understand these factual probing techniques. First, we propose OptiPrompt, a novel and efficient method which directly optimizes in continuous embedding space. We find this simple method is able to predict an additional 6.4\% of facts in the LAMA benchmark. Second, we raise a more important question: Can we really interpret these probing results as a lower bound? Is it possible that these prompt-search methods learn from the training data too? We find, somewhat surprisingly, that the training data used by these methods contains certain regularities of the underlying fact distribution, and all the existing prompt methods, including ours, are able to exploit them for better fact prediction. We conduct a set of control experiments to disentangle "learning" from "learning to recall", providing a more detailed picture of what different prompts can reveal about pre-trained language models.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\USR54ZXH\\Zhong 等 - 2021 - Factual Probing Is [MASK] Learning vs. Learning t.pdf;C\:\\Users\\27404\\Zotero\\storage\\ZB9PQW5D\\2104.html}
 }
@@ -624,7 +624,7 @@
   url = {http://arxiv.org/abs/2103.00020},
   urldate = {2022-12-06},
   abstract = {State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. Learning directly from raw text about images is a promising alternative which leverages a much broader source of supervision. We demonstrate that the simple pre-training task of predicting which caption goes with which image is an efficient and scalable way to learn SOTA image representations from scratch on a dataset of 400 million (image, text) pairs collected from the internet. After pre-training, natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks. We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and many types of fine-grained object classification. The model transfers non-trivially to most tasks and is often competitive with a fully supervised baseline without the need for any dataset specific training. For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on. We release our code and pre-trained model weights at https://github.com/OpenAI/CLIP.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\TZSNYSUD\\Radford 等 - 2021 - Learning Transferable Visual Models From Natural L.pdf;C\:\\Users\\27404\\Zotero\\storage\\SU455QR2\\2103.html}
 }
@@ -640,7 +640,7 @@
   url = {http://arxiv.org/abs/2106.09685},
   urldate = {2022-11-27},
   abstract = {An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\IQHLFRWH\\Hu 等 - 2021 - LoRA Low-Rank Adaptation of Large Language Models.pdf;C\:\\Users\\27404\\Zotero\\storage\\U55M29Q5\\2106.html}
 }
@@ -657,7 +657,7 @@
   url = {http://arxiv.org/abs/2106.01540},
   urldate = {2023-04-20},
   abstract = {The quadratic computational and memory complexities of the Transformer's attention mechanism have limited its scalability for modeling long sequences. In this paper, we propose Luna, a linear unified nested attention mechanism that approximates softmax attention with two nested linear attention functions, yielding only linear (as opposed to quadratic) time and space complexity. Specifically, with the first attention function, Luna packs the input sequence into a sequence of fixed length. Then, the packed sequence is unpacked using the second attention function. As compared to a more traditional attention mechanism, Luna introduces an additional sequence with a fixed length as input and an additional corresponding output, which allows Luna to perform attention operation linearly, while also storing adequate contextual information. We perform extensive evaluations on three benchmarks of sequence modeling tasks: long-context sequence modeling, neural machine translation and masked language modeling for large-scale pretraining. Competitive or even better experimental results demonstrate both the effectiveness and efficiency of Luna compared to a variety},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\VQ4PSFER\\Ma 等 - 2021 - Luna Linear Unified Nested Attention.pdf;C\:\\Users\\27404\\Zotero\\storage\\KTT7SMTP\\2106.html}
 }
@@ -706,7 +706,7 @@
   url = {http://arxiv.org/abs/2107.13586},
   urldate = {2022-11-23},
   abstract = {This paper surveys and organizes research works in a new paradigm in natural language processing, which we dub "prompt-based learning". Unlike traditional supervised learning, which trains a model to take in an input x and predict an output y as P(y|x), prompt-based learning is based on language models that model the probability of text directly. To use these models to perform prediction tasks, the original input x is modified using a template into a textual string prompt x' that has some unfilled slots, and then the language model is used to probabilistically fill the unfilled information to obtain a final string x, from which the final output y can be derived. This framework is powerful and attractive for a number of reasons: it allows the language model to be pre-trained on massive amounts of raw text, and by defining a new prompting function the model is able to perform few-shot or even zero-shot learning, adapting to new scenarios with few or no labeled data. In this paper we introduce the basics of this promising paradigm, describe a unified set of mathematical notations that can cover a wide variety of existing work, and organize existing work along several dimensions, e.g.the choice of pre-trained models, prompts, and tuning strategies. To make the field more accessible to interested beginners, we not only make a systematic review of existing works and a highly structured typology of prompt-based concepts, but also release other resources, e.g., a website http://pretrain.nlpedia.ai/ including constantly-updated survey, and paperlist.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\IIHCGSX9\\Liu 等 - 2021 - Pre-train, Prompt, and Predict A Systematic Surve.pdf;C\:\\Users\\27404\\Zotero\\storage\\DHXHLGU9\\2107.html}
 }
@@ -734,7 +734,7 @@
   url = {http://arxiv.org/abs/2006.15595},
   urldate = {2023-05-23},
   abstract = {In this work, we investigate the positional encoding methods used in language pre-training (e.g., BERT) and identify several problems in the existing formulations. First, we show that in the absolute positional encoding, the addition operation applied on positional embeddings and word embeddings brings mixed correlations between the two heterogeneous information resources. It may bring unnecessary randomness in the attention and further limit the expressiveness of the model. Second, we question whether treating the position of the symbol \textbackslash texttt\{[CLS]\} the same as other words is a reasonable design, considering its special role (the representation of the entire sentence) in the downstream tasks. Motivated from above analysis, we propose a new positional encoding method called \textbackslash textbf\{T\}ransformer with \textbackslash textbf\{U\}ntied \textbackslash textbf\{P\}ositional \textbackslash textbf\{E\}ncoding (TUPE). In the self-attention module, TUPE computes the word contextual correlation and positional correlation separately with different parameterizations and then adds them together. This design removes the mixed and noisy correlations over heterogeneous embeddings and offers more expressiveness by using different projection matrices. Furthermore, TUPE unties the \textbackslash texttt\{[CLS]\} symbol from other positions, making it easier to capture information from all positions. Extensive experiments and ablation studies on GLUE benchmark demonstrate the effectiveness of the proposed method. Codes and models are released at https://github.com/guolinke/TUPE.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\6UEGPMEV\\Ke 等 - 2021 - Rethinking Positional Encoding in Language Pre-tra.pdf;C\:\\Users\\27404\\Zotero\\storage\\A9B8ZHQH\\2006.html}
 }
@@ -749,7 +749,7 @@
   url = {http://arxiv.org/abs/2106.04554},
   urldate = {2023-02-27},
   abstract = {Transformers have achieved great success in many artificial intelligence fields, such as natural language processing, computer vision, and audio processing. Therefore, it is natural to attract lots of interest from academic and industry researchers. Up to the present, a great variety of Transformer variants (a.k.a. X-formers) have been proposed, however, a systematic and comprehensive literature review on these Transformer variants is still missing. In this survey, we provide a comprehensive review of various X-formers. We first briefly introduce the vanilla Transformer and then propose a new taxonomy of X-formers. Next, we introduce the various X-formers from three perspectives: architectural modification, pre-training, and applications. Finally, we outline some potential directions for future research.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\JJGMEQ2K\\Lin 等 - 2021 - A Survey of Transformers.pdf;C\:\\Users\\27404\\Zotero\\storage\\PSB4RTTN\\2106.html}
 }
@@ -779,7 +779,7 @@
   url = {http://arxiv.org/abs/2210.08901},
   urldate = {2022-12-06},
   abstract = {Recent years have witnessed the fast development of large-scale pre-training frameworks that can extract multi-modal representations in a unified form and achieve promising performances when transferred to downstream tasks. Nevertheless, existing approaches mainly focus on pre-training with simple image-text pairs, while neglecting the semantic connections between concepts from different modalities. In this paper, we propose a knowledge-based pre-training framework, dubbed Knowledge-CLIP, which injects semantic information into the widely used CLIP model. Through introducing knowledge-based objectives in the pre-training process and utilizing different types of knowledge graphs as training data, our model can semantically align the representations in vision and language with higher quality, and enhance the reasoning ability across scenarios and modalities. Extensive experiments on various vision-language downstream tasks demonstrate the effectiveness of Knowledge-CLIP compared with the original CLIP and competitive baselines.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition},
   file = {C\:\\Users\\27404\\Zotero\\storage\\KY3IL8G5\\Pan 等 - 2022 - Contrastive Language-Image Pre-Training with Knowl.pdf;C\:\\Users\\27404\\Zotero\\storage\\5FUA6XES\\2210.html}
 }
@@ -794,7 +794,7 @@
   url = {http://arxiv.org/abs/2210.08901},
   urldate = {2022-12-06},
   abstract = {Recent years have witnessed the fast development of large-scale pre-training frameworks that can extract multi-modal representations in a unified form and achieve promising performances when transferred to downstream tasks. Nevertheless, existing approaches mainly focus on pre-training with simple image-text pairs, while neglecting the semantic connections between concepts from different modalities. In this paper, we propose a knowledge-based pre-training framework, dubbed Knowledge-CLIP, which injects semantic information into the widely used CLIP model. Through introducing knowledge-based objectives in the pre-training process and utilizing different types of knowledge graphs as training data, our model can semantically align the representations in vision and language with higher quality, and enhance the reasoning ability across scenarios and modalities. Extensive experiments on various vision-language downstream tasks demonstrate the effectiveness of Knowledge-CLIP compared with the original CLIP and competitive baselines.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition},
   file = {C\:\\Users\\27404\\Zotero\\storage\\MG99HL9A\\Pan 等 - 2022 - Contrastive Language-Image Pre-Training with Knowl.pdf;C\:\\Users\\27404\\Zotero\\storage\\JX96FHW3\\2210.html}
 }
@@ -811,7 +811,7 @@
   url = {http://arxiv.org/abs/2009.06732},
   urldate = {2023-05-08},
   abstract = {Transformer model architectures have garnered immense interest lately due to their effectiveness across a range of domains like language, vision and reinforcement learning. In the field of natural language processing for example, Transformers have become an indispensable staple in the modern deep learning stack. Recently, a dizzying number of "X-former" models have been proposed - Reformer, Linformer, Performer, Longformer, to name a few - which improve upon the original Transformer architecture, many of which make improvements around computational and memory efficiency. With the aim of helping the avid researcher navigate this flurry, this paper characterizes a large and thoughtful selection of recent efficiency-flavored "X-former" models, providing an organized and comprehensive overview of existing work and models across multiple domains.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Information Retrieval,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\Q4JMLH8Q\\Tay 等 - 2022 - Efficient Transformers A Survey.pdf;C\:\\Users\\27404\\Zotero\\storage\\T7IEPP7U\\2009.html}
 }
@@ -827,7 +827,7 @@
   url = {http://arxiv.org/abs/2206.07682},
   urldate = {2023-02-27},
   abstract = {Scaling up language models has been shown to predictably improve performance and sample efficiency on a wide range of downstream tasks. This paper instead discusses an unpredictable phenomenon that we refer to as emergent abilities of large language models. We consider an ability to be emergent if it is not present in smaller models but is present in larger models. Thus, emergent abilities cannot be predicted simply by extrapolating the performance of smaller models. The existence of such emergence implies that additional scaling could further expand the range of capabilities of language models.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\YB4WJ8S9\\Wei 等 - 2022 - Emergent Abilities of Large Language Models.pdf;C\:\\Users\\27404\\Zotero\\storage\\RNVTGQ9Q\\2206.html}
 }
@@ -843,7 +843,7 @@
   url = {http://arxiv.org/abs/2207.04901},
   urldate = {2023-07-04},
   abstract = {The ability to extrapolate from short problem instances to longer ones is an important form of out-of-distribution generalization in reasoning tasks, and is crucial when learning from datasets where longer problem instances are rare. These include theorem proving, solving quantitative mathematics problems, and reading/summarizing novels. In this paper, we run careful empirical studies exploring the length generalization capabilities of transformer-based language models. We first establish that naively finetuning transformers on length generalization tasks shows significant generalization deficiencies independent of model scale. We then show that combining pretrained large language models' in-context learning abilities with scratchpad prompting (asking the model to output solution steps before producing an answer) results in a dramatic improvement in length generalization. We run careful failure analyses on each of the learning modalities and identify common sources of mistakes that highlight opportunities in equipping language models with the ability to generalize to longer problems.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\Z5R4HYK3\\Anil 等 - 2022 - Exploring Length Generalization in Large Language .pdf;C\:\\Users\\27404\\Zotero\\storage\\MLYK5M7D\\2207.html}
 }
@@ -860,7 +860,7 @@
   url = {http://arxiv.org/abs/2205.14135},
   urldate = {2024-06-11},
   abstract = {Transformers are slow and memory-hungry on long sequences, since the time and memory complexity of self-attention are quadratic in sequence length. Approximate attention methods have attempted to address this problem by trading off model quality to reduce the compute complexity, but often do not achieve wall-clock speedup. We argue that a missing principle is making attention algorithms IO-aware -- accounting for reads and writes between levels of GPU memory. We propose FlashAttention, an IO-aware exact attention algorithm that uses tiling to reduce the number of memory reads/writes between GPU high bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of FlashAttention, showing that it requires fewer HBM accesses than standard attention, and is optimal for a range of SRAM sizes. We also extend FlashAttention to block-sparse attention, yielding an approximate attention algorithm that is faster than any existing approximate attention method. FlashAttention trains Transformers faster than existing baselines: 15\% end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the MLPerf 1.1 training speed record, 3\$\textbackslash times\$ speedup on GPT-2 (seq. length 1K), and 2.4\$\textbackslash times\$ speedup on long-range arena (seq. length 1K-4K). FlashAttention and block-sparse FlashAttention enable longer context in Transformers, yielding higher quality models (0.7 better perplexity on GPT-2 and 6.4 points of lift on long-document classification) and entirely new capabilities: the first Transformers to achieve better-than-chance performance on the Path-X challenge (seq. length 16K, 61.4\% accuracy) and Path-256 (seq. length 64K, 63.1\% accuracy).},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\2JNDE4F5\\Dao 等 - 2022 - FlashAttention Fast and Memory-Efficient Exact At.pdf;C\:\\Users\\27404\\Zotero\\storage\\49IFC72J\\2205.html}
 }
@@ -877,7 +877,7 @@
   url = {http://arxiv.org/abs/2103.10360},
   urldate = {2023-05-18},
   abstract = {There have been various types of pretraining architectures including autoencoding models (e.g., BERT), autoregressive models (e.g., GPT), and encoder-decoder models (e.g., T5). However, none of the pretraining frameworks performs the best for all tasks of three main categories including natural language understanding (NLU), unconditional generation, and conditional generation. We propose a General Language Model (GLM) based on autoregressive blank infilling to address this challenge. GLM improves blank filling pretraining by adding 2D positional encodings and allowing an arbitrary order to predict spans, which results in performance gains over BERT and T5 on NLU tasks. Meanwhile, GLM can be pretrained for different types of tasks by varying the number and lengths of blanks. On a wide range of tasks across NLU, conditional and unconditional generation, GLM outperforms BERT, T5, and GPT given the same model sizes and data, and achieves the best performance from a single pretrained model with 1.25x parameters of BERT Large , demonstrating its generalizability to different downstream tasks.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\KY4G6YV3\\Du 等 - 2022 - GLM General Language Model Pretraining with Autor.pdf;C\:\\Users\\27404\\Zotero\\storage\\5ZMGMXBJ\\2103.html}
 }
@@ -900,7 +900,7 @@
   url = {http://arxiv.org/abs/2205.11916},
   urldate = {2022-11-23},
   abstract = {Pretrained large language models (LLMs) are widely used in many sub-fields of natural language processing (NLP) and generally known as excellent few-shot learners with task-specific exemplars. Notably, chain of thought (CoT) prompting, a recent technique for eliciting complex multi-step reasoning through step-by-step answer examples, achieved the state-of-the-art performances in arithmetics and symbolic reasoning, difficult system-2 tasks that do not follow the standard scaling laws for LLMs. While these successes are often attributed to LLMs' ability for few-shot learning, we show that LLMs are decent zero-shot reasoners by simply adding "Let's think step by step" before each answer. Experimental results demonstrate that our Zero-shot-CoT, using the same single prompt template, significantly outperforms zero-shot LLM performances on diverse benchmark reasoning tasks including arithmetics (MultiArith, GSM8K, AQUA-RAT, SVAMP), symbolic reasoning (Last Letter, Coin Flip), and other logical reasoning tasks (Date Understanding, Tracking Shuffled Objects), without any hand-crafted few-shot examples, e.g. increasing the accuracy on MultiArith from 17.7\% to 78.7\% and GSM8K from 10.4\% to 40.7\% with 175B parameter InstructGPT model, as well as similar magnitudes of improvements with another off-the-shelf large model, 540B parameter PaLM. The versatility of this single prompt across very diverse reasoning tasks hints at untapped and understudied fundamental zero-shot capabilities of LLMs, suggesting high-level, multi-task broad cognitive capabilities may be extracted by simple prompting. We hope our work not only serves as the minimal strongest zero-shot baseline for the challenging reasoning benchmarks, but also highlights the importance of carefully exploring and analyzing the enormous zero-shot knowledge hidden inside LLMs before crafting finetuning datasets or few-shot exemplars.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\NRLTLW63\\Kojima 等 - 2022 - Large Language Models are Zero-Shot Reasoners.pdf;C\:\\Users\\27404\\Zotero\\storage\\AI6XEBHT\\2205.html}
 }
@@ -916,7 +916,7 @@
   url = {http://arxiv.org/abs/2206.06522},
   urldate = {2024-04-18},
   abstract = {Fine-tuning large pre-trained models on downstream tasks has been adopted in a variety of domains recently. However, it is costly to update the entire parameter set of large pre-trained models. Although recently proposed parameter-efficient transfer learning (PETL) techniques allow updating a small subset of parameters (e.g. only using 2\% of parameters) inside a pre-trained backbone network for a new task, they only reduce the training memory requirement by up to 30\%. This is because the gradient computation for the trainable parameters still requires backpropagation through the large pre-trained backbone model. To address this, we propose Ladder Side-Tuning (LST), a new PETL technique that can reduce training memory requirements by more substantial amounts. Unlike existing parameter-efficient methods that insert additional parameters inside backbone networks, we train a ladder side network, a small and separate network that takes intermediate activations as input via shortcut connections (called ladders) from backbone networks and makes predictions. LST has significantly lower memory requirements than previous methods, because it does not require backpropagation through the backbone network, but instead only through the side network and ladder connections. We evaluate our method with various models (T5 and CLIP-T5) on both NLP (GLUE) and vision-and-language (VQA, GQA, NLVR2 , MSCOCO) tasks. LST saves 69\% of the memory costs to fine-tune the whole network, while other methods only save 26\% of that in similar parameter usages (hence, 2.7x more memory savings). Moreover, LST achieves higher accuracy than Adapter and LoRA in a low-memory regime. To further show the advantage of this better memory efficiency, we also apply LST to larger T5 models, attaining better GLUE performance than full fine-tuning and other PETL methods. The accuracy-efficiency trade-off also holds on VL tasks.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition},
   file = {C\:\\Users\\27404\\Zotero\\storage\\SBUREUZA\\Sung 等 - 2022 - LST Ladder Side-Tuning for Parameter and Memory E.pdf;C\:\\Users\\27404\\Zotero\\storage\\IAAP94WZ\\2206.html}
 }
@@ -946,7 +946,7 @@
   url = {http://arxiv.org/abs/2205.12647},
   urldate = {2023-02-27},
   abstract = {In this paper, we explore the challenging problem of performing a generative task in a target language when labeled data is only available in English, using summarization as a case study. We assume a strict setting with no access to parallel data or machine translation and find that common transfer learning approaches struggle in this setting, as a generative multilingual model fine-tuned purely on English catastrophically forgets how to generate non-English. Given the recent rise of parameter-efficient adaptation techniques, we conduct the first investigation into how one such method, prompt tuning (Lester et al., 2021), can overcome catastrophic forgetting to enable zero-shot cross-lingual generation. Our experiments show that parameter-efficient prompt tuning provides gains over standard fine-tuning when transferring between less-related languages, e.g., from English to Thai. However, a significant gap still remains between these methods and fully-supervised baselines. To improve cross-lingual transfer further, we explore several approaches, including: (1) mixing in unlabeled multilingual data, and (2) explicitly factoring prompts into recombinable language and task components. Our approaches can provide further quality gains, suggesting that robust zero-shot cross-lingual generation is within reach.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\77FDLE7L\\Vu 等 - 2022 - Overcoming Catastrophic Forgetting in Zero-Shot Cr.pdf;C\:\\Users\\27404\\Zotero\\storage\\DC749M7Q\\2205.html}
 }
@@ -978,7 +978,7 @@
   url = {http://arxiv.org/abs/2110.07602},
   urldate = {2022-11-22},
   abstract = {Prompt tuning, which only tunes continuous prompts with a frozen language model, substantially reduces per-task storage and memory usage at training. However, in the context of NLU, prior work reveals that prompt tuning does not perform well for normal-sized pretrained models. We also find that existing methods of prompt tuning cannot handle hard sequence labeling tasks, indicating a lack of universality. We present a novel empirical finding that properly optimized prompt tuning can be universally effective across a wide range of model scales and NLU tasks. It matches the performance of finetuning while having only 0.1\%-3\% tuned parameters. Our method P-Tuning v2 is an implementation of Deep Prompt Tuning \textbackslash cite\{li2021prefix,qin2021learning\} optimized and adapted for NLU. Given the universality and simplicity of P-Tuning v2, we believe it can serve as an alternative to finetuning and a strong baseline for future research.Our code and data are released at https://github.com/THUDM/P-tuning-v2.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\LUCPGU77\\Liu 等 - 2022 - P-Tuning v2 Prompt Tuning Can Be Comparable to Fi.pdf;C\:\\Users\\27404\\Zotero\\storage\\LQSTMT34\\2110.html}
 }
@@ -993,7 +993,7 @@
   url = {http://arxiv.org/abs/2205.05198},
   urldate = {2023-02-27},
   abstract = {Training large transformer models is one of the most important computational challenges of modern AI. In this paper, we show how to significantly accelerate training of large transformer models by reducing activation recomputation. Activation recomputation is commonly used to work around memory capacity constraints. Rather than storing activations for backpropagation, they are traditionally recomputed, which saves memory but adds redundant compute. In this work, we show most of this redundant compute is unnecessary because we can reduce memory consumption sufficiently without it. We present two novel yet very simple techniques: sequence parallelism and selective activation recomputation. In conjunction with tensor parallelism, these techniques almost eliminate the need to recompute activations. We evaluate our approach on language models up to one trillion parameters in scale and show that our method reduces activation memory by 5x, while reducing execution time overhead from activation recomputation by over 90\%. For example, when training a 530B parameter GPT-3 style model on 2240 NVIDIA A100 GPUs, we achieve a Model Flops Utilization of 54.2\%, which is 29\% faster than the 42.1\% we achieve using recomputation. Our implementation will be available in both Megatron-LM and NeMo-Megatron.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\JKYZYDFZ\\Korthikanti 等 - 2022 - Reducing Activation Recomputation in Large Transfo.pdf;C\:\\Users\\27404\\Zotero\\storage\\LX29AX5F\\2205.html}
 }
@@ -1009,7 +1009,7 @@
   url = {http://arxiv.org/abs/2009.14794},
   urldate = {2023-04-20},
   abstract = {We introduce Performers, Transformer architectures which can estimate regular (softmax) full-rank-attention Transformers with provable accuracy, but using only linear (as opposed to quadratic) space and time complexity, without relying on any priors such as sparsity or low-rankness. To approximate softmax attention-kernels, Performers use a novel Fast Attention Via positive Orthogonal Random features approach (FAVOR+), which may be of independent interest for scalable kernel methods. FAVOR+ can be also used to efficiently model kernelizable attention mechanisms beyond softmax. This representational power is crucial to accurately compare softmax with other kernels for the first time on large-scale tasks, beyond the reach of regular Transformers, and investigate optimal attention-kernels. Performers are linear architectures fully compatible with regular Transformers and with strong theoretical guarantees: unbiased or nearly-unbiased estimation of the attention matrix, uniform convergence and low estimation variance. We tested Performers on a rich set of tasks stretching from pixel-prediction through text models to protein sequence modeling. We demonstrate competitive results with other examined efficient sparse and dense attention methods, showcasing effectiveness of the novel attention-learning paradigm leveraged by Performers.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\VIK4UVJI\\Choromanski 等 - 2022 - Rethinking Attention with Performers.pdf;C\:\\Users\\27404\\Zotero\\storage\\CUZUUWUR\\2009.html}
 }
@@ -1025,7 +1025,7 @@
   url = {http://arxiv.org/abs/2104.09864},
   urldate = {2023-02-27},
   abstract = {Position encoding recently has shown effective in the transformer architecture. It enables valuable supervision for dependency modeling between elements at different positions of the sequence. In this paper, we first investigate various methods to integrate positional information into the learning process of transformer-based language models. Then, we propose a novel method named Rotary Position Embedding(RoPE) to effectively leverage the positional information. Specifically, the proposed RoPE encodes the absolute position with a rotation matrix and meanwhile incorporates the explicit relative position dependency in self-attention formulation. Notably, RoPE enables valuable properties, including the flexibility of sequence length, decaying inter-token dependency with increasing relative distances, and the capability of equipping the linear self-attention with relative position encoding. Finally, we evaluate the enhanced transformer with rotary position embedding, also called RoFormer, on various long text classification benchmark datasets. Our experiments show that it consistently overcomes its alternatives. Furthermore, we provide a theoretical analysis to explain some experimental results. RoFormer is already integrated into Huggingface: \textbackslash url\{https://huggingface.co/docs/transformers/model\_doc/roformer\}.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\EGG9NANG\\Su 等 - 2022 - RoFormer Enhanced Transformer with Rotary Positio.pdf;C\:\\Users\\27404\\Zotero\\storage\\3INMR9JC\\2104.html}
 }
@@ -1041,7 +1041,7 @@
   url = {http://arxiv.org/abs/2104.08821},
   urldate = {2022-10-13},
   abstract = {This paper presents SimCSE, a simple contrastive learning framework that greatly advances state-of-the-art sentence embeddings. We first describe an unsupervised approach, which takes an input sentence and predicts itself in a contrastive objective, with only standard dropout used as noise. This simple method works surprisingly well, performing on par with previous supervised counterparts. We find that dropout acts as minimal data augmentation, and removing it leads to a representation collapse. Then, we propose a supervised approach, which incorporates annotated pairs from natural language inference datasets into our contrastive learning framework by using "entailment" pairs as positives and "contradiction" pairs as hard negatives. We evaluate SimCSE on standard semantic textual similarity (STS) tasks, and our unsupervised and supervised models using BERT base achieve an average of 76.3\% and 81.6\% Spearman's correlation respectively, a 4.2\% and 2.2\% improvement compared to the previous best results. We also show -- both theoretically and empirically -- that the contrastive learning objective regularizes pre-trained embeddings' anisotropic space to be more uniform, and it better aligns positive pairs when supervised signals are available.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\ED8864WD\\Gao 等。 - 2022 - SimCSE Simple Contrastive Learning of Sentence Em.pdf;C\:\\Users\\27404\\Zotero\\storage\\2SL82W83\\2104.html}
 }
@@ -1057,7 +1057,7 @@
   url = {http://arxiv.org/abs/2112.07210},
   urldate = {2023-05-30},
   abstract = {Many NLP tasks require processing long contexts beyond the length limit of pretrained models. In order to scale these models to longer text sequences, many efficient long-range attention variants have been proposed. Despite the abundance of research along this direction, it is still difficult to gauge the relative effectiveness of these models in practical use cases, e.g., if we apply these models following the pretrain-and-finetune paradigm. In this work, we aim to conduct a thorough analysis of these emerging models with large-scale and controlled experiments. For each attention variant, we pretrain large-size models using the same long-doc corpus and then finetune these models for real-world long-context tasks. Our findings reveal pitfalls of an existing widely-used long-range benchmark and show none of the tested efficient attentions can beat a simple local window attention under standard pretraining paradigms. Further analysis on local attention variants suggests that even the commonly used attention-window overlap is not necessary to achieve good downstream results -- using disjoint local attentions, we are able to build a simpler and more efficient long-doc QA model that matches the performance of Longformer\textasciitilde\textbackslash citep\{longformer\} with half of its pretraining compute. The code to replicate our experiments can be found at https://github.com/pytorch/fairseq/tree/main/examples/xformers},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\QIPXI3C4\\Xiong 等 - 2022 - Simple Local Attentions Remain Competitive for Lon.pdf;C\:\\Users\\27404\\Zotero\\storage\\AX972SVF\\2112.html}
 }
@@ -1074,7 +1074,7 @@
   url = {http://arxiv.org/abs/2212.06713},
   urldate = {2023-04-28},
   abstract = {Large language models have exhibited intriguing in-context learning capability, achieving promising zero- and few-shot performance without updating the parameters. However, conventional in-context learning is usually restricted by length constraints, rendering it ineffective to absorb supervision from a large number of examples. In order to go beyond few shots, we introduce structured prompting that breaks the length limit and scales in-context learning to thousands of examples. Specifically, demonstration examples are separately encoded with well-designed position embeddings, and then they are jointly attended by the test example using a rescaled attention mechanism. So we can scale the number of exemplars with linear complexity instead of quadratic complexity with respect to length. Experimental results on a diverse set of tasks show that our approach improves end-task performance and reduces evaluation variance over conventional in-context learning as the number of demonstration examples increases. Code has been released at https://aka.ms/structured-prompting.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\Y8Q3TM4B\\Hao 等 - 2022 - Structured Prompting Scaling In-Context Learning .pdf;C\:\\Users\\27404\\Zotero\\storage\\ZDKMYCGF\\2212.html}
 }
@@ -1090,7 +1090,7 @@
   url = {http://arxiv.org/abs/2203.15556},
   urldate = {2023-02-27},
   abstract = {We investigate the optimal model size and number of tokens for training a transformer language model under a given compute budget. We find that current large language models are significantly undertrained, a consequence of the recent focus on scaling language models whilst keeping the amount of training data constant. By training over 400 language models ranging from 70 million to over 16 billion parameters on 5 to 500 billion tokens, we find that for compute-optimal training, the model size and the number of training tokens should be scaled equally: for every doubling of model size the number of training tokens should also be doubled. We test this hypothesis by training a predicted compute-optimal model, Chinchilla, that uses the same compute budget as Gopher but with 70B parameters and 4\$\textbackslash times\$ more more data. Chinchilla uniformly and significantly outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and Megatron-Turing NLG (530B) on a large range of downstream evaluation tasks. This also means that Chinchilla uses substantially less compute for fine-tuning and inference, greatly facilitating downstream usage. As a highlight, Chinchilla reaches a state-of-the-art average accuracy of 67.5\% on the MMLU benchmark, greater than a 7\% improvement over Gopher.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\VUWG6RPG\\Hoffmann 等 - 2022 - Training Compute-Optimal Large Language Models.pdf;C\:\\Users\\27404\\Zotero\\storage\\P36G4RFN\\2203.html}
 }
@@ -1107,7 +1107,7 @@
   url = {http://arxiv.org/abs/2108.12409},
   urldate = {2023-05-17},
   abstract = {Since the introduction of the transformer model by Vaswani et al. (2017), a fundamental question has yet to be answered: how does a model achieve extrapolation at inference time for sequences that are longer than it saw during training? We first show that extrapolation can be enabled by simply changing the position representation method, though we find that current methods do not allow for efficient extrapolation. We therefore introduce a simpler and more efficient position method, Attention with Linear Biases (ALiBi). ALiBi does not add positional embeddings to word embeddings; instead, it biases query-key attention scores with a penalty that is proportional to their distance. We show that this method trains a 1.3 billion parameter model on input sequences of length 1024 that extrapolates to input sequences of length 2048, achieving the same perplexity as a sinusoidal position embedding model trained on inputs of length 2048 but training 11\% faster and using 11\% less memory. ALiBi's inductive bias towards recency also leads it to outperform multiple strong position methods on the WikiText-103 benchmark.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\RI89IJ2Z\\Press 等 - 2022 - Train Short, Test Long Attention with Linear Bias.pdf;C\:\\Users\\27404\\Zotero\\storage\\IHDG44DV\\2108.html}
 }
@@ -1123,7 +1123,7 @@
   url = {http://arxiv.org/abs/2203.16634},
   urldate = {2024-06-03},
   abstract = {Causal transformer language models (LMs), such as GPT-3, typically require some form of positional encoding, such as positional embeddings. However, we show that LMs without any explicit positional encoding are still competitive with standard models, and that this phenomenon is robust across different datasets, model sizes, and sequence lengths. Probing experiments reveal that such models acquire an implicit notion of absolute positions throughout the network, effectively compensating for the missing information. We conjecture that causal attention enables the model to infer the number of predecessors that each token can attend to, thereby approximating its absolute position. Our findings indicate that causal LMs might derive positional awareness not only from the explicit positioning mechanism, but also from the effects of the causal mask.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\93FC2HD3\\Haviv 等 - 2022 - Transformer Language Models without Positional Enc.pdf;C\:\\Users\\27404\\Zotero\\storage\\JB2TKVS3\\2203.html}
 }
@@ -1138,7 +1138,7 @@
   url = {http://arxiv.org/abs/2110.04366},
   urldate = {2022-11-23},
   abstract = {Fine-tuning large pre-trained language models on downstream tasks has become the de-facto learning paradigm in NLP. However, conventional approaches fine-tune all the parameters of the pre-trained model, which becomes prohibitive as the model size and the number of tasks grow. Recent work has proposed a variety of parameter-efficient transfer learning methods that only fine-tune a small number of (extra) parameters to attain strong performance. While effective, the critical ingredients for success and the connections among the various methods are poorly understood. In this paper, we break down the design of state-of-the-art parameter-efficient transfer learning methods and present a unified framework that establishes connections between them. Specifically, we re-frame them as modifications to specific hidden states in pre-trained models, and define a set of design dimensions along which different methods vary, such as the function to compute the modification and the position to apply the modification. Through comprehensive empirical studies across machine translation, text summarization, language understanding, and text classification benchmarks, we utilize the unified view to identify important design choices in previous methods. Furthermore, our unified framework enables the transfer of design elements across different approaches, and as a result we are able to instantiate new parameter-efficient fine-tuning methods that tune less parameters than previous methods while being more effective, achieving comparable results to fine-tuning all parameters on all four tasks.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\GNMJ8G4K\\He 等 - 2022 - Towards a Unified View of Parameter-Efficient Tran.pdf;C\:\\Users\\27404\\Zotero\\storage\\K2LDYGL2\\2110.html}
 }
@@ -1155,7 +1155,7 @@
   url = {http://arxiv.org/abs/2306.14048},
   urldate = {2024-05-14},
   abstract = {Large Language Models (LLMs), despite their recent impressive accomplishments, are notably cost-prohibitive to deploy, particularly for applications involving long-content generation, such as dialogue systems and story writing. Often, a large amount of transient state information, referred to as the KV cache, is stored in GPU memory in addition to model parameters, scaling linearly with the sequence length and batch size. In this paper, we introduce a novel approach for implementing the KV cache which significantly reduces its memory footprint. Our approach is based on the noteworthy observation that a small portion of tokens contributes most of the value when computing attention scores. We call these tokens Heavy Hitters (H\$\_2\$). Through a comprehensive investigation, we find that (i) the emergence of H\$\_2\$ is natural and strongly correlates with the frequent co-occurrence of tokens in the text, and (ii) removing them results in significant performance degradation. Based on these insights, we propose Heavy Hitter Oracle (H\$\_2\$O), a KV cache eviction policy that dynamically retains a balance of recent and H\$\_2\$ tokens. We formulate the KV cache eviction as a dynamic submodular problem and prove (under mild assumptions) a theoretical guarantee for our novel eviction algorithm which could help guide future work. We validate the accuracy of our algorithm with OPT, LLaMA, and GPT-NeoX across a wide range of tasks. Our implementation of H\$\_2\$O with 20\% heavy hitters improves the throughput over three leading inference systems DeepSpeed Zero-Inference, Hugging Face Accelerate, and FlexGen by up to 29\$\textbackslash times\$, 29\$\textbackslash times\$, and 3\$\textbackslash times\$ on OPT-6.7B and OPT-30B. With the same batch size, H2O can reduce the latency by up to 1.9\$\textbackslash times\$. The code is available at https://github.com/FMInference/H2O.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\K7EL5IK7\\Zhang 等 - 2023 - H$_2$O Heavy-Hitter Oracle for Efficient Generati.pdf;C\:\\Users\\27404\\Zotero\\storage\\5ZDCW7YU\\2306.html}
 }
@@ -1171,7 +1171,7 @@
   url = {http://arxiv.org/abs/2304.15004},
   urldate = {2023-05-04},
   abstract = {Recent work claims that large language models display emergent abilities, abilities not present in smaller-scale models that are present in larger-scale models. What makes emergent abilities intriguing is two-fold: their sharpness, transitioning seemingly instantaneously from not present to present, and their unpredictability, appearing at seemingly unforeseeable model scales. Here, we present an alternative explanation for emergent abilities: that for a particular task and model family, when analyzing fixed model outputs, one can choose a metric which leads to the inference of an emergent ability or another metric which does not. Thus, our alternative suggests that existing claims of emergent abilities are creations of the researcher's analyses, not fundamental changes in model behavior on specific tasks with scale. We present our explanation in a simple mathematical model, then test it in three complementary ways: we (1) make, test and confirm three predictions on the effect of metric choice using the InstructGPT/GPT-3 family on tasks with claimed emergent abilities, (2) make, test and confirm two predictions about metric choices in a meta-analysis of emergent abilities on BIG-Bench; and (3) show how similar metric decisions suggest apparent emergent abilities on vision tasks in diverse deep network architectures (convolutional, autoencoder, transformers). In all three analyses, we find strong supporting evidence that emergent abilities may not be a fundamental property of scaling AI models.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\6MUAAFE3\\Schaeffer 等 - 2023 - Are Emergent Abilities of Large Language Models a .pdf;C\:\\Users\\27404\\Zotero\\storage\\XZ59IVSZ\\2304.html}
 }
@@ -1186,7 +1186,7 @@
   url = {http://arxiv.org/abs/2306.07174},
   urldate = {2024-04-18},
   abstract = {Existing large language models (LLMs) can only afford fix-sized inputs due to the input length limit, preventing them from utilizing rich long-context information from past inputs. To address this, we propose a framework, Language Models Augmented with Long-Term Memory (LongMem), which enables LLMs to memorize long history. We design a novel decoupled network architecture with the original backbone LLM frozen as a memory encoder and an adaptive residual side-network as a memory retriever and reader. Such a decoupled memory design can easily cache and update long-term past contexts for memory retrieval without suffering from memory staleness. Enhanced with memory-augmented adaptation training, LongMem can thus memorize long past context and use long-term memory for language modeling. The proposed memory retrieval module can handle unlimited-length context in its memory bank to benefit various downstream tasks. Typically, LongMem can enlarge the long-form memory to 65k tokens and thus cache many-shot extra demonstration examples as long-form memory for in-context learning. Experiments show that our method outperforms strong long-context models on ChapterBreak, a challenging long-context modeling benchmark, and achieves remarkable improvements on memory-augmented in-context learning over LLMs. The results demonstrate that the proposed method is effective in helping language models to memorize and utilize long-form contents. Our code is open-sourced at https://aka.ms/LongMem.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\P3VPL3V9\\Wang 等 - 2023 - Augmenting Language Models with Long-Term Memory.pdf;C\:\\Users\\27404\\Zotero\\storage\\P3WJJD5F\\2306.html}
 }
@@ -1202,7 +1202,7 @@
   url = {http://arxiv.org/abs/2305.19370},
   urldate = {2023-06-09},
   abstract = {Transformers have emerged as the cornerstone of state-of-the-art natural language processing models, showcasing exceptional performance across a wide range of AI applications. However, the memory demands posed by the self-attention mechanism and the large feedforward network in Transformers limit their ability to handle long sequences, thereby creating challenges for tasks involving multiple long sequences or long-term dependencies. We present a distinct approach, Blockwise Parallel Transformer (BPT), that leverages blockwise computation of self-attention and feedforward network fusion to minimize memory costs. By processing longer input sequences while maintaining memory efficiency, BPT enables training sequences up to 32 times longer than vanilla Transformers and 2 to 4 times longer than previous memory-efficient methods. Extensive experiments on language modeling and reinforcement learning tasks demonstrate the effectiveness of BPT in reducing memory requirements and improving performance.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\63M26AMC\\Liu 和 Abbeel - 2023 - Blockwise Parallel Transformer for Long Context La.pdf;C\:\\Users\\27404\\Zotero\\storage\\4ALTRSKM\\2305.html}
 }
@@ -1218,7 +1218,7 @@
   url = {http://arxiv.org/abs/2304.12210},
   urldate = {2023-04-26},
   abstract = {Self-supervised learning, dubbed the dark matter of intelligence, is a promising path to advance machine learning. Yet, much like cooking, training SSL methods is a delicate art with a high barrier to entry. While many components are familiar, successfully training a SSL method involves a dizzying set of choices from the pretext tasks to training hyper-parameters. Our goal is to lower the barrier to entry into SSL research by laying the foundations and latest SSL recipes in the style of a cookbook. We hope to empower the curious researcher to navigate the terrain of methods, understand the role of the various knobs, and gain the know-how required to explore how delicious SSL can be.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\JZLEKQU2\\Balestriero 等 - 2023 - A Cookbook of Self-Supervised Learning.pdf;C\:\\Users\\27404\\Zotero\\storage\\ZDHSCTVA\\2304.html}
 }
@@ -1234,7 +1234,7 @@
   url = {http://arxiv.org/abs/2212.10356},
   urldate = {2023-07-04},
   abstract = {Length extrapolation permits training a transformer language model on short sequences that preserves perplexities when tested on substantially longer sequences. A relative positional embedding design, ALiBi, has had the widest usage to date. We dissect ALiBi via the lens of receptive field analysis empowered by a novel cumulative normalized gradient tool. The concept of receptive field further allows us to modify the vanilla Sinusoidal positional embedding to create \textasciitilde\textbackslash textbf\{Sandwich\}, the first parameter-free relative positional embedding design that truly length information uses longer than the training sequence. Sandwich shares with KERPLE and T5 the same logarithmic decaying temporal bias pattern with learnable relative positional embeddings; these elucidate future extrapolatable positional embedding design.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\ZDCIW7EN\\Chi 等 - 2023 - Dissecting Transformer Length Extrapolation via th.pdf;C\:\\Users\\27404\\Zotero\\storage\\5Q5C3PXG\\2212.html}
 }
@@ -1250,7 +1250,7 @@
   url = {http://arxiv.org/abs/2309.16039},
   urldate = {2024-04-14},
   abstract = {We present a series of long-context LLMs that support effective context windows of up to 32,768 tokens. Our model series are built through continual pretraining from Llama 2 with longer training sequences and on a dataset where long texts are upsampled. We perform extensive evaluation on language modeling, synthetic context probing tasks, and a wide range of research benchmarks. On research benchmarks, our models achieve consistent improvements on most regular tasks and significant improvements on long-context tasks over Llama 2. Notably, with a cost-effective instruction tuning procedure that does not require human-annotated long instruction data, the 70B variant can already surpass gpt-3.5-turbo-16k's overall performance on a suite of long-context tasks. Alongside these results, we provide an in-depth analysis on the individual components of our method. We delve into Llama's position encodings and discuss its limitation in modeling long dependencies. We also examine the impact of various design choices in the pretraining process, including the data mix and the training curriculum of sequence lengths -- our ablation experiments suggest that having abundant long texts in the pretrain dataset is not the key to achieving strong performance, and we empirically verify that long context continual pretraining is more efficient and similarly effective compared to pretraining from scratch with long sequences.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\XA4JGV7A\\Xiong 等 - 2023 - Effective Long-Context Scaling of Foundation Model.pdf;C\:\\Users\\27404\\Zotero\\storage\\XMCKUXVW\\2309.html}
 }
@@ -1266,7 +1266,7 @@
   url = {http://arxiv.org/abs/2309.17453},
   urldate = {2023-10-30},
   abstract = {Deploying Large Language Models (LLMs) in streaming applications such as multi-round dialogue, where long interactions are expected, is urgently needed but poses two major challenges. Firstly, during the decoding stage, caching previous tokens' Key and Value states (KV) consumes extensive memory. Secondly, popular LLMs cannot generalize to longer texts than the training sequence length. Window attention, where only the most recent KVs are cached, is a natural approach -- but we show that it fails when the text length surpasses the cache size. We observe an interesting phenomenon, namely attention sink, that keeping the KV of initial tokens will largely recover the performance of window attention. In this paper, we first demonstrate that the emergence of attention sink is due to the strong attention scores towards initial tokens as a ``sink'' even if they are not semantically important. Based on the above analysis, we introduce StreamingLLM, an efficient framework that enables LLMs trained with a finite length attention window to generalize to infinite sequence lengths without any fine-tuning. We show that StreamingLLM can enable Llama-2, MPT, Falcon, and Pythia to perform stable and efficient language modeling with up to 4 million tokens and more. In addition, we discover that adding a placeholder token as a dedicated attention sink during pre-training can further improve streaming deployment. In streaming settings, StreamingLLM outperforms the sliding window recomputation baseline by up to 22.2x speedup. Code and datasets are provided at https://github.com/mit-han-lab/streaming-llm.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\4BQZFURU\\Xiao 等 - 2023 - Efficient Streaming Language Models with Attention.pdf;C\:\\Users\\27404\\Zotero\\storage\\J2GUDCB6\\2309.html}
 }
@@ -1282,7 +1282,7 @@
   url = {http://arxiv.org/abs/2306.15595},
   urldate = {2023-07-03},
   abstract = {We present Position Interpolation (PI) that extends the context window sizes of RoPE-based pretrained LLMs such as LLaMA models to up to 32768 with minimal fine-tuning (within 1000 steps), while demonstrating strong empirical results on various tasks that require long context, including passkey retrieval, language modeling, and long document summarization from LLaMA 7B to 65B. Meanwhile, the extended model by Position Interpolation preserve quality relatively well on tasks within its original context window. To achieve this goal, Position Interpolation linearly down-scales the input position indices to match the original context window size, rather than extrapolating beyond the trained context length which may lead to catastrophically high attention scores that completely ruin the self-attention mechanism. Our theoretical study shows that the upper bound of interpolation is at least \$\textbackslash sim 600 \textbackslash times\$ smaller than that of extrapolation, further demonstrating its stability. Models extended via Position Interpolation retain its original architecture and can reuse most pre-existing optimization and infrastructure.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\7TB6KQTT\\Chen 等 - 2023 - Extending Context Window of Large Language Models .pdf;C\:\\Users\\27404\\Zotero\\storage\\APS2SNHB\\2306.html}
 }
@@ -1299,7 +1299,7 @@
   url = {http://arxiv.org/abs/2307.03170},
   urldate = {2023-07-12},
   abstract = {Large language models have an exceptional capability to incorporate new information in a contextual manner. However, the full potential of such an approach is often restrained due to a limitation in the effective context length. One solution to this issue is to endow an attention layer with access to an external memory, which comprises of (key, value) pairs. Yet, as the number of documents increases, the proportion of relevant keys to irrelevant ones decreases, leading the model to focus more on the irrelevant keys. We identify a significant challenge, dubbed the distraction issue, where keys linked to different semantic values might overlap, making them hard to distinguish. To tackle this problem, we introduce the Focused Transformer (FoT), a technique that employs a training process inspired by contrastive learning. This novel approach enhances the structure of the (key, value) space, enabling an extension of the context length. Our method allows for fine-tuning pre-existing, large-scale models to lengthen their effective context. This is demonstrated by our fine-tuning of \$3B\$ and \$7B\$ OpenLLaMA checkpoints. The resulting models, which we name LongLLaMA, exhibit advancements in tasks requiring a long context. We further illustrate that our LongLLaMA models adeptly manage a \$256 k\$ context length for passkey retrieval.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\GBMY2JNN\\Tworkowski 等 - 2023 - Focused Transformer Contrastive Training for Cont.pdf;C\:\\Users\\27404\\Zotero\\storage\\H8N7U9YI\\2307.html}
 }
@@ -1315,7 +1315,7 @@
   url = {http://arxiv.org/abs/2305.19466},
   urldate = {2023-09-25},
   abstract = {Length generalization, the ability to generalize from small training context sizes to larger ones, is a critical challenge in the development of Transformer-based language models. Positional encoding (PE) has been identified as a major factor influencing length generalization, but the exact impact of different PE schemes on extrapolation in downstream tasks remains unclear. In this paper, we conduct a systematic empirical study comparing the length generalization performance of decoder-only Transformers with five different position encoding approaches including Absolute Position Embedding (APE), T5's Relative PE, ALiBi, and Rotary, in addition to Transformers without positional encoding (NoPE). Our evaluation encompasses a battery of reasoning and mathematical tasks. Our findings reveal that the most commonly used positional encoding methods, such as ALiBi, Rotary, and APE, are not well suited for length generalization in downstream tasks. More importantly, NoPE outperforms other explicit positional encoding methods while requiring no additional computation. We theoretically demonstrate that NoPE can represent both absolute and relative PEs, but when trained with SGD, it mostly resembles T5's relative PE attention patterns. Finally, we find that scratchpad is not always helpful to solve length generalization and its format highly impacts the model's performance. Overall, our work suggests that explicit position embeddings are not essential for decoder-only Transformers to generalize well to longer sequences.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\P6CY7D2G\\Kazemnejad 等 - 2023 - The Impact of Positional Encoding on Length Genera.pdf;C\:\\Users\\27404\\Zotero\\storage\\6226VGMX\\2305.html}
 }
@@ -1332,7 +1332,7 @@
   url = {http://arxiv.org/abs/2305.16300},
   urldate = {2023-07-05},
   abstract = {While transformers have shown remarkable success in natural language processing, their attention mechanism's large memory requirements have limited their ability to handle longer contexts. Prior approaches, such as recurrent memory or retrieval-based augmentation, have either compromised the random-access flexibility of attention (i.e., the capability to select any token in the entire context) or relied on separate mechanisms for relevant context retrieval, which may not be compatible with the model's attention. In this paper, we present a novel approach that allows access to the complete context while retaining random-access flexibility, closely resembling running attention on the entire context. Our method uses a landmark token to represent each block of the input and trains the attention to use it for selecting relevant blocks, enabling retrieval of blocks directly through the attention mechanism instead of by relying on a separate mechanism. Our approach seamlessly integrates with specialized data structures and the system's memory hierarchy, enabling processing of arbitrarily long context lengths. We demonstrate that our method can obtain comparable performance with Transformer-XL while significantly reducing the number of retrieved tokens in each step. Finally, we show that fine-tuning LLaMA 7B with our method successfully extends its context length capacity up to 32k tokens, allowing for inference at the context lengths of GPT-4.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\IXBRTL9X\\Mohtashami 和 Jaggi - 2023 - Landmark Attention Random-Access Infinite Context.pdf;C\:\\Users\\27404\\Zotero\\storage\\ULPZSXHV\\2305.html}
 }
@@ -1349,7 +1349,7 @@
   url = {http://arxiv.org/abs/2311.03099},
   urldate = {2023-12-16},
   abstract = {In this paper, we uncover that Language Models (LMs), either encoder- or decoder-based, can obtain new capabilities by assimilating the parameters of homologous models without retraining or GPUs. Typically, new abilities of LMs can be imparted by Supervised Fine-Tuning (SFT), reflected in the disparity between fine-tuned and pre-trained parameters (i.e., delta parameters). We initially observe that by introducing a novel operation called DARE (Drop And REscale), most delta parameters can be directly set to zeros without affecting the capabilities of SFT LMs and larger models can tolerate a higher proportion of discarded parameters. Based on this observation, we further sparsify delta parameters of multiple SFT homologous models with DARE and subsequently merge them into a single model by parameter averaging. We conduct experiments on eight datasets from the GLUE benchmark with BERT and RoBERTa. We also merge WizardLM, WizardMath, and Code Alpaca based on Llama 2. Experimental results show that: (1) The delta parameter value ranges for SFT models are typically small, often within 0.005, and DARE can eliminate 99\% of them effortlessly. However, once the models are continuously pre-trained, the value ranges can grow to around 0.03, making DARE impractical. We have also tried to remove fine-tuned instead of delta parameters and find that a 10\% reduction can lead to drastically decreased performance (even to 0). This highlights that SFT merely stimulates the abilities via delta parameters rather than injecting new abilities into LMs; (2) DARE can merge multiple task-specific LMs into one LM with diverse abilities. For instance, the merger of WizardLM and WizardMath improves the GSM8K zero-shot accuracy of WizardLM from 2.2 to 66.3, retaining its instruction-following ability while surpassing WizardMath's original 64.2 performance. Codes are available at https://github.com/yule-BUAA/MergeLM.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\R6R47RIS\\Yu 等 - 2023 - Language Models are Super Mario Absorbing Abiliti.pdf;C\:\\Users\\27404\\Zotero\\storage\\VNG6YL2C\\2311.html}
 }
@@ -1365,7 +1365,7 @@
   url = {http://arxiv.org/abs/2305.13571},
   urldate = {2024-06-03},
   abstract = {The use of positional embeddings in transformer language models is widely accepted. However, recent research has called into question the necessity of such embeddings. We further extend this inquiry by demonstrating that a randomly initialized and frozen transformer language model, devoid of positional embeddings, inherently encodes strong positional information through the shrinkage of self-attention variance. To quantify this variance, we derive the underlying distribution of each step within a transformer layer. Through empirical validation using a fully pretrained model, we show that the variance shrinkage effect still persists after extensive gradient updates. Our findings serve to justify the decision to discard positional embeddings and thus facilitate more efficient pretraining of transformer language models.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\ID3B3IUW\\Chi 等 - 2023 - Latent Positional Information is in the Self-Atten.pdf;C\:\\Users\\27404\\Zotero\\storage\\3YGFSTBJ\\2305.html}
 }
@@ -1380,7 +1380,7 @@
   url = {http://arxiv.org/abs/2304.08467},
   urldate = {2023-04-28},
   abstract = {Prompting is now the primary way to utilize the multitask capabilities of language models (LMs), but prompts occupy valuable space in the input context window, and re-encoding the same prompt is computationally inefficient. Finetuning and distillation methods allow for specialization of LMs without prompting, but require retraining the model for each task. To avoid this trade-off entirely, we present gisting, which trains an LM to compress prompts into smaller sets of "gist" tokens which can be reused for compute efficiency. Gist models can be easily trained as part of instruction finetuning via a restricted attention mask that encourages prompt compression. On decoder (LLaMA-7B) and encoder-decoder (FLAN-T5-XXL) LMs, gisting enables up to 26x compression of prompts, resulting in up to 40\% FLOPs reductions, 4.2\% wall time speedups, storage savings, and minimal loss in output quality.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\4E69B3AV\\Mu 等 - 2023 - Learning to Compress Prompts with Gist Tokens.pdf;C\:\\Users\\27404\\Zotero\\storage\\933DXEDR\\2304.html}
 }
@@ -1423,7 +1423,7 @@
   url = {http://arxiv.org/abs/2308.16137},
   urldate = {2024-01-01},
   abstract = {In recent years, there have been remarkable advancements in the performance of Transformer-based Large Language Models (LLMs) across various domains. As these LLMs are deployed for increasingly complex domains, they often face the need to follow longer user prompts or generate longer texts. In these situations, the \$\textbackslash textit\{length generalization failure\}\$ of LLMs on long sequences becomes more prominent. Most pre-training schemes truncate training sequences to a fixed length. LLMs often struggle to generate fluent and coherent texts after longer contexts, even with relative positional encoding specifically designed to cope with this problem. Common solutions such as finetuning on longer corpora often involve daunting hardware and time costs and require careful training process design. To more efficiently extrapolate existing LLMs' generation quality to longer texts, we theoretically and empirically investigate the main out-of-distribution (OOD) factors contributing to this problem. Inspired by this diagnosis, we propose a simple yet effective solution for on-the-fly length generalization, LM-Infinite. It involves only a \$\textbackslash mathbf\{\textbackslash Lambda\}\$-shaped attention mask (to avoid excessive attended tokens) and a distance limit (to avoid unseen distances) while requiring no parameter updates or learning. We find it applicable to a variety of LLMs using relative-position encoding methods. LM-Infinite is computationally efficient with \$O(n)\$ time and space, and demonstrates consistent text generation fluency and quality to as long as 128k tokens on ArXiv and OpenWebText2 datasets, with 2.72x decoding speedup. We will make the codes publicly available following publication.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\6Q5QZH58\\Han 等 - 2023 - LM-Infinite Simple On-the-Fly Length Generalizati.pdf;C\:\\Users\\27404\\Zotero\\storage\\L4FFCBWF\\2308.html}
 }
@@ -1440,7 +1440,7 @@
   url = {http://arxiv.org/abs/2308.14508},
   urldate = {2023-09-04},
   abstract = {Although large language models (LLMs) demonstrate impressive performance for many language tasks, most of them can only handle texts a few thousand tokens long, limiting their applications on longer sequence inputs, such as books, reports, and codebases. Recent works have proposed methods to improve LLMs' long context capabilities by extending context windows and more sophisticated memory mechanisms. However, comprehensive benchmarks tailored for evaluating long context understanding are lacking. In this paper, we introduce LongBench, the first bilingual, multi-task benchmark for long context understanding, enabling a more rigorous evaluation of long context understanding. LongBench comprises 21 datasets across 6 task categories in both English and Chinese, with an average length of 6,711 words (English) and 13,386 characters (Chinese). These tasks cover key long-text application areas including single-doc QA, multi-doc QA, summarization, few-shot learning, synthetic tasks, and code completion. All datasets in LongBench are standardized into a unified format, allowing for effortless automatic evaluation of LLMs. Upon comprehensive evaluation of 8 LLMs on LongBench, we find that: (1) Commercial model (GPT-3.5-Turbo-16k) outperforms other open-sourced models, but still struggles on longer contexts. (2) Scaled position embedding and fine-tuning on longer sequences lead to substantial improvement on long context understanding. (3) Context compression technique such as retrieval brings improvement for model with weak ability on long contexts, but the performance still lags behind models that have strong long context understanding capability. The code and datasets are available at https://github.com/THUDM/LongBench.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\VMA5GQ9L\\Bai 等 - 2023 - LongBench A Bilingual, Multitask Benchmark for Lo.pdf;C\:\\Users\\27404\\Zotero\\storage\\F8Q5FIH9\\2308.html}
 }
@@ -1457,7 +1457,7 @@
   url = {http://arxiv.org/abs/2307.02486},
   urldate = {2023-07-08},
   abstract = {Scaling sequence length has become a critical demand in the era of large language models. However, existing methods struggle with either computational complexity or model expressivity, rendering the maximum sequence length restricted. In this work, we introduce LongNet, a Transformer variant that can scale sequence length to more than 1 billion tokens, without sacrificing the performance on shorter sequences. Specifically, we propose dilated attention, which expands the attentive field exponentially as the distance grows. LongNet has significant advantages: 1) it has a linear computation complexity and a logarithm dependency between tokens; 2) it can be served as a distributed trainer for extremely long sequences; 3) its dilated attention is a drop-in replacement for standard attention, which can be seamlessly integrated with the existing Transformer-based optimization. Experiments results demonstrate that LongNet yields strong performance on both long-sequence modeling and general language tasks. Our work opens up new possibilities for modeling very long sequences, e.g., treating a whole corpus or even the entire Internet as a sequence.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\HILTSENP\\Ding 等 - 2023 - LongNet Scaling Transformers to 1,000,000,000 Tok.pdf;C\:\\Users\\27404\\Zotero\\storage\\GFI9MD6U\\2307.html}
 }
@@ -1473,7 +1473,7 @@
   url = {http://arxiv.org/abs/2306.13421},
   urldate = {2023-08-09},
   abstract = {Retrieval-augmented language models (LMs) have received much attention recently. However, typically the retriever is not trained jointly as a native component of the LM, but added to an already-pretrained LM, which limits the ability of the LM and the retriever to adapt to one another. In this work, we propose the Retrieval-Pretrained Transformer (RPT), an architecture and training procedure for jointly training a retrieval-augmented LM from scratch for the task of modeling long texts. Given a recently generated text chunk in a long document, the LM computes query representations, which are then used to retrieve earlier chunks in the document, located potentially tens of thousands of tokens before. Information from retrieved chunks is fused into the LM representations to predict the next target chunk. We train the retriever component with a semantic objective, where the goal is to retrieve chunks that increase the probability of the next chunk, according to a reference LM. We evaluate RPT on four long-range language modeling tasks, spanning books, code, and mathematical writing, and demonstrate that RPT improves retrieval quality and subsequently perplexity across the board compared to strong baselines.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\FTHDY3ST\\Rubin 和 Berant - 2023 - Long-range Language Modeling with Self-retrieval.pdf;C\:\\Users\\27404\\Zotero\\storage\\A6HHMPQ6\\2306.html}
 }
@@ -1490,7 +1490,7 @@
   url = {http://arxiv.org/abs/2310.19240},
   urldate = {2024-04-14},
   abstract = {Managing long sequences has become an important and necessary feature for large language models (LLMs). However, it is still an open question of how to comprehensively and systematically evaluate the long-sequence capability of LLMs. One of the reasons is that conventional and widely-used benchmarks mainly consist of short sequences. In this paper, we propose M4LE, a Multi-ability, Multi-range, Multi-task, Multi-domain benchmark for Long-context Evaluation. M4LE is based on a diverse NLP task pool comprising 36 NLP datasets, 11 task types and 12 domains. To alleviate the scarcity of tasks with naturally long sequences and incorporate multiple-ability assessment, we propose an automatic approach (but with negligible human annotations) to convert short-sequence tasks into a unified long-sequence scenario where LLMs have to identify single or multiple relevant spans in long contexts based on explicit or semantic hints. Specifically, the scenario includes five different types of abilities: (1) explicit single-span; (2) semantic single-span; (3) explicit multiple-span; (4) semantic multiple-span; and (5) global context understanding. The resulting samples in M4LE are evenly distributed from 1k to 8k input length. We conducted a systematic evaluation on 11 well-established LLMs, especially those optimized for long-sequence inputs. Our results reveal that: 1) Current LLMs struggle to understand long context, particularly when tasks require multiple-span attention. 2) Semantic retrieval task is more difficult for competent LLMs. 3) Models fine-tuned on longer text with position interpolation have comparable performance to those using Neural Tangent Kernel (NTK) aware scaling methods without fine-tuning. We make our benchmark publicly available to encourage future research in this challenging area.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\6KKWP5YT\\Kwan 等 - 2023 - M4LE A Multi-Ability Multi-Range Multi-Task Multi.pdf;C\:\\Users\\27404\\Zotero\\storage\\WDAW6FQT\\2310.html}
 }
@@ -1507,7 +1507,7 @@
   url = {http://arxiv.org/abs/2312.00752},
   urldate = {2023-12-05},
   abstract = {Foundation models, now powering most of the exciting applications in deep learning, are almost universally based on the Transformer architecture and its core attention module. Many subquadratic-time architectures such as linear attention, gated convolution and recurrent models, and structured state space models (SSMs) have been developed to address Transformers' computational inefficiency on long sequences, but they have not performed as well as attention on important modalities such as language. We identify that a key weakness of such models is their inability to perform content-based reasoning, and make several improvements. First, simply letting the SSM parameters be functions of the input addresses their weakness with discrete modalities, allowing the model to selectively propagate or forget information along the sequence length dimension depending on the current token. Second, even though this change prevents the use of efficient convolutions, we design a hardware-aware parallel algorithm in recurrent mode. We integrate these selective SSMs into a simplified end-to-end neural network architecture without attention or even MLP blocks (Mamba). Mamba enjoys fast inference (5\$\textbackslash times\$ higher throughput than Transformers) and linear scaling in sequence length, and its performance improves on real data up to million-length sequences. As a general sequence model backbone, Mamba achieves state-of-the-art performance across several modalities such as language, audio, and genomics. On language modeling, our Mamba-3B model outperforms Transformers of the same size and matches Transformers twice its size, both in pretraining and downstream evaluation.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\RUABEXGT\\Gu 和 Dao - 2023 - Mamba Linear-Time Sequence Modeling with Selectiv.pdf;C\:\\Users\\27404\\Zotero\\storage\\BJR7F7UE\\2312.html}
 }
@@ -1523,7 +1523,7 @@
   url = {http://arxiv.org/abs/2207.02098},
   urldate = {2023-05-31},
   abstract = {Reliable generalization lies at the heart of safe ML and AI. However, understanding when and how neural networks generalize remains one of the most important unsolved problems in the field. In this work, we conduct an extensive empirical study (20'910 models, 15 tasks) to investigate whether insights from the theory of computation can predict the limits of neural network generalization in practice. We demonstrate that grouping tasks according to the Chomsky hierarchy allows us to forecast whether certain architectures will be able to generalize to out-of-distribution inputs. This includes negative results where even extensive amounts of data and training time never lead to any non-trivial generalization, despite models having sufficient capacity to fit the training data perfectly. Our results show that, for our subset of tasks, RNNs and Transformers fail to generalize on non-regular tasks, LSTMs can solve regular and counter-language tasks, and only networks augmented with structured memory (such as a stack or memory tape) can successfully generalize on context-free and context-sensitive tasks.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Formal Languages and Automata Theory,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\JICJ7K7X\\Delétang 等 - 2023 - Neural Networks and the Chomsky Hierarchy.pdf;C\:\\Users\\27404\\Zotero\\storage\\LJ5HI7LF\\2207.html}
 }
@@ -1540,7 +1540,7 @@
   url = {http://arxiv.org/abs/2309.10400},
   urldate = {2023-10-03},
   abstract = {In this paper, we introduce Positional Skip-wisE (PoSE) training for efficient adaptation of large language models\textasciitilde (LLMs) to extremely long context windows. PoSE decouples train length from target context window size by simulating long inputs using a fixed context window with manipulated position indices during training. Concretely, we select several short chunks from a long input sequence, and introduce distinct skipping bias terms to modify the position indices of each chunk. These bias terms, along with the length of each chunk, are altered for each training example, allowing the model to adapt to all positions within the target context window without training on full length inputs. Experiments show that, compared with fine-tuning on the full length, PoSE greatly reduces memory and time overhead with minimal impact on performance. Leveraging this advantage, we have successfully extended the LLaMA model to 128k tokens. Furthermore, we empirically confirm that PoSE is compatible with all RoPE-based LLMs and various position interpolation strategies. Notably, by decoupling fine-tuning length from target context window, PoSE can theoretically extend the context window infinitely, constrained only by memory usage for inference. With ongoing advancements for efficient inference, we believe PoSE holds great promise for scaling the context window even further.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\YVLMZ8JF\\Zhu 等 - 2023 - PoSE Efficient Context Window Extension of LLMs v.pdf;C\:\\Users\\27404\\Zotero\\storage\\988AVEFG\\2309.html}
 }
@@ -1556,7 +1556,7 @@
   url = {http://arxiv.org/abs/2305.16843},
   urldate = {2023-07-05},
   abstract = {Transformers have impressive generalization capabilities on tasks with a fixed context length. However, they fail to generalize to sequences of arbitrary length, even for seemingly simple tasks such as duplicating a string. Moreover, simply training on longer sequences is inefficient due to the quadratic computation complexity of the global attention mechanism. In this work, we demonstrate that this failure mode is linked to positional encodings being out-of-distribution for longer sequences (even for relative encodings) and introduce a novel family of positional encodings that can overcome this problem. Concretely, our randomized positional encoding scheme simulates the positions of longer sequences and randomly selects an ordered subset to fit the sequence's length. Our large-scale empirical evaluation of 6000 models across 15 algorithmic reasoning tasks shows that our method allows Transformers to generalize to sequences of unseen length (increasing test accuracy by 12.0\% on average).},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\SSQSQ8CT\\Ruoss 等 - 2023 - Randomized Positional Encodings Boost Length Gener.pdf;C\:\\Users\\27404\\Zotero\\storage\\7WEBHEP8\\2305.html}
 }
@@ -1572,7 +1572,7 @@
   url = {http://arxiv.org/abs/2310.01889},
   urldate = {2024-06-18},
   abstract = {Transformers have emerged as the architecture of choice for many state-of-the-art AI models, showcasing exceptional performance across a wide range of AI applications. However, the memory demands imposed by Transformers limit their ability to handle long sequences, thereby posing challenges in utilizing videos, actions, and other long-form sequences and modalities in complex environments. We present a novel approach, Ring Attention with Blockwise Transformers (Ring Attention), which leverages blockwise computation of self-attention and feedforward to distribute long sequences across multiple devices while fully overlapping the communication of key-value blocks with the computation of blockwise attention. Our approach enables training and inference of sequences that are up to device count times longer than those achievable by prior memory-efficient Transformers, without resorting to approximations or incurring additional communication and computation overheads. Extensive experiments on language modeling and reinforcement learning tasks demonstrate the effectiveness of our approach in allowing millions of tokens context size and improving performance.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\TMFEIRAV\\Liu 等 - 2023 - Ring Attention with Blockwise Transformers for Nea.pdf;C\:\\Users\\27404\\Zotero\\storage\\6W8DWD9M\\2310.html}
 }
@@ -1587,7 +1587,7 @@
   url = {http://arxiv.org/abs/2304.11062},
   urldate = {2023-04-28},
   abstract = {This technical report presents the application of a recurrent memory to extend the context length of BERT, one of the most effective Transformer-based models in natural language processing. By leveraging the Recurrent Memory Transformer architecture, we have successfully increased the model's effective context length to an unprecedented two million tokens, while maintaining high memory retrieval accuracy. Our method allows for the storage and processing of both local and global information and enables information flow between segments of the input sequence through the use of recurrence. Our experiments demonstrate the effectiveness of our approach, which holds significant potential to enhance long-term dependency handling in natural language understanding and generation tasks as well as enable large-scale context processing for memory-intensive applications.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\KEPR97US\\Bulatov 等 - 2023 - Scaling Transformer to 1M tokens and beyond with R.pdf;C\:\\Users\\27404\\Zotero\\storage\\CF2385BT\\2304.html}
 }
@@ -1604,7 +1604,7 @@
   url = {http://arxiv.org/abs/2305.17118},
   urldate = {2024-05-14},
   abstract = {Large language models(LLMs) have sparked a new wave of exciting AI applications. Hosting these models at scale requires significant memory resources. One crucial memory bottleneck for the deployment stems from the context window. It is commonly recognized that model weights are memory hungry; however, the size of key-value embedding stored during the generation process (KV cache) can easily surpass the model size. The enormous size of the KV cache puts constraints on the inference batch size, which is crucial for high throughput inference workload. Inspired by an interesting observation of the attention scores, we hypothesize the persistence of importance: only pivotal tokens, which had a substantial influence at one step, will significantly influence future generations. Based on our empirical verification and theoretical analysis around this hypothesis, we propose Scissorhands, a system that maintains the memory usage of the KV cache at a fixed budget without finetuning the model. In essence, Scissorhands manages the KV cache by storing the pivotal tokens with a higher probability. We validate that Scissorhands reduces the inference memory usage of the KV cache by up to 5X without compromising model quality. We further demonstrate that Scissorhands can be combined with 4-bit quantization, traditionally used to compress model weights, to achieve up to 20X compression.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\RCVP7B2S\\Liu 等 - 2023 - Scissorhands Exploiting the Persistence of Import.pdf;C\:\\Users\\27404\\Zotero\\storage\\GURB2L7Q\\2305.html}
 }
@@ -1620,7 +1620,7 @@
   url = {http://arxiv.org/abs/2305.01625},
   urldate = {2023-05-04},
   abstract = {Transformer-based models typically have a predefined bound to their input length, because of their need to potentially attend to every token in the input. In this work, we propose Unlimiformer: a general approach that can wrap any existing pretrained encoder-decoder transformer, and offload the attention computation across all layers to a single \$k\$-nearest-neighbor index; this index can be kept on either the GPU or CPU memory and queried in sub-linear time. This way, we can index extremely long input sequences, while every attention head in every decoder layer retrieves its top-\$k\$ keys, instead of attending to every key. We demonstrate Unlimiformers's efficacy on several long-document and multi-document summarization benchmarks, showing that it can summarize even 350k token-long inputs from the BookSum dataset, without any input truncation at test time. Unlimiformer improves pretrained models such as BART and Longformer by extending them to unlimited inputs without additional learned weights and without modifying their code. We make our code and models publicly available at https://github.com/abertsch72/unlimiformer .},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\W9ARRCW7\\Bertsch 等 - 2023 - Unlimiformer Long-Range Transformers with Unlimit.pdf;C\:\\Users\\27404\\Zotero\\storage\\TSL9XJZ2\\2305.html}
 }
@@ -1637,7 +1637,7 @@
   url = {http://arxiv.org/abs/2309.00071},
   urldate = {2023-12-05},
   abstract = {Rotary Position Embeddings (RoPE) have been shown to effectively encode positional information in transformer-based language models. However, these models fail to generalize past the sequence length they were trained on. We present YaRN (Yet another RoPE extensioN method), a compute-efficient method to extend the context window of such models, requiring 10x less tokens and 2.5x less training steps than previous methods. Using YaRN, we show that LLaMA models can effectively utilize and extrapolate to context lengths much longer than their original pre-training would allow, while also surpassing previous the state-of-the-art at context window extension. In addition, we demonstrate that YaRN exhibits the capability to extrapolate beyond the limited context of a fine-tuning dataset. The models fine-tuned using YaRN has been made available and reproduced online up to 128k context length at https://github.com/jquesnelle/yarn},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\32KPEGSC\\Peng 等 - 2023 - YaRN Efficient Context Window Extension of Large .pdf;C\:\\Users\\27404\\Zotero\\storage\\XMK8KK5M\\2309.html}
 }
@@ -1653,7 +1653,7 @@
   url = {http://arxiv.org/abs/2405.14591},
   urldate = {2024-06-10},
   abstract = {Position embedding is a core component of current Large Language Models (LLMs). Rotary position embedding (RoPE), a technique that encodes the position information with a rotation matrix, has been the de facto choice for position embedding in many LLMs, such as the Llama series. RoPE has been further utilized to extend long context capability, which is roughly based on adjusting the \textbackslash textit\{base\} parameter of RoPE to mitigate out-of-distribution (OOD) problems in position embedding. However, in this paper, we find that LLMs may obtain a superficial long-context ability based on the OOD theory. We revisit the role of RoPE in LLMs and propose a novel property of long-term decay, we derive that the \textbackslash textit\{base of RoPE bounds context length\}: there is an absolute lower bound for the base value to obtain certain context length capability. Our work reveals the relationship between context length and RoPE base both theoretically and empirically, which may shed light on future long context training.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\TMFEQBPL\\Men 等 - 2024 - Base of RoPE Bounds Context Length.pdf;C\:\\Users\\27404\\Zotero\\storage\\TZQGT8VV\\2405.html}
 }
@@ -1669,7 +1669,7 @@
   url = {http://arxiv.org/abs/2405.06105},
   urldate = {2024-06-18},
   abstract = {Recent studies have shown that Large Language Models (LLMs) have the potential to process extremely long text. Many works only evaluate LLMs' long-text processing ability on the language modeling task, with perplexity (PPL) as the evaluation metric. However, in our study, we find that there is no correlation between PPL and LLMs' long-text understanding ability. Besides, PPL may only reflect the model's ability to model local information instead of catching long-range dependency. Therefore, only using PPL to prove the model could process long text is inappropriate. The local focus feature of PPL could also explain some existing phenomena, such as the great extrapolation ability of the position method ALiBi. When evaluating a model's ability in long text, we might pay more attention to PPL's limitation and avoid overly relying on it.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\Q9G4BVSH\\Hu 等 - 2024 - Can Perplexity Reflect Large Language Model's Abil.pdf;C\:\\Users\\27404\\Zotero\\storage\\S6TSKNLT\\2405.html}
 }
@@ -1686,7 +1686,7 @@
   url = {http://arxiv.org/abs/2308.12950},
   urldate = {2024-06-13},
   abstract = {We release Code Llama, a family of large language models for code based on Llama 2 providing state-of-the-art performance among open models, infilling capabilities, support for large input contexts, and zero-shot instruction following ability for programming tasks. We provide multiple flavors to cover a wide range of applications: foundation models (Code Llama), Python specializations (Code Llama - Python), and instruction-following models (Code Llama - Instruct) with 7B, 13B, 34B and 70B parameters each. All models are trained on sequences of 16k tokens and show improvements on inputs with up to 100k tokens. 7B, 13B and 70B Code Llama and Code Llama - Instruct variants support infilling based on surrounding content. Code Llama reaches state-of-the-art performance among open models on several code benchmarks, with scores of up to 67\% and 65\% on HumanEval and MBPP, respectively. Notably, Code Llama - Python 7B outperforms Llama 2 70B on HumanEval and MBPP, and all our models outperform every other publicly available model on MultiPL-E. We release Code Llama under a permissive license that allows for both research and commercial use.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\Z4YFF7VA\\Rozière 等 - 2024 - Code Llama Open Foundation Models for Code.pdf;C\:\\Users\\27404\\Zotero\\storage\\XJSAINVG\\2308.html}
 }
@@ -1703,7 +1703,7 @@
   url = {http://arxiv.org/abs/2403.11802},
   urldate = {2024-06-11},
   abstract = {While recent research endeavors have focused on developing Large Language Models (LLMs) with robust long-context capabilities, due to the lack of long-context benchmarks, relatively little is known about how well the performance of long-context LLMs. To address this gap, we propose a multi-evidence, position-aware, and scalable benchmark for evaluating long-context LLMs, named Counting-Stars, which evaluates long-context LLMs by using two tasks: multi-evidence acquisition and multi-evidence reasoning. Based on the Counting-Stars test, we conduct experiments to evaluate long-context LLMs (i.e., GPT-4 Turbo, Gemini 1.5 Pro, Claude3 Opus, GLM-4, and Moonshot-v1). Experimental results demonstrate that Gemini 1.5 Pro achieves the best overall results, while the performance of GPT-4 Turbo is the most stable across various tasks. Furthermore, our analysis of these LLMs, which are extended to handle long-context scenarios, indicates that there is potential for improvement as the length of the input context and the intricacy of the tasks are increasing.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   version = {1},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\2C87CWWR\\Song 等 - 2024 - Counting-Stars A Multi-evidence, Position-aware, .pdf;C\:\\Users\\27404\\Zotero\\storage\\IXWVUHKV\\2403.html}
@@ -1719,9 +1719,26 @@
   url = {http://arxiv.org/abs/2402.10171},
   urldate = {2024-04-18},
   abstract = {We study the continual pretraining recipe for scaling language models' context lengths to 128K, with a focus on data engineering. We hypothesize that long context modeling, in particular \textbackslash textit\{the ability to utilize information at arbitrary input locations\}, is a capability that is mostly already acquired through large-scale pretraining, and that this capability can be readily extended to contexts substantially longer than seen during training\textasciitilde (e.g., 4K to 128K) through lightweight continual pretraining on appropriate data mixture. We investigate the \textbackslash textit\{quantity\} and \textbackslash textit\{quality\} of the data for continual pretraining: (1) for quantity, we show that 500 million to 5 billion tokens are enough to enable the model to retrieve information anywhere within the 128K context; (2) for quality, our results equally emphasize \textbackslash textit\{domain balance\} and \textbackslash textit\{length upsampling\}. Concretely, we find that naively upsampling longer data on certain domains like books, a common practice of existing work, gives suboptimal performance, and that a balanced domain mixture is important. We demonstrate that continual pretraining of the full model on 1B-5B tokens of such data is an effective and affordable strategy for scaling the context length of language models to 128K. Our recipe outperforms strong open-source long-context models and closes the gap to frontier models like GPT-4 128K.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\SAH92XUH\\Fu 等 - 2024 - Data Engineering for Scaling Language Models to 12.pdf;C\:\\Users\\27404\\Zotero\\storage\\IYXZ827I\\2402.html}
+}
+
+@online{2024DynamicMemoryCompressionNawrot,
+  title = {Dynamic {{Memory Compression}}: {{Retrofitting LLMs}} for {{Accelerated Inference}}},
+  shorttitle = {Dynamic {{Memory Compression}}},
+  author = {Nawrot, Piotr and Łańcucki, Adrian and Chochowski, Marcin and Tarjan, David and Ponti, Edoardo M.},
+  date = {2024-03-14},
+  eprint = {2403.09636},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2403.09636},
+  url = {http://arxiv.org/abs/2403.09636},
+  urldate = {2024-07-11},
+  abstract = {Transformers have emerged as the backbone of large language models (LLMs). However, generation remains inefficient due to the need to store in memory a cache of key-value representations for past tokens, whose size scales linearly with the input sequence length and batch size. As a solution, we propose Dynamic Memory Compression (DMC), a method for on-line key-value cache compression at inference time. Most importantly, the model learns to apply different compression rates in different heads and layers. We retrofit pre-trained LLMs such as Llama 2 (7B, 13B and 70B) into DMC Transformers, achieving up to \textasciitilde 3.7x throughput increase in auto-regressive inference on a NVIDIA H100 GPU. DMC is applied via continued pre-training on a negligible percentage of the original data without adding any extra parameters. We find that DMC preserves the original downstream performance with up to 4x cache compression, outperforming up-trained grouped-query attention (GQA). GQA and DMC can be even combined to obtain compounded gains. As a result DMC fits longer contexts and larger batches within any given memory budget.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\9KFVIRAQ\\Nawrot 等 - 2024 - Dynamic Memory Compression Retrofitting LLMs for .pdf;C\:\\Users\\27404\\Zotero\\storage\\Z4HIGGJR\\2403.html}
 }
 
 @online{2024ExtendingLLMsContextZhanga,
@@ -1735,9 +1752,25 @@
   url = {http://arxiv.org/abs/2401.07004},
   urldate = {2024-06-13},
   abstract = {Large Language Models (LLMs) are known to have limited extrapolation ability beyond their pre-trained context window, constraining their application in downstream tasks with lengthy inputs. Recent studies have sought to extend LLMs' context window by modifying rotary position embedding (RoPE), a popular position encoding method adopted by well-known LLMs such as LLaMA, PaLM, and GPT-NeoX. However, prior works like Position Interpolation (PI) and YaRN are resource-intensive and lack comparative experiments to assess their applicability. In this work, we identify the inherent need for LLMs' attention entropy (i.e. the information entropy of attention scores) to maintain stability and introduce a novel extension to RoPE which combines adjusting RoPE's base frequency and scaling the attention logits to help LLMs efficiently adapt to a larger context window. We validate the superiority of our method in both fine-tuning performance and robustness across different context window sizes on various context-demanding tasks. Notably, our method extends the context window of LLaMA-2-7B-Chat to 16,384 with only 100 samples and 6 training steps, showcasing extraordinary efficiency. Finally, we also explore how data compositions and training curricula affect context window extension for specific downstream tasks, suggesting fine-tuning LLMs with lengthy conversations as a good starting point. We release our code and SFT data at https://github.com/GAIR-NLP/Entropy-ABF.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\NBP6J3DB\\Zhang 等 - 2024 - Extending LLMs' Context Window with 100 Samples.pdf;C\:\\Users\\27404\\Zotero\\storage\\FHCWSEI9\\2401.html}
+}
+
+@online{2024HowLargeLanguageZhao,
+  title = {How Do {{Large Language Models Handle Multilingualism}}?},
+  author = {Zhao, Yiran and Zhang, Wenxuan and Chen, Guizhen and Kawaguchi, Kenji and Bing, Lidong},
+  date = {2024-05-24},
+  eprint = {2402.18815},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2402.18815},
+  url = {http://arxiv.org/abs/2402.18815},
+  urldate = {2024-07-15},
+  abstract = {Large language models (LLMs) have demonstrated impressive capabilities across diverse languages. This study explores how LLMs handle multilingualism. Based on observed language ratio shifts among layers and the relationships between network structures and certain capabilities, we hypothesize the LLM's multilingual workflow (\$\textbackslash texttt\{MWork\}\$): LLMs initially understand the query, converting multilingual inputs into English for task-solving. In the intermediate layers, they employ English for thinking and incorporate multilingual knowledge with self-attention and feed-forward structures, respectively. In the final layers, LLMs generate responses aligned with the original language of the query. To verify \$\textbackslash texttt\{MWork\}\$, we introduce Parallel Language-specific Neuron Detection (\$\textbackslash texttt\{PLND\}\$) to identify activated neurons for inputs in different languages without any labeled data. Using \$\textbackslash texttt\{PLND\}\$, we validate \$\textbackslash texttt\{MWork\}\$ through extensive experiments involving the deactivation of language-specific neurons across various layers and structures. Moreover, \$\textbackslash texttt\{MWork\}\$ allows fine-tuning of language-specific neurons with a small dataset, enhancing multilingual abilities in a specific language without compromising others. This approach results in an average improvement of \$3.6\textbackslash\%\$ for high-resource languages and \$2.3\textbackslash\%\$ for low-resource languages across all tasks with just \$400\$ documents.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\FPHQY6RS\\Zhao 等 - 2024 - How do Large Language Models Handle Multilingualis.pdf;C\:\\Users\\27404\\Zotero\\storage\\JVMEDCDK\\2402.html}
 }
 
 @online{2024LeaveNoContextMunkhdalai,
@@ -1752,7 +1785,7 @@
   url = {http://arxiv.org/abs/2404.07143},
   urldate = {2024-04-15},
   abstract = {This work introduces an efficient method to scale Transformer-based Large Language Models (LLMs) to infinitely long inputs with bounded memory and computation. A key component in our proposed approach is a new attention technique dubbed Infini-attention. The Infini-attention incorporates a compressive memory into the vanilla attention mechanism and builds in both masked local attention and long-term linear attention mechanisms in a single Transformer block. We demonstrate the effectiveness of our approach on long-context language modeling benchmarks, 1M sequence length passkey context block retrieval and 500K length book summarization tasks with 1B and 8B LLMs. Our approach introduces minimal bounded memory parameters and enables fast streaming inference for LLMs.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing},
   file = {C\:\\Users\\27404\\Zotero\\storage\\448DFSNR\\Munkhdalai 等 - 2024 - Leave No Context Behind Efficient Infinite Contex.pdf;C\:\\Users\\27404\\Zotero\\storage\\2YQ847MM\\2404.html}
 }
@@ -1769,9 +1802,26 @@
   url = {http://arxiv.org/abs/2401.01325},
   urldate = {2024-04-14},
   abstract = {It is well known that LLMs cannot generalize well to long contexts whose lengths are larger than the training sequence length. This poses challenges when employing LLMs for processing long input sequences during inference. In this work, we argue that LLMs themselves have inherent capabilities to handle long contexts without fine-tuning. To achieve this goal, we propose SelfExtend to extend the context window of LLMs by constructing bi-level attention information: the grouped attention and the neighbor attention. The grouped attention captures the dependencies among tokens that are far apart, while neighbor attention captures dependencies among adjacent tokens within a specified range. The two-level attentions are computed based on the original model's self-attention mechanism during inference. With minor code modification, our SelfExtend can effortlessly extend existing LLMs' context window without any fine-tuning. We conduct comprehensive experiments on multiple benchmarks and the results show that our SelfExtend can effectively extend existing LLMs' context window length. The code can be found at \textbackslash url\{https://github.com/datamllab/LongLM\}.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\ZJ227VGA\\Jin 等 - 2024 - LLM Maybe LongLM Self-Extend LLM Context Window W.pdf;C\:\\Users\\27404\\Zotero\\storage\\YJPVEBX2\\2401.html}
+}
+
+@online{2024LongContextNotChen,
+  title = {Long {{Context}} Is {{Not Long}} at {{All}}: {{A Prospector}} of {{Long-Dependency Data}} for {{Large Language Models}}},
+  shorttitle = {Long {{Context}} Is {{Not Long}} at {{All}}},
+  author = {Chen, Longze and Liu, Ziqiang and He, Wanwei and Li, Yunshui and Luo, Run and Yang, Min},
+  date = {2024-05-28},
+  eprint = {2405.17915},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2405.17915},
+  url = {http://arxiv.org/abs/2405.17915},
+  urldate = {2024-07-02},
+  abstract = {Long-context modeling capabilities are important for large language models (LLMs) in various applications. However, directly training LLMs with long context windows is insufficient to enhance this capability since some training samples do not exhibit strong semantic dependencies across long contexts. In this study, we propose a data mining framework \textbackslash textbf\{ProLong\} that can assign each training sample with a long dependency score, which can be used to rank and filter samples that are more advantageous for enhancing long-context modeling abilities in LLM training. Specifically, we first use delta perplexity scores to measure the \textbackslash textit\{Dependency Strength\} between text segments in a given document. Then we refine this metric based on the \textbackslash textit\{Dependency Distance\} of these segments to incorporate spatial relationships across long-contexts. Final results are calibrated with a \textbackslash textit\{Dependency Specificity\} metric to prevent trivial dependencies introduced by repetitive patterns. Moreover, a random sampling approach is proposed to optimize the computational efficiency of ProLong. Comprehensive experiments on multiple benchmarks indicate that ProLong effectively identifies documents that carry long dependencies and LLMs trained on these documents exhibit significantly enhanced long-context modeling capabilities.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\AZVH4YVQ\\Chen 等 - 2024 - Long Context is Not Long at All A Prospector of L.pdf;C\:\\Users\\27404\\Zotero\\storage\\CJX9VKLT\\2405.html}
 }
 
 @online{2024LongLoRAEfficientFinetuningChen,
@@ -1785,7 +1835,7 @@
   url = {http://arxiv.org/abs/2309.12307},
   urldate = {2024-04-14},
   abstract = {We present LongLoRA, an efficient fine-tuning approach that extends the context sizes of pre-trained large language models (LLMs), with limited computation cost. Typically, training LLMs with long context sizes is computationally expensive, requiring extensive training hours and GPU resources. For example, training on the context length of 8192 needs 16x computational costs in self-attention layers as that of 2048. In this paper, we speed up the context extension of LLMs in two aspects. On the one hand, although dense global attention is needed during inference, fine-tuning the model can be effectively and efficiently done by sparse local attention. The proposed shifted sparse attention effectively enables context extension, leading to non-trivial computation saving with similar performance to fine-tuning with vanilla attention. Particularly, it can be implemented with only two lines of code in training, while being optional in inference. On the other hand, we revisit the parameter-efficient fine-tuning regime for context expansion. Notably, we find that LoRA for context extension works well under the premise of trainable embedding and normalization. LongLoRA combines this improved LoRA with S\textasciicircum 2-Attn. LongLoRA demonstrates strong empirical results on various tasks on Llama2 models from 7B/13B to 70B. LongLoRA extends Llama2 7B from 4k context to 100k, or Llama2 70B to 32k on a single 8x A100 machine. LongLoRA extends models' context while retaining their original architectures, and is compatible with most existing techniques, like Flash-Attention2. In addition, we further conduct supervised fine-tuning with LongLoRA and our long instruction-following LongAlpaca dataset.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\YVR35VZY\\Chen 等 - 2024 - LongLoRA Efficient Fine-tuning of Long-Context La.pdf;C\:\\Users\\27404\\Zotero\\storage\\SZAJAZS7\\2309.html}
 }
@@ -1802,7 +1852,7 @@
   url = {http://arxiv.org/abs/2402.13753},
   urldate = {2024-06-13},
   abstract = {Large context window is a desirable feature in large language models (LLMs). However, due to high fine-tuning costs, scarcity of long texts, and catastrophic values introduced by new token positions, current extended context windows are limited to around 128k tokens. This paper introduces LongRoPE that, for the first time, extends the context window of pre-trained LLMs to an impressive 2048k tokens, with up to only 1k fine-tuning steps at within 256k training lengths, while maintaining performance at the original short context window. This is achieved by three key innovations: (i) we identify and exploit two forms of non-uniformities in positional interpolation through an efficient search, providing a better initialization for fine-tuning and enabling an 8x extension in non-fine-tuning scenarios; (ii) we introduce a progressive extension strategy that first fine-tunes a 256k length LLM and then conducts a second positional interpolation on the fine-tuned extended LLM to achieve a 2048k context window; (iii) we readjust LongRoPE on 8k length to recover the short context window performance. Extensive experiments on LLaMA2 and Mistral across various tasks demonstrate the effectiveness of our method. Models extended via LongRoPE retain the original architecture with minor modifications to the positional embedding, and can reuse most pre-existing optimizations.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\IV6RRI2H\\Ding 等 - 2024 - LongRoPE Extending LLM Context Window Beyond 2 Mi.pdf;C\:\\Users\\27404\\Zotero\\storage\\AP62E2FK\\2402.html}
 }
@@ -1818,7 +1868,7 @@
   url = {http://arxiv.org/abs/2404.08801},
   urldate = {2024-04-18},
   abstract = {The quadratic complexity and weak length extrapolation of Transformers limits their ability to scale to long sequences, and while sub-quadratic solutions like linear attention and state space models exist, they empirically underperform Transformers in pretraining efficiency and downstream task accuracy. We introduce Megalodon, a neural architecture for efficient sequence modeling with unlimited context length. Megalodon inherits the architecture of Mega (exponential moving average with gated attention), and further introduces multiple technical components to improve its capability and stability, including complex exponential moving average (CEMA), timestep normalization layer, normalized attention mechanism and pre-norm with two-hop residual configuration. In a controlled head-to-head comparison with Llama2, Megalodon achieves better efficiency than Transformer in the scale of 7 billion parameters and 2 trillion training tokens. Megalodon reaches a training loss of 1.70, landing mid-way between Llama2-7B (1.75) and 13B (1.67). Code: https://github.com/XuezheMax/megalodon},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\LXVW2HN3\\Ma 等 - 2024 - Megalodon Efficient LLM Pretraining and Inference.pdf;C\:\\Users\\27404\\Zotero\\storage\\8FHCLQZE\\2404.html}
 }
@@ -1834,7 +1884,7 @@
   url = {http://arxiv.org/abs/2406.02536},
   urldate = {2024-06-24},
   abstract = {Large Language Models (LLMs) are increasingly applied in various real-world scenarios due to their excellent generalization capabilities and robust generative abilities. However, they exhibit position bias, also known as "lost in the middle", a phenomenon that is especially pronounced in long-context scenarios, which indicates the placement of the key information in different positions of a prompt can significantly affect accuracy. This paper first explores the micro-level manifestations of position bias, concluding that attention weights are a micro-level expression of position bias. It further identifies that, in addition to position embeddings, causal attention mask also contributes to position bias by creating position-specific hidden states. Based on these insights, we propose a method to mitigate position bias by scaling this positional hidden states. Experiments on the NaturalQuestions Multi-document QA, KV retrieval, LongBench and timeline reorder tasks, using various models including RoPE models, context windowextended models, and Alibi models, demonstrate the effectiveness and generalizability of our approach. Our method can improve performance by up to 15.2\% by modifying just one dimension of hidden states. Our code is available at https://aka.ms/PositionalHidden.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\CSFD3UYX\\Yu 等 - 2024 - Mitigate Position Bias in Large Language Models vi.pdf;C\:\\Users\\27404\\Zotero\\storage\\HG2WG4KM\\2406.html}
 }
@@ -1851,7 +1901,7 @@
   url = {http://arxiv.org/abs/2310.01801},
   urldate = {2024-05-09},
   abstract = {In this study, we introduce adaptive KV cache compression, a plug-and-play method that reduces the memory footprint of generative inference for Large Language Models (LLMs). Different from the conventional KV cache that retains key and value vectors for all context tokens, we conduct targeted profiling to discern the intrinsic structure of attention modules. Based on the recognized structure, we then construct the KV cache in an adaptive manner: evicting long-range contexts on attention heads emphasizing local contexts, discarding non-special tokens on attention heads centered on special tokens, and only employing the standard KV cache for attention heads that broadly attend to all tokens. Moreover, with the lightweight attention profiling used to guide the construction of the adaptive KV cache, FastGen can be deployed without resource-intensive fine-tuning or re-training. In our experiments across various asks, FastGen demonstrates substantial reduction on GPU memory consumption with negligible generation quality loss. We will release our code and the compatible CUDA kernel for reproducibility.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\BCKUVX3S\\Ge 等 - 2024 - Model Tells You What to Discard Adaptive KV Cache.pdf;C\:\\Users\\27404\\Zotero\\storage\\WSKMK4HQ\\2310.html}
 }
@@ -1867,7 +1917,7 @@
   url = {http://arxiv.org/abs/2310.05209},
   urldate = {2024-04-14},
   abstract = {The extrapolation capability of Large Language Models (LLMs) based on Rotary Position Embedding is currently a topic of considerable interest. The mainstream approach to addressing extrapolation with LLMs involves modifying RoPE by replacing 10000, the rotary base of \$\textbackslash theta\_n=\{10000\}\textasciicircum\{-2n/d\}\$ in the original RoPE, with a larger value and providing longer fine-tuning text. In this work, we first observe that fine-tuning a RoPE-based LLM with either a smaller or larger base in pre-training context length could significantly enhance its extrapolation performance. After that, we propose \textbackslash textbf\{\textbackslash textit\{Scaling Laws of RoPE-based Extrapolation\}\}, a unified framework from the periodic perspective, to describe the relationship between the extrapolation performance and base value as well as tuning context length. In this process, we also explain the origin of the RoPE-based extrapolation issue by \textbackslash textbf\{\textbackslash textit\{critical dimension for extrapolation\}\}. Besides these observations and analyses, we achieve extrapolation up to 1 million context length within only 16K training length on LLaMA2 7B and 13B.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\XFHZL4LG\\Liu 等 - 2024 - Scaling Laws of RoPE-based Extrapolation.pdf;C\:\\Users\\27404\\Zotero\\storage\\JI9XW5KW\\2310.html}
 }
@@ -1883,7 +1933,7 @@
   url = {http://arxiv.org/abs/2402.08268},
   urldate = {2024-06-18},
   abstract = {Current language models fall short in understanding aspects of the world not easily described in words, and struggle with complex, long-form tasks. Video sequences offer valuable temporal information absent in language and static images, making them attractive for joint modeling with language. Such models could develop a understanding of both human textual knowledge and the physical world, enabling broader AI capabilities for assisting humans. However, learning from millions of tokens of video and language sequences poses challenges due to memory constraints, computational complexity, and limited datasets. To address these challenges, we curate a large dataset of diverse videos and books, utilize the Blockwise RingAttention technique to scalably train on long sequences, and gradually increase context size from 4K to 1M tokens. This paper makes the following contributions: (a) Largest context size neural network: We train one of the largest context size transformers on long video and language sequences, setting new benchmarks in difficult retrieval tasks and long video understanding. (b) Solutions for overcoming vision-language training challenges, including using masked sequence packing for mixing different sequence lengths, loss weighting to balance language and vision, and model-generated QA dataset for long sequence chat. (c) A highly-optimized implementation with RingAttention, Blockwise Transformers, masked sequence packing, and other key features for training on millions-length multimodal sequences. (d) Fully open-sourced a family of 7B parameter models capable of processing long text documents (LWM-Text, LWM-Text-Chat) and videos (LWM, LWM-Chat) of over 1M tokens. This work paves the way for training on massive datasets of long video and language to develop understanding of both human knowledge and the multimodal world, and broader capabilities.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning},
   file = {C:\Users\27404\Zotero\storage\L6MGMIRP\2402.html}
 }
@@ -1900,7 +1950,7 @@
   url = {http://arxiv.org/abs/2403.04652},
   urldate = {2024-06-18},
   abstract = {We introduce the Yi model family, a series of language and multimodal models that demonstrate strong multi-dimensional capabilities. The Yi model family is based on 6B and 34B pretrained language models, then we extend them to chat models, 200K long context models, depth-upscaled models, and vision-language models. Our base models achieve strong performance on a wide range of benchmarks like MMLU, and our finetuned chat models deliver strong human preference rate on major evaluation platforms like AlpacaEval and Chatbot Arena. Building upon our scalable super-computing infrastructure and the classical transformer architecture, we attribute the performance of Yi models primarily to its data quality resulting from our data-engineering efforts. For pretraining, we construct 3.1 trillion tokens of English and Chinese corpora using a cascaded data deduplication and quality filtering pipeline. For finetuning, we polish a small scale (less than 10K) instruction dataset over multiple iterations such that every single instance has been verified directly by our machine learning engineers. For vision-language, we combine the chat language model with a vision transformer encoder and train the model to align visual representations to the semantic space of the language model. We further extend the context length to 200K through lightweight continual pretraining and demonstrate strong needle-in-a-haystack retrieval performance. We show that extending the depth of the pretrained checkpoint through continual pretraining further improves performance. We believe that given our current results, continuing to scale up model parameters using thoroughly optimized data will lead to even stronger frontier models.},
-  pubstate = {preprint},
+  pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\TKV5PB3Y\\AI 等 - 2024 - Yi Open Foundation Models by 01.AI.pdf;C\:\\Users\\27404\\Zotero\\storage\\657X57VC\\2403.html}
 }

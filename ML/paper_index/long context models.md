@@ -39,13 +39,14 @@ Famous long context models
 
 
 | Name            | BaseModel | Method              | PreTrain |     FineTune     |    Test    | \#Tokens  |
-|:--------------- |:--------- | ------------------- |:--------:|:----------------:|:----------:|:---------:|
+| :-------------- | :-------- | ------------------- | :------: | :--------------: | :--------: | :-------: |
 | Llama2          |           | $b=\mathrm{10k}$    |    4k    |                  |            |           |
 | Llama3          |           | $b=\mathrm{500k}$   |    8k    |                  |            |           |
-| PI              | Llama1    | PI                  |    2k    |    32k (x16)     |            |    4B     |
-| LongLoRA        | Llama2    | PI+PEFT             |    4k    | 32k (x8) \~ 100k |            |    2B     |
-| YaRN            | Llama2    | $b'=f(s,\lambda_i)$ |    4k    |    64k (x16)     | 128k (x32) |   2.5B    |
-| Llama2Long(ABF) | Llama2    | $b'=\mathrm{500k}$  |    4k    |     32k (x8)     |            |   400B    |
-| CodeLlama       | Llama2    | $b'=\mathrm{1M}$    |    4k    |     16k (x4)     |   100k+    |    20B    |
-| LWM             | Llama2    | $b'=\mathrm{5M}$    |    4k    |  32k\~1M (x250)  |            |    34B    |
-| Yi              | Yi        | $b'=\mathrm{50M}$   |    4k    |    200k (x50)    |            | 5B(1\~2B) |
+| PI              | Llama1    | PI                  |    2k    |    32k (16x)     |            |    4B     |
+| LongLoRA        | Llama2    | PI+PEFT             |    4k    | 32k (8x) \~ 100k |            |    2B     |
+| YaRN            | Llama2    | $b'=f(s,\lambda_i)$ |    4k    |    64k (16x)     | 128k (x32) |   2.5B    |
+| Llama2Long(ABF) | Llama2    | $b'=\mathrm{500k}$  |    4k    |     32k (8x)     |            |   400B    |
+| CodeLlama       | Llama2    | $b'=\mathrm{1M}$    |    4k    |     16k (4x)     |   100k+    |    20B    |
+| LWM             | Llama2    | $b'=\mathrm{5M}$    |    4k    |  32k\~1M (250x)  |            |    34B    |
+| Yi              | Yi        | $b'=\mathrm{50M}$   |    4k    |    200k (50x)    |            | 5B(1\~2B) |
+| LongRoPE        | Llama2    | 超参数搜索               |    4k    |    256k (64x)    | 2M (512x)  |  6.5B+8B  |

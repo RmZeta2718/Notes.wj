@@ -32,6 +32,7 @@ aliases:
 
 通过超参数搜索：4k → 32k （8x）
 
+$|P|=64,N_1=N_2=16,p=0.3,\mathcal T=40$，PPL 计算 3 个样本，$L>512k$ 规模减半
 ### Extending LLM Context Window to 2048K
 
 - 搜索两组超参数：128k/256k (32x/64x)
