@@ -220,6 +220,24 @@ GIL 导致 python 解释器是单线程的，任何多线程的 python 程序，
 
 https://www.bilibili.com/video/BV1Ve411Y7Bv
 
+```python
+def set_global_logger(log_level: int = logging.INFO):
+    # remove all existing handlers and set the global log level
+    for logger in [logging.getLogger(name) for name in logging.root.manager.loggerDict]:
+        if logger.name in IGNORE_LOGGERS:
+            continue
+        logger.handlers = []
+        logger.level = logging.NOTSET
+        logger.propagate = True
+
+    logging.basicConfig(
+        level=log_level,
+        format=f"%(asctime)s [%(levelname)s|Rank{os.environ.get('LOCAL_RANK', '?')}|%(name)s:%(lineno)s] >> %(message)s",
+        handlers=[logging.StreamHandler()],
+    )
+
+```
+
 ## VSCode 调试
 
 > [How to debug remote Python script in VS Code - Stack Overflow](https://stackoverflow.com/questions/73378057/how-to-debug-remote-python-script-in-vs-code)

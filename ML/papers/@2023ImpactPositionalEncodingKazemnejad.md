@@ -2,7 +2,7 @@
 aliases: ["The Impact of Positional Encoding on Length Generalization in Transformers", "The Impact of Positional Encoding on Length Generalization in Transformers, 2023"]
 ---
 # The Impact of Positional Encoding on Length Generalization in Transformers
-- **Journal**: arxiv:2305.19466
+- **Journal**: arxiv:2305.19466 #NeurIPS/23  
 - **Author**: Amirhossein Kazemnejad, Inkit Padhi, Karthikeyan Natesan Ramamurthy, Payel Das, Siva Reddy
 - **Year**: 2023
 - **URL**: http://arxiv.org/abs/2305.19466

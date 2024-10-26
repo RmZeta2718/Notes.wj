@@ -240,6 +240,17 @@ with init_empty_weights():
 
 > 不要在 `init_empty_weights` 里比较参数是否相同（`parameter is parameter`）
 
+# LLM
+
+## left padding
+
+[为什么当前的 LLM 使用左侧填充？ |追踪逻辑 --- Why current LLM uses left padding? | Trace Logits (junronglin.com)](https://junronglin.com/article/why_left_padding)
+
+https://discuss.huggingface.co/t/the-effect-of-padding-side/67188/4
+
+为什么right padding不对：虽然attention正确地mask掉了，但是生成第一个token时，logits取自padding token，所以是错误的。
+- right padding时：`token token token pad pad`
+
 # Monitor
 
 ### 基础 GPU 监控

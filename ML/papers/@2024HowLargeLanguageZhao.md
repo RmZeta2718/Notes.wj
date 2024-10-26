@@ -20,7 +20,13 @@ aliases:
 
 ## 论文提供的关键元素、关键设计
 
-### 总体流程
+### Parallel Language-specific Neuron Detection (PLND)
+
+mask hidden_states 的某一维（对应参数矩阵的一行或一列，行还是列取决于计算过程），比较mask前后的层输出差的模长，超过阈值（超参数）的视为高度激活的参数
+
+给特定语言的输入，就能筛选出特定语言的神经元
+
+
 
 ## 实验
 

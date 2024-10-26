@@ -3,8 +3,8 @@ aliases: ["PoSE: Efficient Context Window Extension of LLMs via Positional Skip-
 ---
 # PoSE: Efficient Context Window Extension of LLMs via Positional Skip-wise Training
 
-- **Journal**: arxiv:2309.10400
-- **Author**: Dawei Zhu, Nan Yang, Liang Wang, Yifan Song, Wenhao Wu, Furu Wei, Sujian Li
+- **Journal**: arxiv:2309.10400 #ICLR/24
+- **Author**: Dawei Zhu, Nan Yang, Liang Wang, Yifan Song, Wenhao Wu, **Furu Wei**, Sujian Li
 - **Year**: 2023
 - **URL**: http://arxiv.org/abs/2309.10400
 - [**Zotero**](zotero://select/items/@2023PoSEEfficientContextZhu)
