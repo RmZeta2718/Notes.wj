@@ -1704,6 +1704,22 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\Q9G4BVSH\\Hu 等 - 2024 - Can Perplexity Reflect Large Language Model's Abil.pdf;C\:\\Users\\27404\\Zotero\\storage\\S6TSKNLT\\2405.html}
 }
 
+@online{2024CItruSChunkedInstructionawareBai,
+  title = {{{CItruS}}: {{Chunked Instruction-aware State Eviction}} for {{Long Sequence Modeling}}},
+  shorttitle = {{{CItruS}}},
+  author = {Bai, Yu and Zou, Xiyuan and Huang, Heyan and Chen, Sanxing and Rondeau, Marc-Antoine and Gao, Yang and Cheung, Jackie Chi Kit},
+  date = {2024-10-08},
+  eprint = {2406.12018},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2406.12018},
+  url = {http://arxiv.org/abs/2406.12018},
+  urldate = {2024-10-29},
+  abstract = {Long sequence modeling has gained broad interest as large language models (LLMs) continue to advance. Recent research has identified that a large portion of hidden states within the key-value caches of Transformer models can be discarded (also termed evicted) without affecting the perplexity performance in generating long sequences. However, we show that these methods, despite preserving perplexity performance, often drop information that is important for solving downstream tasks, a problem which we call information neglect. To address this issue, we introduce Chunked Instruction-aware State Eviction (CItruS), a novel modeling technique that integrates the attention preferences useful for a downstream task into the eviction process of hidden states. In addition, we design a method for chunked sequence processing to further improve efficiency. Our training-free method exhibits superior performance on long sequence comprehension and retrieval tasks over several strong baselines under the same memory budget, while preserving language modeling perplexity. The code and data have been released at https://github.com/ybai-nlp/CItruS.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\XFEKRPV3\\Bai 等 - 2024 - CItruS Chunked Instruction-aware State Eviction f.pdf;C\:\\Users\\27404\\Zotero\\storage\\5QD2TBB4\\2406.html}
+}
+
 @online{2024CodeLlamaOpenRoziere,
   title = {Code {{Llama}}: {{Open Foundation Models}} for {{Code}}},
   shorttitle = {Code {{Llama}}},
@@ -2057,6 +2073,36 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   file = {C:\Users\27404\Zotero\storage\BALR6U8E\Zhao 等 - 2024 - A Survey of Large Language Models.pdf}
+}
+
+@online{2024UncoveringHiddenGeometrySong,
+  title = {Uncovering Hidden Geometry in {{Transformers}} via Disentangling Position and Context},
+  author = {Song, Jiajun and Zhong, Yiqiao},
+  date = {2024-02-04},
+  eprint = {2310.04861},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2310.04861},
+  url = {http://arxiv.org/abs/2310.04861},
+  urldate = {2024-10-29},
+  abstract = {Transformers are widely used to extract semantic meanings from input tokens, yet they usually operate as black-box models. In this paper, we present a simple yet informative decomposition of hidden states (or embeddings) of trained transformers into interpretable components. For any layer, embedding vectors of input sequence samples are represented by a tensor \$\textbackslash boldsymbol\{h\} \textbackslash in \textbackslash mathbb\{R\}\textasciicircum\{C \textbackslash times T \textbackslash times d\}\$. Given embedding vector \$\textbackslash boldsymbol\{h\}\_\{c,t\} \textbackslash in \textbackslash mathbb\{R\}\textasciicircum d\$ at sequence position \$t \textbackslash le T\$ in a sequence (or context) \$c \textbackslash le C\$, extracting the mean effects yields the decomposition \textbackslash [ \textbackslash boldsymbol\{h\}\_\{c,t\} = \textbackslash boldsymbol\{\textbackslash mu\} + \textbackslash mathbf\{pos\}\_t + \textbackslash mathbf\{ctx\}\_c + \textbackslash mathbf\{resid\}\_\{c,t\} \textbackslash ] where \$\textbackslash boldsymbol\{\textbackslash mu\}\$ is the global mean vector, \$\textbackslash mathbf\{pos\}\_t\$ and \$\textbackslash mathbf\{ctx\}\_c\$ are the mean vectors across contexts and across positions respectively, and \$\textbackslash mathbf\{resid\}\_\{c,t\}\$ is the residual vector. For popular transformer architectures and diverse text datasets, empirically we find pervasive mathematical structure: (1) \$(\textbackslash mathbf\{pos\}\_t)\_\{t\}\$ forms a low-dimensional, continuous, and often spiral shape across layers, (2) \$(\textbackslash mathbf\{ctx\}\_c)\_c\$ shows clear cluster structure that falls into context topics, and (3) \$(\textbackslash mathbf\{pos\}\_t)\_\{t\}\$ and \$(\textbackslash mathbf\{ctx\}\_c)\_c\$ are mutually nearly orthogonal. We argue that smoothness is pervasive and beneficial to transformers trained on languages, and our decomposition leads to improved model interpretability.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\6EHILVPJ\\Song 和 Zhong - 2024 - Uncovering hidden geometry in Transformers via dis.pdf;C\:\\Users\\27404\\Zotero\\storage\\5PA8FM86\\2310.html}
+}
+
+@online{2024UnderstandingCollapseLLMsYang,
+  title = {Understanding the {{Collapse}} of {{LLMs}} in {{Model Editing}}},
+  author = {Yang, Wanli and Sun, Fei and Tan, Jiajun and Ma, Xinyu and Su, Du and Yin, Dawei and Shen, Huawei},
+  date = {2024-09-30},
+  eprint = {2406.11263},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2406.11263},
+  url = {http://arxiv.org/abs/2406.11263},
+  urldate = {2024-10-29},
+  abstract = {Despite significant progress in model editing methods, their application in real-world scenarios remains challenging as they often cause large language models (LLMs) to collapse. Among them, ROME is particularly concerning, as it could disrupt LLMs with only a single edit. In this paper, we study the root causes of such collapse. Through extensive analysis, we identify two primary factors that contribute to the collapse: i) inconsistent handling of prefixed and unprefixed keys in the parameter update equation may result in very small denominators, causing excessively large parameter updates; ii) the subject of collapse cases is usually the first token, whose unprefixed key distribution significantly differs from the prefixed key distribution in autoregressive transformers, causing the aforementioned issue to materialize. To validate our findings, we propose a simple yet effective approach: uniformly using prefixed keys during editing phase and adding prefixes during testing phase to ensure the consistency between training and testing. The experimental results show that the proposed solution can prevent model collapse while maintaining the effectiveness of the edits.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\FIFJL3DD\\Yang 等 - 2024 - Understanding the Collapse of LLMs in Model Editin.pdf;C\:\\Users\\27404\\Zotero\\storage\\MRZ6QUFI\\2406.html}
 }
 
 @online{2024UnveilingLinguisticRegionsZhang,

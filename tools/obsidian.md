@@ -10,7 +10,7 @@
 
 命令面板输入 `obsi` 选择 **重新加载 Obsidian（不保存当前编辑内容）**
 
-已在 ` 命令面板-置顶命令 ` 中置顶
+已在 `命令面板-置顶命令` 中置顶
 
 ### 重命名（移动）时自动更新链接
 
@@ -30,7 +30,7 @@
 
 https://forum.obsidian.md/t/automatic-inline-update-of-links-to-headers-and-blocks-when-they-are-modified-no-extra-dialog-window/25412
 
-移动 heading 到另一个文件：用笔记重组（官方插件， [Note Composer](https://help.obsidian.md/Plugins/Note+composer) ），但是该插件暂不支持链接更新，FR在提了（22年5月）：https://forum.obsidian.md/t/note-composer-links-to-blocks-and-headers-should-be-updated-when-extracting/37534。就硬等。
+移动 heading 到另一个文件：用笔记重组（官方插件， [Note Composer](https://help.obsidian.md/Plugins/Note+composer) ），但是该插件暂不支持链接更新，FR 在提了（22 年 5 月）：https://forum.obsidian.md/t/note-composer-links-to-blocks-and-headers-should-be-updated-when-extracting/37534。就硬等。
 
 ### YAML front matter
 
@@ -59,11 +59,11 @@ https://forum.obsidian.md/t/automatically-keep-numbered-list-ordered-in-editor-a
 
 ~~这玩意为什么不是默认的？折磨人？找了半天 :(~~
 
-对不起，` 设置-编辑器-缩减栏宽 ` 关闭
+对不起，`设置-编辑器-缩减栏宽` 关闭
 
 ### 代码字体
 
-` 外观-代码字体 `：Consolas
+`外观-代码字体`：Consolas
 
 ### 快捷键
 
@@ -91,11 +91,11 @@ https://forum.obsidian.md/t/need-help-with-ccs-themes/20784/2
 
 ## 插件
 
- [精华插件合集 | obsidian 文档咖啡豆版](https://obsidian.vip/zh/community-plugins/Recommended-plugins.html)
+[精华插件合集 | obsidian 文档咖啡豆版](https://obsidian.vip/zh/community-plugins/Recommended-plugins.html)
 
-### pangu
+### obsidian-plugin-prettier
 
-盘古。中英文中间加空格： `Alt+Shift+F`（vscode style shortcut）
+快捷键改为： `Alt+Shift+F`（vscode style shortcut）
 
 ### Advanced Tables
 
@@ -180,7 +180,7 @@ heading 等功能不知道是内部自己实现了还是调用了 obsidian 的�
 
 防止打开重复的 tab
 
-来自一个 [FR](https://forum.obsidian.md/t/ide-style-navigation-tab-reuse-on-link-opening-tab-management/46671/6) ，在FR没有完成之前，以插件的形式存在。
+来自一个 [FR](https://forum.obsidian.md/t/ide-style-navigation-tab-reuse-on-link-opening-tab-management/46671/6) ，在 FR 没有完成之前，以插件的形式存在。
 
 ### obsidian-proxy-github
 
@@ -244,4 +244,4 @@ https://forum.obsidian.md/t/dismiss-specific-unlinked-mentions/42583
 
 ## Reference
 
- [Obsidian 文档咖啡豆版 | Obsidian Docs by CoffeeBean](https://obsidian.vip/)
+[Obsidian 文档咖啡豆版 | Obsidian Docs by CoffeeBean](https://obsidian.vip/)

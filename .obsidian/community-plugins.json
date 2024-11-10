@@ -4,7 +4,6 @@
   "obsidian-vimrc-support",
   "lapel",
   "obsidian-completr",
-  "obsidian-pangu",
   "no-dupe-leaves",
   "copy-document-as-html",
   "dataview",
@@ -12,5 +11,6 @@
   "obsidian-latex-suite",
   "vim-im-select",
   "editing-toolbar",
-  "obsidian-quiet-outline"
+  "obsidian-quiet-outline",
+  "obsidian-plugin-prettier"
 ]
