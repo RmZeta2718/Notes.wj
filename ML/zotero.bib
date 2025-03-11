@@ -1672,6 +1672,21 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\32KPEGSC\\Peng 等 - 2023 - YaRN Efficient Context Window Extension of Large .pdf;C\:\\Users\\27404\\Zotero\\storage\\XMK8KK5M\\2309.html}
 }
 
+@online{2024AnalysingImpactSequenceZhao,
+  title = {Analysing {{The Impact}} of {{Sequence Composition}} on {{Language Model Pre-Training}}},
+  author = {Zhao, Yu and Qu, Yuanbin and Staniszewski, Konrad and Tworkowski, Szymon and Liu, Wei and Miłoś, Piotr and Wu, Yuxiang and Minervini, Pasquale},
+  date = {2024-02-21},
+  eprint = {2402.13991},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2402.13991},
+  url = {http://arxiv.org/abs/2402.13991},
+  urldate = {2024-12-07},
+  abstract = {Most language model pre-training frameworks concatenate multiple documents into fixed-length sequences and use causal masking to compute the likelihood of each token given its context; this strategy is widely adopted due to its simplicity and efficiency. However, to this day, the influence of the pre-training sequence composition strategy on the generalisation properties of the model remains under-explored. In this work, we find that applying causal masking can lead to the inclusion of distracting information from previous documents during pre-training, which negatively impacts the performance of the models on language modelling and downstream tasks. In intra-document causal masking, the likelihood of each token is only conditioned on the previous tokens in the same document, eliminating potential distracting information from previous documents and significantly improving performance. Furthermore, we find that concatenating related documents can reduce some potential distractions during pre-training, and our proposed efficient retrieval-based sequence construction method, BM25Chunk, can improve in-context learning (+11.6\textbackslash\%), knowledge memorisation (+9.8\textbackslash\%), and context utilisation (+7.2\textbackslash\%) abilities of language models without sacrificing efficiency.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\HLGZC5Z8\\Zhao 等 - 2024 - Analysing The Impact of Sequence Composition on La.pdf;C\:\\Users\\27404\\Zotero\\storage\\EFLIPWXM\\2402.html}
+}
+
 @online{2024BaseRoPEBoundsMen,
   title = {Base of {{RoPE Bounds Context Length}}},
   author = {Men, Xin and Xu, Mingyu and Wang, Bingning and Zhang, Qingyu and Lin, Hongyu and Han, Xianpei and Chen, Weipeng},
@@ -1686,6 +1701,22 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\TMFEQBPL\\Men 等 - 2024 - Base of RoPE Bounds Context Length.pdf;C\:\\Users\\27404\\Zotero\\storage\\TZQGT8VV\\2405.html}
+}
+
+@online{2024BreakingMemoryBarrierCheng,
+  title = {Breaking the {{Memory Barrier}}: {{Near Infinite Batch Size Scaling}} for {{Contrastive Loss}}},
+  shorttitle = {Breaking the {{Memory Barrier}}},
+  author = {Cheng, Zesen and Zhang, Hang and Li, Kehan and Leng, Sicong and Hu, Zhiqiang and Wu, Fei and Zhao, Deli and Li, Xin and Bing, Lidong},
+  date = {2024-10-22},
+  eprint = {2410.17243},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2410.17243},
+  url = {http://arxiv.org/abs/2410.17243},
+  urldate = {2024-12-03},
+  abstract = {Contrastive loss is a powerful approach for representation learning, where larger batch sizes enhance performance by providing more negative samples to better distinguish between similar and dissimilar data. However, scaling batch sizes is constrained by the quadratic growth in GPU memory consumption, primarily due to the full instantiation of the similarity matrix. To address this, we propose a tile-based computation strategy that partitions the contrastive loss calculation into arbitrary small blocks, avoiding full materialization of the similarity matrix. Furthermore, we introduce a multi-level tiling strategy to leverage the hierarchical structure of distributed systems, employing ring-based communication at the GPU level to optimize synchronization and fused kernels at the CUDA core level to reduce I/O overhead. Experimental results show that the proposed method scales batch sizes to unprecedented levels. For instance, it enables contrastive training of a CLIP-ViT-L/14 model with a batch size of 4M or 12M using 8 or 32 A800 80GB without sacrificing any accuracy. Compared to SOTA memory-efficient solutions, it achieves a two-order-of-magnitude reduction in memory while maintaining comparable speed. The code will be made publicly available.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\LLE632LD\\Cheng 等 - 2024 - Breaking the Memory Barrier Near Infinite Batch S.pdf;C\:\\Users\\27404\\Zotero\\storage\\VLQ6R5SI\\2410.html}
 }
 
 @online{2024CanPerplexityReflectHu,
@@ -1850,6 +1881,32 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\NBP6J3DB\\Zhang 等 - 2024 - Extending LLMs' Context Window with 100 Samples.pdf;C\:\\Users\\27404\\Zotero\\storage\\FHCWSEI9\\2401.html}
 }
 
+@online{2024FewerTruncationsImproveDing,
+  title = {Fewer {{Truncations Improve Language Modeling}}},
+  author = {Ding, Hantian and Wang, Zijian and Paolini, Giovanni and Kumar, Varun and Deoras, Anoop and Roth, Dan and Soatto, Stefano},
+  date = {2024-04-16},
+  url = {https://arxiv.org/abs/2404.10830v2},
+  urldate = {2024-12-08},
+  abstract = {In large language model training, input documents are typically concatenated together and then split into sequences of equal length to avoid padding tokens. Despite its efficiency, the concatenation approach compromises data integrity -- it inevitably breaks many documents into incomplete pieces, leading to excessive truncations that hinder the model from learning to compose logically coherent and factually consistent content that is grounded on the complete context. To address the issue, we propose Best-fit Packing, a scalable and efficient method that packs documents into training sequences through length-aware combinatorial optimization. Our method completely eliminates unnecessary truncations while retaining the same training efficiency as concatenation. Empirical results from both text and code pre-training show that our method achieves superior performance (e.g., relatively +4.7\% on reading comprehension; +16.8\% in context following; and +9.2\% on program synthesis), and reduces closed-domain hallucination effectively by up to 58.3\%.},
+  langid = {english},
+  organization = {arXiv.org}
+}
+
+@online{2024FewerTruncationsImproveDinga,
+  title = {Fewer {{Truncations Improve Language Modeling}}},
+  author = {Ding, Hantian and Wang, Zijian and Paolini, Giovanni and Kumar, Varun and Deoras, Anoop and Roth, Dan and Soatto, Stefano},
+  date = {2024-05-02},
+  eprint = {2404.10830},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2404.10830},
+  url = {http://arxiv.org/abs/2404.10830},
+  urldate = {2024-12-08},
+  abstract = {In large language model training, input documents are typically concatenated together and then split into sequences of equal length to avoid padding tokens. Despite its efficiency, the concatenation approach compromises data integrity -- it inevitably breaks many documents into incomplete pieces, leading to excessive truncations that hinder the model from learning to compose logically coherent and factually consistent content that is grounded on the complete context. To address the issue, we propose Best-fit Packing, a scalable and efficient method that packs documents into training sequences through length-aware combinatorial optimization. Our method completely eliminates unnecessary truncations while retaining the same training efficiency as concatenation. Empirical results from both text and code pre-training show that our method achieves superior performance (e.g., relatively +4.7\% on reading comprehension; +16.8\% in context following; and +9.2\% on program synthesis), and reduces closed-domain hallucination effectively by up to 58.3\%.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\Y5UTUXCC\\Ding 等 - 2024 - Fewer Truncations Improve Language Modeling.pdf;C\:\\Users\\27404\\Zotero\\storage\\956NWU6Z\\2404.html}
+}
+
 @online{2024HowLargeLanguageZhao,
   title = {How Do {{Large Language Models Handle Multilingualism}}?},
   author = {Zhao, Yiran and Zhang, Wenxuan and Chen, Guizhen and Kawaguchi, Kenji and Bing, Lidong},
@@ -1864,6 +1921,21 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\FPHQY6RS\\Zhao 等 - 2024 - How do Large Language Models Handle Multilingualis.pdf;C\:\\Users\\27404\\Zotero\\storage\\JVMEDCDK\\2402.html}
+}
+
+@online{2024HowTrainLongContextGao,
+  title = {How to {{Train Long-Context Language Models}} ({{Effectively}})},
+  author = {Gao, Tianyu and Wettig, Alexander and Yen, Howard and Chen, Danqi},
+  date = {2024-10-03},
+  eprint = {2410.02660},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2410.02660},
+  url = {http://arxiv.org/abs/2410.02660},
+  urldate = {2024-12-07},
+  abstract = {We study continued training and supervised fine-tuning (SFT) of a language model (LM) to make effective use of long-context information. We first establish a reliable evaluation protocol to guide model development -- Instead of perplexity or simple needle-in-a-haystack (NIAH) tests, we use a broad set of long-context tasks, and we evaluate models after SFT with instruction data as this better reveals long-context abilities. Supported by our robust evaluations, we run thorough experiments to decide the data mix for continued pre-training, the instruction tuning dataset, and many other design choices. We find that (1) code repositories and books are excellent sources of long data, but it is crucial to combine them with high-quality short data; (2) training with a sequence length beyond the evaluation length boosts long-context performance; (3) for SFT, using only short instruction datasets yields strong performance on long-context tasks. Our final model, ProLong-8B, which is initialized from Llama-3 and trained on 40B tokens, demonstrates state-of-the-art long-context performance among similarly sized models at a length of 128K. ProLong outperforms Llama-3.18B-Instruct on the majority of long-context tasks despite having seen only 5\% as many tokens during long-context training. Additionally, ProLong can effectively process up to 512K tokens, one of the longest context windows of publicly available LMs.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\U3CUXGX2\\Gao 等 - 2024 - How to Train Long-Context Language Models (Effecti.pdf;C\:\\Users\\27404\\Zotero\\storage\\GH6HZDNN\\2410.html}
 }
 
 @online{2024LeaveNoContextMunkhdalai,
@@ -1914,6 +1986,21 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\ZJ227VGA\\Jin 等 - 2024 - LLM Maybe LongLM Self-Extend LLM Context Window W.pdf;C\:\\Users\\27404\\Zotero\\storage\\YJPVEBX2\\2401.html}
+}
+
+@online{2024LongContextLanguageModelingYen,
+  title = {Long-{{Context Language Modeling}} with {{Parallel Context Encoding}}},
+  author = {Yen, Howard and Gao, Tianyu and Chen, Danqi},
+  date = {2024-06-11},
+  eprint = {2402.16617},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2402.16617},
+  url = {http://arxiv.org/abs/2402.16617},
+  urldate = {2024-12-07},
+  abstract = {Extending large language models (LLMs) to process longer inputs is crucial for a wide range of applications. However, the substantial computational cost of transformers and limited generalization of positional encoding restrict the size of their context window. We introduce Context Expansion with Parallel Encoding (CEPE), a framework that can be applied to any existing decoder-only LLMs to extend their context window. CEPE employs a small encoder to process long inputs chunk by chunk, enabling the frozen decoder to utilize additional contexts via cross-attention. CEPE is efficient, generalizable, and versatile: trained with 8K-token documents, it extends the context window of LLAMA-2 to 128K tokens, offering 10x the throughput with only 1/6 of the memory. CEPE yields strong performance on language modeling and in-context learning. CEPE also excels in retrieval-augmented applications, while existing long-context models degenerate with retrieved contexts. We further introduce a CEPE variant that can extend the context window of instruction-tuned models using only unlabeled data, and showcase its effectiveness on LLAMA-2-CHAT, leading to a strong instruction-following model that can leverage very long contexts on downstream tasks.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\7QYSV39R\\Yen 等 - 2024 - Long-Context Language Modeling with Parallel Conte.pdf;C\:\\Users\\27404\\Zotero\\storage\\ZK8C74GH\\2402.html}
 }
 
 @online{2024LongContextNotChen,
@@ -2030,6 +2117,22 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\2IULIB9S\\Wu 等 - 2024 - Retrieval Head Mechanistically Explains Long-Conte.pdf;C\:\\Users\\27404\\Zotero\\storage\\FNMS5FZ2\\2404.html}
 }
 
+@online{2024RULERWhatsRealHsieha,
+  title = {{{RULER}}: {{What}}'s the {{Real Context Size}} of {{Your Long-Context Language Models}}?},
+  shorttitle = {{{RULER}}},
+  author = {Hsieh, Cheng-Ping and Sun, Simeng and Kriman, Samuel and Acharya, Shantanu and Rekesh, Dima and Jia, Fei and Zhang, Yang and Ginsburg, Boris},
+  date = {2024-08-06},
+  eprint = {2404.06654},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2404.06654},
+  url = {http://arxiv.org/abs/2404.06654},
+  urldate = {2024-12-09},
+  abstract = {The needle-in-a-haystack (NIAH) test, which examines the ability to retrieve a piece of information (the "needle") from long distractor texts (the "haystack"), has been widely adopted to evaluate long-context language models (LMs). However, this simple retrieval-based test is indicative of only a superficial form of long-context understanding. To provide a more comprehensive evaluation of long-context LMs, we create a new synthetic benchmark RULER with flexible configurations for customized sequence length and task complexity. RULER expands upon the vanilla NIAH test to encompass variations with diverse types and quantities of needles. Moreover, RULER introduces new task categories multi-hop tracing and aggregation to test behaviors beyond searching from context. We evaluate 17 long-context LMs with 13 representative tasks in RULER. Despite achieving nearly perfect accuracy in the vanilla NIAH test, almost all models exhibit large performance drops as the context length increases. While these models all claim context sizes of 32K tokens or greater, only half of them can maintain satisfactory performance at the length of 32K. Our analysis of Yi-34B, which supports context length of 200K, reveals large room for improvement as we increase input length and task complexity. We open source RULER to spur comprehensive evaluation of long-context LMs.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {C:\Users\27404\Zotero\storage\H3Z2EXZ5\Hsieh 等 - 2024 - RULER What's the Real Context Size of Your Long-C.pdf}
+}
+
 @online{2024ScalingLawsRoPEbasedLiu,
   title = {Scaling {{Laws}} of {{RoPE-based Extrapolation}}},
   author = {Liu, Xiaoran and Yan, Hang and Zhang, Shuo and An, Chenxin and Qiu, Xipeng and Lin, Dahua},
@@ -2073,6 +2176,21 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   file = {C:\Users\27404\Zotero\storage\BALR6U8E\Zhao 等 - 2024 - A Survey of Large Language Models.pdf}
+}
+
+@online{2024TrainingFreeLongContextScalingAn,
+  title = {Training-{{Free Long-Context Scaling}} of {{Large Language Models}}},
+  author = {An, Chenxin and Huang, Fei and Zhang, Jun and Gong, Shansan and Qiu, Xipeng and Zhou, Chang and Kong, Lingpeng},
+  date = {2024-05-29},
+  eprint = {2402.17463},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2402.17463},
+  url = {http://arxiv.org/abs/2402.17463},
+  urldate = {2024-12-07},
+  abstract = {The ability of Large Language Models (LLMs) to process and generate coherent text is markedly weakened when the number of input tokens exceeds their pretraining length. Given the expensive overhead of finetuning large-scale models with longer sequences, we propose Dual Chunk Attention (DCA), which enables Llama2 70B to support context windows of more than 100k tokens without continual training. By decomposing the attention computation for long sequences into chunk-based modules, DCA manages to effectively capture the relative positional information of tokens within the same chunk (Intra-Chunk) and across distinct chunks (Inter-Chunk), as well as integrates seamlessly with Flash Attention. In addition to its impressive extrapolation capability, DCA achieves performance on practical long-context tasks that is comparable to or even better than that of finetuned models. When compared with proprietary models, our training-free 70B model attains 94\% of the performance of gpt-3.5-16k, indicating it is a viable open-source alternative. All code and data used in this work are released at \textbackslash url\{https://github.com/HKUNLP/ChunkLlama\}.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\JPYI5XRI\\An 等 - 2024 - Training-Free Long-Context Scaling of Large Langua.pdf;C\:\\Users\\27404\\Zotero\\storage\\QN5SHKT4\\2402.html}
 }
 
 @online{2024UncoveringHiddenGeometrySong,
@@ -2119,6 +2237,37 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
   file = {C\:\\Users\\27404\\Zotero\\storage\\CEUYJPCT\\Zhang 等 - 2024 - Unveiling Linguistic Regions in Large Language Mod.pdf;C\:\\Users\\27404\\Zotero\\storage\\RUIELPKQ\\2402.html}
+}
+
+@online{2024WeGoWhatBarbero,
+  title = {Round and {{Round We Go}}! {{What}} Makes {{Rotary Positional Encodings}} Useful?},
+  author = {Barbero, Federico and Vitvitskyi, Alex and Perivolaropoulos, Christos and Pascanu, Razvan and Veličković, Petar},
+  date = {2024-10-08},
+  eprint = {2410.06205},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2410.06205},
+  url = {http://arxiv.org/abs/2410.06205},
+  urldate = {2024-11-13},
+  abstract = {Positional Encodings (PEs) are a critical component of Transformer-based Large Language Models (LLMs), providing the attention mechanism with important sequence-position information. One of the most popular types of encoding used today in LLMs are Rotary Positional Encodings (RoPE), that rotate the queries and keys based on their relative distance. A common belief is that RoPE is useful because it helps to decay token dependency as relative distance increases. In this work, we argue that this is unlikely to be the core reason. We study the internals of a trained Gemma 7B model to understand how RoPE is being used at a mechanical level. We find that Gemma learns to use RoPE to construct robust "positional" attention patterns by exploiting the highest frequencies. We also find that, in general, Gemma greatly prefers to use the lowest frequencies of RoPE, which we suspect are used to carry semantic information. We mathematically prove interesting behaviours of RoPE and conduct experiments to verify our findings, proposing a modification of RoPE that fixes some highlighted issues and improves performance. We believe that this work represents an interesting step in better understanding PEs in LLMs, which we believe holds crucial value for scaling LLMs to large sizes and context lengths.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\Z67W3MTI\\Barbero 等 - 2024 - Round and Round We Go! What makes Rotary Positiona.pdf;C\:\\Users\\27404\\Zotero\\storage\\77IG4ZA5\\2410.html}
+}
+
+@online{2024WhenPrecisionMeetsWang,
+  title = {When {{Precision Meets Position}}: {{BFloat16 Breaks Down RoPE}} in {{Long-Context Training}}},
+  shorttitle = {When {{Precision Meets Position}}},
+  author = {Wang, Haonan and Liu, Qian and Du, Chao and Zhu, Tongyao and Du, Cunxiao and Kawaguchi, Kenji and Pang, Tianyu},
+  date = {2024-11-26},
+  eprint = {2411.13476},
+  eprinttype = {arXiv},
+  doi = {10.48550/arXiv.2411.13476},
+  url = {http://arxiv.org/abs/2411.13476},
+  urldate = {2024-12-05},
+  abstract = {Extending context window sizes allows large language models (LLMs) to process longer sequences and handle more complex tasks. Rotary Positional Embedding (RoPE) has become the de facto standard due to its relative positional encoding properties that benefit long-context training. However, we observe that using RoPE with BFloat16 format results in numerical issues, causing it to deviate from its intended relative positional encoding, especially in long-context scenarios. This issue arises from BFloat16's limited precision and accumulates as context length increases, with the first token contributing significantly to this problem. To address this, we develop AnchorAttention, a plug-and-play attention method that alleviates numerical issues caused by BFloat16, improves long-context capabilities, and speeds up training. AnchorAttention reduces unnecessary attention computations, maintains semantic coherence, and boosts computational efficiency by treating the first token as a shared anchor with a consistent position ID, making it visible to all documents within the training context. Experiments on three types of LLMs demonstrate that AnchorAttention significantly improves long-context performance and reduces training time by over 50\textbackslash\% compared to standard full attention mechanisms, while preserving the original LLM's capabilities on general tasks. Our code is available at https://github.com/haonan3/AnchorContext.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\SUWZQ8NJ\\Wang 等 - 2024 - When Precision Meets Position BFloat16 Breaks Dow.pdf;C\:\\Users\\27404\\Zotero\\storage\\WCFA63C6\\2411.html}
 }
 
 @online{2024WorldModelMillionLengthLiu,

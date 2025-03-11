@@ -88,7 +88,8 @@ GitHub 上需要重新添加 ssh key，添加时需要将 key type（从 Authent
 
 > [ineo6/hosts: GitHub 最新 hosts。解决 GitHub 图片无法显示，加速 GitHub 网页浏览。](https://github.com/ineo6/hosts#windows-1)
 
-`C:\Windows\System32\drivers\etc\hosts` 属性去掉只读
+- Windows: `C:\Windows\System32\drivers\etc\hosts` 属性去掉只读
+- Linux: `sudoedit /etc/hosts`
 
 最新地址： https://gitlab.com/ineo6/hosts/-/raw/master/hosts
 
@@ -130,3 +131,10 @@ GitHub 上需要重新添加 ssh key，添加时需要将 key type（从 Authent
 gcl --filter=blob:none
 ```
 
+## blames
+
+查找哪些 tag 包含某个特定 commit（从而找到首个包含该 commit 的 tag）
+
+```bash
+git tag --contains <commit_hash>
+```

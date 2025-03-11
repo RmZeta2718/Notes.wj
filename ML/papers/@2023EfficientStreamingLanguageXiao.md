@@ -6,12 +6,12 @@ aliases:
 ---
 # Efficient Streaming Language Models with Attention Sinks
 
-- **Journal**: arxiv:2309.17453
+- **Journal**: arxiv:2309.17453 #ICLR/24
 - **Author**: Guangxuan Xiao, Yuandong Tian, Beidi Chen, Song Han, Mike Lewis
 - **Year**: 2023
 - **URL**: http://arxiv.org/abs/2309.17453
 - [**Zotero**](zotero://select/items/@2023EfficientStreamingLanguageXiao)
-- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4806481707259658241&noteId=2027768705114526976)
+- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?noteId=2027768705114526976)
 
 ## 论文试图解决的问题
 

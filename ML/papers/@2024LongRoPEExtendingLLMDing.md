@@ -7,7 +7,7 @@ aliases:
 
 # LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens
 
-- **Journal**: arxiv:2402.13753
+- **Journal**: arxiv:2402.13753 #ICML/24
 - **Author**: Yiran Ding, Li Lyna Zhang, Chengruidong Zhang, Yuanyuan Xu, Ning Shang, Jiahang Xu, Fan Yang, Mao Yang
 - **Year**: 2024
 - **URL**: http://arxiv.org/abs/2402.13753

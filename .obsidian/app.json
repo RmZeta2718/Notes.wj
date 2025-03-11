@@ -25,6 +25,5 @@
   "spellcheckLanguages": null,
   "autoPairMarkdown": false,
   "foldIndent": false,
-  "foldHeading": false,
-  "showRibbon": true
+  "foldHeading": false
 }

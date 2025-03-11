@@ -11,7 +11,7 @@ aliases:
 - **Year**: 2024
 - **URL**: http://arxiv.org/abs/2405.18009
 - [**Zotero**](zotero://select/items/@2024ExploringContextWindowDong)
-- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=2336242234137600768&noteId=2532256692708945152)
+- [**ReadPaper**](https://readpaper.com/pdf-annotate/note?pdfId=4956643271773257729&noteId=2635903243430987008)
 
 ## 论文试图解决的问题
 

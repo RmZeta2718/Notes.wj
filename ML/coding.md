@@ -216,7 +216,7 @@ pytorch1.4 有 pyi 文件，内置了 `__call__` trick，但是 pytorch1.12 没�
 
  [torch.nn.functional.scaled_dot_product_attention — PyTorch master documentation](https://pytorch.org/docs/master/generated/torch.nn.functional.scaled_dot_product_attention)
 
-huggingface llama + flash attention: [[`core` ] Integrate Flash attention 2 in most used models by younesbelkada · Pull Request #25598 · huggingface/transformers (github.com)](https://github.com/huggingface/transformers/pull/25598)
+huggingface llama + flash attention: [flash attention](https://huggingface.co/docs/transformers/main/en/perf_infer_gpu_one#flashattention-2), [sdpa](https://huggingface.co/docs/transformers/main/en/perf_infer_gpu_one#pytorch-scaled-dot-product-attention)
 
 blog [Extended Guide: Instruction-tune Llama 2](https://www.philschmid.de/instruction-tune-llama-2)
 

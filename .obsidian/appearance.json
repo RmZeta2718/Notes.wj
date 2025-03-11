@@ -12,5 +12,6 @@
   "interfaceFontFamily": "",
   "accentColor": "",
   "showViewHeader": false,
-  "nativeMenus": false
+  "nativeMenus": false,
+  "showRibbon": true
 }
