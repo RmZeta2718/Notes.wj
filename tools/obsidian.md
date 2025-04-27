@@ -107,9 +107,11 @@ https://forum.obsidian.md/t/need-help-with-ccs-themes/20784/2
 
 my template：
 
-```
+```markdown
 ---
-aliases: ["{{title}}", "{{title}}, {{year}}"]
+aliases:
+  - "{{title}}"
+  - "{{title}}, {{year}}"
 ---
 # {{title}}
 
@@ -118,7 +120,6 @@ aliases: ["{{title}}", "{{title}}, {{year}}"]
 - **Year**: {{year}}
 - **URL**: {{URL}}
 - [**Zotero**]({{zoteroSelectURI}})
-- [**TODO ReadPaper**](https://readpaper.com/...)
 
 ## 论文试图解决的问题
 
@@ -134,14 +135,9 @@ aliases: ["{{title}}", "{{title}}, {{year}}"]
 
 %% 实现细节、设置。数据集。评估。消融实验 %%
 
-## 后续工作
-
-%% 有什么疑问。如何继续深入。如何吸取到你的工作中 %%
-
 ## 相关研究
 
 %% 如何归类。值得关注的研究员 %%
-
 ```
 
 文件名：`@{{citekey}}` （不用 title，因为有的时候 title 包含非法字符，不能用于文件名，如冒号）

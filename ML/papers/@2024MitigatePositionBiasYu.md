@@ -5,12 +5,11 @@ aliases:
 ---
 # Mitigate Position Bias in Large Language Models via Scaling a Single Dimension
 
-- **Journal**: arXiv:2406.02536
+- **Journal**: arXiv:2406.02536 #ICML/24 workshop
 - **Author**: Yijiong Yu, Huiqiang Jiang, Xufang Luo, Qianhui Wu, Chin-Yew Lin, Dongsheng Li, Yuqing Yang, Yongfeng Huang, Lili Qiu
 - **Year**: 2024
 - **URL**: http://arxiv.org/abs/2406.02536
 - [**Zotero**](zotero://select/items/@2024MitigatePositionBiasYu)
-- [**TODO ReadPaper**](https://readpaper.com/...)
 
 ## 论文试图解决的问题
 

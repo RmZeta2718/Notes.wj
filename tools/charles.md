@@ -14,6 +14,8 @@ https://blog.csdn.net/ShadowySpirits/article/details/79756274
 
 开启Charles后，clash代理失效，重设“System proxy”即可恢复clash，但Charles又会失效，在Charles内`ctrl+shift+p` x 2（重设Windows proxy）恢复
 
+更新证书： Help > SSL Proxying > Reset Charles Root Certificate > Install Charles Root Certificate
+
 ## 微信小程序
 
 token放在本地存储，重新进入小程序不会刷新（重新请求），可以彻底删除小程序相关存储，下次进入小程序时就会刷新。
