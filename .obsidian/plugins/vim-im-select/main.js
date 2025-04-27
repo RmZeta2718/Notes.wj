@@ -47,25 +47,41 @@ var DEFAULT_SETTINGS = {
   windowsObtainCmd: "",
   windowsSwitchCmd: ""
 };
+function isEmpty(obj) {
+  return obj && typeof obj === "object" && Object.keys(obj).length === 0;
+}
 var VimImPlugin = class extends import_obsidian.Plugin {
   constructor() {
     super(...arguments);
     this.currentInsertIM = "";
     this.previousMode = "";
     this.isWinPlatform = false;
+    this.onVimModeChanged = async (modeObj) => {
+      if (isEmpty(modeObj)) {
+        return;
+      }
+      switch (modeObj.mode) {
+        case "insert":
+          this.switchToInsert();
+          break;
+        default:
+          if (this.previousMode != "insert") {
+            break;
+          }
+          this.switchToNormal();
+          break;
+      }
+    };
   }
   async onload() {
     await this.loadSettings();
-    this.app.workspace.on("file-open", async (_file) => {
+    this.app.workspace.on("active-leaf-change", async () => {
       const view = this.getActiveView();
       if (view) {
         const editor = this.getCodeMirror(view);
         if (editor) {
-          editor.on("vim-mode-change", (modeObj) => {
-            if (modeObj) {
-              this.onVimModeChanged(modeObj);
-            }
-          });
+          editor.off("vim-mode-change", this.onVimModeChanged);
+          editor.on("vim-mode-change", this.onVimModeChanged);
         }
       }
     });
@@ -84,7 +100,7 @@ var VimImPlugin = class extends import_obsidian.Plugin {
     var _a, _b, _c;
     return (_c = (_b = (_a = view.sourceMode) == null ? void 0 : _a.cmEditor) == null ? void 0 : _b.cm) == null ? void 0 : _c.cm;
   }
-  switchToInsert() {
+  async switchToInsert() {
     const { exec } = require("child_process");
     let switchToInsert;
     if (this.currentInsertIM) {
@@ -102,7 +118,7 @@ var VimImPlugin = class extends import_obsidian.Plugin {
     }
     this.previousMode = "insert";
   }
-  switchToNormal() {
+  async switchToNormal() {
     const { exec } = require("child_process");
     const switchFromInsert = this.isWinPlatform ? this.settings.windowsSwitchCmd.replace(/{im}/, this.settings.windowsDefaultIM) : this.settings.switchCmd.replace(/{im}/, this.settings.defaultIM);
     const obtainc = this.isWinPlatform ? this.settings.windowsObtainCmd : this.settings.obtainCmd;
@@ -127,19 +143,6 @@ var VimImPlugin = class extends import_obsidian.Plugin {
       });
     }
     this.previousMode = "normal";
-  }
-  onVimModeChanged(modeObj) {
-    switch (modeObj.mode) {
-      case "insert":
-        this.switchToInsert();
-        break;
-      default:
-        if (this.previousMode != "insert") {
-          break;
-        }
-        this.switchToNormal();
-        break;
-    }
   }
   onunload() {
     console.debug("onunload");
@@ -194,3 +197,5 @@ var SampleSettingTab = class extends import_obsidian.PluginSettingTab {
     }));
   }
 };
+
+/* nosourcemap */
