@@ -1593,8 +1593,10 @@
   url = {http://arxiv.org/abs/2305.17118},
   urldate = {2024-05-14},
   abstract = {Large language models(LLMs) have sparked a new wave of exciting AI applications. Hosting these models at scale requires significant memory resources. One crucial memory bottleneck for the deployment stems from the context window. It is commonly recognized that model weights are memory hungry; however, the size of key-value embedding stored during the generation process (KV cache) can easily surpass the model size. The enormous size of the KV cache puts constraints on the inference batch size, which is crucial for high throughput inference workload. Inspired by an interesting observation of the attention scores, we hypothesize the persistence of importance: only pivotal tokens, which had a substantial influence at one step, will significantly influence future generations. Based on our empirical verification and theoretical analysis around this hypothesis, we propose Scissorhands, a system that maintains the memory usage of the KV cache at a fixed budget without finetuning the model. In essence, Scissorhands manages the KV cache by storing the pivotal tokens with a higher probability. We validate that Scissorhands reduces the inference memory usage of the KV cache by up to 5X without compromising model quality. We further demonstrate that Scissorhands can be combined with 4-bit quantization, traditionally used to compress model weights, to achieve up to 20X compression.},
+  langid = {american},
   pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  annotation = {TLDR: This work hypothesizes the persistence of importance: only pivotal tokens, which had a substantial influence at one step, will significantly influence future generations, and proposes Scissorhands, a system that maintains the memory usage of the KV cache at a fixed budget without finetuning the model.},
   file = {C\:\\Users\\27404\\Zotero\\storage\\RCVP7B2S\\Liu 等 - 2023 - Scissorhands Exploiting the Persistence of Import.pdf;C\:\\Users\\27404\\Zotero\\storage\\GURB2L7Q\\2305.html}
 }
 
@@ -1677,6 +1679,24 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\HLGZC5Z8\\Zhao 等 - 2024 - Analysing The Impact of Sequence Composition on La.pdf;C\:\\Users\\27404\\Zotero\\storage\\EFLIPWXM\\2402.html}
 }
 
+@inproceedings{2024BackwardLensProjectingKatz,
+  title = {Backward {{Lens}}: {{Projecting Language Model Gradients}} into the {{Vocabulary Space}}},
+  shorttitle = {Backward {{Lens}}},
+  booktitle = {Proceedings of the 2024 {{Conference}} on {{Empirical Methods}} in {{Natural Language Processing}}},
+  author = {Katz, Shahar and Belinkov, Yonatan and Geva, Mor and Wolf, Lior},
+  editor = {Al-Onaizan, Yaser and Bansal, Mohit and Chen, Yun-Nung},
+  date = {2024-11},
+  pages = {2390--2422},
+  publisher = {Association for Computational Linguistics},
+  location = {Miami, Florida, USA},
+  doi = {10.18653/v1/2024.emnlp-main.142},
+  url = {https://aclanthology.org/2024.emnlp-main.142/},
+  urldate = {2025-04-30},
+  abstract = {Understanding how Transformer-based Language Models (LMs) learn and recall information is a key goal of the deep learning community. Recent interpretability methods project weights and hidden states obtained from the forward pass to the models' vocabularies, helping to uncover how information flows within LMs. In this work, we extend this methodology to LMs' backward pass and gradients. We first prove that a gradient matrix can be cast as a low-rank linear combination of its forward and backward passes' inputs. We then develop methods to project these gradients into vocabulary items and explore the mechanics of how new information is stored in the LMs' neurons.},
+  eventtitle = {{{EMNLP}} 2024},
+  file = {C:\Users\27404\Zotero\storage\YQLY7TSB\Katz 等 - 2024 - Backward Lens Projecting Language Model Gradients into the Vocabulary Space.pdf}
+}
+
 @online{2024BaseRoPEBoundsMen,
   title = {Base of {{RoPE Bounds Context Length}}},
   author = {Men, Xin and Xu, Mingyu and Wang, Bingning and Zhang, Qingyu and Lin, Hongyu and Han, Xianpei and Chen, Weipeng},
@@ -1723,6 +1743,7 @@
   abstract = {Recent studies have shown that Large Language Models (LLMs) have the potential to process extremely long text. Many works only evaluate LLMs' long-text processing ability on the language modeling task, with perplexity (PPL) as the evaluation metric. However, in our study, we find that there is no correlation between PPL and LLMs' long-text understanding ability. Besides, PPL may only reflect the model's ability to model local information instead of catching long-range dependency. Therefore, only using PPL to prove the model could process long text is inappropriate. The local focus feature of PPL could also explain some existing phenomena, such as the great extrapolation ability of the position method ALiBi. When evaluating a model's ability in long text, we might pay more attention to PPL's limitation and avoid overly relying on it.},
   pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
+  annotation = {TLDR: There is no correlation between PPL and LLMs' long-text understanding ability and PPL may only reflect the model's ability to model local information instead of catching long-range dependency, therefore, only using PPL to prove the model could process long text is inappropriate.},
   file = {C\:\\Users\\27404\\Zotero\\storage\\Q9G4BVSH\\Hu 等 - 2024 - Can Perplexity Reflect Large Language Model's Abil.pdf;C\:\\Users\\27404\\Zotero\\storage\\S6TSKNLT\\2405.html}
 }
 
@@ -1820,9 +1841,11 @@
   url = {http://arxiv.org/abs/2410.10819},
   urldate = {2024-10-25},
   abstract = {Deploying long-context large language models (LLMs) is essential but poses significant computational and memory challenges. Caching all Key and Value (KV) states across all attention heads consumes substantial memory. Existing KV cache pruning methods either damage the long-context capabilities of LLMs or offer only limited efficiency improvements. In this paper, we identify that only a fraction of attention heads, a.k.a, Retrieval Heads, are critical for processing long contexts and require full attention across all tokens. In contrast, all other heads, which primarily focus on recent tokens and attention sinks--referred to as Streaming Heads--do not require full attention. Based on this insight, we introduce DuoAttention, a framework that only applies a full KV cache to retrieval heads while using a light-weight, constant-length KV cache for streaming heads, which reduces both LLM's decoding and pre-filling memory and latency without compromising its long-context abilities. DuoAttention uses a lightweight, optimization-based algorithm with synthetic data to identify retrieval heads accurately. Our method significantly reduces long-context inference memory by up to 2.55x for MHA and 1.67x for GQA models while speeding up decoding by up to 2.18x and 1.50x and accelerating pre-filling by up to 1.73x and 1.63x for MHA and GQA models, respectively, with minimal accuracy loss compared to full attention. Notably, combined with quantization, DuoAttention enables Llama-3-8B decoding with 3.3 million context length on a single A100 GPU. Code is provided in https://github.com/mit-han-lab/duo-attention.},
+  langid = {american},
   pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language},
-  file = {C\:\\Users\\27404\\Zotero\\storage\\M77MTSSA\\Xiao 等 - 2024 - DuoAttention Efficient Long-Context LLM Inference.pdf;C\:\\Users\\27404\\Zotero\\storage\\5GKRPPB9\\2410.html}
+  annotation = {TLDR: DuoAttention is introduced, a framework that only applies a full KV cache to retrieval heads while using a light-weight, constant-length KV cache for streaming heads, which reduces both LLM's decoding and pre-filling memory and latency without compromising its long-context abilities.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\Y3AWE4UE\\Xiao 等 - 2025 - DUOATTENTION EFFICIENT LONG-CONTEXT LLM INFERENCE WITH RETRIEVAL AND STREAMING HEADS.pdf;C\:\\Users\\27404\\Zotero\\storage\\5GKRPPB9\\2410.html}
 }
 
 @online{2024DynamicMemoryCompressionNawrot,
@@ -1860,6 +1883,19 @@
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   annotation = {TLDR: This work proposes an Efficient and Extreme length extension method for Large Language Models, called E 2 -LLM, with only one training procedure and dramatically reduced computation cost, which also removes the need to collect long-context data.},
   file = {C\:\\Users\\27404\\Zotero\\storage\\CUJL3KJN\\Liu 等 - 2024 - E^2-LLM Efficient and Extreme Length Extension of.pdf;C\:\\Users\\27404\\Zotero\\storage\\ENPFPY4V\\2401.html}
+}
+
+@article{2024EfficientInferenceMixtureHuang,
+  title = {Toward {{Efficient Inference}} for {{Mixture}} of {{Experts}}},
+  author = {Huang, Haiyang and Ardalani, Newsha and Sun, Anna and Ke, Liu and Lee, Hsien-Hsin S. and Bhosale, Shruti and Wu, Carole-Jean and Lee, Benjamin},
+  date = {2024-12-16},
+  journaltitle = {Advances in Neural Information Processing Systems},
+  volume = {37},
+  pages = {84033--84059},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2024/hash/98bf3b8505c611ac21055dd9d355c66e-Abstract-Conference.html},
+  urldate = {2025-04-29},
+  langid = {english},
+  file = {C:\Users\27404\Zotero\storage\A5TLSHU9\Huang 等 - 2024 - Toward Efficient Inference for Mixture of Experts.pdf}
 }
 
 @online{2024ExploringContextWindowDong,
@@ -2019,6 +2055,23 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Information Theory,Computer Science - Machine Learning,Mathematics - Information Theory,Statistics - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\8VFTTAIJ\\Nichani 等 - 2024 - How Transformers Learn Causal Structure with Gradi.pdf;C\:\\Users\\27404\\Zotero\\storage\\K4QTZBUW\\2402.html}
+}
+
+@online{2024InferenceoptimalMixtureofExpertLargeYun,
+  title = {Toward {{Inference-optimal Mixture-of-Expert Large Language Models}}},
+  author = {Yun, Longfei and Zhuang, Yonghao and Fu, Yao and Xing, Eric P. and Zhang, Hao},
+  date = {2024-04-03},
+  eprint = {2404.02852},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2404.02852},
+  url = {http://arxiv.org/abs/2404.02852},
+  urldate = {2025-04-29},
+  abstract = {Mixture-of-Expert (MoE) based large language models (LLMs), such as the recent Mixtral and DeepSeek-MoE, have shown great promise in scaling model size without suffering from the quadratic growth of training cost of dense transformers. Like dense models, training MoEs requires answering the same question: given a training budget, what is the optimal allocation on the model size and number of tokens? We study the scaling law of MoE-based LLMs regarding the relations between the model performance, model size, dataset size, and the expert degree. Echoing previous research studying MoE in different contexts, we observe the diminishing return of increasing the number of experts, but this seems to suggest we should scale the number of experts until saturation, as the training cost would remain constant, which is problematic during inference time. We propose to amend the scaling law of MoE by introducing inference efficiency as another metric besides the validation loss. We find that MoEs with a few (4/8) experts are the most serving efficient solution under the same performance, but costs 2.5-3.5x more in training. On the other hand, training a (16/32) expert MoE much smaller (70-85\%) than the loss-optimal solution, but with a larger training dataset is a promising setup under a training budget.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning},
+  annotation = {TLDR: The scaling law of MoE is proposed to be amended by introducing inference efficiency as another metric besides the validation loss, and it is found that MoEs with a few experts are the most serving efficient solution under the same performance, but costs 2.5-3.5x more in training.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\SMUK28S4\\Yun 等 - 2024 - Toward Inference-optimal Mixture-of-Expert Large Language Models.pdf;C\:\\Users\\27404\\Zotero\\storage\\XPSN7ZVX\\2404.html}
 }
 
 @online{2024LeaveNoContextMunkhdalai,
@@ -2228,6 +2281,25 @@
   keywords = {Computer Science - Computation and Language},
   annotation = {TLDR: Adaptive KV cache compression is introduced, a plug-and-play method that reduces the memory footprint of generative inference for Large Language Models (LLMs) and demonstrates substantial reduction on GPU memory consumption with negligible generation quality loss.},
   file = {C\:\\Users\\27404\\Zotero\\storage\\BCKUVX3S\\Ge 等 - 2024 - Model Tells You What to Discard Adaptive KV Cache.pdf;C\:\\Users\\27404\\Zotero\\storage\\WSKMK4HQ\\2310.html}
+}
+
+@online{2024PyramidKVDynamicKVCai,
+  title = {{{PyramidKV}}: {{Dynamic KV Cache Compression}} Based on {{Pyramidal Information Funneling}}},
+  shorttitle = {{{PyramidKV}}},
+  author = {Cai, Zefan and Zhang, Yichi and Gao, Bofei and Liu, Yuliang and Liu, Tianyu and Lu, Keming and Xiong, Wayne and Dong, Yue and Chang, Baobao and Hu, Junjie and Xiao, Wen},
+  date = {2024-10-03},
+  eprint = {2406.02069},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2406.02069},
+  url = {http://arxiv.org/abs/2406.02069},
+  urldate = {2025-04-29},
+  abstract = {In this study, we investigate whether attention-based information flow inside large language models (LLMs) is aggregated through noticeable patterns for long context processing. Our observations reveal that LLMs aggregate information through Pyramidal Information Funneling where attention is scattering widely in lower layers, progressively consolidating within specific contexts, and ultimately focusing on critical tokens (a.k.a massive activation or attention sink) in higher layers. Motivated by these insights, we developed PyramidKV, a novel and effective KV cache compression method. This approach dynamically adjusts the KV cache size across different layers, allocating more cache in lower layers and less in higher ones, diverging from traditional methods that maintain a uniform KV cache size. Our experimental evaluations, utilizing the LongBench benchmark, show that PyramidKV matches the performance of models with a full KV cache while retaining only 12\% of the KV cache, thus significantly reducing memory usage. In scenarios emphasizing memory efficiency, where only 0.7\% of the KV cache is maintained, PyramidKV surpasses other KV cache compression techniques, achieving up to a 20.5 absolute accuracy improvement on TREC dataset. In the Needle-in-a-Haystack experiment, PyramidKV outperforms competing methods in maintaining long-context comprehension in LLMs; notably, retaining just 128 KV cache entries enables the LLAMA-3-70B model to achieve 100\% Acc. performance, matching that of a full KV cache.},
+  langid = {american},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  annotation = {TLDR: PyramidKV, a novel and effective KV cache compression method that dynamically adjusts the KV cache size across different layers, allocating more cache in lower layers and less in higher ones, diverging from traditional methods that maintain a uniform KV cache size.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\6C4X84JL\\Cai 等 - 2024 - PyramidKV Dynamic KV Cache Compression based on Pyramidal Information Funneling.pdf;C\:\\Users\\27404\\Zotero\\storage\\KQ3VKA4V\\2406.html}
 }
 
 @inproceedings{2024ResonanceRoPEImprovingWang,
@@ -2493,6 +2565,43 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\TKV5PB3Y\\AI 等 - 2024 - Yi Open Foundation Models by 01.AI.pdf;C\:\\Users\\27404\\Zotero\\storage\\657X57VC\\2403.html}
 }
 
+@online{2025DissectingQueryKeyInteractionPan,
+  title = {Dissecting {{Query-Key Interaction}} in {{Vision Transformers}}},
+  author = {Pan, Xu and Philip, Aaron and Xie, Ziqian and Schwartz, Odelia},
+  date = {2025-01-14},
+  eprint = {2405.14880},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2405.14880},
+  url = {http://arxiv.org/abs/2405.14880},
+  urldate = {2025-05-07},
+  abstract = {Self-attention in vision transformers is often thought to perform perceptual grouping where tokens attend to other tokens with similar embeddings, which could correspond to semantically similar features of an object. However, attending to dissimilar tokens can be beneficial by providing contextual information. We propose to analyze the query-key interaction by the singular value decomposition of the interaction matrix (i.e. \$\{\textbackslash textbf\{W\}\_q\}\textasciicircum\textbackslash top\textbackslash textbf\{W\}\_k\$). We find that in many ViTs, especially those with classification training objectives, early layers attend more to similar tokens, while late layers show increased attention to dissimilar tokens, providing evidence corresponding to perceptual grouping and contextualization, respectively. Many of these interactions between features represented by singular vectors are interpretable and semantic, such as attention between relevant objects, between parts of an object, or between the foreground and background. This offers a novel perspective on interpreting the attention mechanism, which contributes to understanding how transformer models utilize context and salient features when processing images.},
+  langid = {american},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition},
+  annotation = {TLDR: This work proposes to analyze the query-key interaction by the singular value decomposition of the interaction matrix and finds that in many ViTs, especially those with classification training objectives, early layers attend more to similar tokens, while late layers show increased attention to dissimilar tokens, providing evidence corresponding to perceptual grouping and contextualization, respectively.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\UMU7LNVF\\Pan 等 - 2025 - Dissecting Query-Key Interaction in Vision Transformers.pdf;C\:\\Users\\27404\\Zotero\\storage\\K4EFNF5X\\2405.html}
+}
+
+@online{2025FourierPositionEmbeddingHua,
+  title = {Fourier {{Position Embedding}}: {{Enhancing Attention}}'s {{Periodic Extension}} for {{Length Generalization}}},
+  shorttitle = {Fourier {{Position Embedding}}},
+  author = {Hua, Ermo and Jiang, Che and Lv, Xingtai and Zhang, Kaiyan and Ding, Ning and Sun, Youbang and Qi, Biqing and Fan, Yuchen and Zhu, Xuekai and Zhou, Bowen},
+  date = {2025-05-06},
+  eprint = {2412.17739},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2412.17739},
+  url = {http://arxiv.org/abs/2412.17739},
+  urldate = {2025-05-08},
+  abstract = {Extending the context length of Language Models (LMs) by improving Rotary Position Embedding (RoPE) has become a trend. While existing works mainly address RoPE's limitations within attention mechanism, this paper provides an analysis across nearly all parts of LMs, uncovering their adverse effects on length generalization for RoPE-based attention. Using Discrete Signal Processing theory, we show that RoPE enables periodic attention by implicitly achieving Non-Uniform Discrete Fourier Transform. However, this periodicity is undermined by the spectral damage caused by: 1) linear layers and activation functions outside of attention; 2) insufficiently trained frequency components brought by time-domain truncation. Building on our observations, we propose Fourier Position Embedding (FoPE), which enhances attention's frequency-domain properties to improve both its periodic extension and length generalization. FoPE constructs Fourier Series and zero-outs the destructive frequency components, increasing model robustness against the spectrum damage. Experiments across various model scales and benchmarks show that, within varying context windows, FoPE maintains a more stable performance compared to RoPE and ALiBi. Several analyses and ablations bring further support to our method and theoretical modeling.},
+  langid = {american},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
+  annotation = {TLDR: FoPE is proposed, which enhances attention's frequency-domain properties to improve both its periodic extension and length generalization, and maintains a more stable performance compared to RoPE and ALiBi.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\RZDH9AF7\\Hua 等 - 2025 - Fourier Position Embedding Enhancing Attention's Periodic Extension for Length Generalization.pdf;C\:\\Users\\27404\\Zotero\\storage\\LKHB6VPI\\2412.html}
+}
+
 @online{2025LanguageModelsAreMarro,
   title = {Language {{Models Are Implicitly Continuous}}},
   author = {Marro, Samuele and Evangelista, Davide and Huang, X. Angelo and Malfa, Emanuele La and Lombardi, Michele and Wooldridge, Michael},
@@ -2507,6 +2616,24 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\ZSPRHVGD\\Marro 等 - 2025 - Language Models Are Implicitly Continuous.pdf;C\:\\Users\\27404\\Zotero\\storage\\479P9VQB\\2504.html}
+}
+
+@online{2025MassiveValuesSelfAttentionJin,
+  title = {Massive {{Values}} in {{Self-Attention Modules}} Are the {{Key}} to {{Contextual Knowledge Understanding}}},
+  author = {Jin, Mingyu and Mei, Kai and Xu, Wujiang and Sun, Mingjie and Tang, Ruixiang and Du, Mengnan and Liu, Zirui and Zhang, Yongfeng},
+  date = {2025-05-03},
+  eprint = {2502.01563},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2502.01563},
+  url = {http://arxiv.org/abs/2502.01563},
+  urldate = {2025-05-07},
+  abstract = {Large language models (LLMs) have achieved remarkable success in contextual knowledge understanding. In this paper, we show that these concentrated massive values consistently emerge in specific regions of attention queries (Q) and keys (K) while not having such patterns in values (V) in various modern transformer-based LLMs (Q, K, and V mean the representations output by the query, key, and value layers respectively). Through extensive experiments, we further demonstrate that these massive values play a critical role in interpreting contextual knowledge (knowledge obtained from the current context window) rather than in retrieving parametric knowledge stored within the model's parameters. Our further investigation of quantization strategies reveals that ignoring these massive values leads to a pronounced drop in performance on tasks requiring rich contextual understanding, aligning with our analysis. Finally, we trace the emergence of concentrated massive values and find that such concentration is caused by Rotary Positional Encoding (RoPE), which has appeared since the first layers. These findings shed new light on how Q and K operate in LLMs and offer practical insights for model design and optimization. The Code is Available at https://github.com/MingyuJ666/Rope\_with\_LLM.},
+  langid = {american},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  annotation = {TLDR: It is shown that these concentrated massive values consistently emerge in specific regions of attention queries (Q) and keys (K) while not having such patterns in values in various modern transformer-based LLMs (Q, K, and V mean the representations output by the query, key, and value layers respectively).},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\SSP7DJCN\\Jin 等 - 2025 - Massive Values in Self-Attention Modules are the Key to Contextual Knowledge Understanding.pdf;C\:\\Users\\27404\\Zotero\\storage\\2QKYY9ZY\\2502.html}
 }
 
 @online{2025MultiPowerLawLossLuo,
@@ -2544,6 +2671,25 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\ETA2U565\\Li 等 - 2025 - On the Optimization and Generalization of Two-laye.pdf;C\:\\Users\\27404\\Zotero\\storage\\PVTT2YG6\\2410.html}
 }
 
+@online{2025SparseVideoGenAcceleratingXi,
+  title = {Sparse {{VideoGen}}: {{Accelerating Video Diffusion Transformers}} with {{Spatial-Temporal Sparsity}}},
+  shorttitle = {Sparse {{VideoGen}}},
+  author = {Xi, Haocheng and Yang, Shuo and Zhao, Yilong and Xu, Chenfeng and Li, Muyang and Li, Xiuyu and Lin, Yujun and Cai, Han and Zhang, Jintao and Li, Dacheng and Chen, Jianfei and Stoica, Ion and Keutzer, Kurt and Han, Song},
+  date = {2025-04-27},
+  eprint = {2502.01776},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2502.01776},
+  url = {http://arxiv.org/abs/2502.01776},
+  urldate = {2025-05-09},
+  abstract = {Diffusion Transformers (DiTs) dominate video generation but their high computational cost severely limits real-world applicability, usually requiring tens of minutes to generate a few seconds of video even on high-performance GPUs. This inefficiency primarily arises from the quadratic computational complexity of 3D Full Attention with respect to the context length. In this paper, we propose a training-free framework termed Sparse VideoGen (SVG) that leverages the inherent sparsity in 3D Full Attention to boost inference efficiency. We reveal that the attention heads can be dynamically classified into two groups depending on distinct sparse patterns: (1) Spatial Head, where only spatially-related tokens within each frame dominate the attention output, and (2) Temporal Head, where only temporally-related tokens across different frames dominate. Based on this insight, SVG proposes an online profiling strategy to capture the dynamic sparse patterns and predicts the type of attention head. Combined with a novel hardware-efficient tensor layout transformation and customized kernel implementations, SVG achieves up to 2.28x and 2.33x end-to-end speedup on CogVideoX-v1.5 and HunyuanVideo, respectively, while preserving generation quality. Our code is open-sourced and is available at https://github.com/svg-project/Sparse-VideoGen},
+  langid = {american},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+  annotation = {TLDR: It is revealed that the attention heads can be dynamically classified into two groups depending on distinct sparse patterns: (1) Spatial Head, where only spatially-related tokens within each frame dominate the attention output, and (2) Temporal Head, where only temporally-related tokens across different frames dominate.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\CDUCUSVJ\\Xi 等 - 2025 - Sparse VideoGen Accelerating Video Diffusion Transformers with Spatial-Temporal Sparsity.pdf;C\:\\Users\\27404\\Zotero\\storage\\HKTJARPI\\2502.html}
+}
+
 @online{2025SparsingLawLargeLuo,
   title = {Sparsing {{Law}}: {{Towards Large Language Models}} with {{Greater Activation Sparsity}}},
   shorttitle = {Sparsing {{Law}}},
@@ -2556,7 +2702,6 @@
   url = {http://arxiv.org/abs/2411.02335},
   urldate = {2025-04-27},
   abstract = {Activation sparsity denotes the existence of substantial weakly-contributed elements within activation outputs that can be eliminated, benefiting many important applications concerned with large language models (LLMs). Although promoting greater activation sparsity within LLMs deserves deep studies, existing works lack comprehensive and quantitative research on the correlation between activation sparsity and potentially influential factors. In this paper, we present a comprehensive study on the quantitative scaling properties and influential factors of the activation sparsity within decoder-only Transformer-based LLMs. Specifically, we propose PPL-\$p\textbackslash\%\$ sparsity, a precise and performance-aware activation sparsity metric that is applicable to any activation function. Through extensive experiments, we find several important phenomena. Firstly, different activation functions exhibit comparable performance but opposite training-time sparsity trends. The activation ratio (i.e., \$1-\textbackslash mathrm\{sparsity\textbackslash{} ratio\}\$) evolves as a convergent increasing power-law and decreasing logspace power-law with the amount of training data for SiLU-activated and ReLU-activated LLMs, respectively. These demonstrate that ReLU is more efficient as the activation function than SiLU and can leverage more training data to improve activation sparsity. Secondly, the activation ratio linearly increases with the width-depth ratio below a certain bottleneck point, indicating the potential advantage of a deeper architecture at a fixed parameter scale. Finally, at similar width-depth ratios, we surprisingly find that the limit value of activation sparsity varies weakly with the parameter scale, i.e., the activation patterns within LLMs are insensitive to the parameter scale. These empirical laws towards LLMs with greater activation sparsity have important implications for making LLMs more efficient and interpretable.},
-  langid = {american},
   pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
   annotation = {TLDR: A comprehensive study on the quantitative scaling properties and influential factors of the activation sparsity within decoder-only Transformer-based LLMs and proposes PPL-\$p\$ sparsity, a precise and performance-aware activation sparsity metric that is applicable to any activation function.},

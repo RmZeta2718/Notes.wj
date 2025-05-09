@@ -2,6 +2,7 @@
 aliases:
   - "Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs"
   - "Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs, 2024"
+  - FastGen
 ---
 # Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs
 

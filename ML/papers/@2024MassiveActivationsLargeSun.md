@@ -32,3 +32,5 @@ aliases:
 ## 相关研究
 
 %% 如何归类。值得关注的研究员 %%
+
+https://www.cs.princeton.edu/~zhuangl/
