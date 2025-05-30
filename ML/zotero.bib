@@ -727,6 +727,22 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\JJGMEQ2K\\Lin 等 - 2021 - A Survey of Transformers.pdf;C\:\\Users\\27404\\Zotero\\storage\\PSB4RTTN\\2106.html}
 }
 
+@online{2021TransformerFeedForwardLayersGeva,
+  title = {Transformer {{Feed-Forward Layers Are Key-Value Memories}}},
+  author = {Geva, Mor and Schuster, Roei and Berant, Jonathan and Levy, Omer},
+  date = {2021-09-05},
+  eprint = {2012.14913},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2012.14913},
+  url = {http://arxiv.org/abs/2012.14913},
+  urldate = {2025-05-15},
+  abstract = {Feed-forward layers constitute two-thirds of a transformer model's parameters, yet their role in the network remains under-explored. We show that feed-forward layers in transformer-based language models operate as key-value memories, where each key correlates with textual patterns in the training examples, and each value induces a distribution over the output vocabulary. Our experiments show that the learned patterns are human-interpretable, and that lower layers tend to capture shallow patterns, while upper layers learn more semantic ones. The values complement the keys' input patterns by inducing output distributions that concentrate probability mass on tokens likely to appear immediately after each pattern, particularly in the upper layers. Finally, we demonstrate that the output of a feed-forward layer is a composition of its memories, which is subsequently refined throughout the model's layers via residual connections to produce the final output distribution.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\2QTXPVZG\\Geva 等 - 2021 - Transformer Feed-Forward Layers Are Key-Value Memories.pdf;C\:\\Users\\27404\\Zotero\\storage\\C662BYXS\\2012.html}
+}
+
 @inproceedings{2021ZeroshotLabelAwareEventZhang,
   title = {Zero-Shot {{Label-Aware Event Trigger}} and {{Argument Classification}}},
   booktitle = {Findings of the {{Association}} for {{Computational Linguistics}}: {{ACL-IJCNLP}} 2021},
@@ -1069,6 +1085,7 @@
   url = {http://arxiv.org/abs/2203.16634},
   urldate = {2024-06-03},
   abstract = {Causal transformer language models (LMs), such as GPT-3, typically require some form of positional encoding, such as positional embeddings. However, we show that LMs without any explicit positional encoding are still competitive with standard models, and that this phenomenon is robust across different datasets, model sizes, and sequence lengths. Probing experiments reveal that such models acquire an implicit notion of absolute positions throughout the network, effectively compensating for the missing information. We conjecture that causal attention enables the model to infer the number of predecessors that each token can attend to, thereby approximating its absolute position. Our findings indicate that causal LMs might derive positional awareness not only from the explicit positioning mechanism, but also from the effects of the causal mask.},
+  langid = {american},
   pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
   annotation = {TLDR: This work shows that LMs without any explicit positional encoding are still competitive with standard models, and that this phenomenon is robust across different datasets, model sizes, and sequence lengths.},
@@ -1830,6 +1847,23 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\SAH92XUH\\Fu 等 - 2024 - Data Engineering for Scaling Language Models to 12.pdf;C\:\\Users\\27404\\Zotero\\storage\\IYXZ827I\\2402.html}
 }
 
+@online{2024DiscoveringLatentKnowledgeBurnsa,
+  title = {Discovering {{Latent Knowledge}} in {{Language Models Without Supervision}}},
+  author = {Burns, Collin and Ye, Haotian and Klein, Dan and Steinhardt, Jacob},
+  date = {2024-03-02},
+  eprint = {2212.03827},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2212.03827},
+  url = {http://arxiv.org/abs/2212.03827},
+  urldate = {2025-05-13},
+  abstract = {Existing techniques for training language models can be misaligned with the truth: if we train models with imitation learning, they may reproduce errors that humans make; if we train them to generate text that humans rate highly, they may output errors that human evaluators can't detect. We propose circumventing this issue by directly finding latent knowledge inside the internal activations of a language model in a purely unsupervised way. Specifically, we introduce a method for accurately answering yes-no questions given only unlabeled model activations. It works by finding a direction in activation space that satisfies logical consistency properties, such as that a statement and its negation have opposite truth values. We show that despite using no supervision and no model outputs, our method can recover diverse knowledge represented in large language models: across 6 models and 10 question-answering datasets, it outperforms zero-shot accuracy by 4\textbackslash\% on average. We also find that it cuts prompt sensitivity in half and continues to maintain high accuracy even when models are prompted to generate incorrect answers. Our results provide an initial step toward discovering what language models know, distinct from what they say, even when we don't have access to explicit ground truth labels.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning},
+  annotation = {TLDR: This work introduces a method for accurately answering yes-no questions given only unlabeled model activations, and shows that despite using no supervision and no model outputs, the method can recover diverse knowledge represented in large language models.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\5U8QG6WZ\\Burns 等 - 2024 - Discovering Latent Knowledge in Language Models Without Supervision.pdf;C\:\\Users\\27404\\Zotero\\storage\\8LVNJUQQ\\2212.html}
+}
+
 @online{2024DuoAttentionEfficientLongContextXiao,
   title = {{{DuoAttention}}: {{Efficient Long-Context LLM Inference}} with {{Retrieval}} and {{Streaming Heads}}},
   shorttitle = {{{DuoAttention}}},
@@ -2007,6 +2041,24 @@
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   annotation = {TLDR: Ms-PoE leverages the position indice rescaling to relieve the long-term decay effect introduced by RoPE, while meticulously assigning distinct scaling ratios to different attention heads to preserve essential knowledge learned during the pre-training step, forming a multi-scale context fusion from short to long distance.},
   file = {C\:\\Users\\27404\\Zotero\\storage\\BCCTQ676\\Zhang 等 - 2024 - Found in the Middle How Language Models Use Long Contexts Better via Plug-and-Play Positional Encod.pdf;C\:\\Users\\27404\\Zotero\\storage\\V4K6DK68\\2403.html}
+}
+
+@online{2024HedgehogPorcupineExpressiveZhang,
+  title = {The {{Hedgehog}} \& the {{Porcupine}}: {{Expressive Linear Attentions}} with {{Softmax Mimicry}}},
+  shorttitle = {The {{Hedgehog}} \& the {{Porcupine}}},
+  author = {Zhang, Michael and Bhatia, Kush and Kumbong, Hermann and Ré, Christopher},
+  date = {2024-02-06},
+  eprint = {2402.04347},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2402.04347},
+  url = {http://arxiv.org/abs/2402.04347},
+  urldate = {2025-05-30},
+  abstract = {Linear attentions have shown potential for improving Transformer efficiency, reducing attention's quadratic complexity to linear in sequence length. This holds exciting promise for (1) training linear Transformers from scratch, (2) "finetuned-conversion" of task-specific Transformers into linear versions that recover task performance, and (3) "pretrained-conversion" of Transformers such as large language models into linear versions finetunable on downstream tasks. However, linear attentions often underperform standard softmax attention in quality. To close this performance gap, we find prior linear attentions lack key properties of softmax attention tied to good performance: low-entropy (or "spiky") weights and dot-product monotonicity. We further observe surprisingly simple feature maps that retain these properties and match softmax performance, but are inefficient to compute in linear attention. We thus propose Hedgehog, a learnable linear attention that retains the spiky and monotonic properties of softmax attention while maintaining linear complexity. Hedgehog uses simple trainable MLPs to produce attention weights mimicking softmax attention. Experiments show Hedgehog recovers over 99\% of standard Transformer quality in train-from-scratch and finetuned-conversion settings, outperforming prior linear attentions up to 6 perplexity points on WikiText-103 with causal GPTs, and up to 8.7 GLUE score points on finetuned bidirectional BERTs. Hedgehog also enables pretrained-conversion. Converting a pretrained GPT-2 into a linear attention variant achieves state-of-the-art 16.7 perplexity on WikiText-103 for 125M subquadratic decoder models. We finally turn a pretrained Llama-2 7B into a viable linear attention Llama. With low-rank adaptation, Hedgehog-Llama2 7B achieves 28.1 higher ROUGE-1 points over the base standard attention model, where prior linear attentions lead to 16.5 point drops.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
+  annotation = {TLDR: Hedgehog is proposed, a learnable linear attention that retains the spiky and monotonic properties of softmax attention while maintaining linear complexity, and enables pretrained-conversion.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\4UQTTXY2\\Zhang 等 - 2024 - The Hedgehog & the Porcupine Expressive Linear Attentions with Softmax Mimicry.pdf;C\:\\Users\\27404\\Zotero\\storage\\PJ2LC6MX\\2402.html}
 }
 
 @online{2024HowLargeLanguageZhao,
@@ -2565,6 +2617,24 @@
   file = {C\:\\Users\\27404\\Zotero\\storage\\TKV5PB3Y\\AI 等 - 2024 - Yi Open Foundation Models by 01.AI.pdf;C\:\\Users\\27404\\Zotero\\storage\\657X57VC\\2403.html}
 }
 
+@online{2025D2ODynamicDiscriminativeWan,
+  title = {{{D2O}}: {{Dynamic Discriminative Operations}} for {{Efficient Long-Context Inference}} of {{Large Language Models}}},
+  shorttitle = {{{D2O}}},
+  author = {Wan, Zhongwei and Wu, Xinjian and Zhang, Yu and Xin, Yi and Tao, Chaofan and Zhu, Zhihong and Wang, Xin and Luo, Siqi and Xiong, Jing and Wang, Longyue and Zhang, Mi},
+  date = {2025-03-13},
+  eprint = {2406.13035},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2406.13035},
+  url = {http://arxiv.org/abs/2406.13035},
+  urldate = {2025-05-15},
+  abstract = {Generative inference in Large Language Models (LLMs) is impeded by the growing memory demands of Key-Value (KV) cache, especially for longer sequences. Traditional KV cache eviction strategies, which discard less critical KV pairs based on attention scores, often degrade generation quality, leading to issues such as context loss or hallucinations. In this work, we introduce Dynamic Discriminative Operations (D2O), a KV cache compression method that optimizes KV cache size dynamically and discriminatively at two levels without fine-tuning, while preserving essential context. At layer level, D2O leverages the varying densities of attention weights between shallow and deep layers to dynamically determine which layers should avoid excessive eviction via a novel dynamic allocation strategy to minimize information loss. At token level, D2O incorporates a compensation mechanism that maintains a similarity threshold to re-discriminate the importance of currently discarded tokens, determining whether they should be recalled and merged with similar tokens. We conduct experiments on various benchmarks and LLM architectures. Our results show that D2O not only achieves significant memory savings and enhances inference throughput by more than 3\$\textbackslash times\$ but also maintains high-quality long-text generation.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  annotation = {TLDR: D 2 O is introduced, a novel method that utilizes two-level discriminative strategies to optimize KV cache size without fine-tuning, while preserving essential context.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\64Q333RJ\\Wan 等 - 2025 - D2O Dynamic Discriminative Operations for Efficient Long-Context Inference of Large Language Models.pdf;C\:\\Users\\27404\\Zotero\\storage\\JJBVIN6J\\2406.html}
+}
+
 @online{2025DissectingQueryKeyInteractionPan,
   title = {Dissecting {{Query-Key Interaction}} in {{Vision Transformers}}},
   author = {Pan, Xu and Philip, Aaron and Xie, Ziqian and Schwartz, Odelia},
@@ -2595,7 +2665,6 @@
   url = {http://arxiv.org/abs/2412.17739},
   urldate = {2025-05-08},
   abstract = {Extending the context length of Language Models (LMs) by improving Rotary Position Embedding (RoPE) has become a trend. While existing works mainly address RoPE's limitations within attention mechanism, this paper provides an analysis across nearly all parts of LMs, uncovering their adverse effects on length generalization for RoPE-based attention. Using Discrete Signal Processing theory, we show that RoPE enables periodic attention by implicitly achieving Non-Uniform Discrete Fourier Transform. However, this periodicity is undermined by the spectral damage caused by: 1) linear layers and activation functions outside of attention; 2) insufficiently trained frequency components brought by time-domain truncation. Building on our observations, we propose Fourier Position Embedding (FoPE), which enhances attention's frequency-domain properties to improve both its periodic extension and length generalization. FoPE constructs Fourier Series and zero-outs the destructive frequency components, increasing model robustness against the spectrum damage. Experiments across various model scales and benchmarks show that, within varying context windows, FoPE maintains a more stable performance compared to RoPE and ALiBi. Several analyses and ablations bring further support to our method and theoretical modeling.},
-  langid = {american},
   pubstate = {prepublished},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language},
   annotation = {TLDR: FoPE is proposed, which enhances attention's frequency-domain properties to improve both its periodic extension and length generalization, and maintains a more stable performance compared to RoPE and ALiBi.},
@@ -2616,6 +2685,42 @@
   pubstate = {prepublished},
   keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning},
   file = {C\:\\Users\\27404\\Zotero\\storage\\ZSPRHVGD\\Marro 等 - 2025 - Language Models Are Implicitly Continuous.pdf;C\:\\Users\\27404\\Zotero\\storage\\479P9VQB\\2504.html}
+}
+
+@online{2025LoLCATsLowRankLinearizingZhang,
+  title = {{{LoLCATs}}: {{On Low-Rank Linearizing}} of {{Large Language Models}}},
+  shorttitle = {{{LoLCATs}}},
+  author = {Zhang, Michael and Arora, Simran and Chalamala, Rahul and Wu, Alan and Spector, Benjamin and Singhal, Aaryan and Ramesh, Krithik and Ré, Christopher},
+  date = {2025-03-05},
+  eprint = {2410.10254},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2410.10254},
+  url = {http://arxiv.org/abs/2410.10254},
+  urldate = {2025-05-30},
+  abstract = {Recent works show we can linearize large language models (LLMs) -- swapping the quadratic attentions of popular Transformer-based LLMs with subquadratic analogs, such as linear attention -- avoiding the expensive pretraining costs. However, linearizing LLMs often significantly degrades model quality, still requires training over billions of tokens, and remains limited to smaller 1.3B to 7B LLMs. We thus propose Low-rank Linear Conversion via Attention Transfer (LoLCATs), a simple two-step method that improves LLM linearizing quality with orders of magnitudes less memory and compute. We base these steps on two findings. First, we can replace an LLM's softmax attentions with closely-approximating linear attentions, simply by training the linear attentions to match their softmax counterparts with an output MSE loss ("attention transfer"). Then, this enables adjusting for approximation errors and recovering LLM quality simply with low-rank adaptation (LoRA). LoLCATs significantly improves linearizing quality, training efficiency, and scalability. We significantly reduce the linearizing quality gap and produce state-of-the-art subquadratic LLMs from Llama 3 8B and Mistral 7B v0.1, leading to 20+ points of improvement on 5-shot MMLU. Furthermore, LoLCATs does so with only 0.2\% of past methods' model parameters and 0.4\% of their training tokens. Finally, we apply LoLCATs to create the first linearized 70B and 405B LLMs (50x larger than prior work). When compared with prior approaches under the same compute budgets, LoLCATs significantly improves linearizing quality, closing the gap between linearized and original Llama 3.1 70B and 405B LLMs by 77.8\% and 78.1\% on 5-shot MMLU.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
+  annotation = {TLDR: Low-rank Linear Conversion via Attention Transfer (LoLCATs) is proposed, a simple two-step method that improves LLM linearizing quality with orders of magnitudes less memory and compute and significantly improves linearizing quality, training efficiency, and scalability.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\8UH5F3L3\\Zhang 等 - 2025 - LoLCATs On Low-Rank Linearizing of Large Language Models.pdf;C\:\\Users\\27404\\Zotero\\storage\\59EGNTDW\\2410.html}
+}
+
+@online{2025MambaLlamaDistillingWang,
+  title = {The {{Mamba}} in the {{Llama}}: {{Distilling}} and {{Accelerating Hybrid Models}}},
+  shorttitle = {The {{Mamba}} in the {{Llama}}},
+  author = {Wang, Junxiong and Paliotta, Daniele and May, Avner and Rush, Alexander M. and Dao, Tri},
+  date = {2025-01-08},
+  eprint = {2408.15237},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2408.15237},
+  url = {http://arxiv.org/abs/2408.15237},
+  urldate = {2025-05-30},
+  abstract = {Linear RNN architectures, like Mamba, can be competitive with Transformer models in language modeling while having advantageous deployment characteristics. Given the focus on training large-scale Transformer models, we consider the challenge of converting these pretrained models for deployment. We demonstrate that it is feasible to distill large Transformers into linear RNNs by reusing the linear projection weights from attention layers with academic GPU resources. The resulting hybrid model, which incorporates a quarter of the attention layers, achieves performance comparable to the original Transformer in chat benchmarks and outperforms open-source hybrid Mamba models trained from scratch with trillions of tokens in both chat benchmarks and general benchmarks. Moreover, we introduce a hardware-aware speculative decoding algorithm that accelerates the inference speed of Mamba and hybrid models. Overall we show how, with limited computation resources, we can remove many of the original attention layers and generate from the resulting model more efficiently. Our top-performing model, distilled from Llama3-8B-Instruct, achieves a 29.61 length-controlled win rate on AlpacaEval 2 against GPT-4 and 7.35 on MT-Bench, surpassing the best 8B scale instruction-tuned linear RNN model. We also find that the distilled model has natural length extrapolation, showing almost perfect accuracy in the needle-in-a-haystack test at 20x the distillation length. Code and pre-trained checkpoints are open-sourced at https://github.com/jxiw/MambaInLlama and https://github.com/itsdaniele/speculative\_mamba.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  annotation = {TLDR: It is demonstrated that it is feasible to distill large Transformers into linear RNNs by reusing the linear projection weights from attention layers with academic GPU resources, and a hardware-aware speculative decoding algorithm is introduced that accelerates the inference speed of Mamba and hybrid models.},
+  file = {C\:\\Users\\27404\\Zotero\\storage\\JJEWGALX\\Wang 等 - 2025 - The Mamba in the Llama Distilling and Accelerating Hybrid Models.pdf;C\:\\Users\\27404\\Zotero\\storage\\8JY9YN9J\\2408.html}
 }
 
 @online{2025MassiveValuesSelfAttentionJin,
@@ -2683,7 +2788,6 @@
   url = {http://arxiv.org/abs/2502.01776},
   urldate = {2025-05-09},
   abstract = {Diffusion Transformers (DiTs) dominate video generation but their high computational cost severely limits real-world applicability, usually requiring tens of minutes to generate a few seconds of video even on high-performance GPUs. This inefficiency primarily arises from the quadratic computational complexity of 3D Full Attention with respect to the context length. In this paper, we propose a training-free framework termed Sparse VideoGen (SVG) that leverages the inherent sparsity in 3D Full Attention to boost inference efficiency. We reveal that the attention heads can be dynamically classified into two groups depending on distinct sparse patterns: (1) Spatial Head, where only spatially-related tokens within each frame dominate the attention output, and (2) Temporal Head, where only temporally-related tokens across different frames dominate. Based on this insight, SVG proposes an online profiling strategy to capture the dynamic sparse patterns and predicts the type of attention head. Combined with a novel hardware-efficient tensor layout transformation and customized kernel implementations, SVG achieves up to 2.28x and 2.33x end-to-end speedup on CogVideoX-v1.5 and HunyuanVideo, respectively, while preserving generation quality. Our code is open-sourced and is available at https://github.com/svg-project/Sparse-VideoGen},
-  langid = {american},
   pubstate = {prepublished},
   keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
   annotation = {TLDR: It is revealed that the attention heads can be dynamically classified into two groups depending on distinct sparse patterns: (1) Spatial Head, where only spatially-related tokens within each frame dominate the attention output, and (2) Temporal Head, where only temporally-related tokens across different frames dominate.},
